@@ -1,12 +1,12 @@
-# [Your Name]'s Research Portfolio
+# Prateek's Research Hub
 
 ## Overview
 
-Welcome to my research portfolio! I am [Your Name], a passionate student with a keen interest in the intersection of quantum computing and machine learning. This repository serves as a showcase of my research projects, academic achievements, and contributions to the field.
+Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of quantum computing and machine learning. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 ## About Me
 
-I am a [Your University/Institution] student pursuing [Your Degree] with a focus on quantum computing and machine learning. My academic journey has equipped me with a solid foundation in [relevant subjects], and I am enthusiastic about applying my knowledge to real-world problems.
+I am a 2nd year Electronics Engineering student pursuing my BTech with an inclination towards Control Systems. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
 
 ## Research Interests
 
@@ -14,8 +14,8 @@ My primary research interests lie in the following areas:
 
 - Quantum Computing
 - Machine Learning
-- Quantum Machine Learning
-- [Any other specific interest]
+- Quantum Causality
+- Control Systems
 
 ## Projects
 
