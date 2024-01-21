@@ -17,14 +17,23 @@ My primary research interests lie in the following areas:
 - Quantum Cryptography
 - Control Systems
 
+However, often I find myself thinking in analogies and my attention span lasts so long that it can be described as: 
+$$
+\lim_{{t \to \infty}} Hop Count = \infty
+$$
+Usually my research directions span two or multiple of these areas. I believe interdisciplinary research not only reveals several aspects that couldn't be anticipated but also give us new sound foundational understanding of the fields themselves. After all, that's how nature works, right? 
+
 ## Current Positions
 
-## Position 1: Long-Term Research Intern | IIT Tirupati
+### __Long-Term Research Intern__ | _IIT Tirupati_
 
-I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined with Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IITTp. 
+I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined with Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
--
--
+- Started Oct' 2023
+- [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
+
+
+### 
 
 ## Projects
 
