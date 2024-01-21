@@ -120,7 +120,10 @@ I have always found teaching to be a very enjoyable pursuit -- and as a (~ an _o
 - Since the time I got into basketball and NBA, I have been a constant supporter of Golden State Warriors! (Go Warriors!)
 
 ### __Trekking__
-- I love trekking, off-road cycling. It doesn't fail for once to feel overwhelming and proud to have conquered peaks, and yet realise how minuscule we stand to them! 
+- I love trekking, off-road cycling. It doesn't fail for once to feel overwhelming and proud to have conquered peaks, and yet realise how minuscule we stand to them!
+
+### __Music__
+- I have a wide variety of interests in music, however I admire Classical music, both Indian and Western. I also produce some music myself when I am not occupied, and I will try to put it up here somewhere as we go! 
 
 ### CV 
 
