@@ -6,7 +6,7 @@ Welcome to my hub! I am a passionate engineering student with a keen interest in
 
 ## About Me
 
-I am a 2nd year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards Signal Processing and Control Systems, however I also like various aspects of VLSI. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
+I am a 2nd year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards Signal Processing and Control Systems, however I also like various aspects of VLSI. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!)
 
 ## Research Interests
 
@@ -22,7 +22,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ## Current Positions
 
-### __Long-Term Research Intern__ | _IIT Tirupati_
+### __Long-Term Research Student__ | _IIT Tirupati_
 
 I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined with Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
@@ -30,7 +30,10 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 - [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
 
 
-### 
+### __Research Intern__ | _PES University_ 
+
+- Working with [Dr. Rashmi N Ugarakhod](https://scholar.google.com/citations?user=vUzJA6MAAAAJ&hl=en) at the Dept. of ECE at my University!
+- The focus is on investigating aspects of autonomous control systems with inherent machine learning frameworks.  
 
 ## Projects
 
@@ -78,10 +81,10 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ### __Explain the Concept__ | IISc. 2019
 
--Won the Second prize, nationally, in _Explain The Concept_ event at the Undergraduate Fest organized by Indian Institute of Science, while in high-school (I was in my 9th grade!).  
--The event consisted of picking a relatively complex topic, in sciences or mathematics, and trying to explain it to a layman audience in a very accessible and interactive manner.
+- Won the Second prize, nationally, in _Explain The Concept_ event at the Undergraduate Fest organized by Indian Institute of Science, while in high-school (I was in my 9th grade!).  
+- The event consisted of picking a relatively complex topic, in sciences or mathematics, and trying to explain it to a layman audience in a very accessible and interactive manner.
 
-I have always found teaching to be a very enjoyable pursuit -- and as a (/ an _obvious_) result, I strongly intend to pursue a professorship in my future and establish my very own research group!
+I have always found teaching to be a very enjoyable pursuit -- and as a (~ an _obvious_) result, I strongly intend to pursue a professorship in my future and establish my very own research group!
 
 ## Skills
 
