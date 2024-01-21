@@ -103,7 +103,8 @@ I have always found teaching to be a very enjoyable pursuit -- and as a (~ an _o
 - Tanner EDA / Cadence Virtuoso
 - Matlab
 - `\LaTeX`
-- Simulink
+- Simulink / QuCS
+- Qiskit / Cirq
 
 ## Other Interests
 
