@@ -12,7 +12,7 @@ I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES Univer
 
 My primary research interests lie in the following areas:
 
-- Quantum Computing
+- Quantum Computing and Information Theory
 - Machine Learning
 - Quantum Cryptography
 - Control Systems
@@ -76,9 +76,11 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
   
 ## Education
 
-- **PES University**
+- **PES University** | Class of '26
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
-  - Class of 2026
+  - I am an active part of the Quantum Photonics and Technology lab, the Data Sciences and Applied Machine Learning Special Interest Group!
+  - I head the Content Team at Research Et Al., the official research-oriented club of the Dept. of CSE.
+  - I am also the Technical Mentor of the flagship Quantum Computing Club at my University!
 
 - **Kendriya Vidyalaya Hebbal** | Apr. '22
   - Grade 12 (Physics, Math, Chemistry and Biology along with English (Lit & Lang).
