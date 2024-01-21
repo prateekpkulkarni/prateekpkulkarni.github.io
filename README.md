@@ -24,7 +24,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ### __Long-Term Research Student__ | _IIT Tirupati_
 
-I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined with Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
+I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined by Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
 - Started Oct' 2023
 - [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
