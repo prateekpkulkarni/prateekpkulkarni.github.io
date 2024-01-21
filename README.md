@@ -6,7 +6,7 @@ Welcome to my hub! I am a passionate engineering student with a keen interest in
 
 ## About Me
 
-I am a 2nd year Electronics Engineering student pursuing my BTech with an inclination towards Control Systems. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
+I am a 2nd year Electronics Engineering student pursuing my BTech at PES University(https://pes.edu) with an inclination towards Signal Processing and Control Systems, however I also like various aspects of VLSI. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
 
 ## Research Interests
 
@@ -14,7 +14,7 @@ My primary research interests lie in the following areas:
 
 - Quantum Computing
 - Machine Learning
-- Quantum Causality
+- Quantum Cryptography
 - Control Systems
 
 ## Projects
@@ -35,11 +35,11 @@ My primary research interests lie in the following areas:
 
 ## Publications
 
-[List any research papers, articles, or conference presentations you have authored or co-authored.]
+### Recreational 
 
-1. [Title of Publication 1]
-   - [Link to the publication]
-   - [Brief description]
+1. A Non-Rigorous Proof of Fermat's Last Theorem for Some Special Cases
+   - [[ResearchGate](http://dx.doi.org/10.13140/RG.2.2.28449.38242)]
+   - This paper presents a non-rigorous geometric analysis of Fermat's Last Theorem for specific cases where _n_ is even and for when _n_ is odd but _x_, _y_, and _z_ are perfect squares.
 
 2. [Title of Publication 2]
    - [Link to the publication]
