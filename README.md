@@ -18,7 +18,7 @@ My primary research interests lie in the following areas:
 - Control Systems
 
 However, often I find myself thinking in analogies and my attention span lasts so long that it is apt to say my _hop count_ tends to infinity! XD
-Usually my research directions span two or multiple of these areas. I believe interdisciplinary research not only reveals several aspects that couldn't be anticipated but also give us new sound foundational understanding of the fields themselves. After all, that's how nature works, right? 
+Usually my research directions span two or multiple of these areas. I believe interdisciplinary research not only reveals several aspects that couldn't be anticipated but also give us new sound foundational understanding of the fields themselves.
 
 ## Current Positions
 
