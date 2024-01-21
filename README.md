@@ -6,7 +6,7 @@ Welcome to my hub! I am a passionate engineering student with a keen interest in
 
 ## About Me
 
-I am a 2nd year Electronics Engineering student pursuing my BTech at [PES University(https://pes.edu)] with an inclination towards Signal Processing and Control Systems, however I also like various aspects of VLSI. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
+I am a 2nd year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards Signal Processing and Control Systems, however I also like various aspects of VLSI. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects!
 
 ## Research Interests
 
@@ -17,33 +17,50 @@ My primary research interests lie in the following areas:
 - Quantum Cryptography
 - Control Systems
 
+## Current Positions
+
+## Position 1: Long-Term Research Intern | IIT Tirupati
+
+I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined with Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IITTp. 
+
+-
+-
+
 ## Projects
 
-### Project 1: [Project Name]
+### Project 1: __Field-Induced Isomorphic Optimization Algorithms__
 
-[Short description of the project, its goals, and your role.]
+Developed a new class of optimization algorithms which shares in philosophy similar spirits to the Nature-Inspired Optimization Algorithms (NIOAs). FIIOs induces a property-preserving field for the dataset, and exploits the nature of the field itself to extract desired solutions. It is a visually-powerful and elegant way of looking at optimizing problems with vast potential applications.
 
-- [Link to the project repository or demo]
-- [Any specific technologies or tools used]
+- [Ideation Stage]
+- Write to me if you're interested in working on this!
 
-### Project 2: [Project Name]
+### Project 2: __RegDyno.Ai__
 
-[Short description of the project, its goals, and your role.]
+Co-founded a company that offers a robust predcition model, and aims at reducing noises and errors in a time-series data plot drastically with introduction of a new regression model that uses a custom probability distribution. Currently focused on satellite-relevant data, we are under the process of finishing the framework. The company was pitched as a part of the PESU Venture Labs Any Body Can Create (PVL-ABC) challenge, drawing attention from IP lawyers and investors.
 
-- [Link to the project repository or demo]
-- [Any specific technologies or tools used]
+- [Check Back Soon!]
+
+### Project 3: __MyMath__
+
+Built a fully functional advanced [scientific calculator](https://github.com/psykick05/MyMath), with high precision using Python, (team of 3) for my first semester Python mini project.
 
 ## Publications
 
 ### Recreational 
 
 1. A Non-Rigorous Proof of Fermat's Last Theorem for Some Special Cases
-   - This [paper(http://dx.doi.org/10.13140/RG.2.2.28449.38242)] presents a non-rigorous geometric analysis of Fermat's Last Theorem for specific cases where _n_ is even and for when _n_ is odd but _x_, _y_, and _z_ are          perfect squares.
+   - This [paper](http://dx.doi.org/10.13140/RG.2.2.28449.38242) presents a non-rigorous geometric analysis of Fermat's Last Theorem for specific cases where _n_ is even and for when _n_ is odd but _x_, _y_, and _z_ are          perfect squares.
 
 2. Investigating Factorial Sums and their Connection with the Laplace Transform
-   - [Link to the publication]
-   - [Brief description]
+   - This [article](http://dx.doi.org/10.13140/RG.2.2.19396.40329) presents a formula for the sum of first _n_ factorials, and also establishes a closed-form for the sum of consecutive gamma functions.
 
+## Workshops and Conferences
+
+# Workshop 1: __Present and Future Computing Systems__
+
+- Was one of the ~80 [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
+- The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC. 
 ## Education
 
 - **[Your University/Institution]**
