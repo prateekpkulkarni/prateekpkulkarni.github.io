@@ -49,7 +49,7 @@ Co-founded a company that offers a robust predcition model, and aims at reducing
 
 - [Check Back Soon!]
 
-### Project 3: __MyMath__
+### __MyMath__
 
 Built a fully functional advanced [scientific calculator](https://github.com/psykick05/MyMath), with high precision using Python, (team of 3) for my first semester Python mini project.
 
