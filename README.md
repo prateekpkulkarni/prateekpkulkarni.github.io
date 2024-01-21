@@ -67,7 +67,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ### __Present and Future Computing Systems__ | Jan. 2024
 
-- Was one of the ~80 [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
+- Was one of the ~80 invited/selected [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
 
   
@@ -76,6 +76,15 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - **PES University**
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
   - Class of 2026
+
+## Awards and Honors
+
+### __Explain the Concept__ | IISc. 2019
+
+-Won the Second prize, nationally, in _Explain The Concept_ event at the Undergraduate Fest organized by Indian Institute of Science, while in high-school (I was in my 9th grade!).  
+-The event consisted of picking a relatively complex topic, in sciences or mathematics, and trying to explain it to a layman audience in a very accessible and interactive manner.
+
+I have always found teaching to be a very enjoyable pursuit -- and as a (/ an _obvious_) result, I strongly intend to pursue a professorship in my future and establish my very own research group!
 
 ## Skills
 
@@ -90,6 +99,23 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - Matlab
 - `\LaTeX`
 - Simulink
+
+## Other Interests
+
+### __Writing__
+- I am a free-time writer and poet. I have written about a 100 poems, and have a novel in progress.
+- I also have a small collection of short stories. I am hoping to publish them online soon!
+
+### __Basketball__
+- I am a huge fan of both spectating and playing basketball. I have played professionally for a while in my high-school days! I still continue to ball when I can! :)
+- Since the time I got into basketball and NBA, I have been a constant supporter of Golden State Warriors! (Go Warriors!)
+
+### __Trekking__
+- I love trekking, off-road cycling. It doesn't fail for once to feel overwhelming and proud to have conquered peaks, and yet realise how minuscule we stand to them! 
+
+### CV 
+
+For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1laUwGtKQu0ESKFM4xfinsYwc2wwxyUhr/view?usp=sharing) 
 
 ## Contact
 
