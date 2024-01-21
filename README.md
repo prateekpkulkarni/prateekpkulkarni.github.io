@@ -77,6 +77,11 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
   - Class of 2026
 
+- **Kendriya Vidyalaya Hebbal** | Apr. '22
+  - Grade 12 (Physics, Math, Chemistry and Biology along with English (Lit & Lang).
+  - Looking back, I feel blessed to have attended one of the finest schools(During my time at the school, it was ranked in the top 10 day schools in India for a couple of consecutive years)! Not only did KV expose to me to a ton of opportunities but the environment really infused a research-driven enthusiasm. Besides, the vibrant lush-green campus with lots of open space always set an ideal atmosphere to be in!
+ 
+
 ## Awards and Honors
 
 ### __Explain the Concept__ | IISc. 2019
@@ -115,7 +120,7 @@ I have always found teaching to be a very enjoyable pursuit -- and as a (~ an _o
 
 ### CV 
 
-For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1laUwGtKQu0ESKFM4xfinsYwc2wwxyUhr/view?usp=sharing) 
+For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1r75BQf0KMmNlmdlMKo9Cx8dku4rOO5sR/view?usp=sharing) 
 
 ## Contact
 
