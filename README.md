@@ -37,14 +37,13 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 
 ## Projects
 
-### Project 1: __Field-Induced Isomorphic Optimization Algorithms__
+###  __Field-Induced Isomorphic Optimization Algorithms__
 
 Developed a new class of optimization algorithms which shares in philosophy similar spirits to the Nature-Inspired Optimization Algorithms (NIOAs). FIIOs induces a property-preserving field for the dataset, and exploits the nature of the field itself to extract desired solutions. It is a visually-powerful and elegant way of looking at optimizing problems with vast potential applications.
 
-- [Ideation Stage]
-- Write to me if you're interested in working on this!
+- It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
 
-### Project 2: __RegDyno.Ai__
+###  __RegDyno.Ai__
 
 Co-founded a company that offers a robust predcition model, and aims at reducing noises and errors in a time-series data plot drastically with introduction of a new regression model that uses a custom probability distribution. Currently focused on satellite-relevant data, we are under the process of finishing the framework. The company was pitched as a part of the PESU Venture Labs Any Body Can Create (PVL-ABC) challenge, drawing attention from IP lawyers and investors.
 
@@ -66,30 +65,35 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ## Workshops and Conferences
 
-# Workshop 1: __Present and Future Computing Systems__
+### __Present and Future Computing Systems__ | Jan. 2024
 
 - Was one of the ~80 [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
-- The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC. 
+- The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
+
+  
 ## Education
 
-- **[Your University/Institution]**
-  - [Your Degree] in [Your Major]
-  - [Year of Graduation]
-  - [Link to your institution's webpage](https://www.your-institution.edu)
+- **PES University**
+  - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
+  - Class of 2026
 
 ## Skills
 
-- Quantum Computing
-- Machine Learning
-- Python
-- [Any other relevant skills]
+### Languages
+- Python (Proficient)
+- C (Intermediate)
+- Java (Learning)
+
+### Tools
+- Vivado Design Suite
+- Tanner EDA / Cadence Virtuoso
+- Matlab
+- `\LaTeX`
+- Simulink
 
 ## Contact
 
-Feel free to reach out to me via [email address]. Connect with me on [LinkedIn] for more updates on my research journey.
+Feel free to reach out to me via my [email](pkulkarni2425@gmail.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/psykick05/) for more updates on my journey.
 
-[Include badges or shields for LinkedIn, email, or any other relevant platforms]
 
----
-
-Thank you for visiting my research portfolio! I look forward to exploring the fascinating world of quantum computing and machine learning together.
+Thank you for visiting! I look forward to seeing you again here! 
