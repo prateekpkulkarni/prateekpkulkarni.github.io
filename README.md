@@ -4,9 +4,12 @@
 
 Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of quantum computing and machine learning. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
+
 ## About Me
 
 I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards _Signal Processing_ and _Control Systems_, however I also like various aspects of VLSI (on the lines of device physics and the like). I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!)
+
+![xkcd Qc](https://xkcd.com/1861/)
 
 ## Research Interests
 
