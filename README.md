@@ -9,7 +9,7 @@ Welcome to my hub! I am a passionate engineering student with a keen interest in
 
 I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards _Signal Processing_ and _Control Systems_, however I also like various aspects of VLSI (on the lines of device physics and the like). I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!)
 
-![xkcd Qc](https://xkcd.com/1861/)
+![xkcd Qc](https://imgs.xkcd.com/comics/quantum.png)
 
 ## Research Interests
 
@@ -25,7 +25,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ## Current Positions
 
-- **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
+### **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
@@ -33,7 +33,7 @@ Was awarded one of the 10 internships at the [Center for Information Security, F
 - The internship aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
 
 
-- __Research Student__ | _IIT Tirupati_
+### __Research Student__ | _IIT Tirupati_
 
 I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined by Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
@@ -41,7 +41,7 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 - [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
 
 
-- __Research Intern__ | _PES University_ 
+### __Research Intern__ | _PES University_ 
 
 - Working with [Dr. Rashmi N Ugarakhod](https://scholar.google.com/citations?user=vUzJA6MAAAAJ&hl=en) at the Dept. of ECE at my University!
 - The focus is on investigating aspects of autonomous control systems with inherent machine learning frameworks.
