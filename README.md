@@ -22,7 +22,14 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ## Current Positions
 
-### __Long-Term Research Student__ | _IIT Tirupati_
+### **Post-Quantum Cryptography Intern** | C-ISFCR, PES University 
+
+Was awarded one of the 10 internships at the Center for Information Security, Forensics and Cyber Resilience at my University that involves rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
+
+- Started Jan. 2024! 
+
+
+### __Research Student__ | _IIT Tirupati_
 
 I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined by Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
