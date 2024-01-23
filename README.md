@@ -24,16 +24,17 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ### **Post-Quantum Cryptography Intern** | C-ISFCR, PES University 
 
-Was awarded one of the 10 internships at the Center for Information Security, Forensics and Cyber Resilience at my University that involves rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
+Was awarded one of the 10 internships at the Center for Information Security, Forensics and Cyber Resilience at my University
 
-- Started Jan. 2024! 
+- Started Jan. 2024
+- The internship aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
 
 
 ### __Research Student__ | _IIT Tirupati_
 
 I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined by Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
-- Started Oct' 2023
+- Started Oct. 2023
 - [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
 
 
@@ -49,7 +50,7 @@ Apart from my advisors, I feel fortunate to recieve guidance from [Prof. R Srika
 
 ###  __Field-Induced Isomorphic Optimization Algorithms__
 
-Developed a new class of optimization algorithms which shares in philosophy similar spirits to the Nature-Inspired Optimization Algorithms (NIOAs). FIIOs induces a property-preserving field for the dataset, and exploits the nature of the field itself to extract desired solutions. It is a visually-powerful and elegant way of looking at optimizing problems with vast potential applications.
+Developed a new class of optimization algorithms which shares in philosophy similar spirits to the Nature-Inspired Optimization Algorithms (NIOAs). FIIOs induces a property-preserving field for the dataset, and exploits the nature of the field itself to extract desired solutions. It is a visually-powerful and elegant way of looking at optimizing problems with vast potential applications. 
 
 - It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
 
@@ -101,7 +102,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - Won the Second prize, nationally, in _Explain The Concept_ event at the Undergraduate Fest organized by Indian Institute of Science, while in high-school (I was in my 9th grade!).  
 - The event consisted of picking a relatively complex topic, in sciences or mathematics, and trying to explain it to a layman audience in a very accessible and interactive manner.
 
-I have always found teaching to be a very enjoyable pursuit -- and as a (~ an _obvious_) result, I strongly intend to pursue a professorship in my future and establish my very own research group!
+I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ result, I strongly intend to pursue a professorship in my future and establish my very own research group!
 
 ## Skills
 
