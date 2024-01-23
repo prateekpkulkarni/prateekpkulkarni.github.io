@@ -85,7 +85,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ## Workshops and Conferences
 
-- __Present and Future Computing Systems__ | Jan. 2024
+### __Present and Future Computing Systems__ | Jan. 2024
 
 - Was one of the ~80 invited/selected [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
@@ -93,13 +93,13 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
   
 ## Education
 
-- **PES University** | Class of '26
+### **PES University** | Class of '26
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
   - I am an active part of the Quantum Photonics and Technology lab, the Data Sciences and Applied Machine Learning Special Interest Group!
   - I head the Content Team at Research Et Al., the official research-oriented club of the Dept. of CSE.
   - I am also the Technical Mentor of the flagship Quantum Computing Club at my University!
 
-- **Kendriya Vidyalaya Hebbal** | Apr. '22
+### **Kendriya Vidyalaya Hebbal** | Apr. '22
   - Grade 12 (Physics, Math, Chemistry and Biology along with English (Lit & Lang).
   - Looking back, I feel blessed to have attended one of the finest schools(During my time at the school, it was ranked in the top 10 day schools in India for a couple of consecutive years)! Not only did KV expose to me to a ton of opportunities but the environment really infused a research-driven enthusiasm. Besides, the vibrant lush-green campus with lots of open space always set an ideal atmosphere to be in!
  
