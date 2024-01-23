@@ -22,7 +22,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ## Current Positions
 
-### **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
+- **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
@@ -30,7 +30,7 @@ Was awarded one of the 10 internships at the [Center for Information Security, F
 - The internship aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
 
 
-### __Research Student__ | _IIT Tirupati_
+- __Research Student__ | _IIT Tirupati_
 
 I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT Tirupati on various aspects of Quantum Causlity and it's applications. Recently, I was joined by Priyanuj Rajbongshi (yay!) who's pursuing his PhD at IIT Tirupati. 
 
@@ -38,7 +38,7 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 - [Prof. Aravinda's webpage](https://www.quantaravinda.com/)
 
 
-### __Research Intern__ | _PES University_ 
+- __Research Intern__ | _PES University_ 
 
 - Working with [Dr. Rashmi N Ugarakhod](https://scholar.google.com/citations?user=vUzJA6MAAAAJ&hl=en) at the Dept. of ECE at my University!
 - The focus is on investigating aspects of autonomous control systems with inherent machine learning frameworks.
@@ -56,7 +56,7 @@ To better understand it, or to get a flavor of it, look at the following illustr
 
 ![The _Brachistochrone Curve_ Credits: [AUTODESK Instructables](https://www.instructables.com/The-Brachistochrone-Curve/)_](https://content.instructables.com/FHV/8NN2/JYMTK1D4/FHV8NN2JYMTK1D4.jpg)
 
-It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
+The _Brachistochrone Curve_ (Credits: [AUTODESK Instructables](https://www.instructables.com/The-Brachistochrone-Curve/)). It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
 
 ###  __RegDyno.Ai__
 
@@ -80,7 +80,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ## Workshops and Conferences
 
-### __Present and Future Computing Systems__ | Jan. 2024
+- __Present and Future Computing Systems__ | Jan. 2024
 
 - Was one of the ~80 invited/selected [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
