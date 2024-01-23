@@ -11,6 +11,8 @@ I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES Univer
 
 ![xkcd Qc](https://imgs.xkcd.com/comics/quantum.png)
 
+This is one of my favorite [Xkcd Comics](https://xkcd.com/1861/)! 
+
 ## Research Interests
 
 My primary research interests lie in the following areas:
