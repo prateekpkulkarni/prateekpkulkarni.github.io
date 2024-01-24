@@ -13,7 +13,7 @@ I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES Univer
 
 This is one of my favorite [Xkcd Comics](https://xkcd.com/1861/)! 
 
-## Research Interests ➰📜
+## Research Interests 📑
 
 My primary research interests lie in the following areas:
 
@@ -51,7 +51,7 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 Apart from my advisors, I feel fortunate to recieve guidance from [Prof. R Srikanth](https://ppisr.res.in/r-srikanth/), [Prof. R Vasudevan Iyer](https://staff.pes.edu/nm1164/) and [Prof. Sumit Kumar Mandal](https://www.csa.iisc.ac.in/~skmandal/) amongst others!
 
 
-## Projects
+## Projects 📒
 
 ###  __Field-Induced Isomorphic Optimization Algorithms__
 
@@ -73,7 +73,7 @@ Co-founded a company that offers a robust predcition model, and aims at reducing
 
 Built a fully functional advanced [scientific calculator](https://github.com/psykick05/MyMath), with high precision using Python, (team of 3) for my first semester Python mini project.
 
-## Publications
+## Publications 📄
 
 ### Recreational 
 
@@ -83,7 +83,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 2. Investigating Factorial Sums and their Connection with the Laplace Transform
    - This [article](http://dx.doi.org/10.13140/RG.2.2.19396.40329) presents a formula for the sum of first _n_ factorials, and also establishes a closed-form for the sum of consecutive gamma functions.
 
-## Workshops and Conferences
+## Workshops and Conferences 💾
 
 ### __Present and Future Computing Systems__ | Jan. 2024
 
@@ -91,7 +91,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
 
   
-## Education
+## Education 🎓
 
 ### **PES University** | Class of '26
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
@@ -104,7 +104,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
   - Looking back, I feel blessed to have attended one of the finest schools(During my time at the school, it was ranked in the top 10 day schools in India for a couple of consecutive years)! Not only did KV expose to me to a ton of opportunities but the environment really infused a research-driven enthusiasm. Besides, the vibrant lush-green campus with lots of open space always set an ideal atmosphere to be in!
  
 
-## Awards and Honors
+## Awards and Honors 🏆
 
 ### __Explain the Concept__ | IISc. 2019
 
@@ -112,8 +112,8 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - The event consisted of picking a relatively complex topic, in sciences or mathematics, and trying to explain it to a layman audience in a very accessible and interactive manner.
 
 I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ result, I strongly intend to pursue a professorship in my future and establish my very own research group!
-
-## Skills
+ 
+## Skills 🔑
 
 ### Languages
 - Python (Proficient)
@@ -128,7 +128,7 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 - Simulink / QuCS
 - Qiskit / Cirq
 
-## Other Interests
+## Other Interests 
 
 ### __Writing__ ✍🏻📚
 - I am a free-time writer and poet. I have written about a 100 poems, and have a novel in progress.
