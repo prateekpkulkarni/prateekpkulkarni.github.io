@@ -48,7 +48,7 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 - Working with [Dr. Rashmi N Ugarakhod](https://scholar.google.com/citations?user=vUzJA6MAAAAJ&hl=en) at the Dept. of ECE at my University!
 - The focus is on investigating aspects of autonomous control systems with inherent machine learning frameworks.
 
-Apart from my advisors, I feel fortunate to recieve guidance from [Prof. R Srikanth](https://ppisr.res.in/r-srikanth/), [Prof. R Vasudevan Iyer](https://staff.pes.edu/nm1164/), [Prof. Sumit Kumar Mandal](https://www.csa.iisc.ac.in/~skmandal/) and [Hrishikesh Haritas](https://www.linkedin.com/in/hrishikesh-haritas-58b435228/) amongst others!
+Apart from my advisors, I feel fortunate to recieve guidance from [Prof. R Srikanth](https://ppisr.res.in/r-srikanth/), [Prof. R Vasudevan Iyer](https://staff.pes.edu/nm1164/) and [Prof. Sumit Kumar Mandal](https://www.csa.iisc.ac.in/~skmandal/) amongst others!
 
 
 ## Projects
