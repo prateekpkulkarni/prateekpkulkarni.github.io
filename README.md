@@ -5,7 +5,7 @@
 Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of quantum computing and machine learning. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 
-## About Me
+## About Me 🙋‍♂️
 
 I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards _Signal Processing_ and _Control Systems_, however I also like various aspects of VLSI (on the lines of device physics and the like). I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!)
 
@@ -13,7 +13,7 @@ I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES Univer
 
 This is one of my favorite [Xkcd Comics](https://xkcd.com/1861/)! 
 
-## Research Interests
+## Research Interests ➰📜
 
 My primary research interests lie in the following areas:
 
@@ -25,7 +25,7 @@ My primary research interests lie in the following areas:
 However, often I find myself thinking in analogies and my attention span lasts so long that it is apt to say my _hop count_ tends to infinity! XD
 Usually my research directions span two or multiple of these areas. I believe interdisciplinary research not only reveals several aspects that couldn't be anticipated but also give us new sound foundational understanding of the fields themselves.
 
-## Current Positions
+## Current Positions 📌
 
 ### **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
@@ -130,18 +130,18 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 
 ## Other Interests
 
-### __Writing__
+### __Writing__ ✍🏻📚
 - I am a free-time writer and poet. I have written about a 100 poems, and have a novel in progress.
 - I also have a small collection of short stories. I am hoping to publish them online soon!
 
-### __Basketball__
+### __Basketball__ 🏀
 - I am a huge fan of both spectating and playing basketball. I have played professionally for a while in my high-school days! I still continue to ball when I can! :)
 - Since the time I got into basketball and NBA, I have been a constant supporter of Golden State Warriors! (Go Warriors!)
 
-### __Trekking__
+### __Trekking__ ⛰️
 - I love trekking, off-road cycling. It doesn't fail for once to feel overwhelming and proud to have conquered peaks, and yet realise how minuscule we stand to them!
 
-### __Music__
+### __Music__ 🎧
 - I have a wide variety of interests in music, however I admire Classical music, both Indian and Western. I also produce some music myself when I am not occupied, and I will try to put it up here somewhere as we go! 
 
 ### CV 
