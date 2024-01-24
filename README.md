@@ -148,13 +148,6 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 
 For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1r75BQf0KMmNlmdlMKo9Cx8dku4rOO5sR/view?usp=sharing) 
 
-## Miscellaneous
-
-I was fortunate enough to be able to meet Prof.[Manjul Bhargava](https://en.wikipedia.org/wiki/Manjul_Bhargava) during his visit to India in about early 2019. It truly was a life-changing experience, to be able to meet one of the key inspirations to my research pursuit. Moreover, I was super lucky to be able to present him with a poem I had written for him which Prof. Bhargava had promised me would find its place in his home! (Yay!)
-
-![Me in 2019!](ABP_5218.jpg)
-With Manjul Bhargava! (~Jan. 2019)
-
 ## Contact 📇
 
 Feel free to reach out to me via my [email](pkulkarni2425@gmail.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/psykick05/) for more updates on my journey.
