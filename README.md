@@ -127,7 +127,7 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 - Vivado Design Suite
 - Tanner EDA / Cadence Virtuoso
 - Matlab
-- `\LaTeX`
+- LaTeX (Overleaf etc.)
 - Simulink / QuCS
 - Qiskit / Cirq
 
@@ -147,13 +147,13 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 ### __Music__ 🎧
 - I have a wide variety of interests in music, however I admire Classical music, both Indian and Western. I also produce some music myself when I am not occupied, and I will try to put it up here somewhere as we go! 
 
-### CV 
+### CV ➡️
 
 For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1r75BQf0KMmNlmdlMKo9Cx8dku4rOO5sR/view?usp=sharing) 
 
 ## Contact 📇
 
-Feel free to reach out to me via my [email](pkulkarni2425@gmail.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/psykick05/) for more updates on my journey.
+Feel free to reach out to me via my [✉️](mailto:pkulkarni2425@gmail.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/psykick05/) for more updates on my journey.
 
 
 Thank you for visiting! I look forward to seeing you again here! 
