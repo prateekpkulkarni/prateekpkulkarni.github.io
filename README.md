@@ -60,9 +60,9 @@ Developed a new class of optimization algorithms which shares in philosophy simi
 
 To better understand it, or to get a flavor of it, look at the following illustration. Consider the famous [Brachistochrone Problem](https://mathworld.wolfram.com/BrachistochroneProblem.html). In the figure below, one always ends up choosing the hypotenuse to be the fastest path for the ball -- but Nature has other plans! Due to gravity, there's a path (the curve right below it) that comes out even quicker than the intuitively fastest path. This curve is called the _Brachistochrone_ curve. There's an amazing [Vsauce video](https://youtu.be/skvnj67YGmw?si=mod1PtcM44JJ6Jdg) you could watch on it! So coming back, how can we use this idea to find a cool way to optimize? We start by defining a (currently) ambiguous isomorphic mapping of an input data set in such a way that its configuration might change but it is strictly property-preserving. Then the idea is to fake-induce a gravity field (currently I have no idea how -- we'll get there but yeah), so that among all paths possible there exists a brachistochrone of sorts which will give us the "fastest" solution. This could have implications in several areas of active research! But this is just one of 'em -- mimicking observations of Nature could never be complete in itself. 
 
-![The _Brachistochrone Curve_ Credits: [AUTODESK Instructables](https://www.instructables.com/The-Brachistochrone-Curve/)_](https://content.instructables.com/FHV/8NN2/JYMTK1D4/FHV8NN2JYMTK1D4.jpg)
+![The _Brachistochrone Curve_](OIG1.jpg)
 
-The _Brachistochrone Curve_ (Credits: [AUTODESK Instructables](https://www.instructables.com/The-Brachistochrone-Curve/)). It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
+It's just a thought now and I am just beginning to work on it! Write to me if you're interested!
 
 ###  __RegDyno.Ai__
 
