@@ -2,7 +2,7 @@
 
 ## Overview ☄️
 
-Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of (quantum computing)[https://en.wikipedia.org/wiki/Quantum_computing] and (machine learning)[https://en.wikipedia.org/wiki/Machine_learning]. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
+Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning). This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 
 ## About Me 🙋‍♂️
