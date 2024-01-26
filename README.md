@@ -35,7 +35,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
 - Started Jan. 2024
-- The internship aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
+- The 18-month internship (yes!) aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
 
 
 ### __Research Student__ | _IIT Tirupati_
