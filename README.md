@@ -95,7 +95,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ### **PES University** | Class of '26
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
-  - I am an active part of the Quantum Photonics and Technology lab, the Data Sciences and Applied Machine Learning Special Interest Group!
+  - I am an active part of the Quantum Photonics and Technology lab!
   - I head the Content Team at Research Et Al., the official research-oriented club of the Dept. of CSE.
   - I am also the Technical Mentor of the flagship Quantum Computing Club at my University!
 
