@@ -12,7 +12,8 @@ This is one of my favorite [Xkcd Comics](https://xkcd.com/1861/)!
 
 I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards _Signal Processing_ and _Control Systems_, however I also like various aspects of VLSI (on the lines of device physics and the like). I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!)
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Is it a growing book debt of shame or am I just in massive book credit 📚 <a href="https://t.co/aFspjseyeX">pic.twitter.com/aFspjseyeX</a></p>&mdash; ErrantScience (@ErrantScience) <a href="https://twitter.com/ErrantScience/status/1748314606370488510?ref_src=twsrc%5Etfw">January 19, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Is it a growing book debt of shame or am I just in massive book credit 📚 <a href="https://t.co/aFspjseyeX">pic.twitter.com/aFspjseyeX</a></p>&mdash; ErrantScience (@ErrantScience) <a href="https://twitter.com/ErrantScience/status/1748314606370488510?ref_src=twsrc%5Etfw">January 19, 2024</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
