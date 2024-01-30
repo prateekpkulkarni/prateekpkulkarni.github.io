@@ -1,10 +1,3 @@
-<div style="background-color: #e0e8d4; color: #333; padding: 20px;">
-
-
-
-  
-
-
 # Prateek's Research Hub ⚛
 
 ## Overview ☄️
@@ -163,4 +156,4 @@ Feel free to reach out to me via my [✉️](mailto:pkulkarni2425@gmail.com). Co
 
 Thank you for visiting! I look forward to seeing you again here! 
 
-</div>
+
