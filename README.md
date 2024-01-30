@@ -147,7 +147,7 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 
 ### CV ➡️
 
-For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1r75BQf0KMmNlmdlMKo9Cx8dku4rOO5sR/view?usp=sharing) 
+For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1CRgqbNXDKyutcORnxqSsUmFODHVVZ7Bc/view?usp=sharing).
 
 ## Contact 📇
 
