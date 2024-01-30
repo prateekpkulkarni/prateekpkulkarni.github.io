@@ -88,7 +88,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
 
 ![_5th in the bottom-most row!_](HSC_0957.JPG)
-
+_5th in the bottom-most row!_
   
 ## Education 🎓
 
