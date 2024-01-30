@@ -2,7 +2,7 @@
 
 ## Overview ☄️
 
-Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing) and [machine learning](https://en.wikipedia.org/wiki/Machine_learning). This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
+Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing), [machine learning](https://en.wikipedia.org/wiki/Machine_learning) and [network-on-chip](https://en.wikipedia.org/wiki/Network_on_a_chip) architecture. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 ![xkcd Qc](https://imgs.xkcd.com/comics/quantum.png)
 
@@ -18,7 +18,8 @@ I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES Univer
 My primary research interests lie in the following areas:
 
 - Quantum Computing and Information Theory
-- Machine Learning
+- Hardware for Machine Learning
+- Network-on-Chip
 - Quantum Cryptography
 - Control Systems
 
@@ -87,7 +88,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 
 ### __Present and Future Computing Systems__ | Jan. 2024
 
-- Was one of the ~80 invited/selected [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
+- Was one of the ~80 selected [participants](https://www.csa.iisc.ac.in/~skmandal/data/final_list_of_attendees.pdf) in the [workshop](https://www.csa.iisc.ac.in/~skmandal/Outreach.html) organized by the Dept. of Computer Science and Automation at the Indian Institute of Science. 
 - The workshop included talks on several aspects of computing systems (including but not limited to HPC, Supercomputing, GPUs, Heterogeneous systems), current research forefront and a hands-on demonstration of DIR–V VEGA Processor, India's indigenous microcontroller development board, by the C-DAC.
 
   
