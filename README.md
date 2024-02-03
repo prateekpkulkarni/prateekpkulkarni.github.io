@@ -24,7 +24,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ## Current Positions 📌
 
-### **Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
+### **Quantum/Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
