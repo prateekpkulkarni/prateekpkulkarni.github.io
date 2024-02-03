@@ -28,7 +28,7 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
-- Started Feb. 2024, as a part of the research group led by [Prof. Indu Radhakrishnan](https://www.isfcr.pes.edu/team/indu-radhakrishnan)!
+- Started Feb. 2024, as a part of the __*Cryptography and Blockchain Lab*__ led by [Indu Radhakrishnan](https://www.isfcr.pes.edu/team/indu-radhakrishnan)!
 - The 18-month internship (yes!) aims at rigorous research into the principles of quantum/post-quantum cryptography and developing supporting algorithms and techniques.
 
 
