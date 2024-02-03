@@ -28,6 +28,8 @@ Usually my research directions span two or multiple of these areas. I believe in
 
 ### **Quantum/Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
+![ISFCR](isfcr.jpg)
+
 Was awarded one of the 10 internships at the [Center for Information Security, Forensics and Cyber Resilience](https://www.isfcr.pes.edu/) at my University!
 
 - Started Feb. 2024, as a part of the __*Cryptography and Blockchain Lab*__ led by [Indu Radhakrishnan](https://www.isfcr.pes.edu/team/indu-radhakrishnan)!
