@@ -1,20 +1,22 @@
 # Prateek's Research Hub ⚛
 
-## Overview ☄️
+[Overview](#Overview) | [About Me](#About-Me) | [Research Interests](#Research-Interests) | [Positions](Current-Positions) | [Projects](Projects) | [Publications](Publications) | [Awards](Awards-And-Honors) | [Skills](Skills) | [CV](CV) | [Contact](Contact) 
+
+## Overview
 
 Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing), [machine learning](https://en.wikipedia.org/wiki/Machine_learning) and [network-on-chip](https://en.wikipedia.org/wiki/Network_on_a_chip) architecture. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 
 
 
-## About Me 🙋‍♂️
+## About Me
 
 I am a 2nd-year Electronics Engineering student pursuing my BTech at [PES University](https://pes.edu) with an inclination towards _Signal Processing_ and _Control Systems_, however I also like various aspects of VLSI (on the lines of device physics and the like). I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields. For more on this, please see my projects! I also watch a ton of TV shows, anime and am a voracious book reader (not meaning to boast -- but I have a small collection of about ~4.5k books at my place!) As [ErrantScience](https://twitter.com/ErrantScience/status/1748314606370488510?t=N0H2GWXOGdIq8Rfv0gMmMg&s=19) rightly puts it (XD)!
 
 ![Xkcd](https://imgs.xkcd.com/comics/quantum.png)
 
 One of my favorite [Xkcd Comics](https://xkcd.com/1861)!
-## Research Interests 📑
+## Research Interests 
 
 My primary research interests lie in the following areas:
 
@@ -27,7 +29,7 @@ My primary research interests lie in the following areas:
 However, often I find myself thinking in analogies and my attention span lasts so long that it is apt to say my _hop count_ tends to infinity! XD
 Usually my research directions span two or multiple of these areas. I believe interdisciplinary research not only reveals several aspects that couldn't be anticipated but also give us new sound foundational understanding of the fields themselves.
 
-## Current Positions 📌
+## Current Positions
 
 ### **Quantum/Post-Quantum Cryptography Intern** | _C-ISFCR, PES University_ 
 
@@ -54,7 +56,7 @@ I am fortunate to be working with Prof. S Aravinda at Department of Physics, IIT
 Apart from my advisors, I feel fortunate to recieve guidance from [Prof. R Srikanth](https://ppisr.res.in/r-srikanth/), [Prof. R Vasudevan Iyer](https://staff.pes.edu/nm1164/) and [Prof. Sumit Kumar Mandal](https://www.csa.iisc.ac.in/~skmandal/) amongst others!
 
 
-## Projects 📒
+## Projects 
 
 ###  __Field-Induced Isomorphic Optimization Algorithms__
 
@@ -76,7 +78,7 @@ Co-founded a company that offers a robust predcition model, and aims at reducing
 
 Built a fully functional advanced [scientific calculator](https://github.com/psykick05/MyMath), with high precision using Python, (team of 3) for my first semester Python mini project.
 
-## Publications 📄
+## Publications 
 
 ### Recreational 
 
@@ -86,7 +88,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 2. Investigating Factorial Sums and their Connection with the Laplace Transform
    - This [article](http://dx.doi.org/10.13140/RG.2.2.19396.40329) presents a formula for the sum of first _n_ factorials, and also establishes a closed-form for the sum of consecutive gamma functions.
 
-## Workshops and Conferences 💾
+## Workshops and Conferences 
 
 ### __Present and Future Computing Systems__ | Jan. 2024
 
@@ -96,7 +98,7 @@ Built a fully functional advanced [scientific calculator](https://github.com/psy
 ![_5th in the bottom-most row!_](HSC_0957.JPG)
 _5th in the bottom-most row!_
   
-## Education 🎓
+## Education 
 
 ### **PES University** | Class of '26
   - BTech in [Electronics and Communication Engineering](https://ec.pes.edu)
@@ -109,7 +111,7 @@ _5th in the bottom-most row!_
   - Looking back, I feel blessed to have attended one of the finest schools(During my time at the school, it was ranked in the top 10 day schools in India for a couple of consecutive years)! Not only did KV expose to me to a ton of opportunities but the environment really infused a research-driven enthusiasm. Besides, the vibrant lush-green campus with lots of open space always set an ideal atmosphere to be in!
  
 
-## Awards and Honors 🏆
+## Awards and Honors 
 
 ### __Explain the Concept__ | IISc. 2019
 
@@ -118,7 +120,7 @@ _5th in the bottom-most row!_
 
 I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ result, I strongly intend to pursue a professorship in my future and establish my very own research group!
  
-## Skills 🔑
+## Skills 
 
 ### Languages
 - Python (Proficient)
@@ -153,7 +155,7 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 
 For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1CRgqbNXDKyutcORnxqSsUmFODHVVZ7Bc/view?usp=sharing).
 
-## Contact 📇
+## Contact 
 
 Feel free to reach out to me via my [✉️](mailto:pkulkarni2425@gmail.com). Connect with me on [LinkedIn](https://www.linkedin.com/in/psykick05/) for more updates on my journey.
 
