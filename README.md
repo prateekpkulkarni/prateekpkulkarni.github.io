@@ -1,6 +1,6 @@
 # Prateek's Research Hub ⚛
 
-[Overview](#Overview) | [About Me](#About-Me) | [Research Interests](#Research-Interests) | [Positions](Current-Positions) | [Projects](Projects) | [Publications](Publications) | [Awards](Awards-And-Honors) | [Skills](Skills) | [CV](CV) | [Contact](Contact) 
+[About Me](#About-Me) | [Projects](Projects) | [Publications](Publications) | [Skills](Skills) | [CV](CV) | [Contact](Contact) 
 
 ## Overview
 
