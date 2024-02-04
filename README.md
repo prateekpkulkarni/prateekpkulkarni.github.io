@@ -68,7 +68,7 @@ It's just a thought now and I am just beginning to work on it! Write to me if yo
 
 Co-founded a company that offers a robust predcition model, and aims at reducing noises and errors in a time-series data plot drastically with introduction of a new regression model that uses a custom probability distribution. Currently focused on satellite-relevant data, we are under the process of finishing the framework. The company was pitched as a part of the PESU Venture Labs Any Body Can Create (PVL-ABC) challenge, drawing attention from IP lawyers and investors.
 
-- [Check Back Soon!]
+- For more information on this, feel free to write to me!
 
 ### __MyMath__
 
