@@ -1,4 +1,4 @@
-# Prateek's Research Hub ⚛
+# Prateek's Research Hub
 
 
 ## Overview
