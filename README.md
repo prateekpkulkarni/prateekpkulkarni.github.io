@@ -133,21 +133,21 @@ I have always found teaching to be a very enjoyable pursuit -- and an _obvious_ 
 
 ## Other Interests 
 
-### __Writing__ ✍🏻📚
+### __Writing__ 
 - I am a free-time writer and poet. I have written about a 100 poems, and have a novel in progress.
 - I also have a small collection of short stories. I am hoping to publish them online soon!
 
-### __Basketball__ 🏀
+### __Basketball__ 
 - I am a huge fan of both spectating and playing basketball. I have played professionally for a while in my high-school days! I still continue to ball when I can! :)
 - Since the time I got into basketball and NBA, I have been a constant supporter of Golden State Warriors! (Go Warriors!)
 
-### __Trekking__ ⛰️
+### __Trekking__ 
 - I love trekking, off-road cycling. It doesn't fail for once to feel overwhelming and proud to have conquered peaks, and yet realise how minuscule we stand to them!
 
-### __Music__ 🎧
+### __Music__ 
 - I have a wide variety of interests in music, however I admire Classical music, both Indian and Western. I also produce some music myself when I am not occupied, and I will try to put it up here somewhere as we go! 
 
-### CV ➡️
+### CV 
 
 For more information, or if you would like all this in a compact form, my CV is available [here](https://drive.google.com/file/d/1CRgqbNXDKyutcORnxqSsUmFODHVVZ7Bc/view?usp=sharing).
 
