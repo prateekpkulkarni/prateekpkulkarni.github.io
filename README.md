@@ -6,7 +6,7 @@
 Welcome to my hub! I am a passionate engineering student with a keen interest in the areas of [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing), [machine learning](https://en.wikipedia.org/wiki/Machine_learning) and [network-on-chip](https://en.wikipedia.org/wiki/Network_on_a_chip) architecture. This will serve as a space where I share my thoughts, achievements, research and anything fun/interesting that I come by! You can also find projects that I have worked on earlier, the ones I am currently and my academic positions. Feel free to get in touch/drop an email if you wanna discuss about anything! 
 
 
-![Xkcd](https://imgs.xkcd.com/comics/quantum.png)
+![Logo](IMG-20240207-WA0022.jpg)
 
 ## About Me
 
