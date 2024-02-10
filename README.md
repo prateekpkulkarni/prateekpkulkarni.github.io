@@ -7,6 +7,7 @@ Welcome to my hub! I am a passionate engineering student with a keen interest in
 
 
 ![Logo](IMG-20240207-WA0022.jpg)
+(__Dilbert's Comic Strip!__)
 
 ## About Me
 
