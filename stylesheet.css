@@ -10,12 +10,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  background-image: 
-    linear-gradient(to right, transparent 50%, rgba(23, 114, 208, 0.1) 50%), /* Fading Neural Networks */
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 10%, transparent 40%), /* Electronic Chips */
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 10%, transparent 40%); /* Electronic Chips */
-  background-size: 200px 100%, 80px 80px, 60px 60px;
-  background-position: top left, bottom right, top right;
 }
 
 a {
@@ -33,14 +27,13 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #1772d0;
 }
 
 /* Components */
 .rounded-box {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -50,13 +43,12 @@ h2 {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .papertitle {
   font-size: 18px;
   font-weight: 700;
-  color: #444;
+  color: #1772d0;
   margin-bottom: 10px;
 }
 
