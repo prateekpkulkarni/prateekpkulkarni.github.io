@@ -135,3 +135,10 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.rounded-box {
+  background-color: #ffffff; /* Background color of the box */
+  border-radius: 10px; /* Adjust the value to control the roundness of the edges */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values to control the shadow */
+  padding: 20px; /* Adjust the value to control the inner spacing */
+}
