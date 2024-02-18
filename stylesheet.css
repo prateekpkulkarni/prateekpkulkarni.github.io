@@ -1,6 +1,10 @@
-header {
-  background: linear-gradient(#333, #4678a0);
+body {
+  background: linear-gradient(#333, #603cba);
+  margin: 0; /* Remove default margin for full coverage */
+  padding: 0; /* Remove default padding for full coverage */
+  height: 100vh; /* Ensure full viewport height */
 }
+
 
 
 /* latin-ext */
