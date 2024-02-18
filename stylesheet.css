@@ -1,9 +1,7 @@
 body {
-  background: linear-gradient(#333, #603cba);
-  margin: 0; /* Remove default margin for full coverage */
-  padding: 0; /* Remove default padding for full coverage */
-  height: 100vh; /* Ensure full viewport height */
+  background: linear-gradient(to right, #003366, #45177a, #333333);
 }
+
 
 
 
