@@ -1,5 +1,8 @@
 body {
-  background: linear-gradient(to right, #003366, #45177a, #333333);
+  background: linear-gradient(to bottom, 
+  lightBlue 0%, 
+  periwinkle 75%, 
+  white 100%);
 }
 
 
