@@ -1,15 +1,17 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* Current font family: Lato */
+/* New font family: 'Helvetica Neue', Helvetica, Arial, sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap');
 
 /* General Styles */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Changed font family */
   font-size: 16px;
   line-height: 1.6;
   color: #333;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #ffffff; /* Changed background color to pure white */
 }
 
 a {
@@ -43,23 +45,6 @@ h2 {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.papertitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1772d0;
-  margin-bottom: 10px;
-}
-
-/* Transitions */
-.transition {
-  transition: all 0.3s ease;
-}
-
-/* Utilities */
-.text-center {
-  text-align: center;
 }
 
 /* Responsive */
