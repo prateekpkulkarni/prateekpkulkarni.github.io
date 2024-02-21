@@ -1,10 +1,12 @@
 /* Fonts */
-/* Changed font family to Arial */
-@import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+/* Import Cascadia Code for the name */
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
+/* Import Calibri for the rest of the content */
+@import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
 
 /* General Styles */
 body {
-  font-family: Arial, sans-serif; /* Changed font family to Arial */
+  font-family: Calibri, sans-serif; /* Set Calibri as the default font */
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -39,7 +41,9 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Set font family for the name to Cascadia Code */
 .name {
+  font-family: 'Cascadia Code', monospace;
   font-size: 36px;
   font-weight: 700;
   margin-top: 20px;
