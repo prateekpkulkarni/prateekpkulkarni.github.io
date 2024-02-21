@@ -1,6 +1,8 @@
 /* Fonts */
-/* Import Cascadia Code for the name and "Research" title */
+/* Import Cascadia Code for the name */
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
+/* Import Calibri for the rest of the content */
+@import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
 
 /* General Styles */
 body {
@@ -28,7 +30,6 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
-  font-family: 'Cascadia Code', monospace; /* Set Cascadia Code for "Research" title */
 }
 
 /* Components */
@@ -47,37 +48,6 @@ h2 {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 10px;
-  position: relative; /* Make the position relative */
-}
-
-/* Add subtle black line below the name with fading effect */
-.name::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px; /* Adjust the position as needed */
-  width: 100%;
-  height: 1px; /* Thickness of the line */
-  background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%); /* Fading effect */
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile-picture {
-  flex: 0 0 auto;
-  margin-right: 20px;
-}
-
-.profile-picture img {
-  width: 100px; /* Adjust the width as needed */
-  height: auto;
-}
-
-.profile-name {
-  flex: 1;
 }
 
 .papertitle {
