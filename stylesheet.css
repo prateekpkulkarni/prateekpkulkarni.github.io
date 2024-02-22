@@ -84,3 +84,34 @@ h2 {
     font-size: 28px;
   }
 }
+
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.event-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff; /* Adjust color as needed */
+  margin-right: 20px;
+}
+
+.event-content {
+  flex: 1;
+}
+
+.event h3 {
+  margin-top: 0;
+}
+
+/* Add more styling as needed */
+
