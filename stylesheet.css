@@ -114,4 +114,17 @@ h2 {
 }
 
 /* Add more styling as needed */
-
+/* Add dotted lines */
+.event:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + 10px);
+  left: calc(100% - 10px);
+  width: 50px;
+  height: 2px;
+  background-color: #007bff; /* Adjust color as needed */
+  border-radius: 1px;
+  border-top: 1px dotted #007bff; /* Adjust color as needed */
+  border-bottom: 1px dotted #007bff; /* Adjust color as needed */
+  z-index: -1;
+}
