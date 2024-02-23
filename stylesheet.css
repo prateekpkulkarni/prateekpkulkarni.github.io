@@ -73,7 +73,52 @@ section p {
 }
 
 .profile-pic img {
-    width: 150px;
+    width: 85px; /* Adjust size as needed */
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.position {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.position-dot {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #1772d0; /* Change color as needed */
+}
+
+.position-content {
+    margin-left: 30px;
+}
+
+.position-title {
+    font-weight: bold;
+}
+
+.position-info {
+    font-size: 16px;
+}
+
+.position-dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff; /* Change color as needed */
 }
