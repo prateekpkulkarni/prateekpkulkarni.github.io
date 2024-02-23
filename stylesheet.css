@@ -129,3 +129,32 @@ section p {
     border-radius: 50%;
     background-color: #fff; /* Change color as needed */
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f3f3f3;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    margin-left: 220px; /* Adjust to match sidebar width + margin */
+    padding: 20px;
+}
+
