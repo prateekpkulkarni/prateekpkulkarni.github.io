@@ -73,7 +73,7 @@ section p {
 }
 
 .profile-pic img {
-    width: 100px; /* Adjust size as needed */
+    width: 115px; /* Adjust size as needed */
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -99,18 +99,6 @@ section p {
     background-color: #1772d0; /* Change color as needed */
 }
 
-.position-content {
-    margin-left: 30px;
-}
-
-.position-title {
-    font-weight: bold;
-}
-
-.position-info {
-    font-size: 16px;
-}
-
 .position-dot::before {
     content: "";
     position: absolute;
@@ -121,4 +109,28 @@ section p {
     height: 6px;
     border-radius: 50%;
     background-color: #fff; /* Change color as needed */
+}
+
+.position-dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc; /* Change color as needed */
+    z-index: -1;
+}
+
+.position-content {
+    margin-left: 30px;
+}
+
+.position-title {
+    font-weight: bold;
+}
+
+.position-info {
+    font-size: 16px;
 }
