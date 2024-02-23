@@ -5,9 +5,10 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Change to Roboto font */
     background-color: #fff;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -68,6 +69,11 @@ section h2 {
 
 section p {
     font-size: 18px;
-    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 150px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
