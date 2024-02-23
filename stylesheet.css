@@ -1,130 +1,13 @@
-/* Fonts */
-/* Import Cascadia Code for the name and "Research" title */
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
 
-/* General Styles */
-body {
-  font-family: Calibri, sans-serif; /* Set Calibri as the default font */
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #fffff0; /* Changed background color to ivory white */
-}
+body { font-family: Calibri, sans-serif; font-size: 18px; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fffff0; }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+a { color: #1772d0; text-decoration: none; transition: color 0.3s ease; }
 
-a:hover,
-a:focus {
-  color: #f09228;
-}
+a:hover, a:focus { color: #f09228; }
 
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-family: 'Cascadia Code', monospace; /* Set Cascadia Code for "Research" title */
-}
+h1, h2 { font-family: 'Cascadia Code', monospace; font-weight: 700; margin-bottom: 20px; }
 
-/* Components */
-.rounded-box {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
+h1 { font-size: 36px; margin-top: 20px; position: relative; }
 
-/* Set font family for the name to Cascadia Code */
-.name {
-  font-family: 'Cascadia Code', monospace;
-  font-size: 36px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px; /* Added space after the horizontal line */
-  position: relative; /* Make the position relative */
-}
-
-/* Add subtle black line below the name with fading effect */
-.name::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px; /* Adjust the position as needed */
-  width: 100%;
-  height: 1px; /* Thickness of the line */
-  background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%); /* Fading effect */
-}
-
-.papertitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1772d0;
-  margin-bottom: 10px;
-}
-
-/* Transitions */
-.transition {
-  transition: all 0.3s ease;
-}
-
-/* Utilities */
-.text-center {
-  text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .name {
-    font-size: 28px;
-  }
-}
-
-.timeline {
-  position: relative;
-  width: 80%;
-  margin: 50px auto;
-}
-
-.event {
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.event-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #007bff; /* Adjust color as needed */
-  margin-right: 20px;
-}
-
-.event-content {
-  flex: 1;
-}
-
-.event h3 {
-  margin-top: 0;
-}
-
-/* Add more styling as needed */
-/* Add dotted lines */
-.event:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: calc(50% + 10px);
-  left: calc(100% - 10px);
-  width: 50px;
-  height: 2px;
-  background-color: #007bff; /* Adjust color as needed */
-  border-radius: 1px;
-  border-top: 1px dotted #007bff; /* Adjust color as needed */
-  border-bottom: 1px dotted #007bff; /* Adjust color as needed */
-  z-index: -1;
-}
+h1::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%
