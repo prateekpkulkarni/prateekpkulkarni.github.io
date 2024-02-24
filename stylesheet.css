@@ -119,3 +119,18 @@ section p {
 .position-info {
     font-size: 16px;
 }
+
+/* Reduce spacing between sections */
+section {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Optionally, you can remove margins and padding from specific elements */
+section:last-child {
+  margin-bottom: 0; /* Remove margin from the last section */
+}
+
+/* Adjust padding if needed */
+.container {
+  padding: 20px; /* Adjust as needed */
+}
