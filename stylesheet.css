@@ -47,7 +47,9 @@ nav ul li a {
     font-weight: bold; /* Bold text */
 }
 
+
 .main .content {
+    margin-left: 240px;
     padding: 20px;
 }
 
