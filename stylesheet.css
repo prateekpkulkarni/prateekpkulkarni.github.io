@@ -81,18 +81,6 @@ section h2 {
 .timeline {
     padding: 20px 0;
 }
-
-.position-dot {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #f09228; /* Orange dot */
-}
-
-.position-content {
-    margin-left: 50px; /* Increase left margin */
-}
-
 .position-title {
     font-weight: bold;
     font-size: 20px; /* Reduce font size */
@@ -131,6 +119,53 @@ section {
     color: #f09228; /* Orange link color */
 }
 
+.position {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex; /* Add flex display */
+    align-items: center; /* Vertically center items */
+}
+
+.position-dot {
+    position: absolute;
+    left: -20px; /* Adjust position to the left */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px; /* Increase width */
+    height: 25px; /* Increase height */
+    border-radius: 50%;
+    background-color: #f09228; /* Orange dot */
+}
+
+.position-content {
+    margin-left: 30px;
+}
+
+
 #contact a:hover {
     color: #fff; /* White color on hover */
 }
+
+#affiliated-institutes {
+    background-color: #001f3f; /* Dark blue background */
+    padding: 50px 0;
+}
+
+#affiliated-institutes h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fff; /* White text color */
+}
+
+.affiliated-logos {
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.affiliated-logos img {
+    width: 150px; /* Set width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Add margin between logos */
+}
+
