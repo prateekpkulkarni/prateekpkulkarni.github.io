@@ -121,9 +121,9 @@ section {
 }
 
 .contact-logos img {
-    width: 50px; /* Set width of logos */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 20px; /* Add margin between logos */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height */
+    margin-right: 20px; /* Add some margin between logos */
 }
 
 #contact p {
