@@ -1,188 +1,87 @@
-/* Reset styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Arial', sans-serif; /* Change to Arial font */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    line-height: 1.6;
-    font-size: 18px; /* Increase font size for the entire body */
+	margin:0;
+	padding:25px;
+	font-family: "times new roman", times;
+	color:#333;
+	background-color:#FFF;
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+h1 {
+	margin-top: 0;
+padding-bottom: 0.1em;
+	font-weight:800;
+color: #1144bb;
+font-size: 2em;
 }
 
-header {
-    background-color: #000; /* Dark blue header */
-    color: #fff;
-    padding: 20px 0;
+h2 {
+	margin: 0 0 15 0;
+	padding:0;
+	font-size: 1.2em;
+	font-weight:600;
+	color: #881133;
 }
 
-.logo h1 {
-    font-size: 24px;
-    color: #fff; /* White text color */
+h3 {
+	margin: 0 0 15 0;
+	padding:0;
+	font-size: 1em;
+	font-weight:600;
+	color: #881133;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.bread { text-align: justify;
+  border-width: 1px;
+  width: 680px;
+  margin-top: 5px;
 }
 
-.logo img {
-    width: 50px;
-    margin-right: 10px;
+.bread::after {
+content: " |"
 }
 
-.logo h1 {
-    font-size: 24px;
+.labellist > li{
+  margin-bottom: 0.5em;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+.label {
+	background-color: #eee;
+	color: #000;
+	padding: 4px;
+	font-family: Helvetica;
+	font-size: 0.8em;
+	border-radius: 6px;
 }
 
-nav ul li {
-    margin: 0 15px; /* Increase margin */
+.note {
+	color: #881133;
+	font-size: 0.9em;
+	font-family: Helvetica;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff; /* White text color */
-    transition: color 0.3s ease;
+.note a {
+	font-weight:500;
 }
 
-nav ul li a:hover {
-    color: #f09228; /* Orange on hover */
+#leftcol{
+  float: left;
+	width: 25%;
+	}
+
+#rightcol{
+	float: left;
+	padding-left: 2%;
+	width: 73%;
+	padding-bottom: 2%;
+	}
+
+
+a {
+	color: #09C;
+	text-decoration:none;
+	font-weight:600;
 }
 
-section {
-    padding: 50px 0;
-}
-
-section h2 {
-    font-size: 28px; /* Increase font size for section headings */
-    margin-bottom: 30px; /* Increase bottom margin */
-}
-
-.profile-pic img {
-    width: 150px; /* Increase profile picture size */
-    height: 150px;
-    border-radius: 50%; /* Circular profile picture */
-    margin-right: 30px; /* Increase margin */
-}
-
-.bio {
-    overflow: hidden; /* Clear the float */
-}
-
-.timeline {
-    padding: 20px 0;
-}
-.position-title {
-    font-weight: bold;
-    font-size: 20px; /* Reduce font size */
-    margin-bottom: 10px; /* Reduce bottom margin */
-}
-
-.position-info {
-    font-size: 18px; /* Increase font size */
-    line-height: 1.4;
-}
-
-/* Reduce spacing between sections */
-section {
-    margin-bottom: 30px;
-}
-
-/* Styling for contact section */
-#contact {
-    background-color: #000; /* Dark blue background */
-    padding: 50px 0;
-}
-
-#contact h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #fff; /* White text color */
-}
-
-#contact p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #fff; /* White text color */
-}
-
-#contact a {
-    color: #f09228; /* Orange link color */
-}
-
-.position {
-    position: relative;
-    margin-bottom: 40px;
-    display: flex; /* Add flex display */
-    align-items: center; /* Vertically center items */
-}
-
-.position-dot {
-    position: absolute;
-    left: -20px; /* Adjust position to the left */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px; /* Increase width */
-    height: 25px; /* Increase height */
-    border-radius: 50%;
-    background-color: #f09228; /* Orange dot */
-}
-
-.position-content {
-    margin-left: 30px;
-}
-
-
-#contact a:hover {
-    color: #fff; /* White color on hover */
-}
-
-#affiliated-institutes {
-    background-color: #000; /* Dark blue background */
-    padding: 50px 0;
-}
-
-#affiliated-institutes h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #fff; /* White text color */
-}
-
-.affiliated-logos {
-    display: flex; /* Use flexbox */
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: center; /* Center items vertically */
-}
-
-.affiliated-logos img {
-    width: 150px; /* Set width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 20px; /* Add margin between logos */
-}
-
-
-/* Increase font size for the "About Me" section */
-#about p {
-    font-size: 20px;
-}
-
-/* Increase font size for the "Research" section */
-#research p {
-    font-size: 20px;
-}
-
+a:link { color: #4477bb; }
+a:visited {color: #07C; }
+a:hover { background-color: #EEE; }
