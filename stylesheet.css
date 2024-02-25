@@ -5,8 +5,8 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Change to Roboto font */
-    background-color: #fff;
+    font-family: 'Arial', sans-serif; /* Change to Arial font */
+    background-color: #f5f5f5; /* Light gray background */
     color: #333;
     line-height: 1.6;
 }
@@ -19,23 +19,13 @@ body {
 }
 
 header {
-    background-color: #000;
+    background-color: #001f3f; /* Dark blue header */
     color: #fff;
     padding: 20px 0;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    margin-right: 10px;
-}
-
 .logo h1 {
-    font-size: 24px;
+    font-size: 28px; /* Increase font size for professor's name */
 }
 
 nav ul {
@@ -45,17 +35,17 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px; /* Increase margin */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #333; /* Dark text color */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f09228;
+    color: #f09228; /* Orange on hover */
 }
 
 section {
@@ -63,74 +53,48 @@ section {
 }
 
 section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Increase font size for section headings */
+    margin-bottom: 30px; /* Increase bottom margin */
 }
-
-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 
 .profile-pic img {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    float: left; /* Float the image to the left */
-    margin-right: 20px; /* Add some margin to the right for spacing */
+    width: 200px; /* Increase profile picture size */
+    height: 200px;
+    border-radius: 50%; /* Circular profile picture */
+    margin-right: 30px; /* Increase margin */
 }
 
 .bio {
     overflow: hidden; /* Clear the float */
 }
 
-
 .timeline {
-    position: relative;
     padding: 20px 0;
 }
 
-.position {
-    position: relative;
-    margin-bottom: 40px;
-}
-
 .position-dot {
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: #1772d0; /* Change color as needed */
+    background-color: #1772d0; /* Dark blue dot */
 }
-
 
 .position-content {
-    margin-left: 30px;
+    margin-left: 50px; /* Increase left margin */
 }
 
 .position-title {
     font-weight: bold;
+    font-size: 20px; /* Reduce font size */
+    margin-bottom: 10px; /* Reduce bottom margin */
 }
 
 .position-info {
-    font-size: 16px;
+    font-size: 18px; /* Increase font size */
+    line-height: 1.4;
 }
 
 /* Reduce spacing between sections */
 section {
-  margin-bottom: 20px; /* Adjust as needed */
-}
-
-/* Optionally, you can remove margins and padding from specific elements */
-section:last-child {
-  margin-bottom: 0; /* Remove margin from the last section */
-}
-
-/* Adjust padding if needed */
-.container {
-  padding: 20px; /* Adjust as needed */
+    margin-bottom: 30px;
 }
