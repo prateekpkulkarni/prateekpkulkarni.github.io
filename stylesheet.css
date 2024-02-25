@@ -19,9 +19,14 @@ body {
 }
 
 header {
-    background-color: #000; /* Black header */
+    background-color: #001f3f; /* Dark blue header */
     color: #fff;
     padding: 20px 0;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff; /* White text color */
 }
 
 .logo {
@@ -107,6 +112,18 @@ section {
     font-size: 28px;
     margin-bottom: 30px;
     color: #fff; /* White text color */
+}
+
+.contact-logos {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.contact-logos img {
+    width: 50px; /* Set width of logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Add margin between logos */
 }
 
 #contact p {
