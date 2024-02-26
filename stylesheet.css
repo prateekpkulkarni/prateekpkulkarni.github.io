@@ -36,10 +36,9 @@ h3 {
   margin-top: 5px;
 }
 
-.bread::after {
-content: " |"
+.bread:not(:last-child)::after {
+    content: " |";
 }
-
 .labellist > li{
   margin-bottom: 0.5em;
 }
