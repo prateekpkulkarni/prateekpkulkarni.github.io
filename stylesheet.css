@@ -85,3 +85,7 @@ a {
 a:link { color: #4477bb; }
 a:visited {color: #07C; }
 a:hover { background-color: #EEE; }
+
+#rightcol .bread:last-child {
+    border-right: none; /* Remove border for the last link */
+}
