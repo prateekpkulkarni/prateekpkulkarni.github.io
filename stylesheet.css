@@ -101,3 +101,7 @@ a:hover { background-color: #EEE; }
 #mode-toggle:hover {
   background-color: #0056b3;
 }
+.dark-mode body {
+  background-color: #333; /* Dark mode background color */
+  color: #f4f4f4; /* Dark mode text color */
+}
