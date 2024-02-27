@@ -88,3 +88,16 @@ a:hover { background-color: #EEE; }
 #rightcol .bread:last-child {
     border-right: none; /* Remove border for the last link */
 }
+
+#mode-toggle {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mode-toggle:hover {
+  background-color: #0056b3;
+}
