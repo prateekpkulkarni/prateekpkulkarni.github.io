@@ -149,3 +149,10 @@ button:hover {
   color: #f4f4f4; /* Dark mode text color */
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .name {
+    font-size: 36px; /* Adjusted font size for smaller screens */
+  }
+}
+
