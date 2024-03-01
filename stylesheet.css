@@ -7,7 +7,7 @@ body {
 	/*background-color:#FFF;*/
 	background-image: url('repeating-triangles.png'); 
  	background-repeat: no-repeat;
-  	background-size: cover; /* or 'contain' depending on how you want the image to fit */
+  	background-size: cover;
   	background-position: center center;
 }
 
