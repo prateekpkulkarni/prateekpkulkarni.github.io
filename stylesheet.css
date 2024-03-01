@@ -171,3 +171,21 @@ button:hover {
     line-height: 1.6;
 }
 
+.contact-info {
+    font-size: 16px;
+}
+
+.email-link {
+    position: relative;
+}
+
+.arrow-box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 100%, 20% 80%, 0% 80%);
+    right: -25px; /* Adjust this value to position the arrow box */
+    top: 2px; /* Adjust this value to align the arrow box vertically */
+}
+
