@@ -116,37 +116,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Email animation */
-#email-button {
-  position: relative;
-}
-
-#email-button:hover::after {
-  content: '\2709'; /* Unicode for envelope icon */
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-  animation: bounce 0.5s linear;
-}
-
-@keyframes bounce {
-  0% { transform: translate(-50%, -50%) scale(1); }
-  25% { transform: translate(-50%, -50%) scale(1.1); }
-  50% { transform: translate(-50%, -50%) scale(0.9); }
-  75% { transform: translate(-50%, -50%) scale(1.1); }
-  100% { transform: translate(-50%, -50%) scale(1); }
-}
-.dark-mode body {
-  background-color: #333; /* Dark mode background color */
-  color: #f4f4f4; /* Dark mode text color */
-}
-
-
 .container {
     display: flex;
 }
