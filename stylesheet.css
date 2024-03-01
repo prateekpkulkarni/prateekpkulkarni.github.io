@@ -5,7 +5,7 @@ body {
 	font-family: "times new roman", times;
 	color:#333;
 	/*background-color:#FFF;*/
-	background-image: url('pattern-randomized(1).png'); /* Replace 'your-custom-background.svg' with the path to your SVG file */
+	background-image: url('repeating-triangles.png'); /* Replace 'your-custom-background.svg' with the path to your SVG file */
  	background-repeat: no-repeat;
   	background-size: cover; /* or 'contain' depending on how you want the image to fit */
   	background-position: center center;
