@@ -2,7 +2,9 @@
 body {
 	margin:0;
 	padding:25px;
-	font-family: "times new roman", times;
+	font-family:Cabin;
+	font-style:normal;
+	/*font-family: "times new roman", times;*/
 	color:#333;
 	/*background-color:#FFF;*/
 	background-image: url('pattern-randomized(1).png'); 
