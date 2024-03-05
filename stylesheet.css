@@ -161,3 +161,7 @@ button {
     top: 2px; /* Adjust this value to align the arrow box vertically */
 }
 
+.rounded-image {
+    border-radius: 22px; /* Adjust the value to change the roundness */
+    overflow: hidden; /* This ensures that the image corners are clipped */
+  }
