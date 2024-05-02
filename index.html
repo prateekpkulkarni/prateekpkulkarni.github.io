@@ -10,16 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        /* Custom CSS styles */
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        .nav-tabs {
+            justify-content: center; /* Center-align the nav tabs */
+        }
+    </style>
     <link rel="icon" href="isfcr.png">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4" style="background-color: #f8f9fa;"> <!-- Light gray background color -->
                 <div class="imagecontainer">
                     <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
                 </div>
+                <br><br>
                 <h2>Contact Information</h2>
                 <p>
                     Photonics and Quantum Technology Lab, <br>
@@ -27,7 +38,7 @@
                     PES University, Bengaluru, India <br><br>
 
                     <i>Personal Mail: pkulkarni2425 [at] gmail [dot] com</i> <br>
-                    <i>Work Mail: pes1202202409 [at] pesu [dot] pes [dot] edu</i> <br><br>
+                    <i>Work: pes1202202409 [at] pesu [dot] pes [dot] edu</i> <br><br>
                 </p>
                 <img src="center_logo.png" class="img-fluid" alt="Center Logo">
             </div>
@@ -39,10 +50,12 @@
                 </p>
                 <hr>
                 <nav>
-                    <a href="#res">Research</a> |
-                    <a href="#pos">Current Positions</a> |
-                    <a href="cv2024_mar_ppk.pdf">CV</a> |
-                    <a href="#new">News</a>
+                    <ul class="nav nav-tabs"> <!-- Added nav-tabs class -->
+                        <li class="nav-item"><a href="#res" class="nav-link">Research</a></li>
+                        <li class="nav-item"><a href="#pos" class="nav-link">Current Positions</a></li>
+                        <li class="nav-item"><a href="cv2024_mar_ppk.pdf" class="nav-link">CV</a></li>
+                        <li class="nav-item"><a href="#new" class="nav-link">News</a></li>
+                    </ul>
                 </nav>
                 <h2 id="res">Research</h2>
                 <ul>
