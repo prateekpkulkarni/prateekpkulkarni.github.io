@@ -15,6 +15,7 @@
             background-color: #f8f9fa; /* Light gray background color */
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a mix of Helvetica and Arial */
             line-height: 1.6; /* Improved line spacing for readability */
+            color: #333; /* Dark text color */
         }
 
         .nav-tabs {
@@ -52,10 +53,45 @@
 
         .col-sm-4 {
             padding: 20px; /* Added padding for better content separation */
+            background-color: #fff; /* White background for better contrast */
+            border-radius: 10px; /* Rounded corners for a modern look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
         .col-sm-8 {
             padding: 20px; /* Added padding for better content separation */
+            background-color: #fff; /* White background for better contrast */
+            border-radius: 10px; /* Rounded corners for a modern look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .nav-tabs .nav-link {
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        .imagecontainer img {
+            border-radius: 50%; /* Circular border for profile image */
+            max-width: 150px; /* Limit profile image size */
+            border: 4px solid #fff; /* White border around the image */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+
+        .imagecontainer img:hover {
+            transform: scale(1.1); /* Enlarge image on hover */
+        }
+
+        .text-muted {
+            color: #777; /* Light gray color for muted text */
+        }
+
+        hr {
+            border-top: 2px solid #ddd; /* Light gray border for HR */
+        }
+
+        @media (max-width: 767px) {
+            .imagecontainer img {
+                max-width: 120px; /* Adjusted size for smaller screens */
+            }
         }
     </style>
     <link rel="icon" href="isfcr.png">
@@ -64,8 +100,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4" style="background-color: #f8f9fa;"> <!-- Light gray background color -->
-                <div class="imagecontainer">
+            <div class="col-sm-4"> <!-- Light gray background color -->
+                <div class="imagecontainer text-center">
                     <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
                 </div>
                 <br><br>
