@@ -13,7 +13,7 @@
         /* Custom CSS styles */
         body {
             background-color: #f8f9fa; /* Light gray background color */
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a mix of Helvetica and Arial */
+            font-family: "Roboto", sans-serif; /* Professional font */
             line-height: 1.6; /* Improved line spacing for readability */
             color: #333; /* Dark text color */
         }
@@ -92,15 +92,56 @@
             .imagecontainer img {
                 max-width: 120px; /* Adjusted size for smaller screens */
             }
+
+            .col-sm-4 .text-center {
+                margin-bottom: 10px; /* Reduce margin for name */
+            }
+
+            .col-sm-4 .text-center h1 {
+                margin-top: 0; /* Remove top margin for name */
+            }
+
+            .col-sm-4 .text-center h3 {
+                margin-bottom: 0; /* Remove bottom margin for subtitle */
+            }
+        }
+
+        /* Custom Enhancements */
+        .header-parallax {
+            background-image: url('header_background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 500px;
+            text-align: center;
+            padding-top: 100px;
+            color: #fff;
+        }
+
+        .parallax-text {
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .background-pattern {
+            background-image: url('background_pattern.png');
+            background-repeat: repeat;
+            padding: 30px;
+            border-radius: 10px;
         }
     </style>
     <link rel="icon" href="isfcr.png">
 </head>
 
 <body>
+    <div class="header-parallax">
+        <h1 class="parallax-text">Prat K.</h1>
+    </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-4"> <!-- Left column -->
+            <!-- Left column -->
+            <div class="col-sm-4">
                 <div class="imagecontainer text-center">
                     <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
                 </div>
@@ -122,20 +163,20 @@
                     <img src="center_logo.png" class="img-fluid" alt="Center Logo">
                 </div>
             </div>
-            <div class="col-sm-8"> <!-- Right column -->
-                <h1 class="text-center">Prateek P Kulkarni</h1>
-                <hr>
+
+            <!-- Right column -->
+            <div class="col-sm-8">
                 <nav>
                     <ul class="nav nav-tabs"> <!-- Added nav-tabs class -->
                         <li class="nav-item"><a href="#res" class="nav-link">Research</a></li>
                         <li class="nav-item"><a href="#pos" class="nav-link">Current Positions</a></li>
-                        <li class="nav-item"><a href="cv2024_apr_ppk.pdf" class="nav-link">CV</a></li>
+                        <li class="nav-item"><a href="cv2024_mar_ppk.pdf" class="nav-link">CV</a></li>
                         <li class="nav-item"><a href="#new" class="nav-link">News</a></li>
                     </ul>
                 </nav>
                 <h2 id="res">Research</h2>
                 <ul>
-                    <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in combinatorics on words and cryptography. However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
+                    <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in combinatorics on words and cryptography.<br> However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
                 </ul> <br><br>
                 <h2 id="pos">Current Positions</h2>
                 <ul>
@@ -148,14 +189,16 @@
                     <li><span class="label"><font color="blue">Feb. 2024</font></span> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</li>
                     <li><span class="label"><font color="blue">Jan. 2024</font></span> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</li>
                 </ul>
-                <hr>
+            </div>
+        </div>
+    </div>
+
+    <hr>
                 <small class="text-muted text-center">
                     <img src="qccomic.jpg" alt="Comic Strip" style="max-width: 100%;">
                     Source: <a href="https://dilbert.com/"> Dilbert.com</a>
                 </small>            
             </div>
-        </div>
-    </div>
 </body>
 
 </html>
