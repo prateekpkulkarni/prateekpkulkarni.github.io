@@ -94,6 +94,44 @@
                 max-width: 120px; /* Adjusted size for smaller screens */
             }
         }
+
+        /* Dark theme styles */
+        .dark-theme body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-theme h1,
+        .dark-theme h2,
+        .dark-theme h3 {
+            color: #bbbbbb; /* Lighter text color */
+        }
+
+        .dark-theme .nav-tabs .nav-link {
+            color: #bbbbbb; /* Lighter nav link color */
+        }
+
+        .dark-theme .nav-tabs .nav-link:hover {
+            color: #dddddd; /* Lighter hover color */
+        }
+
+        .dark-theme .col-sm-4,
+        .dark-theme .col-sm-8 {
+            background-color: #1e1e1e; /* Darker background for content */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+        }
+
+        .dark-theme .label {
+            color: #bbbbbb; /* Lighter label color */
+        }
+
+        .dark-theme .text-muted {
+            color: #aaaaaa; /* Lighter muted text color */
+        }
+
+        .dark-theme hr {
+            border-top: 2px solid #555; /* Darker border for HR */
+        }
     </style>
     <link rel="icon" href="isfcr.png">
 </head>
@@ -125,6 +163,9 @@
             </div>
             <div class="col-sm-8"> <!-- Right column -->
                 <h1 class="text-center">Prateek P Kulkarni</h1>
+                <div class="text-center">
+                    <button id="theme-toggle" class="btn btn-primary">Toggle Dark Theme</button>
+                </div>
                 <hr>
                 <nav>
                     <ul class="nav nav-tabs"> <!-- Added nav-tabs class -->
@@ -171,6 +212,11 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark-theme');
+        });
+    </script>
 </body>
 
 </html>
