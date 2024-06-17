@@ -11,87 +11,108 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gill+Sans+MT:wght@400;700&display=swap">
     <style>
-        /* Custom CSS styles */
         body {
-            background-color: #f5f5f5; /* Light gray background color */
+            background-color: #f8f9fa; /* Light gray background color */
             font-family: 'Gill Sans MT', sans-serif; /* Use Gill Sans MT font */
+            line-height: 1.6; /* Improved line spacing for readability */
             color: #333; /* Dark text color */
             margin: 0;
             padding: 0;
         }
 
         .container {
-            margin-top: 50px; /* Add space from the top */
-            max-width: 900px;
+            margin-top: 50px;
+            max-width: 1200px;
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3 {
-            color: #333; /* Dark color for headings */
-            font-weight: 700; /* Bold font weight */
-            text-align: center; /* Center align headings */
+        .header, .content, .footer {
+            margin-bottom: 30px;
         }
 
-        .nav-link {
-            color: #555; /* Gray color for nav links */
-            font-weight: bold; /* Bold font for nav links */
-            text-transform: uppercase; /* Uppercase text for nav links */
-            padding: 10px 15px; /* Add padding for spacing */
+        .header img {
+            border-radius: 50%;
+            max-width: 150px;
+            border: 4px solid #ffffff;
+            transition: transform 0.3s ease;
         }
 
-        .nav-link:hover {
-            color: #000; /* Darker color on hover */
+        .header img:hover {
+            transform: scale(1.1);
         }
 
-        .label {
-            color: #555; /* Gray color for labels */
-            font-weight: 700; /* Bold font weight */
+        .header h1 {
+            font-size: 2.5em;
+            color: #8C1515; /* Stanford red color */
+            font-weight: 700;
         }
 
-        p {
-            font-size: 16px; /* Slightly larger font size for paragraphs */
-            margin-bottom: 20px; /* Improved spacing below paragraphs */
-            text-align: justify; /* Justify text for better readability */
+        .header p {
+            font-size: 1.2em;
+            text-align: center;
         }
 
-        .col-sm-4, .col-sm-8 {
-            padding: 20px; /* Added padding for better content separation */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
         }
 
-        .imagecontainer img {
-            border-radius: 50%; /* Circular border for profile image */
-            max-width: 150px; /* Limit profile image size */
-            border: 4px solid #fff; /* White border around the image */
-            transition: transform 0.3s ease; /* Smooth transform on hover */
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
         }
 
-        .imagecontainer img:hover {
-            transform: scale(1.1); /* Enlarge image on hover */
+        nav ul li a {
+            text-decoration: none;
+            color: #8C1515;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        .text-muted {
-            color: #777; /* Light gray color for muted text */
-        }
-
-        hr {
-            border-top: 2px solid #ddd; /* Light gray border for HR */
-            margin: 20px 0; /* Space above and below HR */
+        nav ul li a:hover {
+            color: #5E0D0D;
         }
 
         .section-title {
-            color: #333;
+            color: #8C1515;
             font-weight: 700;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 2px solid #8C1515;
             padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
             margin-bottom: 20px;
         }
 
+        .footer img {
+            max-width: 100%;
+        }
+
+        .footer small {
+            display: block;
+            text-align: center;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .footer small a {
+            color: #333;
+        }
+
         @media (max-width: 767px) {
-            .imagecontainer img {
-                max-width: 120px; /* Adjusted size for smaller screens */
+            .header img {
+                max-width: 120px;
             }
         }
 
@@ -103,104 +124,62 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
     </style>
     <link rel="icon" href="isfcr.png">
 </head>
 
 <body>
     <div class="container fade-in">
-        <div class="row">
-            <!-- Left column -->
-            <div class="col-sm-4 text-center">
-                <div class="imagecontainer">
-                    <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
-                </div>
-                <br>
-                <h3>I like designing architectures for quantum computers</h3>
-                <p>
-                    I am a 2nd-year engineering student majoring in Electronics at PES University. I love to work on anything that has the words "quantum" and "machine learning" in them -- I really am a chaotic researcher in that respect. I like to work on a wide range of topics and usually I like to find naive intersections of well-established fields.
-                </p>
-                <hr>
-                <h2>Office</h2>
-                <p>
-                    Photonics and Quantum Technology Lab, <br>
-                    B501, BE Block <br>
-                    PES University, Bengaluru, India <br><br>
-                    pkulkarni2425 [at] gmail [dot] com <br>
-                </p>
-                <div>
-                    <img src="center_logo.png" class="img-fluid" alt="Center Logo">
-                </div>
-            </div>
-            <!-- Right column -->
-            <div class="col-sm-8">
-                <h1>Prateek P Kulkarni</h1>
-                <hr>
-                <nav>
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"><a href="#res" class="nav-link active">Research</a></li>
-                        <li class="nav-item"><a href="#pos" class="nav-link">Current Positions</a></li>
-                        <li class="nav-item"><a href="cv2024_apr_ppk.pdf" class="nav-link">CV</a></li>
-                        <li class="nav-item"><a href="#new" class="nav-link">News</a></li>
-                    </ul>
-                </nav>
-                <div class="section-title" id="res">Research</div>
+        <div class="header text-center">
+            <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
+            <h1>Prateek P Kulkarni</h1>
+            <p>I like designing architectures for quantum computers</p>
+        </div>
+        <nav>
+            <ul class="nav">
+                <li><a href="#res">Research</a></li>
+                <li><a href="#pos">Current Positions</a></li>
+                <li><a href="cv2024_apr_ppk.pdf">CV</a></li>
+                <li><a href="#new">News</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div id="res">
+                <div class="section-title">Research</div>
                 <ul>
                     <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in combinatorics on words and cryptography. However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
                 </ul> 
-                <br><br>
-                <div class="section-title" id="pos">Current Positions</div>
+            </div>
+            <div id="pos">
+                <div class="section-title">Current Positions</div>
                 <ul>
-                    <li><b>Research Assistant</b>, Jun. 2024- <br> Joining the Photonics & Quantum Technology Lab at PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>! The work will entail quantum machine learning and possible applications elsewhere. </li>
-                    <br><br>
+                    <li><b>Research Assistant</b>, Jun. 2024- <br> Joining the Photonics & Quantum Technology Lab at PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>! The work will entail quantum machine learning and possible applications elsewhere.</li>
                     <li><b>Visiting Research Student</b>, Mar. 2024- <br> Part of the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal/">Prof. Sumit Kumar Mandal</a>, exploring the aspects of quantum interconnects.</li>
-                    <br><br>
                     <li><b>Long-Term Research Intern</b>, Jan. 2024- <br> At the Center for Information Security, Forensics and Cyber Resilience <a href="https://www.isfcr.pes.edu/">(ISFCR)</a>, PES University. Part of the Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.</li>
-                    <br>
-                    <span class="label"><font color="blue">[Upcoming]</font></span><b> Extra</b>: Additionally, I am also starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>! 
-                    <br><br>
+                    <li><span class="label"><font color="blue">[Upcoming]</font></span><b> Extra</b>: Additionally, I am also starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>!</li>
                 </ul>
-
-                <div class="section-title" id="new">Frequent Collaborators</div>
+            </div>
+            <div id="new">
+                <div class="section-title">Frequent Collaborators</div>
                 <ul>
                     <li><span class="label"><font color="blue">[High Freq.]</font></span><a href="https://www.linkedin.com/in/harshini-suresh-69127528a/">Harshini S</a>, Dept. of CSE (AI & ML), PES University. <br> (Also part of ISFCR and P&QT Lab!)</li>
                     <li><a href="https://www.linkedin.com/in/aniketh-madhugiri-159586234/">Aniketh Madhugiri</a>, Dept. of CSE, PES University. (Also part of CAVE Labs, ISFCR)</li>
                     <li><a href="https://www.linkedin.com/in/hrishikesh-haritas-58b435228/">Hrishikesh Haritas</a>, Dept. of AIML, MSRIT. (Also part of DREAM:Lab at CDS, IISc)</li>
                 </ul>
-                <br><br>
-                
-                <div class="section-title" id="new">News</div>
+                <div class="section-title">News</div>
                 <ul>
                     <li><span class="label"><font color="blue">Apr. 2024</font></span> <a href="https://drive.google.com/file/d/1WAoVwY2sarvf2TXf0gXnw9iHaycw0Dfk/view?usp=sharing">Attended</a> a really cool talk from <a href="https://mtt.org/profile/joseph-bardin/">Dr. Joseph Bardin</a> on quantum computing and microwave engineering, thanks to IEEE IISc MTT/AP-S Student Branch!</li>
                     <li><span class="label"><font color="blue">Feb. 2024</font></span> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</li>
                     <li><span class="label"><font color="blue">Jan. 2024</font></span> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</li>
                 </ul>
-                <hr>
-                <small class="text-muted text-center">
-                    <img src="qccomic.jpg" alt="Comic Strip" style="max-width: 100%;">
-                    Source: <a href="https://dilbert.com/">Dilbert.com</a>
-                </small>            
             </div>
+        </div>
+        <div class="footer">
+            <hr>
+            <small class="text-muted text-center">
+                <img src="qccomic.jpg" alt="Comic Strip">
+                Source: <a href="https://dilbert.com/">Dilbert.com</a>
+            </small> 
         </div>
     </div>
 </body>
