@@ -9,15 +9,16 @@
     <title>Prateek P Kulkarni</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gill+Sans+MT:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
             background-color: #f8f9fa; /* Light gray background color */
-            font-family: 'Gill Sans MT', sans-serif; /* Use Gill Sans MT font */
-            line-height: 1.6; /* Improved line spacing for readability */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            line-height: 1.8; /* Improved line spacing for readability */
             color: #333; /* Dark text color */
             margin: 0;
             padding: 0;
+            font-size: 18px; /* Increased font size */
         }
 
         .container {
@@ -59,6 +60,8 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
+            margin: 0 auto; /* Center the navigation bar */
+            display: inline-block;
         }
 
         nav ul li {
@@ -71,10 +74,14 @@
             color: #8C1515;
             font-weight: bold;
             text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #5E0D0D;
+            color: #fff;
+            background-color: #8C1515;
         }
 
         .section-title {
@@ -96,7 +103,9 @@
         }
 
         .footer img {
-            max-width: 100%;
+            max-width: 80%; /* Slightly decrease the comic strip size */
+            display: block;
+            margin: 0 auto;
         }
 
         .footer small {
@@ -113,6 +122,10 @@
         @media (max-width: 767px) {
             .header img {
                 max-width: 120px;
+            }
+
+            body {
+                font-size: 16px; /* Slightly smaller font size for smaller screens */
             }
         }
 
