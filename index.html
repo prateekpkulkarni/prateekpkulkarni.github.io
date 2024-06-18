@@ -56,14 +56,14 @@
             text-align: center;
         }
 
-       nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin: 0 auto; /* Center the navigation bar */
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center items horizontally */
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto; /* Center the navigation bar */
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center items horizontally */
+        }
 
         nav ul li {
             display: inline;
@@ -138,6 +138,37 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        #contact {
+            margin-bottom: 30px;
+        }
+
+        #contact .section-title {
+            color: #8C1515;
+            font-weight: 700;
+            border-bottom: 2px solid #8C1515;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        #contact ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #contact ul li {
+            margin-bottom: 10px;
+        }
+
+        #contact ul li a {
+            color: #8C1515;
+            text-decoration: none;
+        }
+
+        #contact ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
     <link rel="icon" href="isfcr.png">
 </head>
@@ -162,7 +193,7 @@
                 <div class="section-title">Research</div>
                 <ul>
                     <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in combinatorics on words and cryptography. However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
-                </ul> 
+                </ul>
             </div>
             <div id="pos">
                 <div class="section-title">Current Positions</div>
@@ -188,12 +219,20 @@
                 </ul>
             </div>
         </div>
+        <div id="contact" class="content">
+            <div class="section-title">Contact</div>
+            <ul>
+                <li>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
+                <li>Office:Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
+                <li>You occasionally find me working in my lab (Applied Cryptograhy and Blockchain Lab) at ISFCR, BE Block, PES University. </li>
+            </ul>
+        </div>
         <div class="footer">
             <hr>
             <small class="text-muted text-center">
                 <img src="qccomic.jpg" alt="Comic Strip">
                 Source: <a href="https://dilbert.com/">Dilbert.com</a>
-            </small> 
+            </small>
         </div>
     </div>
 </body>
