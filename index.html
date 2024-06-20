@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
     <style>
         body {
-            background-color: #f8f9fa; /* Light gray background color */
-            font-family: 'Roboto', sans-serif; /* Use Roboto font */
-            line-height: 1.8; /* Improved line spacing for readability */
-            color: #333; /* Dark text color */
+            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
-            font-size: 18px; /* Increased font size */
+            font-size: 18px;
         }
 
         .container {
@@ -30,8 +30,25 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .header, .content, .footer {
+        .header {
+            text-align: center;
             margin-bottom: 30px;
+            padding: 50px 0;
+            background-image: back.jpg; /* Add a background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
         }
 
         .header img {
@@ -39,6 +56,8 @@
             max-width: 150px;
             border: 4px solid #ffffff;
             transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
 
         .header img:hover {
@@ -47,56 +66,44 @@
 
         .header h1 {
             font-size: 2.5em;
-            color: #8C1515; /* Stanford red color */
+            color: #fff;
             font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            z-index: 1;
         }
 
         .header p {
             font-size: 1.2em;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         nav {
             position: sticky;
             top: 0;
-            background-color: #ffffff;
+            background-color: #8C1515;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            .nav li {
-                margin-bottom: 10px;
-            }
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
-            margin: 0 auto; /* Center the navigation bar */
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center items horizontally */
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #8C1515;
+            color: #fff;
             font-weight: bold;
             text-transform: uppercase;
             padding: 10px 15px;
@@ -105,8 +112,7 @@
         }
 
         nav ul li a:hover {
-            color: #fff;
-            background-color: #8C1515;
+            background-color: #A42020;
         }
 
         .section-title {
@@ -125,33 +131,33 @@
 
         .content ul li {
             margin-bottom: 20px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
         }
 
         .footer img {
-            max-width: 80%; /* Slightly decrease the comic strip size */
+            max-width: 100%;
             display: block;
             margin: 0 auto;
         }
 
         .footer small {
             display: block;
-            text-align: center;
-            color: #777;
             margin-top: 20px;
         }
 
         .footer small a {
-            color: #333;
-        }
-
-        @media (max-width: 767px) {
-            .header img {
-                max-width: 120px;
-            }
-
-            body {
-                font-size: 16px; /* Slightly smaller font size for smaller screens */
-            }
+            color: #fff;
         }
 
         .fade-in {
@@ -163,49 +169,37 @@
             100% { opacity: 1; }
         }
 
-        #contact {
-            margin-bottom: 30px;
+        @media (max-width: 767px) {
+            .header img {
+                max-width: 120px;
+            }
+
+            body {
+                font-size: 16px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
         }
 
-        #contact .section-title {
-            color: #8C1515;
-            font-weight: 700;
-            border-bottom: 2px solid #8C1515;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
-        #contact ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #contact ul li {
-            margin-bottom: 10px;
-        }
-
-        #contact ul li a {
-            color: #8C1515;
-            text-decoration: none;
-        }
-
-        #contact ul li a:hover {
-            text-decoration: underline;
-        }
     </style>
     <link rel="icon" href="isfcr.png">
 </head>
 
 <body>
     <div class="container fade-in">
-        <div class="header text-center">
+        <div class="header">
             <img src="1698818859534.jpg" class="img-fluid" alt="Photo">
             <h1>Prateek P Kulkarni</h1>
             <p>I like designing architectures for quantum computers</p>
         </div>
         <nav>
-            <ul class="nav">
+            <ul>
                 <li><a href="#res">Research</a></li>
                 <li><a href="#pos">Current Positions</a></li>
                 <li><a href="cv2024_apr_ppk.pdf">CV</a></li>
@@ -252,7 +246,6 @@
             </ul>
         </div>
         <div class="footer">
-            <hr>
             <small class="text-muted text-center">
                 <img src="qccomic.jpg" alt="Comic Strip">
                 Source: <a href="https://dilbert.com/">Dilbert.com</a>
