@@ -124,7 +124,20 @@
         .footer a:hover {
             text-decoration: underline;
         }
-
+        
+        .background-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    background-image: login-background.jpg; /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity to make it more or less translucent */
+    z-index: -1; /* Ensure the background is behind other content */
+}
         @media (max-width: 768px) {
             .menu-toggle {
                 display: flex;
@@ -233,6 +246,7 @@
     <div class="footer">
         <small>Last Updated: June 20, 2024</small>
     </div>
+    <div class="background-image"></div>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
