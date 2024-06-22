@@ -179,6 +179,27 @@
                 transform: rotate(45deg) translate(-5px, -6px);
             }
         }
+        #folder {
+  width: 100px;
+  height: 120px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: move;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        
+#folder a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
     </style>
 </head>
 
@@ -207,9 +228,14 @@
                 <ul>
                     <li>I am a 3rd year engineering student at <a href="https://pes.edu/">PES University</a> majoring in Electronics. I will be specializing in VLSI, with specific inclination towards quantum technology.</li>
                     <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in quantum cryptography. However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
-                    <p>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</p>
+                    <p>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</p> <br>
+                    <li>I usually make presentations of my work/updates for group meetings periodically. You can find the folder for (some of) those on this page :)</li>
                 </ul>
             </div>
+            <div id="folder">
+                  <a href="https://drive.google.com/drive/folders/16TmW-iBTnyo0bOXmin4LzK4l29IIpQOy?usp=sharing" target="_blank">Click Me</a>
+            </div>
+
             <div id="pos">
                 <div class="section-title">Current Positions</div>
                 <ul>
@@ -255,6 +281,31 @@
             toggleButton.classList.toggle('active');
         }
     </script>
+
+    <script>
+  const folder = document.getElementById('folder');
+
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  folder.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - folder.getBoundingClientRect().left;
+    offsetY = e.clientY - folder.getBoundingClientRect().top;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      folder.style.left = `${e.clientX - offsetX}px`;
+      folder.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+</script>
+
 </body>
 
 </html>
