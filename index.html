@@ -7,42 +7,44 @@
     <title>Prateek P Kulkarni</title>
     <style>
         body {
-            background-color: #fff;
+            background-color: #f5f5f5;
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             font-size: 16px;
-            color: #000;
+            color: #333;
             line-height: 1.6;
         }
 
         .container {
             max-width: 800px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .header h1 {
             font-family: 'Merriweather', serif;
             font-size: 2.5em;
-            color: #000;
+            color: #0033a0;
             margin: 0;
         }
 
         .header p {
             font-size: 1.2em;
-            color: #333;
-            margin: 10px 0;
+            color: #666;
+            margin: 10px 0 0;
         }
 
         nav {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .menu-toggle {
@@ -55,7 +57,7 @@
         }
 
         .menu-toggle span {
-            background: #000;
+            background: #0033a0;
             height: 3px;
             width: 25px;
             margin: 4px 0;
@@ -69,6 +71,8 @@
             display: flex;
             justify-content: center;
             flex-direction: row;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
         }
 
         nav ul li {
@@ -77,24 +81,29 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000;
+            color: #0033a0;
             font-weight: bold;
             text-transform: uppercase;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #666;
-            border-bottom: 1px solid #666;
+            color: #ffc72c;
+            border-bottom: 2px solid #ffc72c;
+        }
+
+        .section {
+            margin-bottom: 40px;
         }
 
         .section-title {
-            color: #000;
+            color: #0033a0;
             font-family: 'Merriweather', serif;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ddd;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0033a0;
             padding-bottom: 5px;
+            text-align: center;
         }
 
         .content ul {
@@ -104,11 +113,12 @@
 
         .content ul li {
             margin-bottom: 15px;
+            line-height: 1.8;
         }
 
         .footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             padding: 20px;
             color: #333;
             font-size: 0.8em;
@@ -116,7 +126,7 @@
         }
 
         .footer a {
-            color: #000;
+            color: #0033a0;
             text-decoration: none;
         }
 
@@ -187,15 +197,16 @@
             </ul>
         </nav>
         <div class="content">
-            <div id="res">
+            <div id="res" class="section">
                 <div class="section-title">Research</div>
                 <ul>
                     <li>I am a 3rd year engineering student at <a href="https://pes.edu/">PES University</a> majoring in Electronics. I will be specializing in VLSI, with specific inclination towards quantum technology.</li>
                     <li>I'm heavily interested in quantum computing and information theory, machine learning and network-on-chip architectures. Lately, I have also been invested in quantum cryptography. However, often my attention span lasts so long that it is apt to say my hop count tends to infinity! Usually my research tends to span two or multiple of these areas.</li>
-                    <p>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</p>
+                    <li>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</li>
                 </ul>
             </div>
-            <div id="pos">
+
+            <div id="pos" class="section">
                 <div class="section-title">Current Positions</div>
                 <ul>
                     <li><b>Research Assistant</b>, Jun. 2024- <br> Joined the Photonics & Quantum Technology Lab at PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>! The work will entail quantum machine learning and possible applications elsewhere.</li>
@@ -204,7 +215,7 @@
                     <li><b>Extra</b>: Additionally, I am also starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>!</li>
                 </ul>
             </div>
-            <div id="new">
+            <div id="new" class="section">
                 <div class="section-title">Frequent Collaborators</div>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/harshini-suresh-69127528a/">Harshini S</a>, Dept. of CSE (AI & ML), PES University. (Also part of ISFCR and P&QT Lab!)</li>
@@ -213,14 +224,13 @@
                 </ul>
                 <div class="section-title">News</div>
                 <ul>
-                    <!--<li><span class="label"><font color="blue">Aug. 2024</font></span> Starting this August, I will be heading the Technical Domain in Q-Forest, the Quantum Computing Club at my University.</li>-->
                     <li><span class="label"><font color="blue">Apr. 2024</font></span> <a href="https://drive.google.com/file/d/1WAoVwY2sarvf2TXf0gXnw9iHaycw0Dfk/view?usp=sharing">Attended</a> a really cool talk from <a href="https://mtt.org/profile/joseph-bardin/">Dr. Joseph Bardin</a> on quantum computing and microwave engineering, thanks to IEEE IISc MTT/AP-S Student Branch!</li>
                     <li><span class="label"><font color="blue">Feb. 2024</font></span> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</li>
                     <li><span class="label"><font color="blue">Jan. 2024</font></span> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</li>
                 </ul>
             </div>
         </div>
-        <div id="contact" class="content">
+        <div id="contact" class="section">
             <div class="section-title">Contact</div>
             <ul>
                 <li><b>Email</b>: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
