@@ -123,18 +123,13 @@
     </div>
 
     <script type="text/javascript">
-      const rot13 = (message) => {
-        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
-        return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
-      }
-      var e_is_shown = false;
-      document.getElementById('iemail').addEventListener("click", function(){
-        let demail = document.getElementById('demail');
-        let msg = "pkulkarni2425@gmail.com";
-        demail.innerHTML = rot13(msg);
-        demail.style.opacity = e_is_shown ? 0 : 1;
-        e_is_shown = !e_is_shown;
-      })
-    </script>
+  var e_is_shown = false;
+  document.getElementById('iemail').addEventListener("click", function(){
+    let demail = document.getElementById('demail');
+    demail.innerHTML = "pkulkarni2425@gmail.com";
+    demail.style.opacity = e_is_shown ? 0 : 1;
+    e_is_shown = !e_is_shown;
+  });
+</script>
   </body>
 </html>
