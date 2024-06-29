@@ -242,6 +242,16 @@ hr {
 .tilb {
     border-right: 1px solid #ccc;
 }
+
+.chunk {
+	background-color: #DFECEC;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	padding: 10px;
+	-moz-border-radius: 10px;
+	margin-bottom: 10px;
+}
 .nodot {
     list-style-type: none;
     padding-left: 0;
