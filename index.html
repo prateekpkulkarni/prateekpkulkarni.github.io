@@ -1,140 +1,204 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Prateek P Kulkarni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+    <style>
+        body {
+            font-family: 'Arimo', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        #dhead {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-bottom: 2px solid #e9e9e9;
+        }
+        #dpic {
+            flex: 0 0 150px;
+        }
+        #dpic img {
+            border-radius: 50%;
+            max-width: 100%;
+        }
+        #ddesc {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .iico {
+            margin: 5px;
+            width: 32px;
+            height: 32px;
+        }
+        .entry {
+            display: flex;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #e9e9e9;
+        }
+        .timespan {
+            flex: 0 0 100px;
+            font-weight: bold;
+        }
+        .ico {
+            flex: 0 0 50px;
+            text-align: center;
+        }
+        .desc {
+            flex: 1;
+            padding-left: 10px;
+        }
+        .entry-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            margin: 5px auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 2px solid #e9e9e9;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        p, ul {
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-    <div style = "background-image:repeating-triangles.png">
     <div id="dhead" class="container">
-      <div class="row">
         <div id="dpic">
-          <img src="1698818859534.jpg" class="ppic" />
+            <img src="1698818859534.jpg" class="ppic" />
         </div>
         <div id="ddesc">
-          <h1>Prateek P Kulkarni</h1>
-          <h2>I like designing architectures for quantum computers ⚛⚡🖥️</h2>
-          <div id="dico">
-            <a href="cv2024_apr_ppk.pdf"><img src="cv.jpg" class="iico" /></a>
-            <img src="cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
-          </div>
-          <div id="demail"></div>
+            <h1>Prateek P Kulkarni</h1>
+            <h2>I like designing architectures for quantum computers ⚛⚡🖥️</h2>
+            <div id="dico">
+                <a href="cv2024_apr_ppk.pdf"><img src="cv.jpg" class="iico" /></a>
+                <img src="cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
+            </div>
+            <div id="demail"></div>
         </div>
-      </div>
     </div>
-    </div>
-
-    <hr>
 
     <div id="history" class="container">
+        <div class="entry row">
+            <div class="timespan">
+                Mar. 2024 -
+            </div>
+            <div class="ico">
+                <div class="entry-dot"></div>
+                <img src="IISc_Master_Seal_Black.jpg" />
+            </div>
+            <div class="desc">
+                <b>Visiting Research Student</b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal/">Prof. Sumit Kumar Mandal</a>, exploring the aspects of quantum interconnects.
+            </div>
+        </div>
+        
+        <div class="entry row">
+            <div class="timespan">
+                Jan. 2024 -
+            </div>
+            <div class="ico">
+                <div class="entry-dot"></div>
+                <img src="isfcr.png" />
+            </div>
+            <div class="desc">
+                <b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience <a href="https://www.isfcr.pes.edu/">(ISFCR)</a>, PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.
+            </div>
+        </div>
 
-      <div class="entry row">
-        <div class="timespan">
-          Mar. 2024 -
+        <div class="entry row">
+            <div class="timespan">
+                2022 - 26*
+            </div>
+            <div class="ico">
+                <div class="entry-dot"></div>
+                <img src="pesu_logo.jpg" />
+            </div>
+            <div class="desc">
+                BTech in Electronics & Communication, Class of '26 at PES University! Also, part of the Photonics & Quantum Technology Lab under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning and possible applications elsewhere.
+            </div>
         </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-          <img src="IISc_Master_Seal_Black.jpg" />
-        </div>
-        <div class="desc">
-          <b>Visiting Research Student </b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal/">Prof. Sumit Kumar Mandal</a>, exploring the aspects of quantum interconnects. <br>
-        </div>
-      </div>
-      
-      <div class="entry row">
-        <div class="timespan">
-          Jan. 2024 -
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-          <img src="isfcr.png" />
-        </div>
-        <div class="desc">
-          <b>Long-Term Research Intern </b> at the Center for Information Security, Forensics and Cyber Resilience <a href="https://www.isfcr.pes.edu/">(ISFCR)</a>, PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.
-        </div>
-      </div>
-
-      <div class="entry row">
-        <div class="timespan">
-          2022 - 26*
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-          <img src="pesu_logo.jpg" />
-        </div>
-        <div class="desc">
-          BTech in Electronics & Communication, Class of '26 at PES University! Also, part of the Photonics & Quantum Technology Lab under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning and possible applications elsewhere. <br>
-        </div>
-      </div>
-    
-    <div id="bio" class="container">
-      <h2>Research</h2>
-      <ul>
-        <li>I am a 3rd year engineering student at <a href="https://pes.edu/">PES University</a> majoring in Electronics, specializing in VLSI with a specific inclination towards quantum technology.</li> <br>
-        <li>I'm heavily interested in all aspects of quantum computing, theoretical computer science, and computer architecture. Lately, I have also been invested in quantum cryptography. However, my attention span often lasts so long that it is apt to say my hop count tends to infinity! Usually, my research spans two or multiple of these areas.</li> <br> 
-        <li>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</li> <br>
-        <p>Additionally, starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>. <br><br>
-      </ul>
     </div>
-    
- 
 
-  
+    <div id="bio" class="container">
+        <h2>Research</h2>
+        <ul>
+            <li>I am a 3rd year engineering student at <a href="https://pes.edu/">PES University</a> majoring in Electronics, specializing in VLSI with a specific inclination towards quantum technology.</li>
+            <li>I'm heavily interested in all aspects of quantum computing, theoretical computer science, and computer architecture. Lately, I have also been invested in quantum cryptography. However, my attention span often lasts so long that it is apt to say my hop count tends to infinity! Usually, my research spans two or multiple of these areas.</li>
+            <li>Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.</li>
+            <p>Additionally, starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>.</p>
+        </ul>
+    </div>
 
     <div id="collaborators" class="container">
-      <h2>Frequent Collaborators</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/harshini-suresh-69127528a/">Harshini S</a>, Dept. of CSE (AI & ML), PES University. (Also part of ISFCR and P&QT Lab!)</li>
-        <li><a href="https://www.linkedin.com/in/hrishikesh-haritas-58b435228/">Hrishikesh Haritas</a>, Dept. of AIML, MSRIT. (Also part of DREAM:Lab at CDS, IISc)</li>
-        <p>Have any cool ideas for potential collaboration? Don't hesitate to <a href="mailto:pkulkarni2425@gmail.com">write</a> to me!</p> <br><br>
-      </ul>
+        <h2>Frequent Collaborators</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/harshini-suresh-69127528a/">Harshini S</a>, Dept. of CSE (AI & ML), PES University. (Also part of ISFCR and P&QT Lab!)</li>
+            <li><a href="https://www.linkedin.com/in/hrishikesh-haritas-58b435228/">Hrishikesh Haritas</a>, Dept. of AIML, MSRIT. (Also part of DREAM:Lab at CDS, IISc)</li>
+            <p>Have any cool ideas for potential collaboration? Don't hesitate to <a href="mailto:pkulkarni2425@gmail.com">write</a> to me!</p>
+        </ul>
     </div>
-
-
 
     <div id="news" class="container">
-      <h2>News</h2>
-      <ul>
-        <li><b>Apr. 2024</b> <a href="https://drive.google.com/file/d/1WAoVwY2sarvf2TXf0gXnw9iHaycw0Dfk/view?usp=sharing">Attended</a> a talk from <a href="https://mtt.org/profile/joseph-bardin/">Dr. Joseph Bardin</a> on quantum computing and microwave engineering, thanks to IEEE IISc MTT/AP-S Student Branch!</li>
-        <li><b>Feb. 2024</b> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</li>
-        <li><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</li> <br><br>
-      </ul>
+        <h2>News</h2>
+        <ul>
+            <li><b>Apr. 2024</b> <a href="https://drive.google.com/file/d/1WAoVwY2sarvf2TXf0gXnw9iHaycw0Dfk/view?usp=sharing">Attended</a> a talk from <a href="https://mtt.org/profile/joseph-bardin/">Dr. Joseph Bardin</a> on quantum computing and microwave engineering, thanks to IEEE IISc MTT/AP-S Student Branch!</li>
+            <li><b>Feb. 2024</b> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</li>
+            <li><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</li>
+        </ul>
     </div>
-
-
-
 
     <div id="contact" class="container">
-      <h2>Contact</h2>
-      <ul>
-        <p><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University</p>
-        <p>You can occasionally find me working in my lab (Applied Cryptography and Blockchain Lab) at ISFCR, BE Block, PES University.</p> <br><br>
-      </ul>
+        <h2>Contact</h2>
+        <ul>
+            <p><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University</p>
+            <p>You can occasionally find me working in my lab (Applied Cryptography and Blockchain Lab) at ISFCR, BE Block, PES University.</p>
+        </ul>
     </div>
-
-
-
-  
 
     <div class="footer">
-        Adapted from <a href="http://karpathy.ai"> Andrej's </a> web. Last Updated: June 20, 2024 <br><br>
-    </div>
-
-    <div class="container">
-      <p></p>
+        Adapted from <a href="http://karpathy.ai">Andrej's</a> web. Last Updated: June 20, 2024
     </div>
 
     <script type="text/javascript">
-  var e_is_shown = false;
-  document.getElementById('iemail').addEventListener("click", function(){
-    let demail = document.getElementById('demail');
-    demail.innerHTML = "pkulkarni2425@gmail.com";
-    demail.style.opacity = e_is_shown ? 0 : 1;
-    e_is_shown = !e_is_shown;
-  });
-</script>
-  </body>
+        var e_is_shown = false;
+        document.getElementById('iemail').addEventListener("click", function(){
+            let demail = document.getElementById('demail');
+            demail.innerHTML = "pkulkarni2425@gmail.com";
+            demail.style.opacity = e_is_shown ? 0 : 1;
+            e_is_shown = !e_is_shown;
+        });
+    </script>
+</body>
 </html>
