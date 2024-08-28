@@ -1,223 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" type="image/png" href="iisc.png">
-	<title>Prateek P Kulkarni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek P Kulkarni</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        nav {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #0000EE;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        section p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #777777;
+        }
+        .image-centered {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+	    .container-fluid {
+            padding: 0 15px;
+        }
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/base.css">
+        .pt-5 {
+            padding-top: 3rem;
+        }
 
-	<!-- FONTS -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-	<!-- Custom Styles -->
-	<style>
+        .col-lg-3 {
+            max-width: 25%;
+            text-align: center;
+        }
 
-    	body {
-        	font-family: 'Arimo', sans-serif;
-        	font-size: 1.1em !important;
-                background-color: #F0FFFF !important;
-    	}
-    	hr {
-        	border-width: 5px;
-        	border-color: #e54649;
-    	}
-    	.bg-dark {
-        	background-color: #000 !important;
-    	}
-    	.img-reduce {
-        	width: 90% !important;
-    	}
-    	.bg-dark-transparent {
-        	background-color: rgba(0, 0, 0, 0.5) !important;
-    	}
-    	.indented {
-        	padding-left: 2em;
-    	}
-    	.img-person {
-        	padding-top: 20px !important;
-    	}
-    	.heading-style {
-        	border-width: 1ex !important;
-        	border-color: #000 !important;
-    	}
-    	.profile-img {
-        	width: 80%;
-    	}
-    	.scroll-link {
-        	color: white !important;
-    	}
-    	.main-divider {
-        	background: url('atom.jpg');
-        	background-size: cover;
-        	background-position: center;
-        	max-width: 110%;
-        	height: auto;
-    	}
-	</style>
+        .col-lg-6 {
+            max-width: 50%;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 100%; /* Ensures responsiveness */
+            max-width: 150px; /* Adjust this to fit your design */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+    </style>
 </head>
-
 <body>
-
-	<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg navigation">
-    	<a class="navbar-brand" href="index.html">Prateek P Kulkarni</a>
-    	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        	<span class="navbar-toggler-icon"></span>
-    	</button>
-    	<div class="collapse navbar-collapse" id="navbarNav">
-        	<ul class="navbar-nav">
-            	<li class="nav-item">
-                	<a class="nav-link" href="#history">positions</a>
-            	</li>
-           	 
-            	<li class="nav-item">
-                	<a class="nav-link" href="#research">research</a>
-            	</li>
-            	<li class="nav-item">
-                	<a class="nav-link" href="#news">news</a>
-            	</li>
-            	<li class="nav-item">
-                	<a class="nav-link" href="cv2024_apr_ppk.pdf">cv</a>
-            	</li>
-            	<li class="nav-item">
-                	<a class="nav-link" href="#contact">contact</a>
-            	</li>
-        	</ul>
-    	</div>
-	</nav>
-
 	<div class="container-fluid pt-5">
-    	<div class="main-divider index-divider row px-0 py-5 bg-dark text-light justify-content-center">
-        	<div class="col-lg-6 px-4">
-            	<p class="pt-3">
-                	<h1 class="bg-dark-transparent bg-dark py-3 pl-3">Prateek P Kulkarni</h1>
-            	</p>
-            	<p class="pb-3">
-                	<i>
-                    	I am a 3rd year engineering student at PES University majoring in Electronics, specializing in VLSI with a specific inclination towards quantum technology. I like designing architectures for quantum computers! <br><br>
-                    	 
-                	</i>
-            	</p>
-        	</div>
-        	<div class="col-lg-3 px-4">
-        	</div>
-    	</div>
-	</div>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="1698818859534.jpg" alt="" class="profile-img">
+            </div>
+            <div class="col-lg-6">
+    <header>
+        <h1>Prateek P Kulkarni,</h1>
+        <p><a href="https://pes.edu">PES University</a></p>
+    </header>
 
-    	<div id="history" class="row justify-content-center pt-4 pb-3">
-        	<div class="col-lg-6 px-4">
-            	<p class="pt-2">
-                	<h2><span class="py-2">Current Positions</span></h2>
-            	</p>
-            	<hr>
-           	 
-            	<p class="pt-2">
-                	<b>Visiting Research Student</b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in"> Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal"> Prof. Sumit Kumar Mandal</a>, exploring the aspects of quantum interconnects and quantum multicore architecture. Furthermore, I will also be writing my undergraduate thesis at the FIST Lab!
-               	 
-            	</p>
-            	<p class="pt-2">
-                	My work is supported by the <b>Walmart Center for Tech Excellence</b> (<a href="https://www.csa.iisc.ac.in/cfe-walmart/">WACE</a>) at CSA, IISc.
-            	</p>
-            	<p class="pt-2">
-                	<b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan"> Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.
-            	</p>
-            	<p class="pt-2">
-                	<b>Research Assistant</b> in the Photonics & Quantum Technology Lab,<a href="https://www.pes.edu"> PES University</a> under <a href="https://staff.pes.edu/nm1246/"> Prof. Kaustav Bhowmick</a>, working on quantum machine learning and possible applications elsewhere.
-            	</p>
-        	</div>
-    	</div>
+    <nav>
+        <a href="#positions">Positions</a>
+        <a href="#research">Research</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="cv2024_apr_ppk.pdf">CV</a>
+    </nav>
 
-    	<div id="research" class="row justify-content-center pt-4 pb-3">
-        	<div class="col-lg-6 px-4">
-            	<p class="pt-2">
-                	<h2><span class="py-2">Research Focus</span></h2>
-            	</p>
-            	<hr>
-            	<p class="pt-2">
-                	I'm heavily interested in all aspects of quantum computing, theoretical computer science, and computer architecture. Lately, I have also been invested in quantum cryptography. However, my attention span often lasts so long that it is apt to say my hop count tends to infinity! Usually, my research spans two or multiple of these areas.
-            	</p>
-            	<p class="pt-2">
-                	Currently, I am working on the architecture of multicore quantum computers, for systems employing superconducting qubits @FIST Lab, CSA - IISc.
-            	</p>
-            	<p class="pt-2">
-                	Additionally, starting to work on Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en"> Prof. Sivasankar M</a>.
-            	</p>
+    <section id="positions">
+        <h2>Current Positions</h2>
+        <p><b>Visiting Research Student</b> at the Future Computing Systems Lab, Dept. of Computer Science and Automation, Indian Institute of Science (IISc), Bangalore under Prof. Sumit Kumar Mandal, exploring quantum interconnects and quantum multicore architecture. I will also be writing my undergraduate thesis at the FIST Lab.</p>
+        <p><b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (ISFCR), PES University. Part of the Applied Cryptography and Blockchain Lab, led by Prof. Indu Radhakrishnan, working on quantum/post-quantum cryptography.</p>
+        <p><b>Research Assistant</b> in the Photonics & Quantum Technology Lab, PES University under Prof. Kaustav Bhowmick, working on quantum machine learning.</p>
+    </section>
 
-        	</div>
-    	</div>
-    	<!-- <div class="row justify-content-center pt-4 pb-3">
-        	<img src="Venn diagram.png" style="width: 600px; height: auto;" />
-    	</div>
-    
-            	<p class="pt-2">
-                	<h2><span class="py-2">Frequent Collaborators</span></h2>
-            	</p>
-            	<hr>
-            	<ul>
-                	<li><a href="https://www.linkedin.com/in/harshini-suresh-69127528a/" class="text-primary">Harshini S</a>, Dept. of CSE (AI & ML), PES University. (Also part of ISFCR and P&QT Lab!)</li>
-                	<li><a href="https://www.linkedin.com/in/hrishikesh-haritas-58b435228/" class="text-primary">Hrishikesh Haritas</a>, Dept. of AIML, MSRIT. (Also part of DREAM:Lab at CDS, IISc)</li>
-                	<li>Have any cool ideas for potential collaboration? Don't hesitate to <a href="mailto:pkulkarni2425@gmail.com" class="text-primary">write</a> to me!</li>
-            	</ul>
-        	</div>
-    	</div> -->
-       	 
-    	<div id="news" class="row justify-content-center pt-4 pb-3">
-        	<div class="col-lg-6 px-4">
-            	<p class="pt-2">
-                	<h2><span class="py-2">News</span></h2>
-            	</p>
-            	<hr>
-                	<p><b>Aug. 2024</b> Starting this August, I'll be heading the flagship Quantum Computing club at my university, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>!</p>
-                      	<p><b>Jul. 2024</b> Presenting a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing"> poster</a> about my work at CSA, IISc this Friday, 12 July! </p>
-                	<p><b>Apr. 2024</b> Attended a cool talk from Dr. Joseph Bardin on quantum computing and microwave engineering, thanks to IEEE IISc MTT/AP-S Student Branch!</p>
-                	<p><b>Feb. 2024</b> Was awarded one of the 10 funded long-term positions at C-ISFCR, aiming to investigate aspects of quantum/post-quantum cryptography.</p>
-                	<p><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop held at IISc, Dept. of Computer Science and Automation.</p>
-           	 
-        	</div>
-    	</div>
+    <section id="research">
+        <h2>Research Focus</h2>
+        <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. My current research involves multicore quantum computers employing superconducting qubits at FIST Lab, CSA - IISc, and Combinatorics on Words with Prof. Sivasankar M.</p>
+    </section>
 
-    	<div id="contact" class="row justify-content-center pt-4 pb-3">
-        	<div class="col-lg-6 px-4">
-            	<p class="pt-2">
-                	<h2><span class="py-2">Contact</span></h2>
-            	</p>
-            	<hr>
-        	<li><b>Email</b>: <a href="mailto:pkulkarni2425@gmail.com"> pkulkarni2425 [at] gmail [dot] com</a> </li>
-        	<li><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University.
-        	<li><b>Seating at IISc</b>: CSA 228 / CSA 223</li> <br><br>
-        	</div>
-    	</div>
-    	<div class="row justify-content-center pt-4 pb-3">
-        	<div class="col-lg-6 px-4">
-        	<p>PS: Here's a vintage picture of the iconic Main Building, or Tower Building of IISc. IISc and CSA both maintain an exhaustive gallery. Find more at <a href="https://events.csa.iisc.ac.in/pictures/gallery.php?directory=iisc-archives-photo-scans"> CSA Events Archive Page</a></p>
-        	</div>
-    	</div>
-    	<div class="row justify-content-center pt-4 pb-3">
-        	<img src="rigtow.gif"/>
-    	</div>
-    
-    	<div class="row bg-dark text-light justify-content-center">
-        	<div class="col-lg-9 pt-4 pb-2 px-4">
-            	<p>
-                	Prateek P Kulkarni &copy; 2024 | Heavily adapted from <a href="http://web.mit.edu/~cua/www/quanta/"> MIT Quanta Group</a>.
+    <section id="news">
+        <h2>News</h2>
+        <p><b>Aug. 2024</b> Will be leading the Quantum Computing club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.</p>
+        <p><b>Jul. 2024</b> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> about my work at CSA, IISc.</p>
+        <p><b>Feb. 2024</b> Awarded one of 10 funded long-term positions at C-ISFCR for research in quantum/post-quantum cryptography.</p>
+        <p><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop at IISc, Dept. of Computer Science and Automation.</p>
+    </section>
 
-            	</p>
-        	</div>
-    	</div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-info">
+            <li><b>Personal Email</b>: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
+	    <li><b>Work Email</b>: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
+            <li><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
+        </ul>
+    </section>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>
