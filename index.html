@@ -37,6 +37,31 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .profile-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .profile-section img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        .profile-section h1 {
+            margin: 10px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .profile-section a {
+            color: #0000EE;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.1em;
+        }
         section {
             margin-bottom: 40px;
         }
@@ -54,11 +79,6 @@
             font-size: 0.9em;
             color: #777777;
         }
-        .image-centered {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-        }
         .contact-info {
             list-style-type: none;
             padding: 0;
@@ -67,43 +87,35 @@
         .contact-info li {
             margin-bottom: 10px;
         }
-	    .container-fluid {
-            padding: 0 15px;
-        }
-
-        .pt-5 {
-            padding-top: 3rem;
-        }
-
-        .row {
+        .header-section, .footer-section {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
         }
-
-        .col-lg-3 {
-            max-width: 25%;
-            text-align: center;
+        .header-section div, .footer-section div {
+            width: 45%;
+            text-align: left;
         }
-
-        .col-lg-6 {
-            max-width: 50%;
+        .header-section div:last-child, .footer-section div:last-child {
+            text-align: right;
         }
-
-        h1 {
-            font-size: 2.5em;
-            margin-top: 0;
+        .header-section ul, .footer-section ul {
+            list-style-type: none;
+            padding: 0;
         }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6em;
+        .header-section ul li, .footer-section ul li {
+            margin: 5px 0;
+        }
+        .header-section a, .footer-section a {
+            color: #0000EE;
+            text-decoration: none;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Prateek P Kulkarni,</h1>
+        <h1>Prateek P Kulkarni</h1>
         <p><a href="https://ec.pes.edu">PES University</a></p>
     </header>
 
@@ -115,34 +127,40 @@
         <a href="cv2024_apr_ppk.pdf">CV</a>
     </nav>
 
-    <section id="positions">
-        <h2>Current Positions</h2>
-        <p><b>Visiting Research Student</b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in"> Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal"> Prof. Sumit Kumar Mandal</a>, exploring quantum interconnects and quantum multicore architecture. I will also be writing my undergraduate thesis at the FIST Lab. My work is supported by the <b>Walmart Center for Tech Excellence</b> (<a href="https://www.csa.iisc.ac.in/cfe-walmart/">WACE</a>) at CSA, IISc.</p>
-        <p><b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan"> Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.</p>
-        <p><b>Research Assistant</b> in the Photonics & Quantum Technology Lab, PES University under <a href="https://staff.pes.edu/nm1246/"> Prof. Kaustav Bhowmick</a>, working on quantum machine learning.</p>
-    </section>
+    <div class="profile-section">
+        <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
+        <h1>Prateek P Kulkarni, <a href="https://ec.pes.edu">PES University</a></h1>
+    </div>
 
-    <section id="research">
-        <h2>Research Focus</h2>
-        <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. My current research involves communication for multicore quantum computers employing superconducting qubits at FIST Lab, CSA - IISc. I am also starting to work in Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en"> Prof. Sivasankar M</a>.</p>
-    </section>
+    <div class="main-content">
+        <section id="positions">
+            <h2>Current Positions</h2>
+            <p><b>Visiting Research Student</b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in"> Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal"> Prof. Sumit Kumar Mandal</a>, exploring quantum interconnects and quantum multicore architecture. I will also be writing my undergraduate thesis at the FIST Lab. My work is supported by the <b>Walmart Center for Tech Excellence</b> (<a href="https://www.csa.iisc.ac.in/cfe-walmart/">WACE</a>) at CSA, IISc.</p>
+            <p><b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan"> Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.</p>
+            <p><b>Research Assistant</b> in the Photonics & Quantum Technology Lab, PES University under <a href="https://staff.pes.edu/nm1246/"> Prof. Kaustav Bhowmick</a>, working on quantum machine learning.</p>
+        </section>
 
-    <section id="news">
-        <h2>News</h2>
-        <p><b>Aug. 2024</b> Leading the Quantum Computing club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.</p>
-        <p><b>Jul. 2024</b> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> about my work at CSA, IISc.</p>
-        <p><b>Feb. 2024</b> Awarded one of 10 funded long-term positions at C-ISFCR for research in quantum/post-quantum cryptography.</p>
-        <p><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop at IISc, Dept. of Computer Science and Automation.</p>
-    </section>
+        <section id="research">
+            <h2>Research Focus</h2>
+            <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. My current research involves communication for multicore quantum computers employing superconducting qubits at FIST Lab, CSA - IISc. I am also starting to work in Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en"> Prof. Sivasankar M</a>.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul class="contact-info">
-            <li><b>Personal Email</b>: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
-	    <li><b>Work Email</b>: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
-            <li><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
-        </ul>
-    </section>
+        <section id="news">
+            <h2>News</h2>
+            <p><b>Aug. 2024</b> Leading the Quantum Computing club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.</p>
+            <p><b>Jul. 2024</b> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> about my work at CSA, IISc.</p>
+            <p><b>Feb. 2024</b> Awarded one of 10 funded long-term positions at C-ISFCR for research in quantum/post-quantum cryptography.</p>
+            <p><b>Jan. 2024</b> Attended the "Present and Future Computing Systems" workshop at IISc, Dept. of Computer Science and Automation.</p>
+        </section>
 
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul class="contact-info">
+                <li><b>Personal Email</b>: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
+                <li><b>Work Email</b>: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
+                <li><b>Office</b>: Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
