@@ -12,16 +12,11 @@
             background-color: #ffffff;
             color: #000000;
             max-width: 600px;
-            margin: 0 auto;
+            margin-left: 0;
         }
         header {
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 1.8em;
-            margin: 0;
-            font-weight: normal;
         }
         header img {
             border: 1px solid #000000;
@@ -30,23 +25,23 @@
             height: auto;
             margin-top: 10px;
         }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-            padding: 10px 0;
+        header h1 {
+            font-size: 1.8em;
+            margin-top: 10px;
+            font-weight: normal;
+            text-align: left;
         }
-        nav a {
-            margin: 0 10px;
-            color: #0000cc;
-            text-decoration: none;
+        .links-left, .links-right {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            padding: 10px;
             font-size: 0.9em;
-        }
-        nav a:hover {
-            text-decoration: underline;
         }
         .main-content {
             font-size: 0.9em;
             line-height: 1.4;
+            margin-left: 25%;
         }
         section {
             margin-bottom: 20px;
@@ -58,7 +53,7 @@
             padding-bottom: 2px;
         }
         footer {
-            text-align: center;
+            text-align: left;
             margin-top: 40px;
             font-size: 0.8em;
             color: #555555;
@@ -70,23 +65,24 @@
 </head>
 <body>
     <header>
-        <h1>Prateek P Kulkarni</h1>
         <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
+        <h1>Prateek P Kulkarni</h1>
     </header>
 
-    <nav>
-        <a href="#positions">Positions</a>
-        <a href="#research">Research</a>
+    <div class="links-left">
+        <a href="#positions">Positions</a><br>
+        <a href="#research">Research</a><br>
         <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-       <!-- <a rel="me" href="https://mathstodon.xyz/@psykick">Mastodon</a> -->
-        
+    </div>
+
+    <div class="links-right">
+        <a href="#contact">Contact</a><br>
         <a href="cv2024_aug_ppk-1.pdf">CV</a>
-    </nav>
+    </div>
 
     <div class="main-content">
         <section id="bio">
-            <p>I am a 3rd-year engineering student, majoring in Electronics at <a href="https://ec.pes.edu">PES University</a>, specializing in VLSI with specific inclination towards quantum computing and architecture.</p>
+            <p>I am a 3rd-year engineering student, majoring in Electronics at <a href="https://ec.pes.edu">PES University</a>, specializing in VLSI with a specific inclination towards quantum computing and architecture.</p>
         </section>
 
         <section id="positions">
