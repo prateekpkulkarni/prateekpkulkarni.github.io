@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: "Georgia", "Times New Roman", serif;
-            background-color: #ffffff;
-            color: #000000;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            color: #2b2e33;
             margin: 0;
             padding: 20px;
             max-width: 900px;
@@ -16,19 +17,20 @@
         header {
             margin-bottom: 40px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #2b2e33;
         }
         header img {
             float: left;
             max-width: 150px;
             height: auto;
             margin-right: 20px;
-            border: 1px solid #000000;
+            border: 1px solid #2b2e33;
         }
         header h1 {
             font-size: 2.5em;
             margin: 0;
             font-weight: normal;
+            color: #0056b3;
         }
         header h3 {
             font-size: 1.3em;
@@ -50,16 +52,18 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #000000;
+            color: #0056b3;
         }
         section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
         }
         section h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
             padding-bottom: 5px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #2b2e33;
         }
         p, li {
             font-size: 1.1em;
@@ -69,8 +73,20 @@
             margin-top: 40px;
             font-size: 0.9em;
             color: #555555;
-            border-top: 1px solid #000000;
+            border-top: 1px solid #2b2e33;
             padding-top: 20px;
+        }
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            header img {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -89,7 +105,6 @@
             <li><a href="#research">Research</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!--<li><a href="blog.html">Blog</a></li>-->
             <li><a href="cv2024_aug_ppk-1.pdf">CV</a></li>
         </ul>
     </nav>
