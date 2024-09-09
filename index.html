@@ -6,120 +6,126 @@
     <title>Prateek P Kulkarni</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif;
-            background-color: #ffffff;
-            color: #000000;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 40px;
-            max-width: 900px;
-            line-height: 1.6;
-            text-align: center; /* Center the content */
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
         }
         header {
-            margin-bottom: 40px;
-            padding-bottom: 10px;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        header img {
-            width: 120px; /* Small square image */
-            height: 120px;
-            border-radius: 5px; /* Subtle rounding for smoothness */
-            display: block;
-            margin: 0 auto; /* Center the image */
-        }
-        h1, h2, h3 {
+        header h1 {
+            font-size: 2em;
+            margin: 0;
             font-weight: normal;
-            margin: 0 0 20px;
         }
-        h1 {
-            font-size: 2.2em;
-        }
-        h2 {
-            font-size: 1.6em;
-            margin-top: 40px;
-        }
-        h3 {
-            font-size: 1.2em;
-            color: #555555;
+        header p {
+            margin-top: 5px;
+            font-style: italic;
+            font-size: 1em;
         }
         nav {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd; /* Subtle line for navbar separation */
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 2px solid #000000;
+            border-bottom: 2px solid #000000;
         }
         nav a {
-            margin: 0 15px;
-            font-size: 1em;
-            color: #000080;
+            margin: 0 10px;
+            color: #0066cc;
             text-decoration: none;
+            font-size: 1em;
         }
         nav a:hover {
             text-decoration: underline;
         }
-        p, a {
-            font-size: 1.1em;
+        .main-content {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+        .profile-section img {
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
         footer {
+            text-align: center;
             margin-top: 40px;
-            font-size: 0.8em;
-            color: #555555;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #777777;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
         <h1>Prateek P Kulkarni</h1>
-        <h3>Third-Year Engineering Student | PES University</h3>
+        <p><a href="https://ec.pes.edu">PES University</a></p>
     </header>
 
     <nav>
-        <a href="#bio">Bio</a>
         <a href="#positions">Positions</a>
         <a href="#research">Research</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
+        <a rel="me" href="https://mathstodon.xyz/@psykick">Mastodon</a>
+        <a href="cv2024_apr_ppk.pdf">CV</a>
     </nav>
 
-    <section id="bio">
-        <h2>Bio</h2>
-        <p>I am a 3rd-year engineering student majoring in Electronics at <a href="https://ec.pes.edu">PES University</a>, specializing in VLSI with a focus on quantum computing and architecture.</p>
-        <p>{<a href="https://hebbalbangalore.kvs.ac.in/">K V Hebbal</a> &#x2192 PES University &#x2192 ?}</p>
-    </section>
+    <div class="profile-section">
+        <!-- <img src="1698818859534.jpg" alt="Prateek P Kulkarni"> -->
+    </div>
 
-    <section id="positions">
-        <h2>Current Positions</h2>
-        <p><b>Visiting Research Student</b> at Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science, Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit Kumar Mandal</a>. My work is supported by <b>Walmart Center for Tech Excellence</b> at CSA, IISc.</p>
-        <p><b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>.</p>
-        <p><b>Research Assistant</b> at Photonics & Quantum Technology Lab, PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning.</p>
-    </section>
+    <div class="main-content">
+        <section id="bio">
+           <li>I am a 3rd year engineering student, majoring in Electronics at <a href="https://ec.pes.edu">PES University</a>, specialising in VLSI with specific inclination towards quantum computing and architecture.</li>
+        </section>
 
-    <section id="research">
-        <h2>Research Focus</h2>
-        <p>My research interests span quantum computing, theoretical computer science, and architecture, with recent work in quantum cryptography and multicore quantum processors. I am also collaborating with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a> on Combinatorics on Words.</p>
-    </section>
+        <section id="positions">
+            <h2>Current Positions</h2>
+            <p><b>Visiting Research Student</b> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore under <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit Kumar Mandal</a>, working on quantum multicore architecture. My work is supported by the <b>Walmart Center for Tech Excellence</b> (<a href="https://www.csa.iisc.ac.in/cfe-walmart/">WACE</a>) at CSA, IISc.</p>
+            <p><b>Long-Term Research Intern</b> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.</p>
+            <p><b>Research Assistant</b> in the Photonics & Quantum Technology Lab, PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning (VQAs and Circuit-based QNN models for instance)</p>
+        </section>
 
-    <section id="news">
-        <h2>News</h2>
-        <p><b>Aug 2024:</b> Leading the Quantum Computing Club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.</p>
-        <p><b>Jul 2024:</b> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> on my work at CSA, IISc.</p>
-        <p><b>Feb 2024:</b> Awarded one of the 10 long-term position at C-ISFCR for quantum cryptography research.</p>
-        <p><b>Jan. 2024:</b> Attended the <a href="https://www.csa.iisc.ac.in/~skmandal/Outreach.html">Present and Future Computing Systems</a> workshop at CSA, IISc.</p>
-    </section>
+        <section id="research">
+            <h2>Research Focus</h2>
+            <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. <br><br> My current research involves communication for multicore quantum processors employing superconducting qubits. I am also starting to work in Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><b>Email:</b> <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
-        <p><b>Work Email:</b> <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></p>
-        <p><b>Office:</b> Photonics and Quantum Technology Lab, B501, BE Block, PES University</p>
-        <p><b>Download CV:</b> <a href="cv2024_aug_ppk-1.pdf" download>CV (<i>Last Updated: Sept. 2024</i>)</a></p>
-    </section>
+        <section id="news">
+            <h2>News</h2>
+            <p><b>Aug. 2024:</b> Leading the Quantum Computing club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.</p>
+            <p><b>Jul. 2024:</b> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> about my work at CSA, IISc.</p>
+            <p><b>Feb. 2024:</b> Awarded one of 10 funded long-term positions at C-ISFCR for research in quantum/post-quantum cryptography.</p>
+            <p><b>Jan. 2024:</b> Attended the "Present and Future Computing Systems" workshop at IISc, Dept. of Computer Science and Automation.</p>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Prateek P Kulkarni. All rights reserved.</p>
-    </footer>
-
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul class="contact-info">
+                <li><b>Personal Email:</b> <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
+                <li><b>Work Email:</b> <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
+                <li><b>Office:</b> Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
