@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILO: Memory-Informed Latency Optimization</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 3px solid;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        header h1 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #555;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        ol {
+            margin-left: 20px;
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MILO: Memory-Informed Latency Optimization</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                **MILO** (Memory-Informed Latency Optimization) is an advanced initiative focused on optimizing instruction scheduling to mitigate pipeline stalls caused by cache misses in RISC-V architectures. The project aims to develop a predictive system that anticipates cache misses and dynamically reorders instructions to enhance pipeline performance and reduce latency.
+            </p>
+            <p>
+                Drawing inspiration from the groundbreaking work of **Onur Mutlu**, MILO integrates sophisticated prediction algorithms with intelligent instruction scheduling. By leveraging these techniques, MILO seeks to push the boundaries of performance optimization in modern computer architectures.
+            </p>
+        </section>
+
+        <section>
+            <h2>Inspiration and Background</h2>
+            <p>
+                **Onur Mutlu** has made significant contributions to optimizing memory systems and performance bottlenecks. Notable projects such as **RowClone**, **TL-DRAM**, **RAIDR**, and **SALP** exemplify Mutlu's innovative approach to memory management. These solutions address various aspects of memory inefficiencies, providing a foundational understanding for MILO's design.
+            </p>
+            <p>
+                MILO builds on Mutlu’s principles of predictive and proactive optimization, extending them to instruction scheduling. This proactive approach aims to reduce the impact of cache misses and improve overall system performance, setting MILO apart from previous solutions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Details</h2>
+            <h3>Objective</h3>
+            <p>
+                MILO’s objective is to enhance RISC-V pipeline efficiency by addressing pipeline stalls caused by cache misses through a combination of predictive and dynamic techniques. The project will utilize the **Ripes simulator** to model and refine these techniques within a realistic RISC-V architecture.
+            </p>
+
+            <h3>Key Components</h3>
+            <ul>
+                <li><strong>Cache Miss Predictor:</strong> Utilizes a miss history buffer to predict future cache misses based on past access patterns, enhancing prediction accuracy.</li>
+                <li><strong>Instruction Reorder Buffer:</strong> Manages and reorders instructions to prioritize those that can execute without causing stalls, based on cache miss predictions.</li>
+                <li><strong>Pre-Fetching Mechanism (Extension):</strong> Introduces speculative data loading strategies to further minimize latency by preemptively loading data into the cache.</li>
+                <li><strong>Hybrid Cache Miss and Branch Predictor (Extension):</strong> Combines cache miss prediction with branch prediction to address multiple performance bottlenecks concurrently.</li>
+                <li><strong>Feedback Mechanism:</strong> Updates the predictor based on real-time outcomes to continuously improve prediction accuracy and adapt to varying workloads.</li>
+            </ul>
+
+            <h3>Implementation Steps</h3>
+            <ol>
+                <li><strong>Analyze Cache Access Patterns:</strong> Simulate typical workloads in Ripes to identify and understand cache miss patterns.</li>
+                <li><strong>Design the Cache Miss Predictor:</strong> Implement the miss history buffer and develop predictive algorithms for future cache misses.</li>
+                <li><strong>Develop Instruction Reordering Logic:</strong> Create and integrate the reorder buffer to manage instruction execution based on predictions.</li>
+                <li><strong>Implement Pre-Fetching (Extension):</strong> Develop speculative pre-fetching mechanisms to enhance cache efficiency.</li>
+                <li><strong>Hybrid Predictor (Extension):</strong> Explore the combination of cache miss and branch prediction for a comprehensive performance optimization solution.</li>
+            </ol>
+
+            <h3>Evaluation and Metrics</h3>
+            <ul>
+                <li><strong>Stall Cycles:</strong> Measure the reduction in pipeline stalls due to cache misses before and after implementing MILO.</li>
+                <li><strong>Instruction Throughput (IPC):</strong> Assess improvements in instructions per cycle to gauge the effectiveness of MILO.</li>
+                <li><strong>Prediction Accuracy:</strong> Evaluate the accuracy of cache miss and hybrid predictors using metrics such as precision and recall.</li>
+                <li><strong>Pre-Fetching Impact:</strong> Analyze the effect of pre-fetching on cache hit rates and overall system performance.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Similar Technologies and Innovations</h2>
+            <p>
+                Several technologies and innovations have addressed aspects of memory and instruction optimization, though MILO aims to push beyond these solutions. Key similar technologies include:
+            </p>
+            <ul>
+                <li><strong>RowClone:</strong> Developed to accelerate row-wise operations in DRAM by duplicating rows. This technique significantly reduces latency but focuses primarily on memory access rather than instruction scheduling. <a href="https://dl.acm.org/doi/10.1145/2465276.2465292">Read more about RowClone</a>.</li>
+                <li><strong>TL-DRAM (Targeted Latency DRAM):</strong> Enhances DRAM performance by targeting specific latency issues, improving access times. It primarily addresses memory latency rather than pipeline stalls. <a href="https://ieeexplore.ieee.org/document/8470461">Read more about TL-DRAM</a>.</li>
+                <li><strong>RAIDR (Row Access Incremental Deep Refresh):</strong> Improves DRAM reliability by reducing refresh overheads, thus indirectly impacting latency. However, it does not directly address instruction-level optimizations. <a href="https://ieeexplore.ieee.org/document/7414961">Read more about RAIDR</a>.</li>
+                <li><strong>SALP (Selective Access Latency Prediction):</strong> Focuses on predicting latency in memory access, offering a predictive mechanism similar to MILO’s cache miss prediction. <a href="https://dl.acm.org/doi/10.1145/3062341.3062355">Read more about SALP</a>.</li>
+            </ul>
+            <p>
+                While these technologies provide significant advancements in memory and latency optimization, MILO distinguishes itself by integrating predictive cache miss handling with dynamic instruction reordering. This approach not only addresses the limitations of previous methods but also aims to achieve a more holistic improvement in pipeline performance. By combining cache miss prediction with pre-fetching and hybrid prediction techniques, MILO seeks to deliver a comprehensive solution that enhances both instruction scheduling and overall system efficiency.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>
+                **MILO** stands at the forefront of RISC-V architecture optimization, leveraging predictive techniques and dynamic scheduling to address pipeline stalls caused by cache misses. Inspired by the pioneering work of Onur Mutlu, MILO aims to extend existing memory and performance optimization strategies into new realms, offering a robust solution to one of the critical challenges in modern computing. Through meticulous simulation and testing using Ripes, MILO aspires to make a substantial impact on the field of computer architecture and provide valuable insights into efficient processor design.
+            </p>
+        </section>
+    </div>
+  
+    <footer>
+        <p>I plan to do this for my one-sem long comp arch course (risc-v) project :)</p>
+      
+        <p>&copy; 2024 Prateek P Kulkarni. All rights reserved.</p>
+    </footer>
+</body>
+</html>
