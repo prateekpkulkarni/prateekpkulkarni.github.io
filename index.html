@@ -6,74 +6,88 @@
     <title>Prateek P Kulkarni's homepage</title>
     <style>
         body {
-            font-family: "Courier New", monospace;
-            background-color: #f4f4f4;
-            color: #000000;
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f4f1e5;
+            color: #000;
             margin: 0;
             padding: 20px;
             max-width: 900px;
-            border: 2px solid #000000;
-            background-image: linear-gradient(to bottom, #f4f4f4 0%, #e0e0e0 100%);
+            text-align: center;
         }
         header {
             margin-bottom: 40px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #000000;
+            border-bottom: 2px solid #000;
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #003366;
+        }
+        header h3 {
+            font-size: 1.3em;
+            margin: 5px 0 0;
             font-weight: normal;
-            text-align: center;
-            text-shadow: 1px 1px 0 #999999;
+        }
+        .main-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 2px solid #333;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            text-align: left;
+            max-width: 700px;
         }
         section {
             margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #333;
+            background-color: #f9f8f6;
         }
         section h2 {
-            font-size: 1.3em;
+            font-size: 1.7em;
             margin-bottom: 10px;
             padding-bottom: 5px;
-            border-bottom: 1px solid #000000;
-            background-color: #d0d0d0;
-            padding: 5px;
-            border-radius: 2px;
+            border-bottom: 1px solid #000;
+            letter-spacing: 2px;
+            color: #800000;
         }
         p, li {
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
         }
         nav {
             margin-bottom: 30px;
+            background-color: #eee;
             padding: 10px;
-            border: 1px solid #000000;
-            background-color: #cccccc;
+            border: 2px solid #666;
             font-size: 1.1em;
         }
         nav a {
-            color: #0000ff;
+            color: #0000ee;
             text-decoration: underline;
-            margin-right: 10px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #800000;
         }
         footer {
             margin-top: 40px;
             font-size: 0.9em;
-            color: #000000;
-            border-top: 2px solid #000000;
-            padding-top: 10px;
-            text-align: center;
-            background-color: #d0d0d0;
+            color: #333;
+            border-top: 2px solid #000;
+            padding-top: 20px;
         }
-        header img {
-            max-width: 100px;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .contact-info {
+            list-style-type: none;
+            padding-left: 0;
         }
-        ul.contact-info {
-            list-style-type: square;
-            padding-left: 20px;
+        .contact-info li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -100,7 +114,7 @@
 
         <section id="research">
             <h2>Research Focus</h2>
-            <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. <br><br> My current research involves fully-quantum communication for multicore quantum processors employing superconducting qubits. I am also starting to work in Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>.</p>
+            <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography. <br><br> My current research involves communication for multicore quantum processors employing superconducting qubits. I am also starting to work in Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>.</p>
         </section>
 
         <section id="news">
