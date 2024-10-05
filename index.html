@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
-<style>
+    <style>
         :root {
-            --mit-red: #A31F34;
-            --light-gray: #2c2c2c;
-            --almost-black: #111111;
-            --text-color: #ffffff;
+            --text-color: #000000;
+            --background-color: #FFFFFF;
+            --link-color: #0033cc;
+            --heading-color: #cc0000;
         }
         body {
             font-family: Georgia, serif;
@@ -17,7 +17,7 @@
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            background-color: var(--almost-black);
+            background-color: var(--background-color);
         }
         .container {
             max-width: 800px;
@@ -25,22 +25,19 @@
             padding: 20px;
         }
         header {
-            background-color: var(--mit-red);
-            color: white;
             padding: 20px 0;
             margin-bottom: 30px;
         }
-        h1, h2, h3 {
+        h1, h2 {
             font-family: Arial, sans-serif;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin: 0;
+            color: var(--heading-color);
         }
         h2 {
-            color: var(--mit-red);
-            border-bottom: 2px solid var(--mit-red);
-            padding-bottom: 5px;
+            color: var(--heading-color);
             margin-top: 30px;
         }
         .profile-info {
@@ -48,32 +45,28 @@
             align-items: center;
         }
         .profile-info img {
-            width: 120px;
+            width: 100px;
             height: auto;
-            border: 3px solid white;
             margin-right: 20px;
+            border-radius: 50%;
         }
         a {
-            color: #0071c5;
+            color: var(--link-color);
             text-decoration: none;
         }
         a:hover {
-            color: #0530ad;
             text-decoration: underline;
         }
-        .section {
+        nav {
+            text-align: center;
             margin-bottom: 30px;
-            background-color: var(--light-gray);
-            padding: 20px;
-            border-radius: 5px;
         }
-        .news-item {
-            margin-bottom: 15px;
+        nav a {
+            margin: 0 10px;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: var(--light-gray);
             margin-top: 30px;
         }
     </style>
@@ -87,60 +80,31 @@
     </header>
 
     <div class="container">
-        <section class="section" id="bio">
-            <p>I am a 3rd year engineering student, majoring in Electronics at <a href="https://ec.pes.edu">PES University</a>, specializing in VLSI with specific interests in quantum computing and architecture.</p>
+        <section id="bio">
+            <p>I am a 3rd-year Electronics Engineering student at <a href="https://ec.pes.edu">PES University</a>, specializing in VLSI and quantum computing. My research interests include quantum architecture, cryptography, and quantum neural networks.</p>
         </section>
 
         <nav>
-            <center>
             <a href="#positions">Positions</a> |
             <a href="#research">Research</a> |
-            <a href="#news">News</a> |
             <a href="#contact">Contact</a> |
             <a href="pratkulkarni.pdf">CV</a>
-            </center>
         </nav>
 
         <section id="positions">
             <h2>Current Positions</h2>
             <ul>
-                <li><strong>Visiting Research Student</strong> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, Indian Institute of Science (IISc), Bangalore advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit Kumar Mandal</a>, working on quantum multicore architecture. My work is supported by the <strong>Walmart Center for Tech Excellence</strong> (<a href="https://www.csa.iisc.ac.in/cfe-walmart/">WACE</a>) at CSA, IISc.</li>
-                <li><strong>Long-Term Research Intern</strong> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University. Part of the Applied Cryptography and Blockchain Lab, led by <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>, working on quantum/post-quantum cryptography.</li>
-                <li><strong>Research Assistant</strong> in the Photonics & Quantum Technology Lab, PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning (VQAs and Circuit-based QNN models for instance).</li>
-
-                <p>Starting this October, I will be joining the Quantum Computing research group @ <a href="https://iiitdwd.ac.in/">IIIT Dharwad</a> advised by <a href="https://iiitdwd.irins.org/profile/102760">Prof. Aswath Babu H</a>. My work most likely will be focused towards Quantum NLP!</p>
+                <li><strong>Visiting Research Student</strong> at the Future Computing Systems Lab, <a href="https://www.csa.iisc.ac.in">Dept. of Computer Science and Automation</a>, IISc Bangalore, working on quantum multicore architectures under <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit Kumar Mandal</a>. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>.</li>
+                <li><strong>Long-Term Research Intern</strong> at the Center for Information Security, Forensics and Cyber Resilience (<a href="https://www.isfcr.pes.edu">ISFCR</a>), PES University, focusing on post-quantum cryptography under <a href="https://www.isfcr.pes.edu/team/indu-radhakrishnan">Prof. Indu Radhakrishnan</a>.</li>
+                <li><strong>Research Assistant</strong> in the Photonics & Quantum Technology Lab at PES University under <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, working on quantum machine learning (VQAs and Quantum Neural Networks).</li>
+                <li><strong>Upcoming (Summer 2025)</strong>: I will be spending my summer at <a href="https://iiitdwd.ac.in/">IIIT Dharwad</a>, working with <a href="https://iiitdwd.irins.org/profile/102760">Prof. Aswath Babu H</a> on Quantum Natural Language Processing (QNLP).</li>
             </ul>
         </section>
 
-        <section id="research">
+       <section id="research">
             <h2>Research Focus</h2>
-            <p>My research interests include quantum computing, theoretical computer science, and computer architecture, with a recent focus on quantum cryptography.</p>
-            <p>My current research involves communication for multicore quantum processors employing superconducting qubits. I have also spent some time working on Quantum Circuits for Combinatorics on Words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a>.</p>
-        </section>
-
-        <section id="news">
-            <h2>News</h2>
-            <div class="news-item">
-                <strong>Oct. 2024:</strong> Submitted my joint work Prof. Sivasankar about {quantum circuits, combinatorics on words} to <a href="https://caldam2025.psgtech.ac.in/">CALDAM'25</a>!
-            </div>
-            <div class="news-item">
-               <strong>Sept. 2024:</strong> Our (PQT Lab) proposal to the <a href="https://x.com/IIScQuanTech/status/1803002551568392382">Q-Pragathi</a> Scheme by <a href="https://iqti.iisc.ac.in/quantum-research-park/">QuRP @IISc</a> was selected to be funded for a year-long project! More updates soon :)
-            </div>
-            <div class="news-item">
-                <strong>Sept. 2024:</strong> Co-organizing a workshop (Qriosity) on energy-efficient electronics and implications in quantum computing at my University. Invited speakers are Prof. Sumit (my advisor @CSA, IISc) and Dr. Anjani P, Quantum Computing Lead at AWS.
-            </div>
-            <div class="news-item">
-                <strong>Aug. 2024:</strong> Leading the Quantum Computing club at PES University, <a href="https://www.linkedin.com/company/qforest/posts/?feedView=all">Q-Forest</a>.
-            </div>
-            <div class="news-item">
-                <strong>Jul. 2024:</strong> Presented a <a href="https://drive.google.com/file/d/1sMGWXRdmNqnk8j7zmr3M7Kl7bkmZyAxa/view?usp=sharing">poster</a> about my work at CSA, IISc.
-            </div>
-            <div class="news-item">
-                <strong>Feb. 2024:</strong> Awarded one of 10 funded long-term positions at C-ISFCR for research in quantum/post-quantum cryptography.
-            </div>
-            <div class="news-item">
-                <strong>Jan. 2024:</strong> Attended the "<a href="https://www.csa.iisc.ac.in/~skmandal/Outreach">Present and Future Computing Systems</a>" workshop at IISc, Dept. of Computer Science and Automation.
-            </div>
+            <p> My research interests include quantum computing, theoretical computer science and computer architecture. </p>
+            <p>I have previously worked on building some quantum circuits for applications in combinatorics on words with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar</a> and fully-quantum communication for multicore quantum processors, at IISc.</p>
         </section>
 
         <section id="contact">
@@ -148,7 +112,7 @@
             <ul>
                 <li><strong>Personal Email:</strong> <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
                 <li><strong>Work Email:</strong> <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
-                <li><strong>Office:</strong> Photonics and Quantum Technology Lab, B501, BE Block, PES University</li>
+                <li><strong>Office:</strong> B501, BE Block, PES University</li>
             </ul>
         </section>
     </div>
