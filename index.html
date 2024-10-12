@@ -47,11 +47,33 @@
         .header-text {
             flex-grow: 1;
         }
-        nav {
-            margin-bottom: 20px;
+        .nav-container {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 10px;
         }
-        nav a {
-            margin-right: 15px;
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-item {
+            margin-bottom: 10px;
+        }
+        .nav-link {
+            display: block;
+            text-align: right;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .nav-link:hover {
+            background-color: #e0e0e0;
+        }
+        .nav-separator {
+            width: 2px;
+            background-color: #9c0831;
+            margin-left: 10px;
         }
         ul {
             padding-left: 20px;
@@ -74,12 +96,25 @@
         </div>
     </div>
 
-    <nav>
-        <a href="#research">Research</a>
-        <a href="#positions">Positions</a>
-        <a href="pratkulkarni.pdf">CV</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-container">
+        <table>
+            <tr>
+                <td>
+                    <nav>
+                        <ul class="nav-list">
+                                     <li class="nav-item"><a href="#research">Research</a></li>
+                                     <li class="nav-item"><a href="#positions">Positions</a></li>
+                                     <li class="nav-item"><a href="pratkulkarni.pdf">CV</a></li>
+                                     <li class="nav-item"><a href="#contact">Contact</a></li>
+                                <!-- Add more menu items as needed -->
+                        </ul>
+                    </nav>
+                </td>
+                <td class="nav-separator"></td>
+            </tr>
+        </table>
+    </div>
+    
 
     <h2 id="research">Research</h2>
     <p>My research centers on quantum computing, theoretical computer science, and computer architecture. Currently, I am focused on building fully-quantum communication systems for multicore quantum processors at IISc Bangalore.</p>
