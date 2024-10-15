@@ -5,174 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
     <style>
-        :root {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --accent-color: #00ff00;
-            --secondary-color: #404040;
-        }
         body {
-            font-family: 'Courier New', monospace;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            color: #000;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 20px;
-        }
-        header {
-            grid-column: 1 / -1;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
         }
         .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-color);
-        }
-        .header-text {
-            margin-left: 20px;
-        }
-        h1, h2 {
-            color: var(--accent-color);
-        }
-        nav {
-            background-color: var(--secondary-color);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav li {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
             margin-bottom: 10px;
         }
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            padding: 5px;
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            background-color: var(--bg-color);
-            border-left-color: var(--accent-color);
-        }
-        main {
-            background-color: var(--secondary-color);
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .cache-layout {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .cache-block {
-            background-color: var(--bg-color);
-            border: 1px solid var(--accent-color);
-            padding: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .cache-block:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-        }
-        footer {
-            text-align: center;
-            margin-top: auto;
-            padding: 20px;
-            background-color: var(--secondary-color);
+        h1, h2 {
+            clear: both;
         }
         a {
-            color: var(--accent-color);
+            color: #0000FF;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
+        ul {
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-img">
-            <div class="header-text">
-                <h1>Prateek P Kulkarni</h1>
-                <p>3rd-year Electronics Engineering student | <a href="https://ec.pes.edu">PES University</a><br>
-                Specializing in Quantum Computing and VLSI Design</p>
-            </div>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#positions">Positions</a></li>
-                <li><a href="#publications">Publications</a><li>
-            <!--    <li><a href="https://github.com/prateekpkulkarni/surface2cirqit">surface2cirqit</a></li> -->
-                <li><a href="pratkulkarni.pdf">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-            <section id="research">
-                <h2>Research</h2>
-                <u1>
-                <p>My research centers on quantum computing, theoretical computer science, and computer architecture. Currently, I am focused on building fully-quantum communication systems for multicore quantum processors at IISc Bangalore.</p>
-                <p>Previous work includes quantum circuit design for applications in combinatorics on words, with Prof. M Sivasankar. I am also exploring quantum neural networks and variational algorithms as part of my ongoing research at PES University.</p>
-                </u1>
-                    <!-- <div class="cache-layout">
-                    <div class="cache-block">Quantum Computing</div>
-                    <div class="cache-block">Theoretical CS</div>
-                    <div class="cache-block">Computer Architecture</div>
-                </div>
-            </section> -->
-            <section id="publications">
-                <h2>Publications</h2>
-                <u1>
-                    <li>Prateek P Kulkarni. A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies. (Submitted to C2I6-2024)</li>
-                    <li>Prateek P Kulkarni and Sivasankar M. Quantum Circuits for Locating the Factors of Morphic Words. (Submitted to CALDAM'25)</li>
-                </u1>
-            </section>
-            <section id="positions">
-                <h2>Positions</h2>
-                <ul>
-                    <li><strong>Visiting Research Student</strong>, Future Computing Systems Lab, Dept. of Computer Science and Automation, IISc Bangalore (Advisor: Prof. Sumit Kumar Mandal)</li>
-                    <li><strong>Research Intern</strong>, Center for Information Security, Forensics and Cyber Resilience, PES University (Quantum Cryptography, Advisor: Prof. Indu Radhakrishnan)</li>
-                    <li><strong>Research Assistant</strong>, Photonics & Quantum Technology Lab, PES University (Advisor: Prof. Kaustav Bhowmick)</li>
-                    <li><strong>Upcoming (Summer 2025)</strong>: Research Intern, IIIT Dharwad, Quantum Natural Language Processing (Advisor: Prof. Aswath Babu H)</li>
-                </ul>
-            </section>
+    <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-img">
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <ul>
-                    <li>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
-                    <li>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
-                    <li>Office: B501, BE Block, PES University</li>
-                </ul>
-            </section>
-        </main>
-    </div>
-    
-    <footer>
-        © 2024 Prateek P Kulkarni
-    </footer>
+    <h1>Prateek P Kulkarni</h1>
+
+    <p>I am 3rd-year Electronics Engineering student at <a href="https://ec.pes.edu">PES University</a>, specializing in Quantum Computing and VLSI Design. </p>
+
+    <p>My <a href="#research">research</a>, <a href="#publications">publications</a>, <a href="#positions">positions</a>, and <a href="pratkulkarni.pdf">CV</a>.</p>
+
+    <p>You can also find me on <a href="www.linkedin.com/in/pkulkarni2425">LinkedIn</a> and <a href="https://github.com/prateekpkulkarni">GitHub</a>.</p>
+
+    <h2 id="research">Research</h2>
+    <p>My research centers on quantum computing, theoretical computer science, and computer architecture. Currently, I am focused on building fully-quantum communication systems for multicore quantum processors at IISc Bangalore.</p>
+    <p>Previous work includes quantum circuit design for applications in combinatorics on words, with Prof. M Sivasankar. I am also exploring quantum neural networks and variational algorithms as part of my ongoing research at PES University.</p>
+
+    <h2 id="publications">Publications</h2>
+    <ul>
+        <li>Prateek P. Kulkarni. RAPID: Row-Access Pattern-aware In-DRAM Prefetching. (Submitted to ETIS'25)</li>
+        <li>Prateek P Kulkarni. A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies. (Submitted to C2I6'24)</li>
+        <li>Prateek P Kulkarni and Sivasankar M. Quantum Circuits for Locating the Factors of Morphic Words. (Submitted to CALDAM'25)</li>
+    </ul>
+
+    <h2 id="positions">Positions</h2>
+    <ul>
+        <li><strong>Visiting Research Student</strong>, Future Computing Systems Lab, Dept. of Computer Science and Automation, IISc Bangalore (Advisor: Prof. Sumit Kumar Mandal)</li>
+        <li><strong>Research Intern</strong>, Center for Information Security, Forensics and Cyber Resilience, PES University (Quantum Cryptography, Advisor: Prof. Indu Radhakrishnan)</li>
+        <li><strong>Research Assistant</strong>, Photonics & Quantum Technology Lab, PES University (Advisor: Prof. Kaustav Bhowmick)</li>
+        <li><strong>Upcoming (Summer 2025)</strong>: Research Intern, IIIT Dharwad, Quantum Natural Language Processing (Advisor: Prof. Aswath Babu H)</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <ul>
+        <li>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></li>
+        <li>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></li>
+        <li>Office: B501, BE Block, PES University</li>
+    </ul>
 </body>
 </html>
