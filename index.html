@@ -36,6 +36,34 @@
             padding: 20px;
             border-radius: 8px;
         }
+        .quote-container {
+    position: fixed;
+    bottom: 80px; /* Adjust to position slightly above bottom-right corner */
+    right: 20px;  /* Keep some padding from the right edge */
+    max-width: 250px; /* Limit the width for a clean look */
+    text-align: right; /* Align text to the right */
+    font-family: 'Patrick Hand', cursive; /* Handwritten feel */
+    font-size: 14px; /* Adjust size for readability */
+    color: #555; /* Subtle text color */
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background for visibility */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for a soft look */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+.quote-text {
+    display: block;
+    font-size: 16px; /* Larger font for the quote */
+    font-weight: 400;
+}
+
+.quote-author {
+    margin-top: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: #888; /* Lighter color for the author name */
+}
     </style>
 </head>
 <body>
@@ -70,5 +98,11 @@
     <h2 id="contact">Contact</h2>
     <p>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
     <p>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></p>
+
+    <div class="quote-container">
+    <q class="quote-text">Somewhere, something incredible is waiting to be known.</q>
+    <p class="quote-author">– Carl Sagan</p>
+    </div>
+
 </body>
 </html>
