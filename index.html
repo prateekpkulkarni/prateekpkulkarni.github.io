@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
@@ -37,43 +37,34 @@
             padding: 20px;
             border-radius: 8px;
         }
-        .vintage-quote-container {
+      
+        .quote-container {
     position: fixed;
-    bottom: 80px; /* Adjust to move above bottom */
-    right: 20px; /* Adjust for space from the right */
-    max-width: 300px; /* Restrict box width */
-    text-align: center;
-}
-
-.scroll-quote {
-    background: #f5deb3; /* Scroll-like parchment color */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners to mimic scroll edges */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle vintage shadow */
-    border: 2px solid #d2b48c; /* Slightly darker scroll border */
-    position: relative;
-    font-family: 'Marcellus', serif; /* Vintage serif font */
-    font-size: 16px;
-    color: #4a3c2a; /* Dark brown text color */
+    bottom: 80px; /* Adjust to position slightly above bottom-right corner */
+    right: 20px;  /* Keep some padding from the right edge */
+    max-width: 250px; /* Limit the width for a clean look */
+    text-align: right; /* Align text to the right */
+    font-family: 'Press Start 2P'; /* Handwritten feel */
+    font-size: 14px; /* Adjust size for readability */
+    color: #555; /* Subtle text color */
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background for visibility */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for a soft look */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border: 1px solid #ddd; /* Subtle border */
 }
 
 .quote-text {
-    font-style: italic;
+    display: block;
+    font-size: 16px; /* Larger font for the quote */
+    font-weight: 400;
 }
 
 .quote-author {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 14px;
-    font-weight: bold;
-}
-
-.vintage-ship {
-    position: absolute;
-    top: -20px;
-    right: -30px; /* Place the ship on the top-right corner */
-    width: 60px; /* Scale the ship */
-    height: auto;
-    opacity: 0.8; /* Subtle ship appearance */
+    font-style: serif;
+    color: #888; /* Lighter color for the author name */
 }
 
     </style>
@@ -111,14 +102,10 @@
     <p>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
     <p>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></p>
 
-   <div class="vintage-quote-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ship_drawing.svg/120px-Ship_drawing.svg.png" 
-         alt="Vintage Ship" class="vintage-ship">
-    <div class="scroll-quote">
-        <q class="quote-text">Somewhere, something incredible is waiting to be known.</q>
-        <p class="quote-author">– Carl Sagan</p>
-    </div>
-</div>
+   <div class="quote-container">
+    <q class="quote-text">Somewhere, something incredible is waiting to be known.</q>
+    <p class="quote-author">– Carl Sagan</p>
+  </div>
 
 
 </body>
