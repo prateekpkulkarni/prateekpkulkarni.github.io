@@ -6,171 +6,99 @@
     <title>Prateek P Kulkarni</title>
     <style>
         body {
-            font-family: 'Times New Roman', monospace;
-            margin: 20px;
-            color: #000000;
-
-            .profile-container {
-  margin-top: 50px;
-}
-
-.profile-pic {
-  width: 200px; /* Fixed width */
-  height: auto; /* Maintain aspect ratio */
-}
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fdfdfd;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         h1 {
-            font-size: 24px;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
         h2 {
-            font-size: 18px;
+            font-size: 22px;
+            margin-top: 30px;
         }
         a {
-            color: #0000EE;
+            color: #0645ad;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 20px 40px;
+        }
         hr {
             border: none;
-            border-top: 1px solid #000000;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
         }
-        #content {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 8px;
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 40px 0;
+            color: #666;
         }
-      
-        .quote-container {
-    position: fixed;
-    bottom: 80px; /* Adjust to position slightly above bottom-right corner */
-    right: 20px;  /* Keep some padding from the right edge */
-    max-width: 250px; /* Limit the width for a clean look */
-    text-align: right; /* Align text to the right */
-    font-family: 'Press Start 2P'; /* Handwritten feel */
-    font-size: 14px; /* Adjust size for readability */
-    color: #555; /* Slight white background for visibility */
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners for a soft look */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    border: 1px solid #ddd; /* Subtle border */
-}
-
-.quote-text {
-    display: block;
-    font-size: 16px; /* Larger font for the quote */
-    font-weight: 400;
-}
-
-.quote-author {
-    margin-top: 5px;
-    font-size: 14px;
-    font-style: serif;
-    color: #888; /* Lighter color for the author name */
-}
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                margin: 10px;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 16px;
-            }
-            .quote-container {
-                bottom: 20px;
-                right: 10px;
-                max-width: 200px;
-                font-size: 12px;
-            }
-            .quote-text {
-                font-size: 14px;
-            }
-            .quote-author {
-                font-size: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-                margin: 5px;
-            }
-            h1 {
-                font-size: 18px;
-            }
-            h2 {
-                font-size: 14px;
-            }
-            a {
-                font-size: 12px;
-            }
-            .quote-container {
-                bottom: 10px;
-                right: 5px;
-                max-width: 180px;
-                font-size: 10px;
-            }
-            .quote-text {
-                font-size: 12px;
-            }
-            .quote-author {
-                font-size: 10px;
-            }
-        }
-        
     </style>
 </head>
 <body>
-    <div class="profile-container">
-    <img src="1698818859534.jpg" alt="My Picture" class="profile-pic">
+    <div class="container">
+        <h1>Prateek P Kulkarni</h1>
+        <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
+        <hr>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#positions">Positions</a>
+            <a href="#teaching">Teaching</a>
+            <a href="pratkulkarni_24.pdf" download>CV</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+        <h2 id="about">About</h2>
+        <p>I am a 3rd-year Electronics Engineering student at PES University, specializing in quantum technology and VLSI design. I enjoy designing architectures for quantum computers. My research focuses on quantum computing, theoretical computer science, and machine learning.</p>
+        <h2 id="publications">Publications</h2>
+        <ul>
+            <li>RAPID: Row-Access Pattern-aware In-DRAM Prefetching (ETIS 2025)</li>
+            <li>Quantum Circuits for Locating Factors of Morphic Words (with Prof. Sivasankar M, submitted to CIAC 2025)</li>
+            <li>Low-Latency Memory Architecture using 3D XPoint & Memristors (C2I6 2024)</li>
+        </ul>
+        <h2 id="positions">Positions</h2>
+        <ul>
+            <li>Visiting Research Student, Future Computing Systems Lab, Indian Institute of Science</li>
+            <li>Research Assistant, Photonics & Quantum Technology Lab, PES University</li>
+        </ul>
+        <h2 id="teaching">Teaching</h2>
+        <u1>
+            <li>Quantum Transport and Logic Gates (Spring 2025)</li>
+        </u1>
+        <h2 id="contact">Contact</h2>
+        <p>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
+        <p>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></p>
+        <div class="quote">&ldquo;Somewhere, something incredible is waiting to be known.&rdquo; &mdash; Carl Sagan</div>
     </div>
-    <h1>Prateek P Kulkarni</h1>
-    <hr>
-    <a href="#about">About</a> | 
-    <a href="#publications">Publications</a> | 
-    <a href="#positions">Positions</a> | 
-  <!--  <a href="#teaching">Teaching</a> | -->
-    <a href="pratkulkarni_24.pdf" download>CV</a> | 
-    <a href="#contact">Contact</a>
-    <hr>
-    
-    <h2 id="about">About</h2>
-    <p>3rd-year Electronics Engineering student at PES University, specialising in quantum technology and VLSI design.</p>
-    <p>I like designing architectures for quantum computers. My research centers around quantum computing, theoretical computer science and machine learning largely. </p>
-
-    <h2 id="publications">Publications</h2>
-    <ul>
-        <li>RAPID: Row-Access Pattern-aware In-DRAM Prefetching (ETIS 2025)</li>
-   <!--     <li>CacheWeave: Cross-Domain Data Extraction Through Systematic Cache Pattern Manipulation (Submitted to HOST 2025)</li> -->
-        <li>Quantum Circuits for Locating Factors of Morphic Words (with Prof. Sivasankar M, submitted to CIAC 2025)</li>
-        <li>Low-Latency Memory Architecture using 3D XPoint & Memristors (C2I6 2024)</li>
-    </ul>
-
-    <h2 id="positions">Positions</h2>
-    <ul>
-    <!--    <li>Research Intern, NYU Quantum Technology Lab, New York University Shanghai</li> -->
-        <li>Visiting Research Student, Future Computing Systems Lab, Indian Institute of Science</li>
-        <li>Research Assistant, Photonics & Quantum Technology Lab, PES University</li>
-    </ul>
-
-<!-- <h2 id="teaching">Teaching</h2>
-    <u1>
-        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025, PES University)</li>
-    </u1> 
-
-      <div class="quote-container">
-    <q class="quote-text">Somewhere, something incredible is waiting to be known.</q>
-    <p class="quote-author">– Carl Sagan</p> 
-  </div> -->
-    
-    <h2 id="contact">Contact</h2>
-    <p>Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
-    <p>Work Email: <a href="mailto:pes1202202409@pesu.pes.edu">pes1202202409@pesu.pes.edu</a></p>
-
 </body>
 </html>
