@@ -3,78 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek's Homepage</title>
+    <title>Prateek P Kulkarni</title>
     <style>
+        /* Core design variables for consistent styling */
+        :root {
+            --primary-color: #2156a5;
+            --text-color: #333;
+            --background-color: #fff;
+            --link-color: #2156a5;
+            --border-color: #eaeaea;
+            --spacing-unit: 1.5rem;
+        }
+
+        /* Base styles using system fonts with academic serif fonts */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.5;
-            color: #000;
+            font-family: "Charter", "Palatino Linotype", Palatino, source-serif-pro, serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
+        /* Clean, minimalist heading style */
         h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin: 0 0 40px 0;
-            padding: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: var(--spacing-unit);
+            color: var(--text-color);
         }
+
         h2 {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0 0 40px 0;
-            padding: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin: calc(var(--spacing-unit) * 2) 0 var(--spacing-unit) 0;
+            color: var(--text-color);
         }
+
+        /* Grid layout for profile and content */
         .content-wrapper {
-            display: flex;
-            gap: 30px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 2);
         }
 
+        /* Profile image styling */
         .profile-image {
-            width: 300px;
+            width: 100%;
             height: auto;
-            flex-shrink: 0;
+            border-radius: 3px;
         }
 
+        /* Main content area styling */
         .info-section {
-            padding-top: 0;
+            font-size: 1.1rem;
         }
 
-        .info-line {
-            margin-bottom: 16px;
-            line-height: 1.5;
+        .contact-info {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: #666;
         }
 
+        .research-interests {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            line-height: 1.7;
+        }
+
+        /* Section styling for publications and teaching */
+        .section {
+            margin: calc(var(--spacing-unit) * 2) 0;
+        }
+
+        /* Link styling with subtle hover effect */
         a {
-            color: #2156a5;
+            color: var(--link-color);
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            border-bottom: 1px solid var(--link-color);
         }
 
-        .research-field {
-            margin-top: 16px;
-        }
-
+        /* Quote styling with separator */
         .quote {
             font-style: italic;
-            margin-top: 20px;
+            color: #666;
+            margin-top: calc(var(--spacing-unit) * 2);
+            padding-top: var(--spacing-unit);
+            border-top: 1px solid var(--border-color);
         }
 
+        /* Responsive design for mobile devices */
         @media (max-width: 768px) {
             .content-wrapper {
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
 
             .profile-image {
-                width: 200px;
+                max-width: 200px;
             }
         }
     </style>
@@ -83,19 +113,47 @@
     <h1>Prateek P Kulkarni</h1>
     
     <div class="content-wrapper">
-        <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
+        <div>
+            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
+        </div>
         
         <div class="info-section">
-            <div class="info-line">3rd year UG (Specialising in VLSI, Quantum Tech Track)</div>
-            <div class="info-line">Department of Electronics and Communication Engineering</div>
-            <div class="info-line">PES University, Bangalore</div>
-            <div class="info-line">Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a> <a href="mailto:pkulkarni2425@gmail.com" style="text-decoration: none; margin-left: 4px">✉</a></div>
-
-            <div style="margin-top: 30px;">
-                I am broadly interested in theoretical computer science, specifically in the aspects of computational complexity and quantum query complexity. <br><br> Currently, I work on multicore quantum computing architectures in the Future Computing Systems (FIST) Lab at the Department of Computer Science and Automation, Indian Institute of Science advised by 
-                <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a>. <br><br> This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>. <br>
-                <!--For publications, visit: <a href="">Google Scholar</a> or <a href="">DBLP</a>.-->
+            <div class="contact-info">
+                Third-year Undergraduate<br>
+                VLSI & Quantum Technology Track<br>
+                Electronics and Communication Engineering<br>
+                PES University, Bangalore<br>
+                <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a>
             </div>
+
+            <div class="research-interests">
+                My research interests lie in theoretical computer science, with a focus on computational complexity and quantum query complexity. 
+                <br><br>
+                I am currently working on multicore quantum computing architectures at the Future Computing Systems (FIST) Lab, Department of Computer Science and Automation, Indian Institute of Science, under the guidance of <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a>. This research is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>.
+            </div>
+
+            <!-- Publications Section (commented out until needed) 
+            <div class="section">
+                <h2>Publications</h2>
+                <div class="publication">
+                    <strong>Title of Paper</strong><br>
+                    Authors: Author1, Author2<br>
+                    Conference/Journal Name, Year<br>
+                    [<a href="#">PDF</a>] [<a href="#">Code</a>] [<a href="#">Slides</a>]
+                </div>
+            </div>
+            -->
+
+            <!-- Teaching Section (commented out until needed)
+            <div class="section">
+                <h2>Teaching</h2>
+                <div class="teaching-experience">
+                    <strong>Course Name</strong> (Term Year)<br>
+                    Role: Teaching Assistant<br>
+                    Description of responsibilities and contributions
+                </div>
+            </div>
+            -->
 
             <div class="quote">
                 "Somewhere, something incredible is waiting to be known." — Carl Sagan
