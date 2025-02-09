@@ -50,6 +50,16 @@
             letter-spacing: -0.02em;
         }
 
+        h2 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--deep-blue);
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E8E8E8;
+        }
+
         .content {
             display: grid;
             grid-template-columns: 280px 1fr;
@@ -83,6 +93,54 @@
 
         .research-interests {
             margin-bottom: 3rem;
+        }
+
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #E8E8E8;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .publication-authors {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0.3rem 0;
+        }
+
+        .publication-venue {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .publication-links {
+            margin-top: 0.5rem;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+        }
+
+        .publication-links a {
+            margin-right: 1rem;
+        }
+
+        .teaching-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .teaching-role {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .teaching-term {
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            color: #666;
         }
 
         a {
@@ -146,10 +204,41 @@
             
             <main class="main-content">
                 <div class="research-interests">
-                    My research interests lie in theoretical computer science, with a focus on computational complexity and quantum query complexity. 
+                    My research interests lie in theoretical computer science, with a focus on discrete math, computational complexity and quantum query complexity. 
                     <br><br>
-                    I am currently working on the realizability of multicore quantum computing architectures at the Future Computing Systems Lab, CSA IISc, under the guidance of <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a>. 
+                    I am currently working on multicore quantum computing architectures at the Future Computing Systems Lab, CSA @IISc, under the guidance of <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a>. 
                 </div>
+
+                <h2>Publications</h2>
+                <div class="publication-item">
+                    <div class="publication-title">On the Quantum Query Complexity of Boolean Functions</div>
+                    <div class="publication-authors">Prateek P Kulkarni, Author2, Author3</div>
+                    <div class="publication-venue">Under Review, 2024</div>
+                    <div class="publication-links">
+                        <a href="#">[PDF]</a>
+                        <a href="#">[arXiv]</a>
+                        <a href="#">[Code]</a>
+                    </div>
+                </div>
+
+                <!-- <div class="publication-item">
+                    <div class="publication-title">Efficient Architectures for Multicore Quantum Computing Systems</div>
+                    <div class="publication-authors">Prateek P Kulkarni, Sumit K Mandal</div>
+                    <div class="publication-venue">In Preparation</div>
+                </div>-->
+
+               <h2>Teaching</h2>
+                <div class="teaching-item">
+                    <div class="teaching-role">Teaching Assistant - Quantum Transport and Logic Gates</div>
+                    <div class="teaching-term">Spring 2025</div>
+                    <div>Assisted in laboratory sessions, graded assignments, and held office hours for a class of 80 students.</div>
+                </div>
+
+                <!--<div class="teaching-item">
+                    <div class="teaching-role">Student Mentor - Introduction to Programming</div>
+                    <div class="teaching-term">Spring 2023</div>
+                    <div>Led weekly problem-solving sessions and provided one-on-one tutoring to first-year students.</div>
+                </div>-->
 
                 <div class="quote">
                     "Somewhere, something incredible is waiting to be known." — Carl Sagan
