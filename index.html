@@ -5,245 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
     <style>
-        :root {
-            --serif: "Crimson Text", "Palatino Linotype", Georgia, serif;
-            --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-            --cardinal-red: #8C1515;
-            --deep-blue: #1F4D7B;
-            --text: #2D2D2D;
-            --bg: #FAFAFA;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Classic theory CS styling */
         body {
-            font-family: var(--serif);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 1000px;
+            font-family: "Computer Modern Serif", Georgia, serif;
+            line-height: 1.5;
+            max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        header {
-            margin-bottom: 3rem;
-            border-bottom: 3px solid var(--cardinal-red);
-            padding-bottom: 1rem;
+            padding: 20px;
+            background: #fff;
+            color: #000;
         }
 
         h1 {
-            font-family: var(--serif);
-            font-size: 2.75rem;
-            font-weight: 400;
-            color: var(--cardinal-red);
-            letter-spacing: -0.02em;
+            font-size: 130%;
+            font-weight: normal;
+            margin: 0 0 1em 0;
         }
 
         h2 {
-            font-family: var(--serif);
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--deep-blue);
-            margin: 2.5rem 0 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #E8E8E8;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 4rem;
-        }
-
-        .profile-section {
-            position: relative;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: auto;
-            border: 1px solid #E8E8E8;
-            padding: 4px;
-            background: white;
-        }
-
-        .contact-info {
-            margin-top: 2rem;
-            font-family: var(--sans);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #666;
-        }
-
-        .main-content {
-            font-size: 1.1rem;
-            max-width: 65ch;
-        }
-
-        .research-interests {
-            margin-bottom: 3rem;
-        }
-
-        .publication-item {
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 2px solid #E8E8E8;
-        }
-
-        .publication-title {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .publication-authors {
-            font-size: 0.95rem;
-            color: #555;
-            margin: 0.3rem 0;
-        }
-
-        .publication-venue {
-            font-style: italic;
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .publication-links {
-            margin-top: 0.5rem;
-            font-family: var(--sans);
-            font-size: 0.9rem;
-        }
-
-        .publication-links a {
-            margin-right: 1rem;
-        }
-
-        .teaching-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .teaching-role {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .teaching-term {
-            font-family: var(--sans);
-            font-size: 0.95rem;
-            color: #666;
+            font-size: 110%;
+            font-weight: normal;
+            margin: 1.5em 0 0.5em 0;
+            border-bottom: 1px solid #ccc;
         }
 
         a {
-            color: var(--deep-blue);
+            color: #00e;  /* Classic browser link blue */
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
         }
 
         a:hover {
-            border-bottom-color: var(--deep-blue);
+            text-decoration: underline;
         }
 
-        .quote {
-            font-style: italic;
+        .profile-table {
+            margin: 1em 0 2em 0;
+        }
+
+        .profile-table td {
+            vertical-align: top;
+            padding-right: 2em;
+        }
+
+        .profile-img {
+            max-width: 180px;
+        }
+
+        .footer {
+            margin-top: 3em;
+            font-size: 80%;
             color: #666;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #E8E8E8;
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 800px) {
-            .container {
-                padding: 2rem;
-            }
-
-            .content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .profile-image {
-                max-width: 240px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
+            border-top: 1px solid #eee;
+            padding-top: 1em;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Prateek P Kulkarni</h1>
-        </header>
-        
-        <div class="content">
-            <aside class="profile-section">
-                <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
-                
-                <div class="contact-info">
-                    Third-year Undergraduate<br>
-                    VLSI & Quantum Technology Track<br>
-                    Electronics and Communication Engineering<br>
-                    PES University, Bangalore<br>
-                    <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a>
-                </div>
-            </aside>
-            
-            <main class="main-content">
-                <div class="research-interests">
-                    My research interests lie in theoretical computer science, with a focus on computational complexity and quantum query complexity. 
-                    <br><br>
-                    I am currently working on the realizability of multicore quantum computing architectures at the Future Computing Systems Lab, CSA IISc, under the guidance of <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a>. 
-                </div>
+    <h1>Prateek P Kulkarni</h1>
 
-               <!--  <h2>Publications</h2>
-                <div class="publication-item">
-                    <div class="publication-title">On the Quantum Query Complexity of Boolean Functions</div>
-                    <div class="publication-authors">Prateek P Kulkarni, Author2, Author3</div>
-                    <div class="publication-venue">Under Review, 2024</div>
-                    <div class="publication-links">
-                        <a href="#">[PDF]</a>
-                        <a href="#">[arXiv]</a>
-                        <a href="#">[Code]</a>
-                    </div>
-                </div>
+    <table class="profile-table">
+        <tr>
+            <td><img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-img"></td>
+            <td>
+                Third-year Undergraduate<br>
+                VLSI & Quantum Technology Track<br>
+                Electronics and Communication Engineering<br>
+                PES University<br>
+                Email: pkulkarni2425 [at] gmail [dot] com
+            </td>
+        </tr>
+    </table>
 
-                <div class="publication-item">
-                    <div class="publication-title">Efficient Architectures for Multicore Quantum Computing Systems</div>
-                    <div class="publication-authors">Prateek P Kulkarni, Sumit K Mandal</div>
-                    <div class="publication-venue">In Preparation</div>
-                </div>
+    <h2>About</h2>
+    <p>
+        I am an undergraduate student interested in theoretical computer science, particularly computational complexity and quantum query complexity. I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Sumit K Mandal</a> at IISc on multicore quantum computing architectures.
+    </p>
 
-               <h2>Teaching</h2>
-                <div class="teaching-item">
-                    <div class="teaching-role">Teaching Assistant - Quantum Transport and Logic Gates</div>
-                    <div class="teaching-term">Spring 2025</div>
-                </div>
+    <!-- Commented sections for future use
+    <h2>News</h2>
+    <ul class="news">
+        <li>[Feb 2025] Started working on quantum query complexity of Boolean functions</li>
+        <li>[Jan 2025] Joined Future Computing Systems Lab at CSA, IISc</li>
+    </ul>
 
-               <div class="teaching-item">
-                    <div class="teaching-role">Student Mentor - Introduction to Programming</div>
-                    <div class="teaching-term">Spring 2023</div>
-                    <div>Led weekly problem-solving sessions and provided one-on-one tutoring to first-year students.</div>
-                </div>-->
+    <h2>Papers</h2>
+    <ul class="papers">
+        <li>
+            On the Quantum Query Complexity of Boolean Functions<br>
+            Prateek P Kulkarni, Author2, Author3<br>
+            Under Review, 2024<br>
+            <span class="paper-links">
+                [<a href="#">pdf</a>]
+                [<a href="#">arXiv</a>]
+                [<a href="#">code</a>]
+            </span>
+        </li>
+        <li>
+            Efficient Architectures for Multicore Quantum Computing Systems<br>
+            Prateek P Kulkarni, Sumit K Mandal<br>
+            In Preparation<br>
+            <span class="paper-links">[<a href="#">draft</a>]</span>
+        </li>
+    </ul>
 
-                <div class="quote">
-                    "Somewhere, something incredible is waiting to be known." — Carl Sagan
-                </div>
-            </main>
-        </div>
+    <h2>Teaching</h2>
+    <ul class="papers">
+        <li>
+            Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)
+        </li>
+        <li>
+            Student Mentor, Introduction to Programming (Spring 2023)
+        </li>
+    </ul>
+    -->
+
+    <div class="footer">
+        Last updated: February 2025<br>
+        This page is valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
     </div>
 </body>
 </html>
