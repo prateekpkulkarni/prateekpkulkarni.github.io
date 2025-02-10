@@ -4,64 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <style>
-        /* Classic theory CS styling */
+        /* Jemdoc-inspired styling */
         body {
-            font-family: "Computer Modern Serif", Georgia, serif;
+            font-family: Georgia, serif;
             line-height: 1.5;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background: #fff;
+            padding: 20px 40px;
+            background: #ffffff;
             color: #000;
         }
 
-        h1 {
-            font-size: 130%;
-            font-weight: normal;
-            margin: 0 0 1em 0;
+        /* Classic jemdoc header */
+        #toptitle {
+            margin-bottom: 1.5em;
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 0.5em;
         }
 
+        h1 {
+            font-size: 140%;
+            font-weight: bold;
+            margin: 0;
+            color: #527bbd;
+        }
+
+        /* Jemdoc-style headers */
         h2 {
             font-size: 110%;
-            font-weight: normal;
+            font-weight: bold;
             margin: 1.5em 0 0.5em 0;
-            border-bottom: 1px solid #ccc;
+            color: #527bbd;
+            border-bottom: 1px solid #527bbd;
+            padding-bottom: 0.2em;
         }
 
+        /* Jemdoc link styling */
         a {
-            color: #00e;  /* Classic browser link blue */
+            color: #224b8d;
             text-decoration: none;
         }
 
         a:hover {
+            color: #00004c;
             text-decoration: underline;
         }
 
+        /* Profile section styling */
         .profile-table {
             margin: 1em 0 2em 0;
+            border-collapse: collapse;
         }
 
         .profile-table td {
             vertical-align: top;
-            padding-right: 2em;
+            padding: 0 2em 0 0;
         }
 
         .profile-img {
-            max-width: 180px;
+            max-width: 160px;
         }
 
+        /* Lists styling */
+        ul {
+            margin: 0.5em 0 1em 0;
+            padding-left: 1.5em;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        /* Footer styling */
         .footer {
             margin-top: 3em;
-            font-size: 80%;
+            font-size: 90%;
             color: #666;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #ccc;
             padding-top: 1em;
+        }
+
+        /* Menu block (common in jemdoc) */
+        .menu {
+            background-color: #f6f6f6;
+            padding: 1em;
+            margin: 1em 0;
+            border: 1px solid #dddddd;
+        }
+
+        /* Code and math environment */
+        code, .math {
+            font-family: "Lucida Console", Monaco, monospace;
+            background: #f6f6f6;
+            padding: 0.2em 0.4em;
+            font-size: 90%;
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        /* Jemdoc-style paragraphs */
+        p {
+            margin: 1em 0;
+            text-align: justify;
+        }
+
+        /* Contact info styling */
+        .contact {
+            font-family: monospace;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>Prateek P Kulkarni</h1>
+    <div id="toptitle">
+        <h1>Prateek P Kulkarni</h1>
+    </div>
 
     <table class="profile-table">
         <tr>
@@ -71,7 +134,7 @@
                 VLSI & Quantum Technology Track<br>
                 Electronics and Communication Engineering<br>
                 PES University<br>
-                Email: pkulkarni2425 [at] gmail [dot] com
+                <span class="contact">pkulkarni2425 [at] gmail [dot] com</span>
             </td>
         </tr>
     </table>
@@ -81,47 +144,15 @@
         I am an undergraduate student interested in theoretical computer science, particularly computational complexity and quantum query complexity. I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on multicore quantum computing architectures.
     </p>
 
-    <!-- Commented sections for future use
-    <h2>News</h2>
-    <ul class="news">
-        <li>[Feb 2025] Started working on quantum query complexity of Boolean functions</li>
-        <li>[Jan 2025] Joined Future Computing Systems Lab at CSA, IISc</li>
-    </ul>
-
-    <h2>Papers</h2>
-    <ul class="papers">
-        <li>
-            On the Quantum Query Complexity of Boolean Functions<br>
-            Prateek P Kulkarni, Author2, Author3<br>
-            Under Review, 2024<br>
-            <span class="paper-links">
-                [<a href="#">pdf</a>]
-                [<a href="#">arXiv</a>]
-                [<a href="#">code</a>]
-            </span>
-        </li>
-        <li>
-            Efficient Architectures for Multicore Quantum Computing Systems<br>
-            Prateek P Kulkarni, Sumit K Mandal<br>
-            In Preparation<br>
-            <span class="paper-links">[<a href="#">draft</a>]</span>
-        </li>
-    </ul>
-    -->
-    
     <h2>Teaching</h2>
-    <ul class="papers">
-        <li>
-            Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)
-        </li>
-        <li>
-            Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)
-        </li>
+    <ul>
+        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
     </ul>
 
     <div class="footer">
         Last updated: February 2025<br>
-         This page is valid <a href="https://validator.w3.org/#validate_by_input">HTML5</a>
+        This page is valid <a href="https://validator.w3.org/#validate_by_input">HTML5</a>
     </div>
 </body>
 </html>
