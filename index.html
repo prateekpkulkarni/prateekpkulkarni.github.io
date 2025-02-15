@@ -5,127 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
     <style>
-        /* Classic theory CS styling */
         body {
-            font-family: "Computer Modern Serif", Georgia, serif;
-            line-height: 1.5;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
+            font-family: Georgia, serif;
+            background: #ffffff;
+            padding: 0;
+            margin: 0;
             color: #000;
         }
-
-        h1 {
-            font-size: 130%;
-            font-weight: normal;
-            margin: 0 0 1em 0;
+        
+        #layout {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding: 20px;
+            gap: 40px;
         }
-
+        
+        #menu {
+            width: 180px;
+            flex-shrink: 0;
+        }
+        
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #menu li {
+            margin: 8px 0;
+        }
+        
+        #menu a {
+            color: #226;
+            text-decoration: none;
+        }
+        
+        #menu a:hover {
+            color: #447;
+            text-decoration: underline;
+        }
+        
+        #content {
+            flex-grow: 1;
+            max-width: 700px;
+        }
+        
+        .title {
+            font-size: 150%;
+            margin-bottom: 30px;
+            color: #527bbd;
+        }
+        
         h2 {
             font-size: 110%;
             font-weight: normal;
-            margin: 1.5em 0 0.5em 0;
+            margin-top: 20px;
+            padding-bottom: 5px;
             border-bottom: 1px solid #ccc;
+            color: #527bbd;
         }
-
+        
+        /* New styles for publications */
+        .pub-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .pub-list li {
+            margin-bottom: 1.2em;
+        }
+        
+        .pub-title {
+            font-weight: normal;
+        }
+        
+        .pub-authors {
+            font-size: 95%;
+            margin: 0.2em 0;
+        }
+        
+        .pub-venue {
+            font-style: italic;
+            font-size: 95%;
+            color: #444;
+        }
+        
+        .pub-links {
+            font-size: 90%;
+            color: #666;
+        }
+        
+        .pub-links a {
+            color: #527bbd;
+            margin-right: 0.5em;
+        }
+        
+        /* Rest of previous styles */
+        .profile {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .profile img {
+            width: 140px;
+        }
+        
+        .contact {
+            line-height: 1.5;
+        }
+        
         a {
-            color: #00e;  /* Classic browser link blue */
+            color: #224b8d;
             text-decoration: none;
         }
-
+        
         a:hover {
             text-decoration: underline;
         }
-
-        .profile-table {
-            margin: 1em 0 2em 0;
-        }
-
-        .profile-table td {
-            vertical-align: top;
-            padding-right: 2em;
-        }
-
-        .profile-img {
-            max-width: 180px;
-        }
-
+        
         .footer {
-            margin-top: 3em;
-            font-size: 80%;
+            margin-top: 40px;
+            font-size: 90%;
             color: #666;
             border-top: 1px solid #eee;
-            padding-top: 1em;
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Prateek P Kulkarni</h1>
-
-    <table class="profile-table">
-        <tr>
-            <td><img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-img"></td>
-            <td>
-                Third-year Undergraduate<br>
-                VLSI & Quantum Technology Track<br>
-                Electronics and Communication Engineering<br>
-                PES University<br>
-                Email: pkulkarni2425 [at] gmail [dot] com
-            </td>
-        </tr>
-    </table>
-
-    <h2>About</h2>
-    <p>
-        I am an undergraduate student interested in theoretical computer science, particularly descriptive (and computational) complexity theory and quantum query complexity. 
-    </p>
-    <p>
-        I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on multicore quantum computing architectures. Earlier, I have worked with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords). I will be soon working on automatic sequences under his advising.
-    </p>
-
-    <!-- Commented sections for future use
-    <h2>News</h2>
-    <ul class="news">
-        <li>[Feb 2025] Started working on quantum query complexity of Boolean functions</li>
-        <li>[Jan 2025] Joined Future Computing Systems Lab at CSA, IISc</li>
-    </ul>
-
-    <h2>Papers</h2>
-    <ul class="papers">
-        <li>
-            On the Quantum Query Complexity of Boolean Functions<br>
-            Prateek P Kulkarni, Author2, Author3<br>
-            Under Review, 2024<br>
-            <span class="paper-links">
-                [<a href="#">pdf</a>]
-                [<a href="#">arXiv</a>]
-                [<a href="#">code</a>]
-            </span>
-        </li>
-        <li>
-            Efficient Architectures for Multicore Quantum Computing Systems<br>
-            Prateek P Kulkarni, Sumit K Mandal<br>
-            In Preparation<br>
-            <span class="paper-links">[<a href="#">draft</a>]</span>
-        </li>
-    </ul>
-    -->
-    
-    <h2>Teaching</h2>
-    <ul class="papers">
-        <li>
-            Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)
-        </li>
-        <li>
-            Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)
-        </li>
-
-    </ul>
-
-    <div class="footer">
-        Last updated: February 2025<br>
-         This page is valid <a href="https://validator.w3.org/#validate_by_input">HTML5</a>
+    <div id="layout">
+        <div id="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div id="content">
+            <div class="title">Prateek P Kulkarni</div>
+            
+            <!-- Previous sections remain same -->
+            <div class="profile">
+                <img src="/api/placeholder/140/140" alt="Prateek P Kulkarni">
+                <div class="contact">
+                    Third-year Undergraduate<br>
+                    VLSI & Quantum Technology Track<br>
+                    Electronics and Communication Engineering<br>
+                    PES University<br>
+                    <br>
+                    Email: pkulkarni2425 [at] gmail [dot] com
+                </div>
+            </div>
+            
+            <h2>About</h2>
+            <p>
+                I am an undergraduate student interested in theoretical computer science, particularly descriptive (and computational) complexity theory and quantum query complexity. 
+            </p>
+            
+           <!-- <h2>Publications</h2>
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">On the Quantum Query Complexity of Boolean Functions</div>
+                    <div class="pub-authors">Prateek P Kulkarni, Author2, Author3</div>
+                    <div class="pub-venue">Under review, 2025</div>
+                    <div class="pub-links">
+                        [<a href="#">arXiv</a>]
+                        [<a href="#">pdf</a>]
+                        [<a href="#">slides</a>]
+                    </div>
+                </li>
+                <li>
+                    <div class="pub-title">Efficient Architectures for Multicore Quantum Computing Systems</div>
+                    <div class="pub-authors">Prateek P Kulkarni, Sumit K Mandal</div>
+                    <div class="pub-venue">In preparation</div>
+                    <div class="pub-links">
+                        [<a href="#">draft</a>]
+                    </div>
+                </li>
+            </ul> -->
+            
+            <h2>Current Research</h2>
+            <p>
+                I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on multicore quantum computing architectures. Earlier, I have worked with <a href="https://scholar.google.com/citations?user=_WD2utcAAAAJ&hl=en">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords). I will be soon working on automatic sequences under his advising.
+            </p>
+            
+            <h2>Teaching</h2>
+            <ul>
+                <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+                <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+            </ul>
+            
+            <div class="footer">
+                Last updated: February 2025<br>
+            </div>
+        </div>
     </div>
 </body>
 </html>
