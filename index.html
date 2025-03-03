@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
-    <style>
+  <!--  <style>
         body {
             font-family: Georgia, serif;
             background: #ffffff;
@@ -168,7 +168,187 @@
                 text-align: center;
             }
         }
-    </style>
+    </style> -->
+<style>
+    body {
+        font-family: Georgia, serif;
+        background: #f9f9f9; /* Light gray background for a softer look */
+        padding: 0;
+        margin: 0;
+        color: #333; /* Darker text for better readability */
+        line-height: 1.6;
+    }
+
+    #layout {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        padding: 20px;
+        gap: 40px;
+        background: #ffffff; /* White content area */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    #menu {
+        width: 180px;
+        flex-shrink: 0;
+        border-right: 1px solid #eee; /* Traditional divider */
+        padding-right: 20px;
+    }
+
+    #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu li {
+        margin: 12px 0;
+    }
+
+    #menu a {
+        color: #224b8d; /* Deep blue for links */
+        text-decoration: none;
+        font-size: 95%;
+    }
+
+    #menu a:hover {
+        color: #447; /* Slightly lighter blue on hover */
+        text-decoration: underline;
+    }
+
+    #content {
+        flex-grow: 1;
+        max-width: 700px;
+    }
+
+    .title {
+        font-size: 150%;
+        margin-bottom: 30px;
+        color: #224b8d; /* Deep blue for the title */
+        font-weight: bold;
+        border-bottom: 2px solid #224b8d; /* Traditional underline */
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 120%;
+        font-weight: bold;
+        margin-top: 30px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc; /* Subtle divider */
+        color: #224b8d; /* Deep blue for headings */
+    }
+
+    /* Publications styling */
+    .pub-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .pub-list li {
+        margin-bottom: 1.5em;
+    }
+
+    .pub-title {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .pub-authors {
+        font-size: 95%;
+        margin: 0.2em 0;
+        color: #555;
+    }
+
+    .pub-venue {
+        font-style: italic;
+        font-size: 95%;
+        color: #666;
+    }
+
+    .pub-links {
+        font-size: 90%;
+        color: #666;
+    }
+
+    .pub-links a {
+        color: #224b8d; /* Deep blue for links */
+        margin-right: 0.5em;
+    }
+
+    /* Profile section */
+    .profile {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .profile img {
+        width: 140px;
+        border: 2px solid #eee; /* Subtle border for the image */
+    }
+
+    .contact {
+        line-height: 1.5;
+        color: #555;
+    }
+
+    a {
+        color: #224b8d; /* Deep blue for links */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styling */
+    .footer {
+        margin-top: 40px;
+        font-size: 90%;
+        color: #666;
+        border-top: 1px solid #eee; /* Traditional divider */
+        padding-top: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 800px) {
+        #layout {
+            flex-direction: column;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        #menu {
+            width: 100%;
+            text-align: center;
+            border-right: none;
+            padding-right: 0;
+        }
+
+        #menu ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        #menu li {
+            display: inline;
+        }
+
+        #content {
+            max-width: 100%;
+        }
+
+        .profile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+</style>
 </head>
 <body>
     <div id="layout">
