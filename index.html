@@ -4,330 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P Kulkarni</title>
-   <style>
+    <style>
         body {
-            font-family: Georgia, serif;
+            font-family: 'Times New Roman', serif;
             background: #ffffff;
-            padding-bottom: 8px;
             padding: 0;
             margin: 0;
             color: #000;
-        }
-        
-        #layout {
-            max-width: 1000px;
+            line-height: 1.6;
+            max-width: 800px;
             margin: 0 auto;
-            display: flex;
             padding: 20px;
-            gap: 40px;
         }
-        
-       #menu {
-            width: 180px;
-            flex-shrink: 0;
+
+        #menu {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
         }
-        
+
         #menu ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-        }
-        
-        #menu li {
-            margin: 8px 0;
-        }
-        
-        #menu a {
-            color: #226;
-            text-decoration: none;
-        }
-        
-        #menu a:hover {
-            color: #447;
-            text-decoration: underline;
-        }
-        
-        #content {
-            flex-grow: 1;
-            max-width: 700px;
-        }
-        
-        .title {
-            font-size: 150%;
-            margin-bottom: 30px;
-            color: #527bbd;
-        }
-        
-        h2 {
-            font-size: 110%;
-            font-weight: normal;
-            margin-top: 20px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ccc;
-            color: #527bbd;
-        }
-        
-        /* New styles for publications */
-        .pub-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .pub-list li {
-            margin-bottom: 1.2em;
-        }
-        
-        .pub-title {
-            font-weight: normal;
-        }
-        
-        .pub-authors {
-            font-size: 95%;
-            margin: 0.2em 0;
-        }
-        
-        .pub-venue {
-            font-style: italic;
-            font-size: 95%;
-            color: #444;
-        }
-        
-        .pub-links {
-            font-size: 90%;
-            color: #666;
-        }
-        
-        .pub-links a {
-            color: #527bbd;
-            margin-right: 0.5em;
-        }
-        
-        /* Rest of previous styles */
-        .profile {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .profile img {
-            width: 140px;
-        }
-        
-        .contact {
-            line-height: 1.5;
-        }
-        
-        a {
-            color: #224b8d;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            font-size: 90%;
-            color: #666;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 800px) {
-            #layout {
-                flex-direction: column;
-                gap: 20px;
-                padding: 15px;
-            }
-
-            #menu {
-                width: 100%;
-                text-align: center;
-            }
-
-            #menu ul {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            #menu li {
-                display: inline;
-            }
-
-            #content {
-                max-width: 100%;
-            }
-
-            .profile {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-    </style> 
-<!--  <style>
-    body {
-        font-family: Georgia, serif;
-        background: #f9f9f9; /* Light gray background for a softer look */
-        padding: 0;
-        margin: 0;
-        color: #333; /* Darker text for better readability */
-        line-height: 1.6;
-    }
-
-    #layout {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        padding: 20px;
-        gap: 40px;
-        background: #ffffff; /* White content area */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    }
-
-    #menu {
-        width: 180px;
-        flex-shrink: 0;
-        border-right: 1px solid #eee; /* Traditional divider */
-        padding-right: 20px;
-    }
-
-    #menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    #menu li {
-        margin: 12px 0;
-    }
-
-    #menu a {
-        color: #224b8d; /* Deep blue for links */
-        text-decoration: none;
-        font-size: 95%;
-    }
-
-    #menu a:hover {
-        color: #447; /* Slightly lighter blue on hover */
-        text-decoration: underline;
-    }
-
-    #content {
-        flex-grow: 1;
-        max-width: 700px;
-    }
-
-    .title {
-        font-size: 150%;
-        margin-bottom: 30px;
-        color: #224b8d; /* Deep blue for the title */
-        font-weight: bold;
-        border-bottom: 2px solid #224b8d; /* Traditional underline */
-        padding-bottom: 10px;
-    }
-
-    h2 {
-        font-size: 120%;
-        font-weight: bold;
-        margin-top: 30px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #ccc; /* Subtle divider */
-        color: #224b8d; /* Deep blue for headings */
-    }
-
-    /* Publications styling */
-    .pub-list {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .pub-list li {
-        margin-bottom: 1.5em;
-    }
-
-    .pub-title {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .pub-authors {
-        font-size: 95%;
-        margin: 0.2em 0;
-        color: #555;
-    }
-
-    .pub-venue {
-        font-style: italic;
-        font-size: 95%;
-        color: #666;
-    }
-
-    .pub-links {
-        font-size: 90%;
-        color: #666;
-    }
-
-    .pub-links a {
-        color: #224b8d; /* Deep blue for links */
-        margin-right: 0.5em;
-    }
-
-    /* Profile section */
-    .profile {
-        display: flex;
-        gap: 20px;
-        margin: 20px 0;
-    }
-
-    .profile img {
-        width: 140px;
-        border: 2px solid #eee; /* Subtle border for the image */
-    }
-
-    .contact {
-        line-height: 1.5;
-        color: #555;
-    }
-
-    a {
-        color: #224b8d; /* Deep blue for links */
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    /* Footer styling */
-    .footer {
-        margin-top: 40px;
-        font-size: 90%;
-        color: #666;
-        border-top: 1px solid #eee; /* Traditional divider */
-        padding-top: 10px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 800px) {
-        #layout {
-            flex-direction: column;
-            gap: 20px;
-            padding: 15px;
-        }
-
-        #menu {
-            width: 100%;
-            text-align: center;
-            border-right: none;
-            padding-right: 0;
-        }
-
-        #menu ul {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -338,91 +38,154 @@
             display: inline;
         }
 
-        #content {
-            max-width: 100%;
+        #menu a {
+            color: #0000EE; /* Classic blue link color */
+            text-decoration: none;
+            font-size: 100%;
+        }
+
+        #menu a:hover {
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 150%;
+            margin-bottom: 30px;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 120%;
+            font-weight: bold;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            color: #000;
         }
 
         .profile {
-            flex-direction: column;
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
             align-items: center;
+            justify-content: center;
+        }
+
+        .profile img {
+            width: 140px;
+            border: 1px solid #ccc;
+        }
+
+        .contact {
+            line-height: 1.5;
+            color: #000;
+        }
+
+        .pub-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            margin-bottom: 1.5em;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .pub-authors {
+            font-size: 95%;
+            margin: 0.2em 0;
+            color: #000;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            font-size: 95%;
+            color: #000;
+        }
+
+        .pub-links {
+            font-size: 90%;
+            color: #000;
+        }
+
+        .pub-links a {
+            color: #0000EE; /* Classic blue link color */
+            margin-right: 0.5em;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 90%;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
             text-align: center;
         }
-    }
-</style> -->
+
+        @media (max-width: 800px) {
+            body {
+                padding: 15px;
+            }
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="layout">
-        <div id="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#misc">Miscellaneous</a></li>
-            </ul>
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#misc">Miscellaneous</a></li>
+        </ul>
+    </div>
+    
+    <div class="title">Prateek P Kulkarni</div>
+    
+    <div class="profile">
+        <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-img">
+        <div class="contact">
+            Third-year Undergrad<br>
+            VLSI & Quantum Technology Track<br>
+            Department of Electronics and Communication Engineering<br>
+            PES University, Bengaluru, India<br>
+            <br>
+            Email: pkulkarni2425 [at] gmail [dot] com
         </div>
-        
-        <div id="content">
-            <div class="title">Prateek P Kulkarni</div>
-            
-            
-            <div class="profile">
-                <img src="1698818859534.jpg" alt="<prat.pfp>" class="profile-img">
-                <div class="contact">
-                    Third-year Undergrad<br>
-                    VLSI & Quantum Technology Track<br>
-                    Department of Electronics and Communication Engineering<br>
-                    PES University, Bengaluru, India<br>
-                    <br>
-                    Email: pkulkarni2425 [at] gmail [dot] com
-                </div>
-            </div>
-            
-            <h2>About</h2>
-            <p>
-                I am an undergraduate student interested in theoretical computer science, particularly descriptive (and computational) complexity theory and quantum query complexity. 
-            </p>
-            
-           <!-- <h2>Publications</h2>
-            <ul class="pub-list">
-                <li>
-                    <div class="pub-title">On the Quantum Query Complexity of Boolean Functions</div>
-                    <div class="pub-authors">Prateek P Kulkarni, Author2, Author3</div>
-                    <div class="pub-venue">Under review, 2025</div>
-                    <div class="pub-links">
-                        [<a href="#">arXiv</a>]
-                        [<a href="#">pdf</a>]
-                        [<a href="#">slides</a>]
-                    </div>
-                </li>
-                <li>
-                    <div class="pub-title">Efficient Architectures for Multicore Quantum Computing Systems</div>
-                    <div class="pub-authors">Prateek P Kulkarni, Sumit K Mandal</div>
-                    <div class="pub-venue">In preparation</div>
-                    <div class="pub-links">
-                        [<a href="#">draft</a>]
-                    </div>
-                </li>
-            </ul> -->
-            
-            <h2>Current Research</h2>
-            <p>
-                I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures. 
-            </p>
-            <p>
-                Earlier, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords). I will be soon working on automatic sequences under his advising.
-            </p>
-            
-            <h2>Teaching</h2>
-            <ul>
-                <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-                <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-            </ul>
-            
-            <div class="footer">
-                Last updated: February 2025<br>
-            </div>
-        </div>
+    </div>
+    
+    <h2>About</h2>
+    <p>
+        I am an undergraduate student interested in theoretical computer science, particularly descriptive (and computational) complexity theory and quantum query complexity. 
+    </p>
+    
+    <h2>Current Research</h2>
+    <p>
+        I am currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures. 
+    </p>
+    <p>
+        Earlier, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords). I will be soon working on automatic sequences under his advising.
+    </p>
+    
+    <h2>Teaching</h2>
+    <ul>
+        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+    </ul>
+    
+    <div class="footer">
+        Last updated: February 2025<br>
     </div>
 </body>
 </html>
