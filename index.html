@@ -1,122 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prateek P Kulkarni</title>
-  <style>
-    body {
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 0 20px;
-      background-color: #FFFCF4;
-      color: #333333;
-      line-height: 1.5;
-    }
-    a {
-      color: #0070C0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      font-size: 28px;
-      color: #333333;
-      border-bottom: 2px solid #0070C0;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-    img {
-      float: right;
-      border: 1px solid #ccc;
-      padding: 4px;
-      background: white;
-      margin: 0 0 15px 20px;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 20px 0;
-    }
-    b {
-      color: #0070C0;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    .footer {
-      font-size: 14px;
-      color: #777;
-      font-style: italic;
-    }
-    .section {
-      margin-top: 20px;
-    }
-    code {
-      background-color: #F8F8F8;
-      padding: 2px;
-      font-family: "Courier New", monospace;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek P Kulkarni</title>
+    <style>
+        /* Inspired by jemdoc style */
+        body {
+            background: white;
+            font-family: Georgia, serif;
+            padding-bottom: 8px;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        #layout-menu {
+            background: #f6f6f6;
+            border: 1px solid #dddddd;
+            padding-top: 0.5em;
+            padding-left: 8px;
+            padding-right: 8px;
+            font-size: 1.0em;
+            width: 12em;
+            white-space: nowrap;
+            text-align: left;
+            vertical-align: top;
+            float: left;
+            margin-right: 20px;
+        }
+        
+        #layout-content {
+            padding-top: 0.0em;
+            padding-left: 1.0em;
+            padding-right: 1.0em;
+            border: none;
+            background: white;
+            text-align: left;
+            vertical-align: top;
+            margin-left: 14em;
+            max-width: 700px;
+        }
+        
+        #layout-menu a {
+            line-height: 1.5em;
+            margin-left: 0.5em;
+            display: block;
+        }
+        
+        a, a > tt {
+            color: #224b8d;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            border-bottom: 1px gray dotted;
+        }
+        
+        #layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
+            color: #527bbd;
+            text-decoration: none;
+        }
+        
+        div.menu-category {
+            border-bottom: 1px solid gray;
+            margin-top: 0.8em;
+            padding-top: 0.2em;
+            padding-bottom: 0.1em;
+            font-weight: bold;
+        }
+        
+        div.menu-item {
+            padding-left: 16px;
+            text-indent: -16px;
+        }
+        
+        div#toptitle {
+            padding-bottom: 0.2em;
+            margin-bottom: 1.5em;
+            border-bottom: 3px double gray;
+        }
+        
+        h1, h2, h3 {
+            color: #527bbd;
+            margin-top: 0.7em;
+            margin-bottom: 0.3em;
+            padding-bottom: 0.2em;
+            line-height: 1.0;
+            padding-top: 0.5em;
+            border-bottom: 1px solid #aaaaaa;
+        }
+        
+        h1 {
+            font-size: 165%;
+        }
+        
+        h2 {
+            padding-top: 0.8em;
+            font-size: 125%;
+        }
+        
+        p {
+            margin-top: 0.0em;
+            margin-bottom: 0.8em;
+            padding: 0;
+        }
+        
+        ul, ol, dl {
+            margin-top: 0.2em;
+            padding-top: 0;
+            margin-bottom: 0.8em;
+        }
+        
+        ul {
+            list-style-position: outside;
+            list-style-type: square;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table.imgtable, table.imgtable td {
+            border: none;
+            text-align: left;
+        }
+        
+        div#footer {
+            font-size: small;
+            border-top: 1px solid #c0c0c0;
+            padding-top: 0.1em;
+            margin-top: 4.0em;
+            color: #c0c0c0;
+        }
+        
+        div#footer a {
+            color: #80a0b0;
+        }
+        
+        pre, tt {
+            font-size: 90%;
+            font-family: monaco, monospace;
+        }
+        
+        @media (max-width: 800px) {
+            #layout-menu {
+                float: none;
+                width: auto;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            #layout-content {
+                margin-left: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Prateek P Kulkarni</h1>
-  <img src="1698818859534.jpg" alt="Prateek P Kulkarni" width="160">
-  
-  <p>
-    I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
-  </p>
-
-  <div class="Reviewing">
-    <p><b>Reviewing & Service</b>: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></p>
-  </div>
-  
-  <div class="section">
-    <p><b>Current Research</b></p>
-    <ul>
-      <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures.</li>
-      <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
-    </ul>
-  </div>
-  
-  <!--<div class="section">
-    <p><b>Publications</b></p>
-    <ul>
-      <li></li>
-    </ul>
-  </div>-->
-  
-  <div class="section">
-    <p><b>Teaching</b></p>
-    <ul>
-      <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-      <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-    </ul>
-  </div>
-  
-  <div class="section">
-    <p><b>Contact</b></p>
-    <p style="margin-left: 20px;">
-      Email: pkulkarni2425 [at] gmail [dot] com
-    </p>
-  </div>
-  
-  <!--<div class="section">
-    <p><b>Miscellaneous</b></p>
-    <ul>
-      <li><a href="#">CV</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Research Statement</a></li>
-    </ul>
-  </div>-->
-  
-  <hr>
-  
-  <p class="footer">
-    Last updated: February 2025
-   
-  </p>
-  </div>
+    <div id="layout-content">
+        <div id="toptitle">
+            <h1>Prateek P Kulkarni</h1>
+        </div>
+        
+        <table class="imgtable">
+            <tr>
+                <td>
+                    <p>I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.</p>
+                </td>
+                <td>
+                    <img src="1698818859534.jpg" alt="Prateek P Kulkarni" width="140px">
+                </td>
+            </tr>
+        </table>
+        
+        <h2>Research</h2>
+        <ul>
+            <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures.</li>
+            <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
+        </ul>
+        
+        <h2>Teaching</h2>
+        <ul>
+            <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+            <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+        </ul>
+        
+        <h2>Service</h2>
+        <p><b>Reviewing</b>: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></p>
+        
+        <h2>Contact</h2>
+        <p>Email: pkulkarni2425 [at] gmail [dot] com</p>
+        
+        <div id="footer">
+            <div id="footer-text">
+                Last updated: February 2025
+            </div>
+        </div>
+    </div>
 </body>
 </html>
