@@ -1,109 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Prateek P Kulkarni</title>
-    <style>
-        body {
-            font-family: "Computer Modern", "Times New Roman", serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            line-height: 1.5;
-            font-size: 16px;
-        }
-        
-        a {
-            color: #0000EE;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        h1 {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-        
-        h2 {
-            font-size: 18px;
-            color: #000000;
-            font-weight: normal;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        
-        img {
-            float: right;
-            border: 1px solid #ccc;
-            padding: 3px;
-            background: white;
-            margin: 0 0 15px 20px;
-            max-width: 150px;
-        }
-        
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 25px 0;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .footer {
-            font-size: 14px;
-            color: #777;
-            font-style: italic;
-        }
-        
-        .contact {
-            margin-left: 20px;
-            font-family: monospace;
-        }
-    </style>
-</head>
-<body>
-    <h1>Prateek P Kulkarni</h1>
-    <img src="1698818859534.jpg" alt="Prateek P Kulkarni" width="150">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prateek P Kulkarni</title>
+  <style>
+    body {
+      font-family: "Computer Modern", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 30px;
+      background-color: #fcfcfc;
+      color: #333;
+      line-height: 1.6;
+      font-size: 17px;
+    }
     
-    <p>
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 28px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+    
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+      border-bottom: 1px dotted #1a73e8;
+    }
+    
+    a:hover {
+      border-bottom: 1px solid #1a73e8;
+    }
+    
+    img {
+      float: right;
+      border: none;
+      margin: 0 0 20px 30px;
+      max-width: 160px;
+      border-radius: 2px;
+    }
+    
+    ul {
+      padding-left: 25px;
+    }
+    
+    li {
+      margin-bottom: 12px;
+    }
+    
+    .bio {
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    
+    .contact {
+      font-family: Consolas, monospace;
+      background-color: #f5f5f5;
+      padding: 8px 15px;
+      display: inline-block;
+      border-radius: 3px;
+    }
+    
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+      font-style: italic;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+    
+    @media (max-width: 600px) {
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Prateek P Kulkarni</h1>
+    <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
+    <div class="bio">
+      <p>
         I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, 
         pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. 
-        My research interests center around the capabilities and limits of quantum computers, and computational complexity theory 
-        more generally.
-    </p>
-    
+        My research interests center around the capabilities and limits of quantum computers, and computational complexity 
+        theory more generally.
+      </p>
+    </div>
+  </header>
+
+  <section>
     <h2>Current Research</h2>
     <ul>
-        <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures.</li>
-        <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
+      <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at IISc on the realizability of multicore quantum computing architectures.</li>
+      <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
     </ul>
+  </section>
 
-    <h2>Reviewing & Service</h2>
+  <section>
+    <h2>Reviewing &amp; Service</h2>
     <ul>
-        <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
+      <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
     </ul>
-    
+  </section>
+
+  <section>
     <h2>Teaching</h2>
     <ul>
-        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+      <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+      <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
     </ul>
-    
+  </section>
+
+  <section>
     <h2>Contact</h2>
     <p class="contact">pkulkarni2425 [at] gmail [dot] com</p>
-    
-    <hr>
-    
-    <p class="footer">
-        Last updated: April 2025
-    </p>
+  </section>
+
+  <footer>
+    Last updated: April 2025
+  </footer>
 </body>
 </html>
