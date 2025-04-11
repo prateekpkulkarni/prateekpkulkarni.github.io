@@ -1,113 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prateek P Kulkarni's homepage</title>
-  <style>
-    body {
-      font-family: "Computer Modern", Georgia, serif;
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 0 20px;
-      background-color: #ffffff;
-      color: #222;
-      line-height: 1.5;
-      font-size: 16px;
-    }
-    
-    h1 {
-      font-size: 24px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    
-    h2 {
-      font-size: 18px;
-      font-weight: normal;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-    
-    a {
-      color: #00008B;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    img {
-      float: right;
-      margin: 0 0 15px 20px;
-      max-width: 130px;
-    }
-    
-    ul {
-      padding-left: 20px;
-    }
-    
-    li {
-      margin-bottom: 8px;
-    }
-    
-    .contact {
-      font-family: monospace;
-    }
-    
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #777;
-      font-style: italic;
-    }
-    
-    @media (max-width: 600px) {
-      img {
-        float: none;
-        display: block;
-        margin: 0 auto 20px;
-      }
-    }
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek P Kulkarni's homepage</title>
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #121212;
+            --accent-color: #3949ab;
+            --secondary-color: #00897b;
+            --highlight: #ffe082;
+            --code-bg: #f5f5f5;
+            --border: #e0e0e0;
+        }
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #fafafa;
+                --accent-color: #7986cb;
+                --secondary-color: #4db6ac;
+                --highlight: #5c4f20;
+                --code-bg: #1e1e1e;
+                --border: #333333;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--secondary-color);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            background-color: var(--highlight);
+            border-bottom-style: solid;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: "λ";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .contact {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--code-bg);
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .quantum-circuit {
+            margin: 2rem auto;
+            text-align: center;
+            font-family: monospace;
+            white-space: pre;
+            display: inline-block;
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        /* Paper fold effect */
+        .paper-fold {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 30px 0;
+            border-color: transparent var(--accent-color) transparent transparent;
+            box-shadow: -2px 2px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Toggle theme button */
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        /* A bit of responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
 <body>
-  <h1>Prateek P Kulkarni</h1>
-  
-  <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
-  
-  <p>
-    I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, 
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="paper-fold"></div>
+        <button class="theme-toggle" id="theme-toggle">☀</button>
+        <h1>Prateek P Kulkarni</h1>
+        <p>PES University, Bengaluru, India</p>
+    </header>
+
+    <section>
+        <h2>About</h2>
+        <p>I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, 
     pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. 
     My research interests center around the capabilities and limits of quantum computers, and computational complexity 
-    theory more generally.
-  </p>
+    theory more generally.</p>
+    </section>
 
-  <h2>Current Research</h2>
-  <ul>
-    <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at CSA, IISc on the realizability of multicore quantum computing architectures. </li>
+    <section>
+        <h2>Current Research</h2>
+        <ul>
+           <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at CSA, IISc on the realizability of multicore quantum computing architectures. </li>
     <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
-  </ul>
+        </ul>
+    </section>
 
-  <h2>Reviewing &amp; Service</h2>
-  <ul>
-    <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
-  </ul>
+    <!--<div class="quantum-circuit">
+|0⟩ —————[H]—————•—————————————————
+                |
+|0⟩ —————[H]————[X]————•——————————
+                      |
+|0⟩ ——————————————————[X]——[H]———
+    </div>-->
 
-  <h2>Teaching</h2>
-  <ul>
-    <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-    <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-  </ul>
+    <section>
+        <h2>Reviewing & Service</h2>
+        <ul>
+           <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
+        </ul>
+    </section>
 
-  <h2>Contact</h2>
-  <p class="contact">pkulkarni2425 [at] gmail [dot] com</p>
+    <section>
+        <h2>Teaching</h2>
+        <ul>
+            <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+            <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+        </ul>
+    </section>
 
-  <footer>
-    “Somewhere, something incredible is waiting to be known.” ― Carl Sagan <br>
-    Last updated: April 2025
-  </footer>
+    <div class="contact">
+        <h2>Contact</h2>
+        <p>pkulkarni2425 [at] gmail [dot] com</p>
+    </div>
+
+    <div class="quote">
+        "Somewhere, something incredible is waiting to be known." ― Carl Sagan
+    </div>
+
+    <footer>
+        Last updated: April 2025
+    </footer>
+
+    <!-- Load particles.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configure particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#3949ab"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                    },
+                    "opacity": {
+                        "value": 0.1,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#3949ab",
+                        "opacity": 0.1,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 0.5,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 0.3
+                            }
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+
+        // Theme toggle functionality
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = this.textContent === '☀' ? '☾' : '☀';
+        });
+    </script>
 </body>
 </html>
