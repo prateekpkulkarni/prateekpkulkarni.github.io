@@ -6,7 +6,6 @@ title: Prateek P Kulkarni
 
 I am a 3rd year undergraduate student at [PES University](https://www.pes.edu/), Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
 
----
 
 ## Current Research
 - Working with [Prof. Sumit K Mandal](https://www.csa.iisc.ac.in/~skmandal) at IISc on the realizability of multicore quantum computing architectures.
@@ -22,6 +21,3 @@ I am a 3rd year undergraduate student at [PES University](https://www.pes.edu/),
 ## Contact
 `pkulkarni2425 [at] gmail [dot] com`
 
----
-
-> *Last updated: April 2025*
