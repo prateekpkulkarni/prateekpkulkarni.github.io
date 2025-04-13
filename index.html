@@ -1,247 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prateek P Kulkarni</title>
-  <style>
-    /* Jemdoc styling properly applied */
-    body {
-      background: white;
-      font-family: Georgia, serif;
-      padding-bottom: 8px;
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    #layout-menu {
-      background: #f6f6f6;
-      border: 1px solid #dddddd;
-      padding-top: 0.5em;
-      padding-left: 8px;
-      padding-right: 8px;
-      font-size: 1.0em;
-      width: 180px;
-      white-space: nowrap;
-      text-align: left;
-      vertical-align: top;
-      position: fixed;
-      left: 20px;
-      top: 20px;
-    }
-
-    #layout-content {
-      padding-top: 0.0em;
-      padding-left: 1.0em;
-      padding-right: 1.0em;
-      border: none;
-      background: white;
-      text-align: left;
-      vertical-align: top;
-      margin-left: 220px;
-      margin-right: 20px;
-      max-width: 700px;
-    }
-
-    h1, h2, h3 {
-      color: #527bbd;
-      margin-top: 0.7em;
-      margin-bottom: 0.3em;
-      padding-bottom: 0.2em;
-      line-height: 1.0;
-      padding-top: 0.5em;
-      border-bottom: 1px solid #aaaaaa;
-    }
-
-    h1 {
-      font-size: 165%;
-      border-bottom: none; /* Remove the border from h1 */
-    }
-
-    h2 {
-      padding-top: 0.8em;
-      font-size: 125%;
-    }
-
-    a, a > tt {
-      color: #224b8d;
-      text-decoration: none;
-    }
-
-    a:hover {
-      border-bottom: 1px gray dotted;
-    }
-
-    p {
-      margin-top: 0.0em;
-      margin-bottom: 0.8em;
-      padding: 0;
-      line-height: 1.3;
-    }
-
-    ul, ol, dl {
-      margin-top: 0.2em;
-      padding-top: 0;
-      margin-bottom: 0.8em;
-    }
-
-    ul {
-      list-style-position: outside;
-      list-style-type: square;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    div#toptitle {
-      padding-bottom: 0.2em;
-      margin-bottom: 1.5em;
-      border-bottom: 3px double gray; /* This is the only underline we need */
-    }
-
-    div.menu-category {
-      border-bottom: 1px solid gray;
-      margin-top: 0.8em;
-      padding-top: 0.2em;
-      padding-bottom: 0.1em;
-      font-weight: bold;
-    }
-
-    div.menu-item {
-      padding-left: 16px;
-      text-indent: -16px;
-      padding-top: 2px;
-      padding-bottom: 2px;
-    }
-
-    #layout-menu a.current:link, #layout-menu a.current:visited {
-      color: #022b6d;
-      border-bottom: 1px gray solid;
-    }
-
-    #layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
-      color: #527bbd;
-      text-decoration: none;
-    }
-
-    #layout-menu a:hover {
-      text-decoration: none;
-    }
-
-    div#footer {
-      font-size: small;
-      border-top: 1px solid #c0c0c0;
-      padding-top: 0.1em;
-      margin-top: 4.0em;
-      color: #c0c0c0;
-    }
-
-    div#footer a {
-      color: #80a0b0;
-    }
-
-    div#footer-text {
-      float: left;
-      padding-bottom: 8px;
-    }
-
-    div#footer-data {
-      float: right;
-      padding-bottom: 8px;
-    }
-
-    table.imgtable, table.imgtable td {
-      border: none;
-      text-align: left;
-      vertical-align: top;
-      padding-right: 15px;
-    }
-
-    table.imgtable img {
-      max-width: 180px;
-    }
-
-    @media (max-width: 800px) {
-      #layout-menu {
-        position: relative;
-        width: auto;
-        left: auto;
-        top: auto;
-        margin-bottom: 20px;
-      }
-      
-      #layout-content {
-        margin-left: 0;
-        padding-left: 1em;
-      }
-    }
-  </style>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Prateek P Kulkarni</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
 </head>
 <body>
-  <div id="layout-menu">
-    <div class="menu-category">Menu</div>
-    <div class="menu-item"><a href="#" class="current">Home</a></div>
-    <div class="menu-item"><a href="#research">Research</a></div>
-    <div class="menu-item"><a href="#service">Academic Service</a></div>
-    <div class="menu-item"><a href="#teaching">Teaching</a></div>
-    <div class="menu-item"><a href="#misc">Miscellaneous</a></div>
-    
-    <div class="menu-category">Links</div>
-    <div class="menu-item"><a href="https://www.pes.edu/">PES University</a></div>
-    <div class="menu-item"><a href="https://www.csa.iisc.ac.in/">CSA, IISc</a></div>
-  </div>
-  
-  <div id="layout-content">
-    <div id="toptitle">
-      <h1>Prateek P Kulkarni</h1>
-    </div>
-    
-    <table class="imgtable">
-      <tr>
-        <td>
-          <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
-        </td>
-        <td>
-          <p>
-            I am a 3rd year undergraduate student at PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
-          </p>
-          <p>
-            My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
-          </p>
-          <p>
-            <b>Contact:</b> pkulkarni2425 [at] gmail [dot] com
-          </p>
-        </td>
-      </tr>
-    </table>
-    
-    <h2 id="research">Current Research</h2>
-    <ul>
-      <li>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at CSA, IISc on the realizability of multicore quantum computing architectures.</li>
-      <li>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
-    </ul>
-    
-    <h2 id="service">Academic Service</h2>
-    <ul>
-      <li>Reviewer, <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
-    </ul>
-    
-    <h2 id="teaching">Teaching</h2>
-    <ul>
-      <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-      <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-    </ul>
-    
-    <div id="footer">
-      <div id="footer-text">
-        "Somewhere, something incredible is waiting to be known." — Carl Sagan<br>
-        Last updated: April 2025
-      </div>
-      <div id="footer-data">
-        <a href="https://jemdoc.jaboc.net/">Generated using jemdoc</a>
-      </div>
-    </div>
-  </div>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Prateek P Kulkarni</h1>
+</div>
+<table class="imgtable"><tr><td>
+<img src="1698818859534.jpg" alt="Prateek P Kulkarni" height="250em" />&nbsp;</td>
+<td align="left"><p>Prateek P Kulkarni<br />
+3rd Year Undergraduate Student<br />
+Electronics and Communication Engineering<br />
+PES University, Bengaluru, India<br />
+Email: pkulkarni2425 [at] gmail [dot] com<br />
+</p>
+</td></tr></table>
+<p>Hi! I am Prateek P Kulkarni. I am a 3rd year undergraduate student at <a href="https://www.pes.edu/" target=&ldquo;blank&rdquo;>PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
+</p>
+<p><b>Research Interests</b>: My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
+</p>
+<h2>Current Research</h2>
+<ul>
+<li><p>Working with <a href="https://www.csa.iisc.ac.in/~skmandal" target=&ldquo;blank&rdquo;>Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/" target=&ldquo;blank&rdquo;>CSA</a>, IISc on the realizability of multicore quantum computing architectures.
+</p>
+</li>
+<li><p>Previously worked with <a href="https://staff.pes.edu/nm1802/" target=&ldquo;blank&rdquo;>Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).
+</p>
+</li>
+</ul>
+<h2>Academic Service</h2>
+<ul>
+<li><p>Reviewer, <a href="https://ieee-conecct.org/" target=&ldquo;blank&rdquo;>IEEE CONECCT 2025</a>
+</p>
+</li>
+</ul>
+<h2>Teaching</h2>
+<ul>
+<li><p>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)
+</p>
+</li>
+<li><p>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)
+</p>
+</li>
+</ul>
+<p>"Somewhere, something incredible is waiting to be known." — Carl Sagan
+</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2025-04-13, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</div>
 </body>
 </html>
