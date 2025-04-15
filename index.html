@@ -4,7 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P Kulkarni</title>
-  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <style>
+    :root {
+      --bg-color: #f8f8f8;
+      --text-color: #333;
+      --primary-color: #2a5caa;
+      --secondary-color: #888;
+      --border-color: #e0e0e0;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-weight: 300;
+      font-size: 2.2rem;
+      margin: 0;
+      color: var(--primary-color);
+      letter-spacing: -0.5px;
+    }
+    
+    h2 {
+      font-weight: 400;
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      color: var(--primary-color);
+    }
+    
+    .profile {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .profile img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 2px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .profile-info {
+      flex: 1;
+    }
+    
+    .contact {
+      font-size: 0.95rem;
+      color: var(--secondary-color);
+      line-height: 1.5;
+    }
+    
+    ul {
+      padding-left: 1.2rem;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: #1a3a6a;
+      text-decoration: underline;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      color: var(--secondary-color);
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .profile img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
   <!-- MathJax -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
   <script type="text/x-mathjax-config">
@@ -15,78 +127,70 @@
   <!-- End MathJax -->
 </head>
 <body>
-  <div id="layout-content">
-    <div id="toptitle">
-      <h1 class="name">Prateek P Kulkarni</h1>
-    </div>
-    <table class="imgtable">
-      <tr>
-        <td>
-          <img src="1698818859534.jpg" alt="Prateek P Kulkarni" height="250em" />
-        </td>
-        <td align="left">
-          <p>
-            Prateek P Kulkarni<br />
-            3rd Year Undergraduate Student<br />
-            Electronics and Communication Engineering<br />
-            PES University, Bengaluru, India<br />
-            Email: pkulkarni2425 [at] gmail [dot] com<br />
-          </p>
-        </td>
-      </tr>
-    </table>
+  <div class="container">
+    <header>
+      <h1>Prateek P Kulkarni</h1>
+    </header>
     
-    <p>
-      Hi! I am Prateek P Kulkarni. I am a 3rd year undergraduate student at 
-      <a href="https://www.pes.edu/" target="_blank">PES University</a>, Bengaluru, India, 
-      pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
-    </p>
-    
-    <p>
-      <strong>Research Interests</strong>: My research interests center around the capabilities and limits of quantum computers, 
-      and computational complexity theory more generally.
-    </p>
-    
-    <h2>Current Research</h2>
-    <ul>
-      <li>
-        <p>
-          Working with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
-          at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on the realizability of multicore quantum computing architectures.
-        </p>
-      </li>
-      <li>
-        <p>
-          Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
-          on some problems in combinatorics on words (enumerating/locating factors/subwords).
-        </p>
-      </li>
-    </ul>
-    
-    <h2>Academic Service</h2>
-    <ul>
-      <li>
-        <p>
-          Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a>
-        </p>
-      </li>
-    </ul>
-    
-    <h2>Teaching</h2>
-    <ul>
-      <li>
-        <p>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</p>
-      </li>
-      <li>
-        <p>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</p>
-      </li>
-    </ul>
-    
-    <div id="footer">
-      <div id="footer-text">
-        Page generated 2025-04-14, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+    <div class="profile">
+      <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
+      <div class="profile-info">
+        <div class="contact">
+          <p>3rd Year Undergraduate Student<br />
+          Electronics and Communication Engineering<br />
+          PES University, Bengaluru, India</p>
+          <p>Email: pkulkarni2425 [at] gmail [dot] com</p>
+        </div>
       </div>
     </div>
+    
+    <section>
+      <p>
+        I am a 3rd year undergraduate student at 
+        <a href="https://www.pes.edu/" target="_blank">PES University</a>, Bengaluru, India, 
+        pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
+      </p>
+      
+      <p>
+        <strong>Research Interests</strong>: My research interests center around the capabilities and limits of quantum computers, 
+        and computational complexity theory more generally.
+      </p>
+    </section>
+    
+    <section>
+      <h2>Current Research</h2>
+      <ul>
+        <li>
+          Working with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
+          at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on the realizability of multicore quantum computing architectures.
+        </li>
+        <li>
+          Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
+          on some problems in combinatorics on words (enumerating/locating factors/subwords).
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Academic Service</h2>
+      <ul>
+        <li>
+          Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Teaching</h2>
+      <ul>
+        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+      </ul>
+    </section>
+    
+    <footer>
+      <p>Page generated 2025-04-14</p>
+    </footer>
   </div>
 </body>
 </html>
