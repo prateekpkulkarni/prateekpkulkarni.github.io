@@ -6,65 +6,69 @@
   <title>Prateek P Kulkarni</title>
   <style>
     :root {
-      --bg-color: #f8f8f8;
-      --text-color: #333;
-      --primary-color: #2a5caa;
-      --secondary-color: #888;
-      --border-color: #e0e0e0;
+      --bg-color: #fff;
+      --text-color: #222;
+      --primary-color: #8B0000; /* Princeton orange-red */
+      --secondary-color: #555;
+      --border-color: #ddd;
+      --highlight-color: #f8f8f8;
     }
     
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
       line-height: 1.6;
       color: var(--text-color);
       background-color: var(--bg-color);
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 2rem 1.5rem;
     }
     
     .container {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 2.5rem;
     }
     
     header {
-      border-bottom: 1px solid var(--border-color);
+      text-align: center;
+      margin-bottom: 1.5rem;
       padding-bottom: 1rem;
-      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
     }
     
     h1 {
-      font-weight: 300;
-      font-size: 2.2rem;
-      margin: 0;
+      font-weight: 400;
+      font-size: 2.4rem;
+      margin: 0.5rem 0;
       color: var(--primary-color);
-      letter-spacing: -0.5px;
+      letter-spacing: -0.02em;
     }
     
     h2 {
       font-weight: 400;
       font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 0.3rem;
-      margin-top: 2rem;
-      color: var(--primary-color);
     }
     
     .profile {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       align-items: center;
       margin-bottom: 2rem;
     }
     
     .profile img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
       border-radius: 2px;
       border: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     
     .profile-info {
@@ -72,17 +76,24 @@
     }
     
     .contact {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--secondary-color);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      list-style-type: square;
+      color: var(--primary-color);
     }
     
     li {
       margin-bottom: 0.8rem;
+      color: var(--text-color);
+    }
+    
+    li p {
+      margin: 0.3rem 0;
     }
     
     a {
@@ -92,28 +103,30 @@
     }
     
     a:hover {
-      color: #1a3a6a;
+      color: #600;
       text-decoration: underline;
     }
     
     footer {
-      margin-top: 3rem;
+      margin-top: 4rem;
       padding-top: 1rem;
       border-top: 1px solid var(--border-color);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--secondary-color);
       text-align: center;
+      font-family: Arial, sans-serif;
     }
     
     @media (max-width: 768px) {
       .profile {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
       }
       
       .profile img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
       }
     }
   </style>
@@ -129,16 +142,17 @@
 <body>
   <div class="container">
     <header>
-      <h1>Prateek P Kulkarni</h1>
+      <h1>Prateek P. Kulkarni</h1>
+      <div class="contact">
+        3rd Year Undergraduate | Electronics and Communication Engineering
+      </div>
     </header>
     
     <div class="profile">
       <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
       <div class="profile-info">
         <div class="contact">
-          <p>3rd Year Undergraduate Student<br />
-          Electronics and Communication Engineering<br />
-          PES University, Bengaluru, India</p>
+          <p>PES University, Bengaluru, India</p>
           <p>Email: pkulkarni2425 [at] gmail [dot] com</p>
         </div>
       </div>
@@ -146,27 +160,33 @@
     
     <section>
       <p>
-        I am a 3rd year undergraduate student at 
-        <a href="https://www.pes.edu/" target="_blank">PES University</a>, Bengaluru, India, 
-        pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
+        I am an undergraduate student at 
+        <a href="https://www.pes.edu/" target="_blank">PES University</a>, 
+        specializing in VLSI and Quantum Technology within Electronics and Communication Engineering.
       </p>
       
       <p>
-        <strong>Research Interests</strong>: My research interests center around the capabilities and limits of quantum computers, 
-        and computational complexity theory more generally.
+        <strong>Research Interests</strong>: Quantum computation, computational complexity theory, and the fundamental limits of quantum computers.
       </p>
     </section>
     
     <section>
-      <h2>Current Research</h2>
+      <h2>Research</h2>
       <ul>
         <li>
-          Working with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
-          at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on the realizability of multicore quantum computing architectures.
+          <p>
+            <strong>Multicore Quantum Architectures</strong><br />
+            With <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
+            at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a><br />
+            Investigating realizability of multicore quantum computing architectures.
+          </p>
         </li>
         <li>
-          Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
-          on some problems in combinatorics on words (enumerating/locating factors/subwords).
+          <p>
+            <strong>Combinatorics on Words</strong><br />
+            With <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a><br />
+            Enumerating and locating factors/subwords in formal languages.
+          </p>
         </li>
       </ul>
     </section>
@@ -189,7 +209,7 @@
     </section>
     
     <footer>
-      <p>Last Updated: April 2025</p>
+      <p>Last updated: April 2025</p>
     </footer>
   </div>
 </body>
