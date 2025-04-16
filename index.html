@@ -3,92 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prateek P Kulkarni - Quantum Computing Research</title>
+  <title>Prateek P Kulkarni</title>
   <style>
     body {
-      font-family: "Times New Roman", Times, serif;
+      font-family: Georgia, "Times New Roman", Times, serif;
       line-height: 1.5;
-      color: #333;
+      color: #000;
       background-color: #fff;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
     }
     
-    #headerwrapper {
+    .container {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 15px;
+      gap: 30px;
     }
     
-    #header_left {
+    .sidebar {
+      flex: 0 0 220px;
+    }
+    
+    .content {
       flex: 1;
-      min-width: 250px;
-    }
-    
-    #header_right {
-      margin-top: 30px;
+      min-width: 300px;
     }
     
     h1 {
       font-size: 1.8em;
-      margin: 0 0 10px 0;
-      color: #333;
+      margin: 0 0 5px 0;
+      color: #000080;
     }
     
     h2 {
-      font-size: 1.4em;
-      margin: 20px 0 10px 0;
-      color: #333;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
+      font-size: 1.3em;
+      margin: 25px 0 10px 0;
+      color: #000080;
+      border-bottom: 1px solid #000080;
+      padding-bottom: 3px;
     }
     
-    pictureblock {
-      display: block;
-      margin: 15px 0;
-    }
-    
-    pictureblock img {
+    img {
       max-width: 180px;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
+      margin-top: 10px;
     }
     
-    #navcontainer {
-      margin-top: 15px;
+    nav {
+      margin: 25px 0;
     }
     
-    #navlist {
+    nav ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
     }
     
-    #navlist li {
-      display: inline;
-      margin-right: 15px;
+    nav li {
+      margin-bottom: 8px;
     }
     
-    #navlist a {
-      color: #00008B;
+    nav a {
+      color: #000080;
       text-decoration: none;
+      font-weight: bold;
     }
     
-    #navlist a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
     
-    #main_content {
-      clear: both;
-    }
-    
-    #main_content p {
-      margin-bottom: 15px;
-    }
-    
     a {
-      color: #00008B;
+      color: #000080;
       text-decoration: none;
     }
     
@@ -101,24 +88,33 @@
     }
     
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     
-    #footer {
-      margin-top: 30px;
+    p {
+      margin-bottom: 12px;
+    }
+    
+    footer {
+      margin-top: 40px;
       padding-top: 10px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #ccc;
       font-size: 0.9em;
-      text-align: center;
+      color: #666;
     }
     
-    @media (max-width: 600px) {
-      #headerwrapper {
+    .address {
+      margin-top: 15px;
+      font-style: normal;
+    }
+    
+    @media (max-width: 700px) {
+      .container {
         flex-direction: column;
       }
       
-      #header_right {
-        margin-top: 15px;
+      .sidebar {
+        order: -1;
       }
     }
   </style>
@@ -132,86 +128,71 @@
 </head>
 
 <body>
-  <div id="headerwrapper">
-    <div id="header_left">
-      <h1>Prateek P. Kulkarni</h1>
-      <pictureblock>
-        <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
-      </pictureblock>
-    </div>
-    
-    <div id="header_right">
-      <div id="navcontainer">
-        <ul id="navlist" class="default">
-          <li id="active"><a href="index.html">Home</a></li>
+  <div class="container">
+    <div class="sidebar">
+      <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
+      
+      <!--<nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>-->
+      
+      <div class="address">
+        <strong>Contact:</strong><br>
+        Department of Electronics and Communication Engineering<br>
+        PES University<br>
+        Bengaluru, India - 560085<br><br>
+        p k u l k a r n i 2 4 2 5 [at] g m a i l [dot] c o m
       </div>
+    </div>
+    
+    <div class="content">
+      <h1>Prateek P. Kulkarni</h1>
+      <p>
+        Undergraduate Student<br>
+        <a href="https://www.pes.edu/" target="_blank">PES University</a>
+      </p>
+      
+      <h2>About</h2>
+      <p>
+        I am an undergraduate student at <a href="https://www.pes.edu/" target="_blank">PES University</a>, 
+        specializing in VLSI and Quantum Technology within Electronics and Communication Engineering.
+        My research interests center around the capabilities and limits of quantum computers, and 
+        computational complexity theory more generally.
+      </p>
+      
+      <h2>Research</h2>
+      <p>
+        Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
+        at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on the realizability of multicore 
+        quantum computing architectures.
+      </p>
+      
+      <p>
+        Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
+        on some problems in combinatorics on words (enumerating/locating factors/subwords).
+      </p>
+      
+      <h2>Academic Service</h2>
+      <ul>
+        <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
+      </ul>
+      
+      <h2>Teaching</h2>
+      <ul>
+        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+      </ul>
     </div>
   </div>
 
-  <div id="main_content">
-    <h2>About</h2>
-    <p align="justify">
-      I am an undergraduate student at <a href="https://www.pes.edu/" target="_blank">PES University</a>, 
-      specializing in VLSI and Quantum Technology within Electronics and Communication Engineering.
-      My research interests center around the capabilities and limits of quantum computers, and 
-      computational complexity theory more generally.
-    </p>
-    
-    <h2>Research</h2>
-    <p align="justify">
-      Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K Mandal</a> 
-      at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on the realizability of multicore 
-      quantum computing architectures.
-    </p>
-    
-    <p align="justify">
-      Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
-      on some problems in combinatorics on words (enumerating/locating factors/subwords).
-    </p>
-    
-    <!--<h2>Current Work</h2>
-    <ul>
-      <li>
-        <strong>Multicore Quantum Architectures</strong>: Investigating theoretical limits and practical constraints 
-        of quantum information distribution across multiple quantum cores with limited bandwidth.
-      </li>
-      <li>
-        <strong>Quantum Circuit Optimization</strong>: Working on methods to reduce gate count and circuit depth 
-        for specific quantum algorithms.
-      </li>
-    </ul>-->
-    
-    <h2>Academic Service</h2>
-    <ul>
-      <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
-    </ul>
-    
-    <h2>Teaching</h2>
-    <ul>
-      <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-      <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-    </ul>
-    
-    <h2>Contact Information</h2>
-    <p>
-      p k u l k a r n i 2 4 2 5 [at] g m a i l [dot] c o m<br><br>
-      Department of Electronics and Communication Engineering<br>
-      PES University<br>
-      Bengaluru, India - 560085
-    </p>
-  </div>
-
-  <div id="footer">
-    <p>
-      <a href="index.html">Prateek P. Kulkarni</a> |
-      <a href="https://www.pes.edu/">PES University</a> |
-      Last updated: April 2025
-    </p>
-  </div>
+  <footer>
+    <p>Last updated: April 2025</p>
+  </footer>
 </body>
 </html>
