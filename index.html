@@ -5,17 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P. Kulkarni</title>
   <style>
+    /* Use a CSS variable approach for easy theming */
+    :root {
+      --bg: #f8f8f8;
+      --text: #333;
+      --primary: #2c3e50;
+      --accent: #e74c3c;
+      --secondary: #3498db;
+      --code-bg: #2d2d2d;
+      --code-text: #f8f8f2;
+      --border: #ddd;
+    }
+    
+    /* Toggle dark mode with JavaScript */
+    .dark-theme {
+      --bg: #282c34;
+      --text: #abb2bf;
+      --primary: #61afef;
+      --accent: #e06c75;
+      --secondary: #98c379;
+      --border: #4b5263;
+    }
+    
     body {
-      font-family: Georgia, "Times New Roman", Times, serif;
-      line-height: 1.5;
-      color: #000;
-      background-color: #fff;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
+      font-family: 'Fira Code', 'Roboto Mono', monospace;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .top-bar {
+      background-color: var(--primary);
+      color: white;
+      padding: 4px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     
     .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
@@ -23,6 +57,7 @@
     
     .sidebar {
       flex: 0 0 260px;
+      position: relative;
     }
     
     .content {
@@ -31,84 +66,180 @@
     }
     
     h1 {
-      font-size: 1.8em;
-      margin: 0 0 5px 0;
-      color: #000080;
+      font-size: 2em;
+      margin: 0 0 10px 0;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      display: inline-block;
     }
     
     h2 {
-      font-size: 1.3em;
-      margin: 25px 0 10px 0;
-      color: #000080;
-      border-bottom: 1px solid #000080;
-      padding-bottom: 3px;
+      font-size: 1.4em;
+      margin: 30px 0 15px 0;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+    
+    h2::before {
+      content: "λ";
+      color: var(--accent);
+      margin-right: 10px;
+      font-size: 1.1em;
     }
     
     img {
       max-width: 210px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
     
-    nav {
-      margin: 25px 0;
-    }
-    
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    nav li {
-      margin-bottom: 8px;
-    }
-    
-    nav a {
-      color: #000080;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
+    img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     
     a {
-      color: #000080;
+      color: var(--secondary);
       text-decoration: none;
+      transition: color 0.2s ease;
+      border-bottom: 1px dashed var(--secondary);
     }
     
     a:hover {
-      text-decoration: underline;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
     }
     
     ul {
       padding-left: 20px;
+      list-style-type: none;
     }
     
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      position: relative;
     }
     
-    p {
-      margin-bottom: 12px;
-    }
-    
-    footer {
-      margin-top: 40px;
-      padding-top: 10px;
-      border-top: 1px solid #ccc;
-      font-size: 0.9em;
-      color: #666;
+    li::before {
+      content: "→";
+      color: var(--accent);
+      position: absolute;
+      left: -20px;
     }
     
     .address {
       margin-top: 15px;
-      font-style: normal;
+      background-color: var(--code-bg);
+      padding: 15px;
+      border-radius: 5px;
+      color: var(--code-text);
+      font-size: 0.9em;
     }
     
-    @media (max-width: 700px) {
+    .topic-bubble {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    
+    .interests {
+      margin: 20px 0;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .section::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+      margin-top: 20px;
+    }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+    
+    .typing-effect {
+      border-right: 2px solid var(--accent);
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+    }
+    
+    .profile-image-container {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    
+    .profile-image-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent 97%, var(--accent) 97%);
+      pointer-events: none;
+    }
+    
+    .xkcd {
+      margin-top: 20px;
+    }
+    
+    .xkcd img {
+      max-width: 100%;
+      border: 1px solid var(--border);
+    }
+    
+    .xkcd-caption {
+      font-size: 0.8em;
+      color: var(--text);
+      opacity: 0.7;
+      margin-top: 5px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: var(--text);
+      opacity: 0.7;
+      border-top: 1px solid var(--border);
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent) }
+    }
+    
+    @media (max-width: 768px) {
       .container {
         flex-direction: column;
       }
@@ -117,7 +248,45 @@
         order: -1;
       }
     }
+    
+    /* ASCII art styling */
+    .ascii-art {
+      font-family: monospace;
+      white-space: pre;
+      font-size: 0.8em;
+      color: var(--primary);
+      margin: 20px 0;
+      line-height: 1.2;
+    }
+    
+    /* Highlight for code snippets */
+    .code-snippet {
+      background-color: var(--code-bg);
+      color: var(--code-text);
+      padding: 10px 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      margin: 15px 0;
+    }
+    
+    .keyword {
+      color: #f92672;
+    }
+    
+    .type {
+      color: #66d9ef;
+    }
+    
+    .function {
+      color: #a6e22e;
+    }
+    
+    .comment {
+      color: #75715e;
+    }
   </style>
+  
   <!-- MathJax -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
   <script type="text/x-mathjax-config">
@@ -128,74 +297,133 @@
 </head>
 
 <body>
+  <div class="top-bar">
+    <span>~/prateek-kulkarni</span>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  </div>
+  
   <div class="container">
     <div class="sidebar">
-      <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
-      
-      
-      <!--<nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>-->
+      <div class="profile-image-container">
+        <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
+      </div>
       
       <div class="address">
-        <strong>Contact:</strong><br>
+        <span style="color: #61afef;">/* Contact Information */</span><br>
         Dept. of Electronics and Communication Engineering<br>
         PES University<br>
         Bengaluru, India - 560085<br><br>
-        pkulkarni2425 [at] gmail [dot] com
+        <span style="color: #98c379;">pkulkarni2425 [at] gmail [dot] com</span>
       </div>
-      <br><br>
-      <img src="quantum_2x.png"/>
-      <p>Credits: <a href="https://xkcd.com/1861/">xkcd</a></p>
-    </div>
+      
+     <!-- <div class="interests">
+        <span class="topic-bubble">Quantum Computing</span>
+        <span class="topic-bubble">Complexity Theory</span>
+        <span class="topic-bubble">VLSI</span>
+        <span class="topic-bubble">Algorithms</span>
+      </div> -->
+      
+     <!-- <div class="xkcd">
+        <img src="quantum_2x.png" alt="XKCD Quantum Comic"/>
+        <div class="xkcd-caption">Credits: <a href="https://xkcd.com/1861/">xkcd</a></div>
+      </div>
+    </div> -->
     
     <div class="content">
       <h1>Prateek P. Kulkarni</h1>
-      <p>
-        3rd Year Undergrad<br>
-        <a href="https://www.pes.edu/" target="_blank">PES University</a>
+      <p class="typing-effect">
+        3rd Year Undergrad at PES University
       </p>
       
-      <h2>About</h2>
-      <p>
-        I am an undergraduate student at <a href="https://www.pes.edu/" target="_blank">PES University</a>, 
-        specializing in VLSI and Quantum Technology within Electronics and Communication Engineering.
-        My research interests center around the capabilities and limits of quantum computers, and 
-        computational complexity theory more generally.
-      </p>
+     <!-- <div class="ascii-art">
+  _____                 _                 _____       _            _   _    _           
+ / ____|               | |               |_   _|     | |          | | | |  (_)          
+| |  __ _ __ ___  _ __ | |__  ___  _ __    | |  _ __| |_ ___ _ __| |_| | ___ _ __  ___ 
+| | |_ | '_ ` _ \| '_ \| '_ \/ _ \| '__|   | | | '__| __/ _ \ '__| __| |/ / | '_ \/ __|
+| |__| | | | | | | |_) | | | | (_) | |     _| |_| |  | ||  __/ |  | |_|   <| | | | \__ \
+ \_____|_| |_| |_| .__/|_| |_|\___/|_|    |_____|_|   \__\___|_|   \__|_|\_\_|_| |_|___/
+                 | |                                                                   
+                 |_|                                                                   
+      </div>-->
       
-      <h2>Research</h2>
-      <p>
-        Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a> 
-        at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and on the realizability of multicore quantum computing architectures.
-      </p>
+      <div class="section">
+        <h2>About</h2>
+        <p>
+          I am an undergraduate student at <a href="https://www.pes.edu/" target="_blank">PES University</a>, 
+          specializing in VLSI and Quantum Technology within Electronics and Communication Engineering.
+          My research interests center around the capabilities and limits of quantum computers, and 
+          computational complexity theory more generally.
+        </p>
+        
+        <div class="code-snippet">
+<span class="keyword">function</span> <span class="function">researchInterests</span>() {
+  <span class="keyword">const</span> <span class="type">interests</span> = [
+    <span class="comment">// Primary research areas</span>
+    "Quantum Complexity Theory",
+    "Distributed Quantum Computing",
+    "Multicore Quantum Architectures",
+    "Combinatorics on Words"
+  ];
+  <span class="keyword">return</span> interests;
+}</div>
+      </div>
       
-      <p>
-        Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
-        on some problems in combinatorics on words (enumerating/locating factors/subwords).
-      </p>
+      <div class="section">
+        <h2>Research</h2>
+        <p>
+          Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a> 
+          at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and on the realizability of multicore quantum computing architectures.
+        </p>
+        
+        <p>
+          Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
+          on some problems in combinatorics on words (enumerating/locating factors/subwords).
+        </p>
+      </div>
       
-      <h2>Academic Service</h2>
-      <ul>
-        <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
-      </ul>
+      <div class="section">
+        <h2>Academic Service</h2>
+        <ul>
+          <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
+        </ul>
+      </div>
       
-      <h2>Teaching</h2>
-      <ul>
-        <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-        <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-      </ul>
+      <div class="section">
+        <h2>Teaching</h2>
+        <ul>
+          <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+          <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <footer>
-    <p>Last updated: April 2025</p>
+    <p>Last updated: April 2025.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+    
+    // Animation for typing effect
+    document.addEventListener('DOMContentLoaded', function() {
+      const typingElements = document.querySelectorAll('.typing-effect');
+      typingElements.forEach(element => {
+        const text = element.textContent;
+        element.textContent = '';
+        let i = 0;
+        const typeWriter = () => {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+          }
+        };
+        setTimeout(typeWriter, 1000);
+      });
+    });
+  </script>
 </body>
 </html>
