@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>prateek p. kulkarni</title>
+  <title>Prateek P. Kulkarni</title>
   <style>
     :root {
       --bg-color: #fff;
@@ -22,7 +22,7 @@
     }
     
     body {
-      font-family: "helvetica neue", helvetica, arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.5;
       color: var(--text-color);
       background-color: var(--bg-color);
@@ -137,16 +137,16 @@
         body.removeAttribute('data-theme');
         localStorage.setItem('theme', 'light');
         document.getElementById('theme-icon').innerHTML = '☼';
-        document.getElementById('theme-text').innerHTML = 'dark mode';
+        document.getElementById('theme-text').innerHTML = 'Dark mode';
       } else {
         body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
         document.getElementById('theme-icon').innerHTML = '☾';
-        document.getElementById('theme-text').innerHTML = 'light mode';
+        document.getElementById('theme-text').innerHTML = 'Light mode';
       }
     }
     
-    // set theme based on localStorage or system preference
+    // Set theme based on localStorage or system preference
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -154,10 +154,10 @@
       if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.setAttribute('data-theme', 'dark');
         document.getElementById('theme-icon').innerHTML = '☾';
-        document.getElementById('theme-text').innerHTML = 'light mode';
+        document.getElementById('theme-text').innerHTML = 'Light mode';
       } else {
         document.getElementById('theme-icon').innerHTML = '☼';
-        document.getElementById('theme-text').innerHTML = 'dark mode';
+        document.getElementById('theme-text').innerHTML = 'Dark mode';
       }
     });
   </script>
@@ -166,57 +166,57 @@
 <body>
   <div class="theme-switch" onclick="toggleTheme()">
     <span id="theme-icon" class="theme-switch-icon">☼</span>
-    <span id="theme-text">dark mode</span>
+    <span id="theme-text">Dark mode</span>
   </div>
-  <h1>prateek p. kulkarni</h1>
+  <h1>Prateek P. Kulkarni</h1>
   
   <div class="section">
-    <img src="1698818859534.jpg" alt="prateek p kulkarni" />
-    3rd year undergraduate<br>
-    electronics and communication engineering<br>
+    <img src="1698818859534.jpg" alt="Prateek P Kulkarni" />
+    3rd Year Undergraduate<br>
+    Electronics and Communication Engineering<br>
     <a href="https://www.pes.edu/" target="_blank">PES University</a>
     
     <div class="contact">
-      department of electronics and communication engineering<br>
+      Department of Electronics and Communication Engineering<br>
       PES University<br>
-      bengaluru, india - 560085<br>
+      Bengaluru, India - 560085<br>
       pkulkarni2425 [at] gmail.com
     </div>
   </div>
   
-  <h2>about</h2>
+  <h2>ABOUT</h2>
   <p>
-    i am an undergraduate student at PES University, specializing in VLSI and quantum technology within 
-    electronics and communication engineering. my research interests center around the capabilities and 
+    I am an undergraduate student at PES University, specializing in VLSI and Quantum Technology within 
+    Electronics and Communication Engineering. My research interests center around the capabilities and 
     limits of quantum computers, and computational complexity theory more generally.
   </p>
   
-  <h2>research</h2>
+  <h2>RESEARCH</h2>
   <p>
-    currently working in the future computing systems (FIST) lab with 
+    Currently working in the Future Computing Systems (FIST) Lab with 
     <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a> 
     at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on topics in quantum complexity theory, 
     distributed quantum computing and on the realizability of multicore quantum computing architectures.
   </p>
   
   <p>
-    previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
+    Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
     on some problems in combinatorics on words (enumerating/locating factors/subwords).
   </p>
   
-  <h2>academic service</h2>
+  <h2>ACADEMIC SERVICE</h2>
   <ul>
-    <li>reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
+    <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
   </ul>
   
-  <h2>teaching</h2>
+  <h2>TEACHING</h2>
   <ul>
-    <li>teaching assistant, quantum transport and logic gates (spring 2025)</li>
-    <li>teaching assistant, quantum entanglement and quantum computation (fall 2025)</li>
+    <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+    <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
   </ul>
 
   <footer>
-    last updated: april 2025
+    Last updated: April 2025
   </footer>
 </body>
 </html>
