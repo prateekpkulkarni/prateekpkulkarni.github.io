@@ -5,15 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P Kulkarni</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222;
+      --link-color: #00008B;
+      --secondary-text: #777;
+      --toggle-bg: #eaeaea;
+      --toggle-circle: #555;
+      --toggle-border: #ccc;
+    }
+    
+    body.dark-theme {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #8ab4f8;
+      --secondary-text: #aaa;
+      --toggle-bg: #444;
+      --toggle-circle: #f0f0f0;
+      --toggle-border: #666;
+    }
+    
     body {
       font-family: "Computer Modern", Georgia, serif;
       max-width: 650px;
       margin: 50px auto;
       padding: 0 20px;
-      background-color: #ffffff;
-      color: #222;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.5;
       font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     h1 {
@@ -30,8 +51,9 @@
     }
     
     a {
-      color: #00008B;
+      color: var(--link-color);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     
     a:hover {
@@ -59,8 +81,48 @@
     footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #777;
+      color: var(--secondary-text);
       font-style: italic;
+    }
+    
+    .theme-toggle-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .theme-toggle {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background-color: var(--toggle-bg);
+      border-radius: 10px;
+      margin-left: 8px;
+      transition: background-color 0.3s ease;
+      border: 1px solid var(--toggle-border);
+    }
+    
+    .theme-toggle-circle {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--toggle-circle);
+      border-radius: 50%;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    body.dark-theme .theme-toggle-circle {
+      transform: translateX(20px);
+    }
+    
+    .toggle-icon {
+      opacity: 0.7;
+      font-size: 14px;
     }
     
     @media (max-width: 600px) {
@@ -69,11 +131,26 @@
         display: block;
         margin: 0 auto 20px;
       }
+      
+      .theme-toggle-wrapper {
+        position: relative;
+        top: 0;
+        right: 0;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
-
 <body>
+  <div class="theme-toggle-wrapper" onclick="toggleTheme()">
+    <span class="toggle-icon">☀️</span>
+    <div class="theme-toggle">
+      <div class="theme-toggle-circle"></div>
+    </div>
+    <span class="toggle-icon">🌙</span>
+  </div>
+  
   <h1>Prateek P Kulkarni</h1>
   
   <img src="1698818859534.jpg" alt="Prateek P Kulkarni">
@@ -86,29 +163,69 @@
     My research interests center around the capabilities and limits of quantum computers, and computational complexity 
     theory more generally.
   </p>
-
   <h2>Current Research</h2>
   <ul>
     <li>Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and quantum error correction.</li>
     <li>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
   </ul>
-
   <h2>Academic Service</h2>
   <ul>
     <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
   </ul>
-
   <h2>Teaching</h2>
   <ul>
     <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
     <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
   </ul>
-
   <h2>Contact</h2>
   <p class="contact">pkulkarni2425 [at] gmail [dot] com</p>
-
   <footer>
     Last updated: April 2025
   </footer>
+
+  <script>
+    // Check for saved theme preference or use user's system preference
+    function getPreferredTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      
+      // Check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      
+      return 'light';
+    }
+    
+    // Apply theme on load
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+      }
+    }
+    
+    // Toggle theme
+    function toggleTheme() {
+      if (document.body.classList.contains('dark-theme')) {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    
+    // Apply saved theme on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme(getPreferredTheme());
+    });
+    
+    // Apply immediately for faster rendering
+    applyTheme(getPreferredTheme());
+  </script>
 </body>
 </html>
