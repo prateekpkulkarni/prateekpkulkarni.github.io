@@ -1,46 +1,39 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-            "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html> 
 <head>
 <title>Prateek P. Kulkarni</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="Prateek P. Kulkarni, 
-                                  Undergraduate Student,
-                                  Electronics and Communication Engineering, 
-                                  PES University">
+<meta name="description" content="Prateek P. Kulkarni">
 <style type="text/css">
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    color: #111;
-    max-width: 900px;
+    color: #333;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 30px 20px;
-    font-size: 15px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  :root {
-    --primary-color: #0076df;
-    --secondary-color: #505050;
-    --accent-color: #007080;
-    --highlight-color: #00b060;
+    padding: 40px 20px;
+    font-size: 16px;
   }
   
   h1, h2, h3 {
-    color: var(--secondary-color);
-    margin-top: 20px;
-    margin-bottom: 10px;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 26px;
+    margin-top: 0;
   }
   
   h2 {
-    font-size: 18px;
+    font-size: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
   }
   
   a {
-    color: var(--primary-color);
+    color: #0366d6;
     text-decoration: none;
   }
   
@@ -48,105 +41,96 @@
     text-decoration: underline;
   }
   
-  a.nodec {
-    text-decoration: none;
-  }
-  
-  td.navbar { 
-    width: 100%; 
-    border-top: var(--accent-color) dashed 2px; 
-    border-bottom: var(--accent-color) dashed 2px; 
-    border-left: var(--accent-color) dashed 2px; 
-    border-right: var(--accent-color) dashed 2px; 
-    background: white; 
-    padding: 8px;
-    text-align: center;
-  }
-  
-  .blacklargetext {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .imagecontainer {
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .mainimage {
-    max-width: 180px;
-    border: 1px solid #ddd;
-  }
-  
-  .theme-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #777;
+  .header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
   }
   
-  .theme-switch-icon {
-    margin-right: 6px;
-    font-size: 16px;
+  .header-image {
+    margin-right: 30px;
   }
   
-  [data-theme="dark"] {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+  .header-text {
+    flex-grow: 1;
   }
   
-  [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
-    color: #d0d0d0;
+  img.profile {
+    max-width: 160px;
+    border-radius: 5px;
+    border: 1px solid #eee;
   }
   
-  [data-theme="dark"] a {
-    color: #5aafff;
+  .navbar {
+    margin: 20px 0;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
   }
   
-  [data-theme="dark"] td.navbar {
-    background: #2a2a2a;
-    border-color: #5a5a5a;
-  }
-  
-  [data-theme="dark"] .mainimage {
-    border-color: #444;
+  .navbar a {
+    margin: 0 15px;
+    font-weight: 500;
   }
   
   .section {
-    margin-bottom: 25px;
-    text-align: justify;
+    margin-bottom: 30px;
   }
   
-  .contact {
-    line-height: 1.4;
-    margin-top: 10px;
+  .contact-info {
+    line-height: 1.6;
+  }
+  
+  ul {
+    padding-left: 25px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  .pub-item {
+    margin-bottom: 16px;
+  }
+  
+  .pub-title {
+    font-weight: bold;
+  }
+  
+  .pub-authors {
+    font-style: italic;
+  }
+  
+  .pub-venue {
+    display: block;
+    margin-top: 2px;
+  }
+  
+  .pub-links {
+    margin-top: 2px;
+    font-size: 0.9em;
   }
   
   footer {
     margin-top: 40px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
     font-size: 14px;
     color: #777;
     text-align: center;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
   }
   
-  @media (max-width: 768px) {
-    .mainimage {
-      max-width: 150px;
+  @media (max-width: 640px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     
-    body {
-      padding: 15px;
-    }
-    
-    .theme-switch {
-      top: 10px;
-      right: 10px;
+    .header-image {
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 </style>
@@ -159,181 +143,110 @@ MathJax.Hub.Config({
 });
 </script>
 
-<script>
-  function toggleTheme() {
-    const body = document.body;
-    if (body.getAttribute('data-theme') === 'dark') {
-      body.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      document.getElementById('theme-icon').innerHTML = '☼';
-      document.getElementById('theme-text').innerHTML = 'Dark mode';
-    } else {
-      body.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      document.getElementById('theme-icon').innerHTML = '☾';
-      document.getElementById('theme-text').innerHTML = 'Light mode';
-    }
-  }
-  
-  // Set theme based on localStorage or system preference
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      document.body.setAttribute('data-theme', 'dark');
-      document.getElementById('theme-icon').innerHTML = '☾';
-      document.getElementById('theme-text').innerHTML = 'Light mode';
-    } else {
-      document.getElementById('theme-icon').innerHTML = '☼';
-      document.getElementById('theme-text').innerHTML = 'Dark mode';
-    }
-  });
-</script>
-
 </head>
 
 <body>
 
-<div class="theme-switch" onclick="toggleTheme()">
-  <span id="theme-icon" class="theme-switch-icon">☼</span>
-  <span id="theme-text">Dark mode</span>
+<div class="header">
+  <div class="header-image">
+    <img src="1698818859534.jpg" alt="Prateek P. Kulkarni" class="profile">
+  </div>
+  
+  <div class="header-text">
+    <h1>Prateek P. Kulkarni</h1>
+    3rd Year Undergraduate<br>
+    <a href="https://www.pes.edu/">Electronics and Communication Engineering</a><br>
+    <a href="https://www.pes.edu/">PES University</a>
+  </div>
 </div>
 
-<!--================================================================-->
-<center> 
-<table cellpadding=5 border=0 width="100%">
-
-<!-- First row --> 
-<tr>
-
-<td width="25%">
-<center>
-<div class="imagecontainer">
-  <img src="1698818859534.jpg" height=180px alt="Prateek P Kulkarni" class="mainimage"><br>
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <!-- <a href="#publications">Publications</a> -->
+  <a href="#teaching">Teaching</a>
+  <a href="#service">Service</a>
+  <a href="#contact">Contact</a>
 </div>
-</center>
-</td>
-
-<!-- Name and position -->
-<td align=left width="50%">
-<h1>Prateek P. Kulkarni</h1>
-3rd Year Undergraduate<br>
-<a href="https://www.pes.edu/" class="nodec">Electronics and Communication Engineering</a><br>
-<a href="https://www.pes.edu/" class="nodec">PES University</a>
-
-<!--<div class="contact">
-  Department of Electronics and Communication Engineering<br>
-  PES University<br>
-  Bengaluru, India - 560085<br>
-  pkulkarni2425 [at] gmail.com
-</div>
-</td>-->
-
-<!-- Third column: University Logo 
-<td align=center width="25%">
-<img width=120px align=center alt="PES University Logo"
-     src="/api/placeholder/150/150"><br>
-<span style="font-size: 12px; color: #777;">PES University</span>
-</td> -->
-
-</tr>
-
-<!-- Second row: Navigation Bar -->
-<tr>
-<td colspan=3 align=center class="navbar">
-<span class="blacklargetext">
-<a href="#about">About</a> |
-<a href="#research">Research</a> |
-<!--<a href="#publications">Publications</a> |-->
-<a href="#teaching">Teaching</a> |
-<a href="#service">Service</a> |
-<a href="#contact">Contact</a>
-</span>
-</td>
-</tr>
-
-<!-- Third row: Content -->
-<tr>
-<td colspan=3 style="padding: 15px">
 
 <div class="section" id="about">
-<h2>ABOUT</h2>
-<p>
-  I am an undergraduate student at PES University, specializing in VLSI and Quantum Technology within 
-  Electronics and Communication Engineering. My research interests center around the capabilities and 
-  limits of quantum computers, and computational complexity theory more generally.
-</p>
+  <h2>About</h2>
+  <p>
+    I am an undergraduate student at PES University, specializing in VLSI and Quantum Technology within 
+    Electronics and Communication Engineering. My research interests center around the capabilities and 
+    limits of quantum computers, and computational complexity theory more generally.
+  </p>
 </div>
 
 <div class="section" id="research">
-<h2>RESEARCH</h2>
-<p>
-  Currently working in the Future Computing Systems (FIST) Lab with 
-  <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a> 
-  at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on topics in quantum complexity theory, 
-  distributed quantum computing and on the realizability of multicore quantum computing architectures.
-</p>
+  <h2>Research</h2>
+  <p>
+    Currently working in the Future Computing Systems (FIST) Lab with 
+    <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a> 
+    at <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA, IISc</a> on topics in quantum complexity theory, 
+    distributed quantum computing and on the realizability of multicore quantum computing architectures.
+  </p>
 
-<p>
-  Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
-  on some problems in combinatorics on words (enumerating/locating factors/subwords).
-</p>
+  <p>
+    Previously worked with <a href="https://staff.pes.edu/nm1802/" target="_blank">Prof. Sivasankar M</a> 
+    on some problems in combinatorics on words (enumerating/locating factors/subwords).
+  </p>
 </div>
 
-<!--<div class="section" id="publications">
-<h2>PUBLICATIONS</h2>
-<ul>
-  <li>
-    <strong>Paper Title</strong><br>
-    Authors: Prateek P. Kulkarni, Coauthor Name<br>
-    Conference/Journal, Year<br>
-    <a href="#">[PDF]</a> <a href="#">[Code]</a>
-  </li>
-  <!-- Add more publications as needed
-</ul>
-</div> -->
+<!--
+<div class="section" id="publications">
+  <h2>Publications</h2>
+  <div class="pub-item">
+    <div class="pub-title">Paper Title Goes Here</div>
+    <div class="pub-authors">Prateek P. Kulkarni, Coauthor Name</div>
+    <span class="pub-venue">Conference/Journal Name, Year</span>
+    <div class="pub-links">
+      <a href="#" target="_blank">[PDF]</a>
+      <a href="#" target="_blank">[Code]</a>
+      <a href="#" target="_blank">[arXiv]</a>
+    </div>
+  </div>
+  
+  <div class="pub-item">
+    <div class="pub-title">Another Paper Title Goes Here</div>
+    <div class="pub-authors">Prateek P. Kulkarni, Coauthor One, Coauthor Two</div>
+    <span class="pub-venue">Conference/Journal Name, Year</span>
+    <div class="pub-links">
+      <a href="#" target="_blank">[PDF]</a>
+      <a href="#" target="_blank">[Code]</a>
+    </div>
+  </div>
+</div>
+-->
 
 <div class="section" id="teaching">
-<h2>TEACHING</h2>
-<ul>
-  <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-  <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-</ul>
+  <h2>Teaching</h2>
+  <ul>
+    <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+    <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+  </ul>
 </div>
 
 <div class="section" id="service">
-<h2>ACADEMIC SERVICE</h2>
-<ul>
-  <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
-</ul>
+  <h2>Academic Service</h2>
+  <ul>
+    <li>Reviewer, <a href="https://ieee-conecct.org/" target="_blank">IEEE CONECCT 2025</a></li>
+  </ul>
 </div>
 
 <div class="section" id="contact">
-<h2>CONTACT</h2>
-<p>
-  Department of Electronics and Communication Engineering<br>
-  PES University<br>
-  Bengaluru, India - 560085<br>
-  Email: pkulkarni2425 [at] gmail.com
-</p>
+  <h2>Contact</h2>
+  <div class="contact-info">
+    Department of Electronics and Communication Engineering<br>
+    PES University<br>
+    Bengaluru, India - 560085<br>
+    Email: pkulkarni2425 [at] gmail.com
+  </div>
 </div>
-
-<!--<!--==============================================================
-</td>
-</tr>-->
-
-<!--================================================================-->
-<!--<tr><td colspan=3><hr></td></tr>-->
-<!--================================================================-->
-
-</table>
-</center> 
 
 <footer>
   Last updated: April 2025
 </footer>
 
-<!--================================================================-->
 </body>
 </html>
