@@ -1,103 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Prateek P Kulkarni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek P Kulkarni - Theoretical Computer Science</title>
     <style>
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400&display=swap');
+        
+        /* Color palette */
+        :root {
+            --primary-bg: #f9f7f1;
+            --secondary-bg: #ffffff;
+            --primary-text: #383838;
+            --secondary-text: #666666;
+            --accent: #8b6d47;
+            --accent-light: #d8c8b8;
+            --link: #6b5b95;
+            --link-hover: #4a3f73;
+            --separator: #e3e0d8;
+        }
+        
+        /* Base styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 18px;
+        }
+        
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.5;
+            font-family: 'Source Sans Pro', Georgia, serif;
+            line-height: 1.6;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
-            max-width: 1000px;
+            padding: 2rem;
+            letter-spacing: 0.01em;
         }
+        
+        /* Header section */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--separator);
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: normal;
+            color: var(--primary-text);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .title {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        /* Main content */
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            grid-column: 1;
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 240px;
+            border: 8px solid var(--secondary-bg);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .contact-text {
+            font-family: 'Source Sans Pro', monospace;
+            font-size: 0.9rem;
+        }
+        
+        /* Content */
+        .content {
+            grid-column: 2;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
         h2 {
-            color: #333;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: var(--primary-text);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--separator);
         }
+        
         h3 {
-            color: #333;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: var(--accent);
+            margin: 1rem 0 0.5rem;
         }
-        .dp {
-            margin-left: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
+        
+        p {
+            margin-bottom: 1rem;
         }
-        .intro {
-            margin-bottom: 30px;
+        
+        /* Lists */
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
         }
-        .pubs, .research, .academic-service, .teaching {
-            clear: both;
-        }
-        ul {
-            padding-left: 20px;
-        }
+        
         li {
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem;
         }
+        
+        /* Links */
         a {
+            color: var(--link);
             text-decoration: none;
-            color: #0066cc;
+            transition: color 0.2s ease;
+            border-bottom: 1px dotted var(--link);
+            padding-bottom: 1px;
         }
+        
         a:hover {
-            text-decoration: underline;
+            color: var(--link-hover);
+            border-bottom: 1px solid var(--link-hover);
         }
-        .contact {
-            font-family: monospace;
+        
+        /* Publication styling */
+        .publication {
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted var(--separator);
         }
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .pub-title {
             font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+        
+        .pub-authors {
+            margin-bottom: 0.3rem;
+        }
+        
+        .pub-venue {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--separator);
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--secondary-text);
+            font-style: italic;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
+            .profile-image {
+                margin: 0 auto 1.5rem;
+            }
+            
+            .contact-item {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <h2>Prateek P Kulkarni</h2>
+    <header>
+        <h1 class="name">Prateek P Kulkarni</h1>
+        <!--<div class="title">Undergraduate Student in Electronics and Quantum Computing</div>-->
+    </header>
     
-    <img class="dp" src="1698818859534.jpg" width="300" height="390" style="float:right" alt="Prateek P Kulkarni">
-    
-    <div class="intro">
-        Email: pkulkarni2425 (at) gmail.com <br>
-        <p>
-            I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, 
-            pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
-            <br>
-            My research interests center around the capabilities and limits of quantum computers, and computational complexity 
-            theory more generally.
-        </p>
-    </div>
-    
-    <div class="research">
-        <h3>Current Research</h3>
-        <ul>
-            <li>Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and quantum error correction.</li>
-            <li>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
-        </ul>
-    </div>
-    
-    <div class="academic-service">
-        <h3>Academic Service</h3>
-        <ul>
-            <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
-        </ul>
-    </div>
-    
-    <div class="teaching">
-        <h3>Teaching</h3>
-        <ul>
-            <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
-            <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-        </ul>
-    </div>
-    
-    <div class="contact-info">
-        <h3>Contact</h3>
-        <p class="contact">pkulkarni2425 [at] gmail [dot] com</p>
-    </div>
+    <main>
+        <div class="sidebar">
+            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span class="contact-text">PES University<br>Bengaluru, India</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span class="contact-text">pkulkarni2425 [at] gmail [dot] com</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.</p>
+                
+                <p>My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.</p>
+            </section>
+            
+            <section id="research">
+                <h2>Current Research</h2>
+                <ul>
+                    <li>Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and quantum error correction.</li>
+                    <li>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
+                </ul>
+            </section>
+            
+            <section id="academic-service">
+                <h2>Academic Service</h2>
+                <ul>
+                    <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
+                </ul>
+            </section>
+            
+            <section id="teaching">
+                <h2>Teaching Experience</h2>
+                <ul>
+                    <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
+                    <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+                </ul>
+            </section>
+        </div>
+    </main>
     
     <footer>
         Last updated: April 2025
