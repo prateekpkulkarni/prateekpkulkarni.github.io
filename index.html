@@ -3,284 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P Kulkarni - Theoretical Computer Science</title>
+    <title>Prateek P Kulkarni</title>
     <style>
-        /* Typography */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400&display=swap');
+        /* Japanese-inspired minimalist design */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;500&display=swap');
         
-        /* Color palette */
         :root {
-            --primary-bg: #f9f7f1;
-            --secondary-bg: #ffffff;
-            --primary-text: #383838;
-            --secondary-text: #666666;
-            --accent: #8b6d47;
-            --accent-light: #d8c8b8;
-            --link: #6b5b95;
-            --link-hover: #4a3f73;
-            --separator: #e3e0d8;
+            --bg-color: #fafaf8;
+            --text-color: #2c2c2c;
+            --accent-color: #8a8880;
+            --border-color: #e6e6e1;
+            --link-color: #5c6b8f;
+            --hover-color: #374269;
         }
         
-        /* Base styling */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
         
-        html {
-            font-size: 18px;
-        }
-        
         body {
-            font-family: 'Source Sans Pro', Georgia, serif;
-            line-height: 1.6;
-            background-color: var(--primary-bg);
-            color: var(--primary-text);
-            max-width: 850px;
+            font-family: 'Noto Sans', sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 820px;
             margin: 0 auto;
-            padding: 2rem;
-            letter-spacing: 0.01em;
+            padding: 3rem 2rem;
         }
         
-        /* Header section */
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--separator);
-        }
-        
-        .name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
             font-weight: normal;
-            color: var(--primary-text);
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.02em;
         }
         
-        .title {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 300;
-            font-size: 1.2rem;
-            color: var(--secondary-text);
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.4em;
+            font-weight: 400;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            padding-bottom: 0.4rem;
+            position: relative;
         }
         
-        /* Main content */
-        main {
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 3rem;
+            background-color: var(--accent-color);
+        }
+        
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--hover-color);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        
+        li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .container {
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
         }
         
-        /* Sidebar */
-        .sidebar {
-            grid-column: 1;
+        .profile {
+            margin-bottom: 2rem;
         }
         
         .profile-image {
             width: 100%;
-            max-width: 240px;
-            border: 8px solid var(--secondary-bg);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            max-width: 220px;
+            display: block;
             margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
         }
         
         .contact-info {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         
-        .contact-item {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
+        .subtle {
+            color: var(--accent-color);
+            font-size: 0.95rem;
         }
         
-        .contact-icon {
-            width: 20px;
-            text-align: center;
-            margin-right: 10px;
-            color: var(--accent);
-        }
-        
-        .contact-text {
-            font-family: 'Source Sans Pro', monospace;
-            font-size: 0.9rem;
-        }
-        
-        /* Content */
-        .content {
-            grid-column: 2;
-        }
-        
-        section {
-            margin-bottom: 2.5rem;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: normal;
-            color: var(--primary-text);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--separator);
-        }
-        
-        h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: normal;
-            color: var(--accent);
-            margin: 1rem 0 0.5rem;
-        }
-        
-        p {
+        .content-section {
             margin-bottom: 1rem;
         }
         
-        /* Lists */
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Links */
-        a {
-            color: var(--link);
-            text-decoration: none;
-            transition: color 0.2s ease;
-            border-bottom: 1px dotted var(--link);
-            padding-bottom: 1px;
-        }
-        
-        a:hover {
-            color: var(--link-hover);
-            border-bottom: 1px solid var(--link-hover);
-        }
-        
-        /* Publication styling */
-        .publication {
-            margin-bottom: 1.2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px dotted var(--separator);
-        }
-        
-        .publication:last-child {
-            border-bottom: none;
-        }
-        
-        .pub-title {
-            font-style: italic;
-            margin-bottom: 0.3rem;
-        }
-        
-        .pub-authors {
-            margin-bottom: 0.3rem;
-        }
-        
-        .pub-venue {
-            color: var(--secondary-text);
-            font-size: 0.9rem;
-        }
-        
-        /* Footer */
-        footer {
+        .footer {
+            grid-column: 1 / -1;
             margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--separator);
-            font-size: 0.8rem;
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            color: var(--secondary-text);
-            font-style: italic;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
-            main {
+            .container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
-            .sidebar {
+            .profile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
-                margin-bottom: 2rem;
             }
             
-            .profile-image {
-                margin: 0 auto 1.5rem;
-            }
-            
-            .contact-item {
-                justify-content: center;
+            h2::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="name">Prateek P Kulkarni</h1>
-        <!--<div class="title">Undergraduate Student in Electronics and Quantum Computing</div>-->
-    </header>
+    <h1>Prateek P Kulkarni</h1>
     
-    <main>
+    <div class="container">
         <div class="sidebar">
-            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <span class="contact-text">PES University<br>Bengaluru, India</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span class="contact-text">pkulkarni2425 [at] gmail [dot] com</span>
+            <div class="profile">
+                <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
+                
+                <div class="contact-info">
+                    <p>
+                        <span class="subtle">Affiliation</span><br>
+                        PES University<br>
+                        Bengaluru, India
+                    </p>
+                    
+                    <p>
+                        <span class="subtle">Email</span><br>
+                        pkulkarni2425 [at] gmail [dot] com
+                    </p>
                 </div>
             </div>
         </div>
         
-        <div class="content">
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, Bengaluru, India, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.</p>
+        <div class="main-content">
+            <div class="content-section">
+                <h2>About</h2>
+                <p>
+                    I am a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
+                </p>
                 
-                <p>My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.</p>
-            </section>
+                <p>
+                    My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
+                </p>
+            </div>
             
-            <section id="research">
-                <h2>Current Research</h2>
+            <div class="content-section">
+                <h2>Research</h2>
                 <ul>
                     <li>Currently working in the Future Computing Systems (FIST) Lab with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and quantum error correction.</li>
                     <li>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).</li>
                 </ul>
-            </section>
+            </div>
             
-            <section id="academic-service">
-                <h2>Academic Service</h2>
-                <ul>
-                    <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
-                </ul>
-            </section>
+            <div class="content-section">
+                <h2>Publications</h2>
+                <p><em>Coming soon</em></p>
+            </div>
             
-            <section id="teaching">
-                <h2>Teaching Experience</h2>
+            <div class="content-section">
+                <h2>Teaching</h2>
                 <ul>
                     <li>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)</li>
                     <li>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
                 </ul>
-            </section>
+            </div>
+            
+            <div class="content-section">
+                <h2>Academic Service</h2>
+                <ul>
+                    <li><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
+                </ul>
+            </div>
         </div>
-    </main>
-    
-    <footer>
-        Last updated: April 2025
-    </footer>
+        
+        <div class="footer">
+            Last updated: April 2025
+        </div>
+    </div>
 </body>
 </html>
