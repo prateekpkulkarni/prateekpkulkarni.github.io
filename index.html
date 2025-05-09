@@ -1,271 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P Kulkarni</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&family=Source+Serif+4:wght@400;700&display=swap');
+<HTML><HEAD><TITLE>Prateek P Kulkarni</TITLE>
+</HEAD>
+<BODY bgColor=white>
+<TABLE cellSpacing=10>
+  <TBODY>
+  <TR border="0">
+    <TD vAlign=bottom border="0"><FONT face=Arial color=blue size=+3>Prateek
+      P Kulkarni</FONT>&nbsp;&nbsp;&nbsp;&nbsp;<IMG
+      src="1698818859534.jpg" border=0></TD>
+  <TR>
+    <TD width=550 border="0">
+      <HR>
+      <p>I'm a 3rd year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
         
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --link-color: #0066cc;
-            --link-hover: #004080;
-            --accent-color: #6b5b95;
-            --light-gray: #f5f5f5;
-            --border-color: #e0e0e0;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            margin: 40px 0;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Source Serif 4', serif;
-            margin-bottom: 16px;
-            color: var(--text-color);
-        }
-        
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-        }
-        
-        h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 32px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-        
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 24px;
-        }
-        
-        p {
-            margin-bottom: 16px;
-        }
-        
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        a:hover {
-            color: var(--link-hover);
-            text-decoration: underline;
-        }
-        
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .sidebar {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .main-content {
-            flex: 3;
-            min-width: 300px;
-        }
-        
-        .profile-image {
-            width: 200px;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 16px;
-        }
-        
-        .contact-info {
-            margin-bottom: 24px;
-        }
-        
-        .contact-info p {
-            margin-bottom: 8px;
-        }
-        
-        ul {
-            margin-bottom: 16px;
-            padding-left: 24px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .section {
-            margin-bottom: 32px;
-        }
-        
-        .paper-entry {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px dashed var(--border-color);
-        }
-        
-        .paper-entry:last-child {
-            border-bottom: none;
-        }
-        
-        .paper-title {
-            font-weight: 600;
-        }
-        
-        .paper-authors {
-            font-style: italic;
-            margin-bottom: 4px;
-        }
-        
-        .paper-venue {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .research-interests {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .research-interests li {
-            display: inline-block;
-            background-color: var(--light-gray);
-            padding: 4px 8px;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        
-        .teaching-entry {
-            margin-bottom: 16px;
-        }
-        
-        .course-title {
-            font-weight: 600;
-        }
-        
-        .course-info {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        footer {
-            margin-top: 40px;
-            border-top: 1px solid var(--border-color);
-            padding: 20px 0;
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .sidebar, .main-content {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Prateek P Kulkarni</h1>
-        <p>Undergraduate Student<br>
-        Electronics & Communication Engineering<br>
-        <a href="https://www.pes.edu/">PES University</a></p>
-    </header>
-    
-    <div class="container">
-        <div class="sidebar">
-            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-image">
-            
-            <div class="contact-info">
-                <h3>Contact</h3>
-                <p>Dept. of Electronics and Communication Engineering,<br>
-                PES University, Bangalore, India 560085<br>
-                Email: pkulkarni2425@gmail.com</p>
-            </div>
-        </div>
-        
-        <div class="main-content">
-            <section class="section" id="about">
-                <h2>About</h2>
-                <p>
-                    I am a 3rd year undergraduate student at PES University, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology.
-                </p>
-                <p>
-                    My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally. 
-                </p>
-            </section>
-            
-            <section class="section" id="research">
-                <h2>Research</h2>
-                <p>
-                    I am currently working in the <strong>Future Computing Systems (FIST) Lab</strong> with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">Computer Science and Automation, Indian Institute of Science</a>. My work focuses on topics in quantum complexity theory, distributed quantum computing and quantum error correction.
-                </p>
-                <p>
-                    Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on problems in combinatorics on words, specifically on enumerating and locating factors/subwords in formal languages.
-                </p>
-            </section>
-            
-            <!--<section class="section" id="publications">
-                <h2>Publications</h2>
-                <p><em>In preparation</em></p>
-            </section>-->
-            
-            <section class="section" id="teaching">
-                <h2>Teaching</h2>
-                <div class="teaching-entry">
-                    <div class="course-title">Quantum Transport and Logic Gates</div>
-                    <div class="course-info">Teaching Assistant, Spring 2025</div>
-                </div>
-                <div class="teaching-entry">
-                    <div class="course-title">Quantum Entanglement and Quantum Computation</div>
-                    <div class="course-info">Teaching Assistant, Fall 2025</div>
-                </div>
-            </section>
-            
-            <section class="section" id="service">
-                <h2>Academic Service</h2>
-                <ul>
-                    <li>Reviewer, <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Prateek P Kulkarni | Last updated: April 2025</p>
-    </footer>
-</body>
-</html>
+      <p><b>Research</b>
+      <ul>
+        <LI>Currently working in the <b>Future Computing Systems (FIST) Lab</b> with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on topics in quantum complexity theory, distributed quantum computing and quantum error correction.
+        <LI>Previously worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words (enumerating/locating factors/subwords).
+      </ul>
+
+      <p><b>Teaching</b>
+      <ul>
+        <LI>Teaching Assistant, Quantum Transport and Logic Gates (Spring 2025)
+        <LI>Teaching Assistant, Quantum Entanglement and Quantum Computation (Fall 2025)
+      </ul>
+
+      <p><b>Academic Service</b>
+      <ul>
+        <LI><A href="https://ieee-conecct.org/">IEEE CONECCT 2025</A>
+      </ul>
+
+      <!--<p><b>Education</b>
+      <UL>
+        <LI>B.Tech in Electronics and Communication Engineering (Class of 2026)
+            <br>PES University, Bengaluru, India
+      </UL>-->
+
+      <P><B>Contact</B>
+      <ul>
+        <p>Email: pkulkarni2425 [at] gmail [dot] com <br>
+        Dept. of Electronics and Communication Engineering <br>
+        PES University, Bangalore 560085</p>
+      </ul>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>
