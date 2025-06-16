@@ -485,7 +485,30 @@
                 flex-direction: column;
             }
         }
-
+        
+        @media (max-width: 768px) {
+        /* Hide desktop nav by default */
+        .nav-bar {
+            display: none;
+        }
+        /* Show when 'show' class is added */
+        .nav-bar.show {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+        }
+        /* Style the hamburger button */
+        .mobile-menu-btn {
+            display: block;
+            background: var(--primary-black);
+            color: white;
+            padding: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            border: none;
+            border-bottom: 6px solid var(--accent-red);
+            width: 100%;
+            cursor: pointer;
+        }
+        }
         /* Scroll behavior */
         html {
             scroll-behavior: smooth;
