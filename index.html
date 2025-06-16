@@ -3,104 +3,294 @@
 <head>
     <title>Prateek P. Kulkarni</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Times New Roman", serif;
-            margin: 40px;
-            line-height: 1.5;
-            background: white;
-            color: black;
-            max-width: 700px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        
+
+        /* Header with navigation */
+        .header {
+            background-color: #666;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-bar {
+            background-color: #666;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset for fixed navigation */
+        .section {
+            scroll-margin-top: 80px;
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            padding: 30px 40px;
+        }
+
+        /* Profile section */
+        .profile-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
         h1 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: normal;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #333;
         }
-        
+
+        .profile-details {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .profile-details a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .profile-details a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
         h2 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            margin-top: 30px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
         }
-        
-        a {
-            color: blue;
+
+        /* Publications list */
+        .publications-list {
+            list-style: none;
+            padding: 0;
         }
-        
-        .photo {
-            float: right;
-            margin-left: 20px;
-            margin-bottom: 10px;
+
+        .publications-list li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-left: 4px solid #0066cc;
+            line-height: 1.6;
         }
-        
+
+        .publication-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .publication-authors {
+            margin-bottom: 5px;
+        }
+
+        .publication-venue {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .publication-links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .publication-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Regular lists */
         ul {
-            margin: 10px 0;
+            margin-left: 20px;
+            line-height: 1.6;
         }
-        
+
         li {
-            margin: 5px 0;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-bar a {
+                display: block;
+                margin: 2px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="1698818859534.jpg" width="160" height="160" class="photo">
-    
-    <h1>Prateek P. Kulkarni</h1>
-    
-    Undergrad<br>
-    Electronics and Communication Engineering<br>
-    <a href="https://www.pes.edu/">PES University</a><br><br>
-    
-    Email: pkulkarni2425 [at] gmail [dot] com <br>
-    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a> | 
-    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-    
-    <hr>
-    <h2>About</h2>
-    I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.
+    <!-- Header with navigation -->
+    <div class="header">
+        <div class="nav-bar">
+            <a href="#home">▼ HOME</a>
+            <a href="#about">▼ ABOUT</a>
+            <a href="#research">▼ RESEARCH</a>
+            <a href="#publications">▼ PUBLICATIONS</a>
+            <a href="#teaching">▼ TEACHING</a>
+            <a href="#service">▼ SERVICE</a>
+        </div>
+    </div>
 
-    <h2>Research</h2>
-    I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.
-    
-    <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
+    <!-- Main content -->
+    <div class="container" id="home">
+        <!-- Profile section -->
+        <div class="profile-section">
+            <div class="profile-info">
+                <h1>Prateek P. Kulkarni</h1>
+                <div class="profile-details">
+                    Undergraduate<br>
+                    Electronics and Communication Engineering<br>
+                    <a href="https://www.pes.edu/">PES University</a><br><br>
+                    Email: pkulkarni2425 [at] gmail [dot] com
+                </div>
+                <div class="links">
+                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+                </div>
+            </div>
+            <img src="1698818859534.jpg" alt="Prateek P. Kulkarni" class="profile-photo">
+        </div>
 
-    <h2>Publications</h2>
-    <!--Preprints and Posters-->
-    <ul style="list-style-type: none;">
-       <li> [2] RAPID: Row-Access Pattern-Aware In-DRAM Prefetching. <br>
-            Prateek P. Kulkarni. <br>
-            <em>Emerging Technologies for Intelligent Systems</em>, 2025. <br>
-            [<a href="https://ieeexplore.ieee.org/xpl/conhome/10960730/proceeding">pdf</a>]
-       </li>
-        <!--<li>Fully Quantum Communication Enabled Multi-Core Quantum Computing with Superconducting Qubits. <br>
-            Prateek P. Kulkarni and Sumit K. Mandal. <br>
-            <em>Poster, <a href="https://events.csa.iisc.ac.in/systemsday2025/">Systems Day</a> at CSA, IISc</em>, 2025. <br>
-            [<a href="https://drive.google.com/file/d/1-Beaio2C-DDFmdXbST6qPaZMCrr931o8/view?usp=sharing">pdf</a>]
-        </li>-->
-        <li> [1] A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies. <br>
-            Prateek P. Kulkarni. <br>
-            <em>5th International Conference on Communication, Computing and Industry 4.0</em>, 2024. <br>
-            [<a href="https://ieeexplore.ieee.org/document/10894988">pdf</a>]
-        </li>
-        <!--<li>Title of Paper. <br>
-            Author. <br>
-            <em>Conference/Journal</em>, Year. <br>
-            [<a href="#">pdf</a>] [<a href="#">arXiv</a>] [<a href="#">slides</a>]
-        </li>-->
-    </ul>
+        <!-- About section -->
+        <div class="section" id="about">
+            <h2>About</h2>
+            <p>I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.</p>
+        </div>
 
-    <h2>Teaching</h2>
-    <ul>
-        <li>TA, Quantum Transport and Logic Gates (Spring 2025)</li>
-        <li>TA, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-    </ul>
+        <!-- Research section -->
+        <div class="section" id="research">
+            <h2>Research</h2>
+            <p>I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.</p>
+            <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
+        </div>
 
-    <h2>Service</h2>
-    <ul>
-        <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
-    </ul>
+        <!-- Publications section -->
+        <div class="section" id="publications">
+            <h2>Publications</h2>
+            <ul class="publications-list">
+                <li>
+                    <div class="publication-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching.</div>
+                    <div class="publication-authors">Prateek P. Kulkarni.</div>
+                    <div class="publication-venue">Emerging Technologies for Intelligent Systems, 2025.</div>
+                    <div class="publication-links">
+                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10960730/proceeding">[pdf]</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="publication-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies.</div>
+                    <div class="publication-authors">Prateek P. Kulkarni.</div>
+                    <div class="publication-venue">5th International Conference on Communication, Computing and Industry 4.0, 2024.</div>
+                    <div class="publication-links">
+                        <a href="https://ieeexplore.ieee.org/document/10894988">[pdf]</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
+        <!-- Teaching section -->
+        <div class="section" id="teaching">
+            <h2>Teaching</h2>
+            <ul>
+                <li>TA, Quantum Transport and Logic Gates (Spring 2025)</li>
+                <li>TA, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+            </ul>
+        </div>
+
+        <!-- Service section -->
+        <div class="section" id="service">
+            <h2>Service</h2>
+            <ul>
+                <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
