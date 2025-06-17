@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
         * {
@@ -11,19 +13,26 @@
 
         body {
             font-family: Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.3;
             background-color: #f5f5f5;
             color: #333;
         }
 
-        /* Header with navigation */
+        /* Header with navigation - keeping your original nav */
         .header {
-            background-color: #666;
+            background-color: #333;
             padding: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         .nav-bar {
-            background-color: #666;
+            background-color: #333;
             padding: 12px 0;
             text-align: center;
         }
@@ -41,7 +50,7 @@
         }
 
         .nav-bar a:hover {
-            background-color: #555;
+            background-color: #222;
         }
 
         /* Smooth scrolling */
@@ -49,247 +58,277 @@
             scroll-behavior: smooth;
         }
 
-        /* Offset for fixed navigation */
-        .section {
-            scroll-margin-top: 80px;
-        }
-
-        /* Main content container */
+        /* Main container - Kothari style */
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             min-height: 100vh;
-            padding: 30px 40px;
         }
 
-        /* Profile section */
-        .profile-section {
+        /* Header section - Kothari style */
+        .profile-header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             display: flex;
-            gap: 40px;
-            margin-bottom: 40px;
+            justify-content: space-between;
             align-items: flex-start;
         }
 
-        .profile-info {
-            flex: 1;
+        .profile-header h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+            text-transform: uppercase;
         }
 
         .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 8px;
+            width: 80px;
+            height: 100px;
+            background-color: #ddd;
+            border: 1px solid #999;
+            flex-shrink: 0;
             object-fit: cover;
-            border: 1px solid #ddd;
         }
 
-        h1 {
-            font-size: 28px;
-            font-weight: normal;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .profile-details {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .profile-details a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .profile-details a:hover {
-            text-decoration: underline;
-        }
-
-        .links {
-            margin-top: 15px;
-        }
-
-        .links a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section styling */
+        /* Section styling - Kothari style */
         .section {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 25px;
         }
 
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 20px;
+        .section-title {
             font-weight: bold;
-            margin-bottom: 15px;
+            font-size: 12px;
             color: #333;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 16px;
         }
 
-        /* Publications list */
-        .publications-list {
-            list-style: none;
-            padding: 0;
+        /* Two column layout for main content */
+        .two-column {
+            display: flex;
+            gap: 30px;
         }
 
-        .publications-list li {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fafafa;
-            border-left: 4px solid #0066cc;
-            line-height: 1.6;
+        .left-column {
+            flex: 2;
         }
 
-        .publication-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+        .right-column {
+            flex: 1;
         }
 
-        .publication-authors {
-            margin-bottom: 5px;
+        /* About section content */
+        .about-content {
+            text-align: justify;
+            margin-bottom: 15px;
         }
 
-        .publication-venue {
+        .research-content {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .research-content p {
+            margin-bottom: 10px;
+        }
+
+        /* Contact info styling */
+        .contact-info {
+            margin-bottom: 15px;
+        }
+
+        .contact-info div {
+            margin-bottom: 2px;
+        }
+
+        /* Publications styling - Kothari style */
+        .publication-item {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .publication-item .title {
             font-style: italic;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
-        .publication-links a {
+        .publication-item .authors {
+            font-weight: normal;
+            margin-bottom: 3px;
+        }
+
+        .publication-item .venue {
+            font-weight: normal;
+            margin-bottom: 3px;
+        }
+
+        .publication-item .year {
+            font-weight: bold;
+        }
+
+        .publication-item .links {
+            margin-top: 5px;
+        }
+
+        .publication-item .links a {
             color: #0066cc;
             text-decoration: none;
             margin-right: 10px;
-            font-size: 14px;
+            font-size: 10px;
         }
 
-        .publication-links a:hover {
+        /* Teaching and Service sections */
+        .teaching-item, .service-item {
+            margin-bottom: 6px;
+        }
+
+        /* Links styling */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
             text-decoration: underline;
         }
 
-        /* Regular lists */
-        ul {
-            margin-left: 20px;
-            line-height: 1.6;
+        .links-section {
+            margin-top: 10px;
         }
 
-        li {
-            margin-bottom: 8px;
+        .links-section a {
+            margin-right: 15px;
+            font-size: 11px;
+        }
+
+        /* Small sections in right column */
+        .small-section {
+            margin-bottom: 20px;
+        }
+
+        .small-section .section-title {
+            font-size: 11px;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
+                margin: 80px 10px 0;
                 padding: 20px;
             }
 
-            .profile-section {
+            .profile-header {
                 flex-direction: column;
                 text-align: center;
             }
 
+            .profile-photo {
+                margin-top: 10px;
+                align-self: center;
+            }
+
+            .two-column {
+                flex-direction: column;
+            }
+
             .nav-bar a {
-                display: block;
-                margin: 2px 0;
+                display: inline-block;
+                margin: 2px 5px;
+                font-size: 10px;
+                padding: 6px 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header with navigation -->
-    <div class="header">
-        <div class="nav-bar">
-            <a href="#home">▼ HOME</a>
-            <a href="#about">▼ ABOUT</a>
-            <a href="#research">▼ RESEARCH</a>
-            <a href="#publications">▼ PUBLICATIONS</a>
-            <a href="#teaching">▼ TEACHING</a>
-            <a href="#service">▼ SERVICE</a>
-        </div>
-    </div>
+
 
     <!-- Main content -->
     <div class="container" id="home">
-        <!-- Profile section -->
-        <div class="profile-section">
-            <div class="profile-info">
-                <h1>Prateek P. Kulkarni</h1>
-                <div class="profile-details">
-                    Undergraduate<br>
-                    Electronics and Communication Engineering<br>
-                    <a href="https://www.pes.edu/">PES University</a><br><br>
-                    Email: pkulkarni2425 [at] gmail [dot] com
-                </div>
-                <div class="links">
-                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
-                    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-                </div>
-            </div>
+        <!-- Profile header - Kothari style -->
+        <div class="profile-header">
+            <h1>Prateek P. Kulkarni</h1>
             <img src="1698818859534.jpg" alt="Prateek P. Kulkarni" class="profile-photo">
         </div>
 
-        <!-- About section -->
-        <div class="section" id="about">
-            <h2>About</h2>
-            <p>I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.</p>
-        </div>
-
-        <!-- Research section -->
-        <div class="section" id="research">
-            <h2>Research</h2>
-            <p>I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.</p>
-            <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
-        </div>
-
-        <!-- Publications section -->
-        <div class="section" id="publications">
-            <h2>Publications</h2>
-            <ul class="publications-list">
-                <li>
-                    <div class="publication-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching.</div>
-                    <div class="publication-authors">Prateek P. Kulkarni.</div>
-                    <div class="publication-venue">Emerging Technologies for Intelligent Systems, 2025.</div>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/10961614">[pdf]</a>
+        <!-- Two column layout -->
+        <div class="two-column">
+            <div class="left-column">
+                <!-- About section -->
+                <div class="section" id="about">
+                    <div class="section-title">About</div>
+                    <div class="about-content">
+                        I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.
                     </div>
-                </li>
-                <li>
-                    <div class="publication-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies.</div>
-                    <div class="publication-authors">Prateek P. Kulkarni.</div>
-                    <div class="publication-venue">5th International Conference on Communication, Computing and Industry 4.0, 2024.</div>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/10894988">[pdf]</a>
+                </div>
+
+                <!-- Research section -->
+                <div class="section" id="research">
+                    <div class="section-title">Research</div>
+                    <div class="research-content">
+                        <p>I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.</p>
+                        <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
                     </div>
-                </li>
-            </ul>
-        </div>
+                </div>
 
-        <!-- Teaching section -->
-        <div class="section" id="teaching">
-            <h2>Teaching</h2>
-            <ul>
-                <li>TA, Quantum Transport and Logic Gates (Spring 2025)</li>
-                <li>TA, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-            </ul>
-        </div>
+                <!-- Publications section -->
+                <div class="section" id="publications">
+                    <div class="section-title">Publications</div>
+                    
+                    <div class="publication-item">
+                        <span class="title">[2] RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</span><br>
+                        <span class="authors">Prateek P. Kulkarni</span><br>
+                        <span class="venue">Emerging Technologies for Intelligent Systems, 2025</span><br>
+                        <div class="links">
+                            <a href="https://ieeexplore.ieee.org/document/10961614">[pdf]</a>
+                        </div>
+                    </div>
 
-        <!-- Service section -->
-        <div class="section" id="service">
-            <h2>Service</h2>
-            <ul>
-                <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
-            </ul>
+                    <div class="publication-item">
+                        <span class="title">[1] A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</span><br>
+                        <span class="authors">Prateek P. Kulkarni</span><br>
+                        <span class="venue">5th International Conference on Communication, Computing and Industry 4.0, 2024</span><br>
+                        <div class="links">
+                            <a href="https://ieeexplore.ieee.org/document/10894988">[pdf]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teaching section -->
+                <div class="section" id="teaching">
+                    <div class="section-title">Teaching</div>
+                    <div class="teaching-item">TA, Quantum Transport and Logic Gates (Spring 2025)</div>
+                    <div class="teaching-item">TA, Quantum Entanglement and Quantum Computation (Fall 2025)</div>
+                </div>
+
+                <!-- Service section -->
+                <div class="section" id="service">
+                    <div class="section-title">Service</div>
+                    <div class="service-item">Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <!-- Contact section -->
+                <div class="small-section">
+                    <div class="section-title">Contact</div>
+                    <div class="contact-info">
+                        <div>Undergraduate</div>
+                        <div>Electronics and Communication Engineering</div>
+                        <div><a href="https://www.pes.edu/">PES University</a></div>
+                        <div><br>Email: pkulkarni2425 [at] gmail [dot] com</div>
+                    </div>
+                    <div class="links-section">
+                        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
+                        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
