@@ -3,16 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P Kulkarni</title>
+    <title>Prateek P. Kulkarni</title>
     <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #333;
+            --text-secondary: #666;
+            --border-color: #e0e0e0;
+            --sidebar-bg: #f8f9fa;
+            --sidebar-border: #e0e0e0;
+            --hover-bg: #e9ecef;
+            --link-color: #0066cc;
+            --hamburger-hover: rgba(0, 0, 0, 0.05);
+            --hamburger-active: rgba(0, 0, 0, 0.1);
+            --overlay-bg: rgba(0, 0, 0, 0.5);
+            --profile-border: #e0e0e0;
+            --counter-color: #666;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --border-color: #333;
+            --sidebar-bg: #2a2a2a;
+            --sidebar-border: #404040;
+            --hover-bg: #404040;
+            --link-color: #66b3ff;
+            --hamburger-hover: rgba(255, 255, 255, 0.1);
+            --hamburger-active: rgba(255, 255, 255, 0.2);
+            --overlay-bg: rgba(0, 0, 0, 0.7);
+            --profile-border: #404040;
+            --counter-color: #888;
+        }
+
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #333;
-            background: #fff;
+            color: var(--text-color);
+            background: var(--bg-color);
             margin: 0;
             padding: 0;
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            background: var(--sidebar-bg);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .theme-toggle:hover {
+            background: var(--hover-bg);
+            transform: scale(1.05);
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.95);
         }
 
         /* Sidebar Navigation */
@@ -22,8 +87,8 @@
             top: 0;
             width: 250px;
             height: 100vh;
-            background: #f8f9fa;
-            border-right: 1px solid #e0e0e0;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--sidebar-border);
             transition: left 0.3s ease;
             z-index: 1000;
             padding: 60px 0 0 0;
@@ -40,16 +105,16 @@
         .sidebar nav a {
             display: block;
             padding: 16px 30px;
-            color: #333;
+            color: var(--text-color);
             text-decoration: none;
             font-size: 16px;
             transition: background 0.2s ease;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .sidebar nav a:hover,
         .sidebar nav a:active {
-            background: #e9ecef;
+            background: var(--hover-bg);
         }
 
         .sidebar nav a:last-child {
@@ -76,17 +141,17 @@
         }
 
         .hamburger:hover {
-            background: rgba(0, 0, 0, 0.05);
+            background: var(--hamburger-hover);
         }
 
         .hamburger:active {
-            background: rgba(0, 0, 0, 0.1);
+            background: var(--hamburger-active);
         }
 
         .hamburger span {
             width: 100%;
             height: 2px;
-            background: #333;
+            background: var(--text-color);
             transition: all 0.3s ease;
         }
 
@@ -108,7 +173,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: var(--overlay-bg);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -141,7 +206,7 @@
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--profile-border);
         }
 
         .header-content {
@@ -152,18 +217,18 @@
             font-size: 28px;
             font-weight: 400;
             margin: 0 0 8px 0;
-            color: #000;
+            color: var(--text-color);
         }
 
         .affiliation {
             font-size: 15px;
-            color: #666;
+            color: var(--text-secondary);
             margin-bottom: 18px;
             line-height: 1.4;
         }
 
         .affiliation a {
-            color: #666;
+            color: var(--text-secondary);
             text-decoration: none;
         }
 
@@ -173,12 +238,12 @@
 
         .contact {
             font-size: 14px;
-            color: #666;
+            color: var(--text-secondary);
             margin-bottom: 18px;
         }
 
         .contact a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
         }
 
@@ -188,7 +253,7 @@
 
         .interests {
             font-size: 15px;
-            color: #333;
+            color: var(--text-color);
             margin-bottom: 0;
             line-height: 1.5;
         }
@@ -202,12 +267,12 @@
             font-size: 18px;
             font-weight: 500;
             margin: 0 0 16px 0;
-            color: #000;
+            color: var(--text-color);
         }
 
         .section p {
             margin: 0 0 12px 0;
-            color: #333;
+            color: var(--text-color);
         }
 
         .papers {
@@ -219,7 +284,7 @@
 
         .papers li {
             margin-bottom: 16px;
-            color: #333;
+            color: var(--text-color);
             counter-increment: paper-counter;
             position: relative;
             padding-left: 25px;
@@ -230,7 +295,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: #666;
+            color: var(--counter-color);
             font-weight: 500;
         }
 
@@ -242,7 +307,7 @@
 
         .paper-venue {
             font-size: 14px;
-            color: #666;
+            color: var(--text-secondary);
             margin-bottom: 2px;
         }
 
@@ -251,7 +316,7 @@
         }
 
         .paper-links a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
             margin-right: 8px;
         }
@@ -268,12 +333,12 @@
 
         .teaching li, .service li {
             margin-bottom: 5px;
-            color: #333;
+            color: var(--text-color);
             font-size: 15px;
         }
 
         .service a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
         }
 
@@ -282,14 +347,14 @@
         }
 
         .collaboration {
-            color: #666;
+            color: var(--text-secondary);
             font-size: 15px;
             margin-bottom: 12px;
             line-height: 1.5;
         }
 
         .collaboration a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
         }
 
@@ -411,6 +476,14 @@
             .section h2 {
                 font-size: 18px;
             }
+
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -419,6 +492,10 @@
         <span></span>
         <span></span>
         <span></span>
+    </button>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
     </button>
 
     <div class="overlay" onclick="closeSidebar()"></div>
@@ -437,7 +514,7 @@
         <div class="header">
             <img src="prat.jpg" alt="Prateek P Kulkarni" class="profile-photo">
             <div class="header-content">
-                <h1>Prateek P Kulkarni</h1>
+                <h1>Prateek P. Kulkarni</h1>
                 
                 <div class="affiliation">
                     4th year Undergrad<br>
@@ -512,6 +589,34 @@
     </div>
 
     <script>
+        // Theme management
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            updateThemeIcon(newTheme);
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeIcon = document.getElementById('theme-icon');
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Initialize theme
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon(theme);
+        }
+
+        // Sidebar functions
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const hamburger = document.querySelector('.hamburger');
@@ -544,6 +649,18 @@
                     });
                 }
             });
+        });
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                const theme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+                updateThemeIcon(theme);
+            }
         });
     </script>
 </body>
