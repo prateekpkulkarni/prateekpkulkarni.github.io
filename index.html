@@ -39,23 +39,29 @@
 
         .sidebar nav a {
             display: block;
-            padding: 12px 30px;
+            padding: 16px 30px;
             color: #333;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 16px;
             transition: background 0.2s ease;
+            border-bottom: 1px solid #e9ecef;
         }
 
-        .sidebar nav a:hover {
+        .sidebar nav a:hover,
+        .sidebar nav a:active {
             background: #e9ecef;
+        }
+
+        .sidebar nav a:last-child {
+            border-bottom: none;
         }
 
         .hamburger {
             position: fixed;
-            top: 25px;
-            left: 25px;
-            width: 30px;
-            height: 30px;
+            top: 20px;
+            left: 20px;
+            width: 44px;
+            height: 44px;
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -63,8 +69,18 @@
             gap: 5px;
             background: none;
             border: none;
-            padding: 0;
+            padding: 7px;
             z-index: 1001;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .hamburger:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .hamburger:active {
+            background: rgba(0, 0, 0, 0.1);
         }
 
         .hamburger span {
@@ -283,14 +299,15 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 40px 16px;
+                padding: 80px 20px 40px;
             }
             
             .header {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                gap: 20px;
+                gap: 25px;
+                margin-bottom: 40px;
             }
             
             .profile-photo {
@@ -299,7 +316,100 @@
             }
             
             h1 {
+                font-size: 26px;
+            }
+
+            .affiliation {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .contact {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .interests {
+                font-size: 16px;
+            }
+
+            .section {
+                margin-bottom: 35px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+
+            .papers li {
+                margin-bottom: 20px;
+                padding-left: 30px;
+            }
+
+            .paper-title {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .paper-venue {
+                font-size: 15px;
+            }
+
+            .paper-links {
+                font-size: 14px;
+            }
+
+            .paper-links a {
+                padding: 2px 0;
+                margin-right: 12px;
+            }
+
+            .teaching li, .service li {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .collaboration {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
+            /* Larger touch targets for mobile */
+            .contact a, .collaboration a, .service a {
+                padding: 2px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 80px 16px 40px;
+            }
+
+            .header {
+                gap: 20px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
                 font-size: 24px;
+            }
+
+            .sidebar {
+                width: 280px;
+                left: -280px;
+            }
+
+            .papers li {
+                padding-left: 25px;
+            }
+
+            .section h2 {
+                font-size: 18px;
             }
         }
     </style>
@@ -324,12 +434,12 @@
 
     <div class="container">
         <div class="header">
-            <img src="1698818859534.jpg" alt="pkulkarni" class="profile-photo">
+            <img src="1698818859534.jpg" alt="Prateek P Kulkarni" class="profile-photo">
             <div class="header-content">
                 <h1>Prateek P Kulkarni</h1>
                 
                 <div class="affiliation">
-                    4th year Undergraduate<br>
+                    4th year Undergrad<br>
                     Electronics and Communication Engineering<br>
                     <a href="https://www.pes.edu/">PES University</a>
                 </div>
@@ -349,10 +459,10 @@
         <div class="section" id="research">
             <h2>Research</h2>
             <div class="collaboration">
-                I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.
+                I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on quantum complexity theory, architectures for distributed quantum computing and quantum error correction for near-term devices, more recently.
             </div>
             <div class="collaboration">
-                Previously, I worked with <a href="https://staff.pes.edu/nm1802/">Sivasankar M</a> on some problems in combinatorics on words.
+                Previously, I worked with <a href="https://staff.pes.edu/nm1802/">Sivasankar M</a> on combinatorics on words.
             </div>
         </div>
 
