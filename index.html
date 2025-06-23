@@ -1,667 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
-        :root {
-            --bg-color: #fff;
-            --text-color: #333;
-            --text-secondary: #666;
-            --border-color: #e0e0e0;
-            --sidebar-bg: #f8f9fa;
-            --sidebar-border: #e0e0e0;
-            --hover-bg: #e9ecef;
-            --link-color: #0066cc;
-            --hamburger-hover: rgba(0, 0, 0, 0.05);
-            --hamburger-active: rgba(0, 0, 0, 0.1);
-            --overlay-bg: rgba(0, 0, 0, 0.5);
-            --profile-border: #e0e0e0;
-            --counter-color: #666;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --text-secondary: #b0b0b0;
-            --border-color: #333;
-            --sidebar-bg: #2a2a2a;
-            --sidebar-border: #404040;
-            --hover-bg: #404040;
-            --link-color: #66b3ff;
-            --hamburger-hover: rgba(255, 255, 255, 0.1);
-            --hamburger-active: rgba(255, 255, 255, 0.2);
-            --overlay-bg: rgba(0, 0, 0, 0.7);
-            --profile-border: #404040;
-            --counter-color: #888;
-        }
-
-        * {
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Dark Mode Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 44px;
-            height: 44px;
-            border: none;
-            border-radius: 50%;
-            background: var(--sidebar-bg);
-            border: 1px solid var(--border-color);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .theme-toggle:hover {
-            background: var(--hover-bg);
-            transform: scale(1.05);
-        }
-
-        .theme-toggle:active {
-            transform: scale(0.95);
-        }
-
-        /* Sidebar Navigation */
-        .sidebar {
-            position: fixed;
-            left: -250px;
-            top: 0;
-            width: 250px;
-            height: 100vh;
-            background: var(--sidebar-bg);
-            border-right: 1px solid var(--sidebar-border);
-            transition: left 0.3s ease;
-            z-index: 1000;
-            padding: 60px 0 0 0;
-        }
-
-        .sidebar.active {
-            left: 0;
-        }
-
-        .sidebar nav {
-            padding: 20px 0;
-        }
-
-        .sidebar nav a {
-            display: block;
-            padding: 16px 30px;
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 16px;
-            transition: background 0.2s ease;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .sidebar nav a:hover,
-        .sidebar nav a:active {
-            background: var(--hover-bg);
-        }
-
-        .sidebar nav a:last-child {
-            border-bottom: none;
-        }
-
-        .hamburger {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 7px;
-            z-index: 1001;
-            border-radius: 6px;
-            transition: background 0.2s ease;
-        }
-
-        .hamburger:hover {
-            background: var(--hamburger-hover);
-        }
-
-        .hamburger:active {
-            background: var(--hamburger-active);
-        }
-
-        .hamburger span {
-            width: 100%;
-            height: 2px;
-            background: var(--text-color);
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--overlay-bg);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 999;
-        }
-
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .container {
+            font-family: "Times New Roman", serif;
+            margin: 40px;
+            line-height: 1.5;
+            background: white;
+            color: black;
             max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            transition: margin-left 0.3s ease;
         }
-
-        /* Header with photo */
-        .header {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 50px;
-            align-items: flex-start;
-        }
-
-        .profile-photo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 1px solid var(--profile-border);
-        }
-
-        .header-content {
-            flex: 1;
-        }
-
+        
         h1 {
-            font-size: 28px;
-            font-weight: 400;
-            margin: 0 0 8px 0;
-            color: var(--text-color);
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 10px;
         }
-
-        .affiliation {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 18px;
-            line-height: 1.4;
-        }
-
-        .affiliation a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .affiliation a:hover {
-            text-decoration: underline;
-        }
-
-        .contact {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 18px;
-        }
-
-        .contact a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .interests {
-            font-size: 15px;
-            color: var(--text-color);
-            margin-bottom: 0;
-            line-height: 1.5;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
+        
+        h2 {
             font-size: 18px;
-            font-weight: 500;
-            margin: 0 0 16px 0;
-            color: var(--text-color);
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
-
-        .section p {
-            margin: 0 0 12px 0;
-            color: var(--text-color);
+        
+        a {
+            color: blue;
         }
-
-        .papers {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            counter-reset: paper-counter;
+        
+        .photo {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 10px;
         }
-
-        .papers li {
-            margin-bottom: 16px;
-            color: var(--text-color);
-            counter-increment: paper-counter;
-            position: relative;
-            padding-left: 25px;
+        
+        ul {
+            margin: 10px 0;
         }
-
-        .papers li::before {
-            content: counter(paper-counter) ".";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--counter-color);
-            font-weight: 500;
-        }
-
-        .paper-title {
-            font-weight: 500;
-            margin-bottom: 2px;
-            line-height: 1.4;
-        }
-
-        .paper-venue {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 2px;
-        }
-
-        .paper-links {
-            font-size: 13px;
-        }
-
-        .paper-links a {
-            color: var(--link-color);
-            text-decoration: none;
-            margin-right: 8px;
-        }
-
-        .paper-links a:hover {
-            text-decoration: underline;
-        }
-
-        .teaching, .service {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .teaching li, .service li {
-            margin-bottom: 5px;
-            color: var(--text-color);
-            font-size: 15px;
-        }
-
-        .service a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        .service a:hover {
-            text-decoration: underline;
-        }
-
-        .collaboration {
-            color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .collaboration a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        .collaboration a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 80px 20px 40px;
-            }
-            
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 25px;
-                margin-bottom: 40px;
-            }
-            
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-            
-            h1 {
-                font-size: 26px;
-            }
-
-            .affiliation {
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-
-            .contact {
-                font-size: 15px;
-                margin-bottom: 20px;
-            }
-
-            .interests {
-                font-size: 16px;
-            }
-
-            .section {
-                margin-bottom: 35px;
-            }
-
-            .section h2 {
-                font-size: 20px;
-                margin-bottom: 18px;
-            }
-
-            .papers li {
-                margin-bottom: 20px;
-                padding-left: 30px;
-            }
-
-            .paper-title {
-                font-size: 16px;
-                line-height: 1.4;
-            }
-
-            .paper-venue {
-                font-size: 15px;
-            }
-
-            .paper-links {
-                font-size: 14px;
-            }
-
-            .paper-links a {
-                padding: 2px 0;
-                margin-right: 12px;
-            }
-
-            .teaching li, .service li {
-                font-size: 16px;
-                margin-bottom: 8px;
-            }
-
-            .collaboration {
-                font-size: 16px;
-                margin-bottom: 16px;
-            }
-
-            /* Larger touch targets for mobile */
-            .contact a, .collaboration a, .service a {
-                padding: 2px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 80px 16px 40px;
-            }
-
-            .header {
-                gap: 20px;
-            }
-
-            .profile-photo {
-                width: 100px;
-                height: 100px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .sidebar {
-                width: 280px;
-                left: -280px;
-            }
-
-            .papers li {
-                padding-left: 25px;
-            }
-
-            .section h2 {
-                font-size: 18px;
-            }
-
-            .theme-toggle {
-                top: 15px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
+        
+        li {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <button class="hamburger" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <img src="prat.jpg" width="150" height="150" class="photo">
+    
+    <h1>Prateek P. Kulkarni</h1>
+    
+    Undergrad<br>
+    Electronics and Communication Engineering<br>
+    <a href="https://www.pes.edu/">PES University</a><br><br>
+    
+    Email: pkulkarni2425 [at] gmail [dot] com <br>
+    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a> | 
+    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+    <hr>
+    <h2>About</h2>
+    I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.
 
-    <button class="theme-toggle" onclick="toggleTheme()">
-        <span id="theme-icon">🌙</span>
-    </button>
+    <h2>Research</h2>
+    I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.
+    
+    <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
 
-    <div class="overlay" onclick="closeSidebar()"></div>
+    <h2>Publications</h2>
+    <!--Preprints and Posters-->
+    <ul>
+        <li>RAPID: Row-Access Pattern-Aware In-DRAM Prefetching. <br>
+            Prateek P. Kulkarni. <br>
+            <em>Emerging Technologies for Intelligent Systems</em>, 2025. <br>
+            [<a href="https://ieeexplore.ieee.org/xpl/conhome/10960730/proceeding">pdf</a>]
+        </li>
+        <!--<li>Fully Quantum Communication Enabled Multi-Core Quantum Computing with Superconducting Qubits. <br>
+            Prateek P. Kulkarni and Sumit K. Mandal. <br>
+            <em>Poster, <a href="https://events.csa.iisc.ac.in/systemsday2025/">Systems Day</a> at CSA, IISc</em>, 2025. <br>
+            [<a href="https://drive.google.com/file/d/1-Beaio2C-DDFmdXbST6qPaZMCrr931o8/view?usp=sharing">pdf</a>]
+        </li>-->
+        <li>A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies. <br>
+            Prateek P. Kulkarni. <br>
+            <em>5th International Conference on Communication, Computing and Industry 4.0</em>, 2024. <br>
+            [<a href="https://ieeexplore.ieee.org/document/10894988">pdf</a>]
+        </li>
+        <!--<li>Title of Paper. <br>
+            Author. <br>
+            <em>Conference/Journal</em>, Year. <br>
+            [<a href="#">pdf</a>] [<a href="#">arXiv</a>] [<a href="#">slides</a>]
+        </li>-->
+    </ul>
 
-    <aside class="sidebar" id="sidebar">
-        <nav>
-            <a href="#about" onclick="closeSidebar()">Home</a>
-            <a href="#research" onclick="closeSidebar()">Research</a>
-            <a href="#papers" onclick="closeSidebar()">Papers</a>
-            <a href="#teaching" onclick="closeSidebar()">Teaching</a>
-            <a href="#service" onclick="closeSidebar()">Service</a>
-        </nav>
-    </aside>
+    <h2>Service</h2>
+    <ul>
+        <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
+    </ul>
 
-    <div class="container">
-        <div class="header">
-            <img src="prat.jpg" alt="Prateek P Kulkarni" class="profile-photo">
-            <div class="header-content">
-                <h1>Prateek P. Kulkarni</h1>
-                
-                <div class="affiliation">
-                    4th year Undergrad<br>
-                    Electronics and Communication Engineering<br>
-                    <a href="https://www.pes.edu/">PES University</a>
-                </div>
+    <h2>Teaching</h2>
+    <ul>
+        <li>TA, Quantum Transport and Logic Gates (Spring 2025)</li>
+        <li>TA, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
+    </ul>
 
-                <div class="contact">
-                    pkulkarni2425 [at] gmail [dot] com<br>
-                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a> | 
-                    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <h2>About</h2>
-                <div class="collaboration">
-                    I'm a final year undergraduate student at <a href="https://www.pes.edu/" target="_blank">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.
-                </div>
-        </div>
-        
-        <div class="section" id="research">
-            <h2>Research</h2>
-            <div class="collaboration">
-                Currently, I work in the Future Computing Systems Lab at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a>  with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>, on quantum complexity theory, architectures for distributed quantum computing and quantum error correction for near-term devices, more recently.
-            </div>
-
-            <div class="collaboration">
-                For my undergraduate thesis, I am working on building a photonic FPGA for variational quantum algorithms, in the Photonics and Quantum Tech Lab, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>. 
-            </div>
-            
-            <div class="collaboration">
-                Previously, I worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on some problems in combinatorics on words.
-            </div>
-        </div>
-
-        <div class="section" id="papers">
-            <h2>Papers</h2>
-            <ul class="papers">
-                <li>
-                    <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
-                    <div class="paper-venue">Emerging Technologies for Intelligent Systems, 2025</div>
-                    <div class="paper-links">
-                        <a href="https://ieeexplore.ieee.org/document/10961614">[paper]</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
-                    <div class="paper-venue">International Conference on Communication, Computing and Industry 6.0, 2024</div>
-                    <div class="paper-links">
-                        <a href="https://ieeexplore.ieee.org/document/10894988">[paper]</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section" id="teaching">
-            <h2>Teaching</h2>
-            <ul class="teaching">
-                <li>TA, Quantum Transport and Logic Gates (Spring 2025)</li>
-                <li>TA, Quantum Entanglement and Quantum Computation (Fall 2025)</li>
-            </ul>
-        </div>
-
-        <div class="section" id="service">
-            <h2>Service</h2>
-            <ul class="service">
-                <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE TQE</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        // Theme management
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            updateThemeIcon(newTheme);
-            
-            // Save preference to localStorage
-            localStorage.setItem('theme', newTheme);
-        }
-
-        function updateThemeIcon(theme) {
-            const themeIcon = document.getElementById('theme-icon');
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
-
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            
-            document.documentElement.setAttribute('data-theme', theme);
-            updateThemeIcon(theme);
-        }
-
-        // Sidebar functions
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const hamburger = document.querySelector('.hamburger');
-            const overlay = document.querySelector('.overlay');
-            
-            sidebar.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
-
-        function closeSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const hamburger = document.querySelector('.hamburger');
-            const overlay = document.querySelector('.overlay');
-            
-            sidebar.classList.remove('active');
-            hamburger.classList.remove('active');
-            overlay.classList.remove('active');
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Initialize theme on page load
-        document.addEventListener('DOMContentLoaded', initTheme);
-
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                const theme = e.matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', theme);
-                updateThemeIcon(theme);
-            }
-        });
-    </script>
 </body>
 </html>
