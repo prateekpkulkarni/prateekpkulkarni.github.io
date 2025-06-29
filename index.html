@@ -6,13 +6,167 @@
         body {
             font-family: "Computer Modern", "Latin Modern Roman", serif;
             font-size: 12pt;
-            margin: 30px auto;
-            max-width: 750px;
-            padding: 0 20px;
+            margin: 0;
+            padding: 0;
             line-height: 1.3;
             background: white;
             color: #1a1a1a;
         }
+        
+        .nav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav li {
+            margin: 0;
+        }
+        
+        .nav li:before {
+            content: none;
+        }
+        
+        .nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 11pt;
+            font-weight: normal;
+            padding: 8px 12px;
+            border-radius: 3px;
+            transition: background-color 0.2s;
+            display: block;
+            white-space: nowrap;
+        }
+        
+        .nav a:hover {
+            background-color: #e8e8e8;
+            text-decoration: none;
+        }
+        
+        .nav a.active {
+            background-color: #000080;
+            color: white;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                font-size: 11pt;
+            }
+            
+            .nav {
+                padding: 8px 0;
+            }
+            
+            .nav ul {
+                gap: 8px;
+                justify-content: space-around;
+            }
+            
+            .nav a {
+                font-size: 10pt;
+                padding: 6px 8px;
+            }
+            
+            .content {
+                padding: 0 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .photo {
+                margin: 15px 0 0 0;
+                order: -1;
+            }
+            
+            .header-left {
+                margin-top: 15px;
+            }
+            
+            h1 {
+                font-size: 15pt;
+                text-align: center;
+            }
+            
+            h2 {
+                font-size: 12pt;
+            }
+            
+            .pub {
+                font-size: 10pt;
+            }
+            
+            .research {
+                font-size: 10pt;
+            }
+            
+            .affil {
+                font-size: 10pt;
+            }
+            
+            .contact {
+                font-size: 9pt;
+            }
+            
+            .ascii {
+                font-size: 8pt;
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav ul {
+                gap: 4px;
+                flex-wrap: wrap;
+            }
+            
+            .nav a {
+                font-size: 9pt;
+                padding: 5px 6px;
+            }
+            
+            body {
+                font-size: 10pt;
+            }
+            
+            .content {
+                padding: 0 10px;
+            }
+            
+            .ascii {
+                font-size: 7pt;
+                line-height: 1.0;
+            }
+        }
+        
+        .content {
+            margin: 0 auto;
+            max-width: 750px;
+            padding: 0 20px;
+        }
+        
         h1 {
             font-size: 16pt;
             font-weight: normal;
@@ -115,6 +269,20 @@
 </head>
 <body>
 
+<nav class="nav">
+    <div class="nav-container">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Papers</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content">
 <h1>Prateek P. Kulkarni</h1>
 
 <div class="header">
@@ -128,7 +296,8 @@ Electronics and Communication Engineering<br>
 <div class="contact">
 <b>email:</b> pkulkarni2425 [at] gmail [dot] com<br>
 <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">scholar</a> • 
-<a href="https://www.linkedin.com/in/pkulkarni2425">linkedin</a>
+<a href="https://www.linkedin.com/in/pkulkarni2425">linkedin</a> •
+<a href="pkulkarni_cv_2025.pdf">cv</a>
 </div>
 </div>
 <img src="1698818859534.jpg" width="140" height="140" class="photo">
@@ -136,19 +305,19 @@ Electronics and Communication Engineering<br>
 
 <hr>
 
-<h2>about</h2>
+<h2 id="about">about</h2>
 <div class="research">
 I'm a final year undergraduate student at <a href="https://www.pes.edu/">PES University</a>, pursuing a degree in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technology. My research interests are in quantum complexity theory, distributed quantum computing, and quantum error correction.
 </div>
 
-<h2>research</h2>
+<h2 id="research">research</h2>
 <div class="research">
 I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at <a href="https://www.csa.iisc.ac.in/">CSA, IISc</a> on architectures for distributed quantum computing and quantum error correction for near-term devices.
 <p>Previously, I have worked with <a href="https://staff.pes.edu/nm1802/">Prof. Sivasankar M</a> on combinatorics on words (enumerating/locating factors and subwords).</p>
-<p>For my undergraduate thesis, I am working on building a Photonic FPGA for Variational Quantum Algorithms, in the Photonics and Quantum Tech Lab, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
+<p>For my undergraduate thesis, I am working on building a Photonic FPGA for Variational Quantum Algorithms, in the Photonics and Quantum Tech Lab, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p><
 </div>
 
-<h2>publications</h2>
+<h2 id="publications">publications</h2>
 
 <div class="pub">
 [1] <span class="pubtitle">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</span><br>
@@ -164,12 +333,12 @@ Prateek P. Kulkarni<br>
 <span class="links">[<a href="https://ieeexplore.ieee.org/document/10894988">pdf</a>]</span>
 </div>
 
-<h2>service</h2>
+<h2 id="service">service</h2>
 <ul>
 <li>Reviewer: <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
 </ul>
 
-<h2>teaching</h2>
+<h2 id="teaching">teaching</h2>
 <ul>
 <li>TA: Quantum Transport and Logic Gates (S'25)</li>
 <li>TA: Quantum Entanglement and Quantum Computation (F'25)</li>
@@ -180,7 +349,8 @@ Prateek P. Kulkarni<br>
          │  P = NP ? ∨ BPP ⊊ BQP ? ∨ ¯\_(ツ)_/¯    │
          ╰─────────────────────────────────────────╯
          Last Updated: June 2025
-</div>    
+</div>
+</div>
     
 </body>
 </html>
