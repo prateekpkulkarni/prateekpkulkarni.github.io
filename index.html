@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,405 +13,164 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fefefe;
-            font-size: 16px;
-        }
-
-        .container {
+            font-family: 'Arimo', Arial, sans-serif;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            font-size: 14px;
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
 
-        /* Header */
-        header {
-            border-bottom: 1px solid #e5e5e5;
-            margin-bottom: 60px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #666;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #333;
-        }
-
-        /* Hero */
-        .hero {
-            margin-bottom: 80px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 120px;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #111;
-        }
-
-        .hero .role {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 8px;
-        }
-
-        .hero .affiliation {
-            color: #888;
-            margin-bottom: 30px;
-        }
-
-        .hero .bio {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-
-        .hero-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 1px solid #e5e5e5;
-        }
-
-        .links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .links a {
-            color: #007acc;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 70px;
-        }
-
-        .section h2 {
+        h1 {
             font-size: 24px;
             font-weight: 600;
-            margin-bottom: 30px;
-            color: #111;
-        }
-
-        /* Research */
-        .research-grid {
-            display: grid;
-            gap: 25px;
-        }
-
-        .research-item {
-            border-left: 3px solid #007acc;
-            padding-left: 20px;
-        }
-
-        .research-item h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #111;
-        }
-
-        .research-item p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .research-item a {
-            color: #007acc;
-            text-decoration: none;
-        }
-
-        .research-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Publications */
-        .publication {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .publication:last-child {
-            border-bottom: none;
-        }
-
-        .pub-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 6px;
-            line-height: 1.4;
-        }
-
-        .pub-authors {
-            color: #666;
-            margin-bottom: 4px;
-        }
-
-        .pub-venue {
-            color: #888;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-
-        .pub-links a {
-            color: #007acc;
-            text-decoration: none;
-            font-weight: 500;
-            margin-right: 15px;
-        }
-
-        .pub-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Teaching & Service */
-        .item {
-            margin-bottom: 25px;
-        }
-
-        .item h3 {
-            font-size: 17px;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 5px;
-        }
-
-        .item .meta {
-            color: #888;
-            font-size: 14px;
             margin-bottom: 8px;
         }
 
-        .item p {
-            color: #555;
-            line-height: 1.6;
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 30px 0 10px 0;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
         }
 
-        .item a {
-            color: #007acc;
-            text-decoration: none;
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 15px 0 5px 0;
         }
 
-        .item a:hover {
+        p {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #00e;
             text-decoration: underline;
         }
 
-        /* Footer */
-        footer {
-            border-top: 1px solid #e5e5e5;
-            padding: 40px 0;
-            text-align: center;
-            color: #888;
-            font-size: 14px;
+        a:visited {
+            color: #551a8b;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .contact {
             margin-bottom: 20px;
         }
 
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
+        .contact p {
+            margin-bottom: 4px;
         }
 
-        .footer-links a:hover {
-            color: #333;
+        .links {
+            margin-top: 10px;
         }
 
-        /* Mobile */
-        @media (max-width: 600px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
+        .links a {
+            margin-right: 15px;
+        }
 
-            .hero h1 {
-                font-size: 28px;
-            }
+        .pub-item {
+            margin-bottom: 15px;
+        }
 
-            .nav-links {
-                display: none;
-            }
+        .pub-title {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
 
-            .hero-photo {
-                width: 100px;
-                height: 100px;
-            }
+        .pub-authors {
+            margin-bottom: 3px;
+        }
 
-            .container {
-                padding: 0 16px;
-            }
+        .pub-venue {
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .teaching-item, .service-item {
+            margin-bottom: 10px;
+        }
+
+        .course-term {
+            font-weight: 600;
+        }
+
+        .research-area {
+            margin-bottom: 12px;
+        }
+
+        .research-title {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 3px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <nav>
-                <a href="#" class="logo">Prateek P. Kulkarni</a>
-                <ul class="nav-links">
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#teaching">Teaching</a></li>
-                    <li><a href="#service">Service</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-grid">
-                <div>
-                    <h1>Prateek P. Kulkarni</h1>
-                    <p class="role">Quantum Computing • VLSI Design • EDA</p>
-                    <p class="affiliation">Electronics and Communication Engineering, PES University</p>
-                    <p class="bio">
-                        Final year undergraduate purusing BTech in ECE with a specialisation in VLSI and Quantum Technology.
-                        My research interests span quantum computing, computer architecture and electronic design automation.
-                    </p>
-                    <div class="links">
-                        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-                        <a href="pkulkarni__cv.pdf">CV</a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Scholar</a>
-                        <a href="https://github.com/prateekpkulkarni">GitHub</a>
-                    </div>
-                </div>
-                <img src="1698818859534.jpg" alt="Prateek P. Kulkarni" class="hero-photo">
-            </div>
-        </section>
-
-        <!-- Research -->
-        <section id="research" class="section">
-            <h2>Research</h2>
-            <div class="research-grid">
-                <div class="research-item">
-                    <h3>Quantum Computing</h3>
-                    <p>Working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> 
-                    at CSA, IISc on architectures for distributed quantum computing and quantum error correction 
-                    for near-term devices.</p>
-                </div>
-                <div class="research-item">
-                    <h3>VLSI Design & Computer Architecture</h3>
-                    <p>Developing novel memory architectures and in-DRAM prefetching techniques. 
-                    Research includes 3D XPoint and memristor technologies for improved system performance.</p>
-                </div>
-                <div class="research-item">
-                    <h3>Quantum Machine Learning</h3>
-                    <p>Building a Photonic FPGA for Variational Quantum Algorithms in the Photonics and 
-                    Quantum Tech Lab, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, for my undergraduate thesis.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications -->
-        <section id="publications" class="section">
-            <h2>Publications</h2>
-            
-            <div class="publication">
-                <h3 class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</h3>
-                <p class="pub-authors">Prateek P. Kulkarni</p>
-                <p class="pub-venue">Emerging Technologies for Intelligent Systems, 2025</p>
-                <div class="pub-links">
-                    <a href="https://ieeexplore.ieee.org/document/10961614">Paper</a>
-                </div>
-            </div>
-
-            <div class="publication">
-                <h3 class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</h3>
-                <p class="pub-authors">Prateek P. Kulkarni</p>
-                <p class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</p>
-                <div class="pub-links">
-                    <a href="https://ieeexplore.ieee.org/document/10894988">Paper</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teaching -->
-        <section id="teaching" class="section">
-            <h2>Teaching</h2>
-            
-            <div class="item">
-                <h3>Quantum Transport and Logic Gates</h3>
-                <p class="meta">Teaching Assistant • Spring 2025</p>
-                <!--<p>Undergraduate course covering quantum transport phenomena and, quantum logic gate and device design.</p>-->
-            </div>
-            
-            <div class="item">
-                <h3>Quantum Entanglement and Quantum Computation</h3>
-                <p class="meta">Teaching Assistant • Fall 2025</p>
-                <!--<p>Introductory undergraduate course on quantum entanglement theory and quantum computation, with a focus on quantum algorithms.</p>-->
-            </div>
-        </section>
-
-        <!-- Service -->
-        <section id="service" class="section">
-            <h2>Service</h2>
-            
-            <div class="item">
-                <h3>Reviewer</h3>
-                <p><a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a></p>
-                <p><a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></p>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-links">
-                <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-                <a href="https://github.com/prateekpkulkarni">GitHub</a>
-                <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Scholar</a>
-            </div>
-            <p>© 2025 Prateek P. Kulkarni</p>
-        </footer>
+    <h1>Prateek P. Kulkarni</h1>
+    
+    <div class="contact">
+        <p>Electronics and Communication Engineering</p>
+        <p>PES University</p>
+        <p>Email: pkulkarni2425@gmail.com</p>
+        <div class="links">
+            <a href="pkulkarni__cv.pdf">CV</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
+            <a href="https://github.com/prateekpkulkarni">GitHub</a>
+        </div>
     </div>
+
+    <p>I am a final year undergraduate pursuing BTech in ECE with a specialization in VLSI and Quantum Technology. My research interests span quantum computing, computer architecture, and electronic design automation.</p>
+
+    <h2>Research</h2>
+    
+    <p>Currently, I am working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> at CSA, IISc on architectures for distributed quantum computing and quantum error correction for near-term devices.</p>
+
+    <p>For my undergraduate thesis, I am working on aspects of Variational Quantum Algorithms, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
+
+    <p>Earlier on, I have worked on developing novel memory architectures and in-DRAM prefetching techniques. Research includes 3D XPoint and memristor technologies for improved system performance.</p>
+    <h2>Publications</h2>
+    
+    <div class="pub-item">
+        <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+        <div class="pub-authors">Prateek P. Kulkarni</div>
+        <div class="pub-venue">Emerging Technologies for Intelligent Systems, 2025</div>
+        <a href="https://ieeexplore.ieee.org/document/10961614">Paper</a>
+    </div>
+
+    <div class="pub-item">
+        <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+        <div class="pub-authors">Prateek P. Kulkarni</div>
+        <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
+        <a href="https://ieeexplore.ieee.org/document/10894988">Paper</a>
+    </div>
+
+    <h2>Teaching</h2>
+    
+    <div class="teaching-item">
+        <span class="course-term">Spring 2025:</span> Teaching Assistant, Quantum Transport and Logic Gates
+    </div>
+    
+    <div class="teaching-item">
+        <span class="course-term">Fall 2025:</span> Teaching Assistant, Quantum Entanglement and Quantum Computation
+    </div>
+
+    <h2>Service</h2>
+    
+    <div class="service-item">
+        <strong>Reviewer:</strong> <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
+    </div>
+
 </body>
 </html>
