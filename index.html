@@ -5,428 +5,617 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
-        /* Jekyll Minima Theme Styling */
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #111;
-            background-color: #fdfdfd;
             margin: 0;
             padding: 0;
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-feature-settings: "kern" 1;
-            -moz-font-feature-settings: "kern" 1;
-            -o-font-feature-settings: "kern" 1;
-            font-feature-settings: "kern" 1;
-            font-kerning: normal;
+            background-color: white;
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #333;
         }
 
-        /* Header */
-        .site-header {
-            border-top: 5px solid #424242;
-            border-bottom: 1px solid #e8e8e8;
-            min-height: 55.95px;
-            position: relative;
-            background-color: #fdfdfd;
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .site-header .wrapper {
+        .nav-container {
+            max-width: 970px;
+            margin: 0 auto;
+            padding: 0 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 60px;
         }
 
-        .site-title {
-            font-size: 26px;
-            font-weight: 300;
-            line-height: 54px;
-            letter-spacing: -1px;
-            margin-bottom: 0;
-            color: #424242;
+        .nav-logo {
+            font-size: 18px;
+            font-weight: normal;
+            color: #333;
             text-decoration: none;
-        }
-
-        .site-title:hover {
-            text-decoration: none;
-        }
-
-        .site-nav {
-            line-height: 54px;
-        }
-
-        .site-nav .nav-trigger {
-            display: none;
-        }
-
-        .site-nav .menu-icon {
-            display: none;
-        }
-
-        .site-nav .page-link {
-            color: #111;
-            line-height: 1.5;
-            margin-left: 20px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 400;
             transition: color 0.3s ease;
         }
 
-        .site-nav .page-link:hover {
-            color: #2a7ae4;
-            text-decoration: none;
+        .nav-logo:hover {
+            color: #0066cc;
         }
 
-        .site-nav .page-link:not(:last-child) {
-            margin-right: 0;
-        }
-
-        /* Main content wrapper */
-        .wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        .page-content {
-            padding: 30px 0;
-            flex: 1;
-        }
-
-        /* Profile section */
-        .profile-section {
+        .nav-links {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
             gap: 30px;
         }
 
-        .profile-image {
-            flex-shrink: 0;
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
-        .profile-image img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        .nav-links a.active {
+            color: #0066cc;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0066cc;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Mobile menu */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .nav-toggle span {
+            width: 20px;
+            height: 2px;
+            background-color: #333;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                gap: 40px;
+                transition: left 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+
+        /* Add top padding to body content */
+        .main-content {
+            margin-top: 60px;
+        }
+
+        /* Layout */
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+             }
+        }
+        .row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        /* Header Props */
+        #dhead {
+            margin-top: 20px;
+        }
+        #dpic {
+            grid-column: span 6;
+            text-align: right;
+        }
+        #ddesc {
+            padding-top: 40px;
+            padding-left: 20px;
+            grid-column: span 6;
+        }
+        @media (max-width: 991px) {
+            #dpic {
+              grid-column: span 12;
+              text-align: center;
+            }
+            #ddesc {
+              grid-column: span 12;
+              padding-top: 20px;
+              text-align: center;
+            }
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: normal;
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            font-weight: normal;
+            font-style: italic;
+            color: #999;
+            font-size: 18px;
+            padding: 0;
+            margin: 5px 0 10px 0;
+        }
+        @media (min-width: 992px) {
+            h2 {
+                max-width: 300px;
+            }
+        }
+        #dpic img {
+            width: 240px;
+            height: 240px;
+            border-radius: 120px;
             object-fit: cover;
-            border: 3px solid #e8e8e8;
+            border: 3px solid #e0e0e0;
         }
-
-        .profile-info {
-            flex: 1;
+        .iico {
+            width: 40px;
+            height: 40px;
         }
-
-        .profile-info h1 {
-            font-size: 42px;
-            font-weight: 400;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-            color: #111;
+        #demail {
+            margin-top: 10px;
+            color: #555;
+            opacity: 0;
+            transition: opacity 0.7s;
         }
-
-        .profile-tagline {
-            font-size: 18px;
-            color: #828282;
-            font-style: italic;
+        hr {
+            height: 1px;
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            padding: 0;
+            margin: 20px 0px 20px 0px;
+            border: 0;
+        }
+        .ico {
+            grid-column: span 1;
+            vertical-align: top;
+            border-left: 2px solid #cfcfcf;
+            position: relative;
+        }
+        .ico img {
+            border-radius: 5px;
+            width: 100%;
+            max-width: 80px;
+            margin-left: 10px;
+        }
+        .desc {
+            grid-column: span 10;
+            vertical-align: top;
+            font-size: 17px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        .entry {
+        }
+        .entry-dot {
+            position: absolute;
+            top: 0px;
+            left: -8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 7px;
+            background-color: #cfcfcf;
+            border: 2px solid white;
+        }
+        .timespan {
+            grid-column: span 1;
+            font-size: 14px;
+            text-align: right;
+            padding-right: 5px;
+            color: #bbb;
+        }
+        .hassets {
+            position: relative;
+        }
+        @media (max-width: 991px) {
+            .hassets {
+                display: none;
+            }
+        }
+        .hasset {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+        .ctitle {
+            font-size: 36px;
             margin-bottom: 20px;
-        }
-
-        .profile-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .profile-links a {
-            color: #2a7ae4;
-            text-decoration: none;
-            font-size: 14px;
-            padding: 5px 10px;
-            border: 1px solid #e8e8e8;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        .profile-links a:hover {
-            background-color: #f7f7f7;
-            text-decoration: none;
-        }
-
-        /* Section styling */
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 32px;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: #111;
-            border-bottom: 1px solid #e8e8e8;
-            padding-bottom: 10px;
-        }
-
-        .section-content {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-left: 4px solid #e8e8e8;
-            margin-bottom: 20px;
-        }
-
-        .section-content p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .section-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Publications */
-        .publication {
-            margin-bottom: 25px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #2a7ae4;
-        }
-
-        .pub-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-
-        .pub-authors {
-            font-size: 14px;
-            color: #828282;
-            margin-bottom: 5px;
-        }
-
-        .pub-venue {
-            font-size: 14px;
-            color: #2a7ae4;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .pub-link {
-            color: #2a7ae4;
-            text-decoration: none;
-            font-size: 14px;
-            border: 1px solid #2a7ae4;
-            padding: 4px 8px;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        .pub-link:hover {
-            background-color: #2a7ae4;
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Teaching and Service */
-        .teaching-item, .service-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #828282;
-        }
-
-        .teaching-semester {
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 5px;
-        }
-
-        /* Links */
-        a {
-            color: #2a7ae4;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            color: #1e5ba8;
-        }
-
-        /* Footer */
-        .site-footer {
-            border-top: 1px solid #e8e8e8;
-            padding: 30px 0;
-            background-color: #f9f9f9;
             margin-top: 40px;
         }
-
-        .footer-content {
-            text-align: center;
-            color: #828282;
+        #featured-talks .row {
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            padding-bottom: 30px;
+        }
+        .card {
+            grid-column: span 3;
+            vertical-align: top;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: white;
+            padding-bottom: 10px;
+        }
+        @media (max-width: 991px) {
+            .card {
+                grid-column: span 6;
+            }
+            #featured-talks .row {
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+            }
+        }
+        .card img {
+            border-radius: 5px;
+            width: 100%;
+        }
+        .cdesc {
+            height: 30px;
+            vertical-align: top;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        @media (max-width: 768px) {
+            .cdesc {
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+        }
+        #pet-projects .row {
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        .project {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .pico {
+            float: left;
+            margin-right: 10px;
+        }
+        .pdesc {
+        }
+        .pend {
+            clear: both;
+        }
+        .pico img {
+            height: 80px;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+        .pub {
             font-size: 14px;
+            border-left: 4px solid #aaa;
+            padding: 2px 0px 2px 10px;
+            margin-bottom: 10px;
+        }
+        .pub-title {
+            display: inline;
+            color: #333;
+        }
+        .pub-venue {
+            display: inline;
+            color: #090;
+        }
+        .pub-authors {
+            display: block;
+            color: #900;
+        }
+        .tul {
+            text-align: center;
+            padding: 0;
+        }
+        .til {
+            display: inline-block;
+            padding: 3px 15px 3px 15px;
+            margin-bottom: 5px;
+        }
+        .tilb {
+            border-right: 1px solid #ccc;
+        }
+        .nodot {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        /* Responsive design */
-        @media screen and (max-width: 600px) {
-            .wrapper {
-                padding: 0 15px;
-            }
-            
-            .site-header .wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .site-nav {
-                line-height: 1.5;
-                margin-top: 10px;
-            }
-            
-            .site-nav .page-link {
-                margin-left: 0;
-                margin-right: 20px;
-                font-size: 14px;
-            }
-            
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            
-            .profile-image img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .profile-info h1 {
-                font-size: 32px;
-            }
-            
-            .profile-links {
-                justify-content: center;
-            }
-            
-            .section h2 {
-                font-size: 26px;
-            }
+        /* Additional styles for links */
+        a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #0052a3;
+        }
+
+        /* Custom styles for this specific content */
+        .links-container {
+            margin-top: 15px;
+        }
+        .links-container a {
+            color: #0066cc;
+            margin-right: 15px;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        
+        .bio-text {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section spacing for better navigation */
+        section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrapper">
-            <a class="site-title" href="#" rel="author">Prateek P. Kulkarni</a>
-            <nav class="site-nav">
-                <a class="page-link" href="#about">About</a>
-                <a class="page-link" href="#research">Research</a>
-                <a class="page-link" href="#publications">Publications</a>
-                <a class="page-link" href="#teaching">Teaching</a>
-                <a class="page-link" href="#service">Service</a>
-            </nav>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Prateek P. Kulkarni</a>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#service" class="nav-link">Service</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main class="page-content">
-        <div class="wrapper">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="1698818859534.jpg" alt="Prateek P. Kulkarni">
-                </div>
-                <div class="profile-info">
-                    <h1>Prateek P. Kulkarni</h1>
-                    <p class="profile-tagline">I like turning address traces into prophecies 🔮📦💾</p>
-                    <div class="profile-links">
-                        <a href="pkulkarni__cv.pdf">CV</a>
-                        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
-                        <a href="https://github.com/prateekpkulkarni">GitHub</a>
+    <div class="main-content">
+        <div class="container">
+            <section id="home">
+                <div id="dhead" class="row">
+                    <div id="dpic">
+                        <img src="1698818859534.jpg" alt="Prat. K">
+                    </div>
+                    <div id="ddesc">
+                        <h1>Prateek P. Kulkarni</h1>
+                        <h2><i>I like turning address traces into prophecies 🔮📦💾</i></h2>
+                        <div class="links-container">
+                            <a href="pkulkarni__cv.pdf">CV</a>
+                            <a href="mailto:pkulkarni2425@gmail.com">Gmail</a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Scholar</a>
+                            <a href="https://github.com/prateekpkulkarni">GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="about">
-                <h2>About</h2>
-                <div class="section-content">
-                    <p>I am a final year undergraduate pursuing BTech in Electronics and Communication Engineering, with specialization in VLSI and Quantum Technology at <a href="https://pes.edu/">PES University</a>. Research interests span quantum computing architectures, advanced memory systems, and electronic design automation for next-generation computing platforms.</p>
+            <hr>
+
+            <section id="about">
+                <div class="ctitle">about</div>
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
+                    I am a final year undergraduate pursuing BTech in Electronics and Communication Engineering, with specialization in VLSI and Quantum Technology at <a href="https://pes.edu/">PES University</a>. Research interests span quantum computing architectures, advanced memory systems, and electronic design automation for next-generation computing platforms.
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="research">
-                <h2>Research</h2>
-                <div class="section-content">
-                    <p>I work on quantum computing systems and memory architectures. Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> in the Future Computing Systems (FIST) Lab at <a href="https://www.csa.iisc.ac.in">CSA, IISc</a> on distributed quantum computing architectures and error correction for near-term devices. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>.</p>
-                    
-                    <p>My undergraduate thesis with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> explores variational quantum algorithms.</p>
-                    
-                    <p>I am also very keen on developing advanced memory systems in general, like using emerging technologies like 3D XPoint and memristors, and intelligent in-DRAM prefetching techniques.</p>
+            <section id="research">
+                <div class="ctitle">research</div>
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
+                    I work on quantum computing systems and memory architectures. Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> in the Future Computing Systems (FIST) Lab at <a href="https://www.csa.iisc.ac.in">CSA, IISc</a> on distributed quantum computing architectures and error correction for near-term devices. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>. <br><br>
+                    My undergraduate thesis with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> explores variational quantum algorithms. <br><br>
+                    I am also very keen on developing advanced memory systems in general, like using emerging technologies like 3D XPoint and memristors, and intelligent in-DRAM prefetching techniques.
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="publications">
-                <h2>Publications</h2>
-                
-                <div class="publication">
+            <section id="publications">
+                <div class="ctitle">publications</div>
+                <div class="pub">
                     <div class="pub-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
                     <div class="pub-authors">Ramaseshan R, <u>Prateek P. Kulkarni</u>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
-                    <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
-                    <a href="https://doi.org/10.48550/arXiv.2507.09517" class="pub-link">View Paper</a>
+                    <div class="pub-venue"> arXiv:2507.09517 [quant-ph], 2025</div>
+                    <a href="https://doi.org/10.48550/arXiv.2507.09517">View Paper</a>
                 </div>
                 
-                <div class="publication">
+                <div class="pub">
                     <div class="pub-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
                     <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <u>Prateek P. Kulkarni</u> and Kaustav Bhowmick</div>
                     <div class="pub-venue">The Journal Of Supercomputing, 2025</div>
-                    <span class="pub-link" style="opacity: 0.5; cursor: not-allowed;">View Paper</span>
+                    <!--<a href="https://ieeexplore.ieee.org/document/10961614"></a>-->View Paper
                 </div>
                 
-                <div class="publication">
+                <div class="pub">
                     <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
                     <div class="pub-authors">Prateek P. Kulkarni</div>
                     <div class="pub-venue">Emerging Technologies for Intelligent Systems, 2025</div>
-                    <a href="https://ieeexplore.ieee.org/document/10961614" class="pub-link">View Paper</a>
+                    <a href="https://ieeexplore.ieee.org/document/10961614">View Paper</a>
                 </div>
 
-                <div class="publication">
+                <div class="pub">
                     <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
                     <div class="pub-authors">Prateek P. Kulkarni</div>
                     <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
-                    <a href="https://ieeexplore.ieee.org/document/10894988" class="pub-link">View Paper</a>
+                    <a href="https://ieeexplore.ieee.org/document/10894988">View Paper</a>
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="teaching">
-                <h2>Teaching</h2>
-                <div class="teaching-item">
-                    <div class="teaching-semester">Spring 2025:</div>
-                    <div>Teaching Assistant, Quantum Transport and Logic Gates</div>
+            <section id="teaching">
+                <div class="ctitle">teaching</div>
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
+                    <div style="margin-bottom: 10px;">
+                        <strong>Spring 2025:</strong> Teaching Assistant, Quantum Transport and Logic Gates
+                    </div>
+                    <div>
+                        <strong>Fall 2025:</strong> Teaching Assistant, Quantum Entanglement and Quantum Computation
+                    </div>
                 </div>
-                <div class="teaching-item">
-                    <div class="teaching-semester">Fall 2025:</div>
-                    <div>Teaching Assistant, Quantum Entanglement and Quantum Computation</div>
-                </div>
-            </div>
+            </section>
 
-            <div class="section" id="service">
-                <h2>Service</h2>
-                <div class="service-item">
+            <section id="service">
+                <div class="ctitle">service</div>
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
                     <strong>Reviewer:</strong> <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
                 </div>
-            </div>
-        </div>
-    </main>
+            </section>
 
-    <footer class="site-footer">
-        <div class="wrapper">
-            <div class="footer-content">
-                © Prateek P. Kulkarni (2025)
-            </div>
+            <div style="margin-bottom: 50px;"></div>
+            
+            <footer style="text-align: center; padding: 40px 0; border-top: 1px solid #e0e0e0; margin-top: 40px; color: #666; font-size: 14px;">
+                Website design inspired by <a href="https://karpathy.ai/" style="color: #0066cc;">Andrej Karpathy</a>
+            </footer>
         </div>
-    </footer>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const navLinksItems = document.querySelectorAll('.nav-link');
+
+            // Smooth fade-in effect for email on hover
+            const emailEl = document.getElementById('demail');
+            if (emailEl) {
+                setTimeout(() => {
+                    emailEl.style.opacity = '1';
+                }, 1000);
+            }
+
+            // Mobile menu toggle
+            navToggle.addEventListener('click', function() {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', function() {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Active link highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinksArray = Array.from(navLinksItems);
+
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinksArray.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navbar.contains(event.target)) {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
