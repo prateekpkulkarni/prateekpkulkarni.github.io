@@ -5,297 +5,368 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
+        /* Jekyll Minima Theme Styling */
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #111;
+            background-color: #fdfdfd;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            font-family: Georgia, serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-feature-settings: "kern" 1;
+            -moz-font-feature-settings: "kern" 1;
+            -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
+            font-kerning: normal;
         }
 
-        .container {
+        /* Header */
+        .site-header {
+            border-top: 5px solid #424242;
+            border-bottom: 1px solid #e8e8e8;
+            min-height: 55.95px;
+            position: relative;
+            background-color: #fdfdfd;
+        }
+
+        .site-title {
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 54px;
+            letter-spacing: -1px;
+            margin-bottom: 0;
+            color: #424242;
+            text-decoration: none;
+        }
+
+        .site-title:hover {
+            text-decoration: none;
+        }
+
+        /* Main content wrapper */
+        .wrapper {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 0 30px;
         }
 
-        /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            font-weight: normal;
-            margin: 0 0 40px 0;
-            color: #333;
-        }
-
-        .nav-links {
-            margin-bottom: 40px;
-        }
-
-        .nav-links a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover {
-            color: #333;
-        }
-
-        /* Main Content Section */
-        .main-content {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 60px;
-            align-items: flex-start;
-        }
-
-        .profile-section {
-            flex: 0 0 200px;
-            text-align: center;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #e0e0e0;
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .social-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .social-links a:hover {
-            color: #357abd;
-        }
-
-        .content-section {
+        .page-content {
+            padding: 30px 0;
             flex: 1;
         }
 
-        .bio-text {
-            margin-bottom: 30px;
-            text-align: justify;
-            line-height: 1.7;
+        /* Profile section */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 30px;
         }
 
-        .bio-text p {
-            margin-bottom: 15px;
+        .profile-image {
+            flex-shrink: 0;
         }
 
-        /* Section Styles */
-        .section-title {
-            font-size: 24px;
-            font-weight: normal;
-            margin: 40px 0 20px 0;
-            color: #333;
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e8e8e8;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            color: #111;
+        }
+
+        .profile-tagline {
+            font-size: 18px;
+            color: #828282;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .profile-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .profile-links a {
+            color: #2a7ae4;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+            border: 1px solid #e8e8e8;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .profile-links a:hover {
+            background-color: #f7f7f7;
+            text-decoration: none;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #111;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 10px;
         }
 
         .section-content {
-            margin-bottom: 30px;
-            line-height: 1.7;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #e8e8e8;
+            margin-bottom: 20px;
         }
 
-        /* Publication Styles */
+        .section-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Publications */
         .publication {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-left: 4px solid #4a90e2;
+            margin-bottom: 25px;
+            padding: 20px;
             background-color: #f9f9f9;
+            border-left: 4px solid #2a7ae4;
         }
 
         .pub-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
 
         .pub-authors {
-            font-style: italic;
-            color: #666;
+            font-size: 14px;
+            color: #828282;
             margin-bottom: 5px;
         }
 
         .pub-venue {
-            color: #4a90e2;
-            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2a7ae4;
+            margin-bottom: 10px;
+            font-style: italic;
         }
 
         .pub-link {
-            color: #4a90e2;
+            color: #2a7ae4;
             text-decoration: none;
             font-size: 14px;
+            border: 1px solid #2a7ae4;
+            padding: 4px 8px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
         }
 
         .pub-link:hover {
-            text-decoration: underline;
+            background-color: #2a7ae4;
+            color: white;
+            text-decoration: none;
         }
 
-        /* Footer Section */
-        .footer {
-            border-top: 1px solid #e0e0e0;
-            padding-top: 30px;
-            margin-top: 60px;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
+        /* Teaching and Service */
+        .teaching-item, .service-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #828282;
+        }
+
+        .teaching-semester {
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 5px;
         }
 
         /* Links */
         a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #357abd;
+            color: #2a7ae4;
             text-decoration: underline;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-content {
+        a:hover {
+            color: #1e5ba8;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid #e8e8e8;
+            padding: 30px 0;
+            background-color: #f9f9f9;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            text-align: center;
+            color: #828282;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            .wrapper {
+                padding: 0 15px;
+            }
+            
+            .profile-section {
                 flex-direction: column;
                 text-align: center;
+                gap: 20px;
             }
-
-            .profile-section {
-                flex: none;
-                margin-bottom: 30px;
+            
+            .profile-image img {
+                width: 150px;
+                height: 150px;
             }
-
-            .nav-links a {
-                margin: 0 10px;
+            
+            .profile-info h1 {
+                font-size: 32px;
             }
-        }
-
-        /* Hover effects */
-        .profile-image {
-            transition: transform 0.3s ease;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
-
-        .social-links a {
-            transition: all 0.3s ease;
-            padding: 5px;
-            border-radius: 4px;
-        }
-
-        .social-links a:hover {
-            background-color: #f8f9fa;
+            
+            .profile-links {
+                justify-content: center;
+            }
+            
+            .section h2 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Prateek P. Kulkarni</h1>
-            <div class="nav-links">
-                <a href="#about">about</a>
-                <a href="#research">research</a>
-            </div>
+    <header class="site-header">
+        <div class="wrapper">
+            <a class="site-title" href="#" rel="author">Prateek P. Kulkarni</a>
         </div>
+    </header>
 
-        <div class="main-content">
+    <main class="page-content">
+        <div class="wrapper">
             <div class="profile-section">
-                <img src="1698818859534.jpg" alt="Prateek P. Kulkarni" class="profile-image">
-                <div class="social-links">
-                    <a href="mailto:pkulkarni2425@gmail.com">contact</a>
-                    <a href="pkulkarni__cv.pdf">curriculum vitae</a>
-                    <a href="https://github.com/prateekpkulkarni">github</a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">google scholar</a>
+                <div class="profile-image">
+                    <img src="1698818859534.jpg" alt="Prateek P. Kulkarni">
+                </div>
+                <div class="profile-info">
+                    <h1>Prateek P. Kulkarni</h1>
+                    <p class="profile-tagline">I like turning address traces into prophecies 🔮📦💾</p>
+                    <div class="profile-links">
+                        <a href="pkulkarni__cv.pdf">CV</a>
+                        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
+                        <a href="https://github.com/prateekpkulkarni">GitHub</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="content-section">
-                <div class="bio-text">
+            <div class="section">
+                <h2>About</h2>
+                <div class="section-content">
                     <p>I am a final year undergraduate pursuing BTech in Electronics and Communication Engineering, with specialization in VLSI and Quantum Technology at <a href="https://pes.edu/">PES University</a>. Research interests span quantum computing architectures, advanced memory systems, and electronic design automation for next-generation computing platforms.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="section-title">research</div>
-        <div class="section-content">
-            I work on quantum computing systems and memory architectures. Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> in the Future Computing Systems (FIST) Lab at <a href="https://www.csa.iisc.ac.in">CSA, IISc</a> on distributed quantum computing architectures and error correction for near-term devices. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>. <br><br>
-            My undergraduate thesis with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> explores variational quantum algorithms. <br><br>
-            I am also very keen on developing advanced memory systems in general, like using emerging technologies like 3D XPoint and memristors, and intelligent in-DRAM prefetching techniques.
-        </div>
-
-        <div class="section-title">publications</div>
-        <div class="publication">
-            <div class="pub-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
-            <div class="pub-authors">Ramaseshan R, <u>Prateek P. Kulkarni</u>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
-            <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
-            <a href="https://doi.org/10.48550/arXiv.2507.09517" class="pub-link">View Paper</a>
-        </div>
-        
-        <div class="publication">
-            <div class="pub-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
-            <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <u>Prateek P. Kulkarni</u> and Kaustav Bhowmick</div>
-            <div class="pub-venue">The Journal Of Supercomputing, 2025</div>
-            <span class="pub-link">View Paper</span>
-        </div>
-        
-        <div class="publication">
-            <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
-            <div class="pub-authors">Prateek P. Kulkarni</div>
-            <div class="pub-venue">Emerging Technologies for Intelligent Systems, 2025</div>
-            <a href="https://ieeexplore.ieee.org/document/10961614" class="pub-link">View Paper</a>
-        </div>
-
-        <div class="publication">
-            <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
-            <div class="pub-authors">Prateek P. Kulkarni</div>
-            <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
-            <a href="https://ieeexplore.ieee.org/document/10894988" class="pub-link">View Paper</a>
-        </div>
-
-        <div class="section-title">teaching</div>
-        <div class="section-content">
-            <div style="margin-bottom: 10px;">
-                <strong>Spring 2025:</strong> Teaching Assistant, Quantum Transport and Logic Gates
+            <div class="section">
+                <h2>Research</h2>
+                <div class="section-content">
+                    <p>I work on quantum computing systems and memory architectures. Currently working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> in the Future Computing Systems (FIST) Lab at <a href="https://www.csa.iisc.ac.in">CSA, IISc</a> on distributed quantum computing architectures and error correction for near-term devices. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>.</p>
+                    
+                    <p>My undergraduate thesis with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> explores variational quantum algorithms.</p>
+                    
+                    <p>I am also very keen on developing advanced memory systems in general, like using emerging technologies like 3D XPoint and memristors, and intelligent in-DRAM prefetching techniques.</p>
+                </div>
             </div>
-            <div>
-                <strong>Fall 2025:</strong> Teaching Assistant, Quantum Entanglement and Quantum Computation
+
+            <div class="section">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <div class="pub-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
+                    <div class="pub-authors">Ramaseshan R, <u>Prateek P. Kulkarni</u>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
+                    <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
+                    <a href="https://doi.org/10.48550/arXiv.2507.09517" class="pub-link">View Paper</a>
+                </div>
+                
+                <div class="publication">
+                    <div class="pub-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
+                    <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <u>Prateek P. Kulkarni</u> and Kaustav Bhowmick</div>
+                    <div class="pub-venue">The Journal Of Supercomputing, 2025</div>
+                    <span class="pub-link" style="opacity: 0.5; cursor: not-allowed;">View Paper</span>
+                </div>
+                
+                <div class="publication">
+                    <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+                    <div class="pub-authors">Prateek P. Kulkarni</div>
+                    <div class="pub-venue">Emerging Technologies for Intelligent Systems, 2025</div>
+                    <a href="https://ieeexplore.ieee.org/document/10961614" class="pub-link">View Paper</a>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+                    <div class="pub-authors">Prateek P. Kulkarni</div>
+                    <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
+                    <a href="https://ieeexplore.ieee.org/document/10894988" class="pub-link">View Paper</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Teaching</h2>
+                <div class="teaching-item">
+                    <div class="teaching-semester">Spring 2025:</div>
+                    <div>Teaching Assistant, Quantum Transport and Logic Gates</div>
+                </div>
+                <div class="teaching-item">
+                    <div class="teaching-semester">Fall 2025:</div>
+                    <div>Teaching Assistant, Quantum Entanglement and Quantum Computation</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Service</h2>
+                <div class="service-item">
+                    <strong>Reviewer:</strong> <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
+                </div>
             </div>
         </div>
+    </main>
 
-        <div class="section-title">service</div>
-        <div class="section-content">
-            <strong>Reviewer:</strong> <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!--Website design inspired by <a href="https://karpathy.ai/">Andrej Karpathy</a> • Jekyll Minima theme style-->© Prateek P. Kulkarni (2025)
+            </div>
         </div>
-
-        <!--<div class="footer">
-            Website design inspired by <a href="https://karpathy.ai/">Andrej Karpathy</a>
-        </div>-->
-    </div>
+    </footer>
 </body>
 </html>
