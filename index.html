@@ -5,100 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
-        :root {
-            /* Light mode colors */
-            --bg-color: white;
-            --text-color: #333;
-            --text-secondary: #666;
-            --text-muted: #999;
-            --text-light: #bbb;
-            --border-color: #e0e0e0;
-            --border-muted: #cfcfcf;
-            --card-bg: white;
-            --section-bg: #f8f8f8;
-            --nav-bg: rgba(255, 255, 255, 0.95);
-            --nav-bg-scrolled: rgba(255, 255, 255, 0.98);
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --accent-color: #0066cc;
-            --accent-hover: #0052a3;
-            --success-color: #090;
-            --warning-color: #900;
-        }
-
-        [data-theme="dark"] {
-            /* Dark mode colors */
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --text-secondary: #b0b0b0;
-            --text-muted: #888;
-            --text-light: #666;
-            --border-color: #333;
-            --border-muted: #444;
-            --card-bg: #2a2a2a;
-            --section-bg: #242424;
-            --nav-bg: rgba(26, 26, 26, 0.95);
-            --nav-bg-scrolled: rgba(26, 26, 26, 0.98);
-            --shadow-color: rgba(0, 0, 0, 0.3);
-            --accent-color: #4d9fff;
-            --accent-hover: #3d8fff;
-            --success-color: #00cc44;
-            --warning-color: #ff4444;
-        }
-
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
+            background-color: white;
             font-family: sans-serif;
             font-size: 16px;
             line-height: 1.4;
-            color: var(--text-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Dark Mode Toggle */
-        .theme-toggle {
-            position: relative;
-            width: 60px;
-            height: 30px;
-            background: var(--border-color);
-            border-radius: 15px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            border: 2px solid var(--border-muted);
-        }
-
-        .theme-toggle:hover {
-            background: var(--border-muted);
-        }
-
-        .theme-toggle-slider {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 22px;
-            height: 22px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            transition: transform 0.3s ease, background 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-        }
-
-        [data-theme="dark"] .theme-toggle-slider {
-            transform: translateX(28px);
-            background: var(--accent-color);
-        }
-
-        .theme-toggle-slider::before {
-            content: '☀️';
-        }
-
-        [data-theme="dark"] .theme-toggle-slider::before {
-            content: '🌙';
+            color: #333;
         }
 
         /* Navigation */
@@ -107,16 +21,16 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: var(--nav-bg);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #e0e0e0;
             z-index: 1000;
             transition: all 0.3s ease;
         }
         
         nav.scrolled {
-            background-color: var(--nav-bg-scrolled);
-            box-shadow: 0 2px 10px var(--shadow-color);
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .nav-container {
@@ -129,22 +43,16 @@
             height: 60px;
         }
 
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
         .nav-logo {
             font-size: 18px;
             font-weight: normal;
-            color: var(--text-color);
+            color: #333;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .nav-logo:hover {
-            color: var(--accent-color);
+            color: #0066cc;
         }
 
         .nav-links {
@@ -156,7 +64,7 @@
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: #666;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s ease;
@@ -164,11 +72,11 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: #0066cc;
         }
 
         .nav-links a.active {
-            color: var(--accent-color);
+            color: #0066cc;
         }
 
         .nav-links a::after {
@@ -178,7 +86,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent-color);
+            background-color: #0066cc;
             transition: width 0.3s ease;
         }
 
@@ -198,7 +106,7 @@
         .nav-toggle span {
             width: 20px;
             height: 2px;
-            background-color: var(--text-color);
+            background-color: #333;
             margin: 2px 0;
             transition: 0.3s;
         }
@@ -210,7 +118,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 60px);
-                background-color: var(--nav-bg-scrolled);
+                background-color: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(10px);
                 flex-direction: column;
                 justify-content: flex-start;
@@ -238,16 +146,6 @@
 
             .nav-toggle.active span:nth-child(3) {
                 transform: rotate(-45deg) translate(7px, -6px);
-            }
-
-            .nav-left {
-                flex-direction: column;
-                gap: 10px;
-                align-items: flex-start;
-            }
-
-            .theme-toggle {
-                transform: scale(0.8);
             }
         }
 
@@ -302,12 +200,11 @@
             font-weight: normal;
             padding: 0;
             margin: 0;
-            color: var(--text-color);
         }
         h2 {
             font-weight: normal;
             font-style: italic;
-            color: var(--text-muted);
+            color: #999;
             font-size: 18px;
             padding: 0;
             margin: 5px 0 10px 0;
@@ -322,8 +219,7 @@
             height: 240px;
             border-radius: 120px;
             object-fit: cover;
-            border: 3px solid var(--border-color);
-            transition: border-color 0.3s ease;
+            border: 3px solid #e0e0e0;
         }
         .iico {
             width: 40px;
@@ -331,13 +227,16 @@
         }
         #demail {
             margin-top: 10px;
-            color: var(--text-secondary);
+            color: #555;
             opacity: 0;
             transition: opacity 0.7s;
         }
         hr {
             height: 1px;
-            background-image: linear-gradient(to right, transparent, var(--border-muted), transparent);
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
             padding: 0;
             margin: 20px 0px 20px 0px;
             border: 0;
@@ -345,7 +244,7 @@
         .ico {
             grid-column: span 1;
             vertical-align: top;
-            border-left: 2px solid var(--border-muted);
+            border-left: 2px solid #cfcfcf;
             position: relative;
         }
         .ico img {
@@ -370,16 +269,15 @@
             width: 10px;
             height: 10px;
             border-radius: 7px;
-            background-color: var(--border-muted);
-            border: 2px solid var(--bg-color);
-            transition: background-color 0.3s ease, border-color 0.3s ease;
+            background-color: #cfcfcf;
+            border: 2px solid white;
         }
         .timespan {
             grid-column: span 1;
             font-size: 14px;
             text-align: right;
             padding-right: 5px;
-            color: var(--text-light);
+            color: #bbb;
         }
         .hassets {
             position: relative;
@@ -398,7 +296,6 @@
             font-size: 36px;
             margin-bottom: 20px;
             margin-top: 40px;
-            color: var(--text-color);
         }
         #featured-talks .row {
             grid-column-gap: 10px;
@@ -408,12 +305,12 @@
         .card {
             grid-column: span 3;
             vertical-align: top;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background-color: #eee;
+            border: 1px solid #ddd;
             border-radius: 3px;
             padding: 5px;
+            background-color: white;
             padding-bottom: 10px;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         @media (max-width: 991px) {
             .card {
@@ -447,7 +344,7 @@
         .project {
             margin-bottom: 10px;
             padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #eee;
         }
         .pico {
             float: left;
@@ -461,25 +358,25 @@
         .pico img {
             height: 80px;
             border-radius: 5px;
-            border: 1px solid var(--text-muted);
+            border: 1px solid #999;
         }
         .pub {
             font-size: 14px;
-            border-left: 4px solid var(--text-muted);
+            border-left: 4px solid #aaa;
             padding: 2px 0px 2px 10px;
             margin-bottom: 10px;
         }
         .pub-title {
             display: inline;
-            color: var(--text-color);
+            color: #333;
         }
         .pub-venue {
             display: inline;
-            color: var(--success-color);
+            color: #090;
         }
         .pub-authors {
             display: block;
-            color: var(--warning-color);
+            color: #900;
         }
         .tul {
             text-align: center;
@@ -491,7 +388,7 @@
             margin-bottom: 5px;
         }
         .tilb {
-            border-right: 1px solid var(--border-muted);
+            border-right: 1px solid #ccc;
         }
         .nodot {
             list-style-type: none;
@@ -500,12 +397,11 @@
 
         /* Additional styles for links */
         a {
-            color: var(--accent-color);
+            color: #0066cc;
             text-decoration: underline;
-            transition: color 0.3s ease;
         }
         a:hover {
-            color: var(--accent-hover);
+            color: #0052a3;
         }
 
         /* Custom styles for this specific content */
@@ -513,7 +409,7 @@
             margin-top: 15px;
         }
         .links-container a {
-            color: var(--accent-color);
+            color: #0066cc;
             margin-right: 15px;
             font-size: 14px;
             text-decoration: underline;
@@ -522,37 +418,6 @@
         .bio-text {
             margin-top: 20px;
             margin-bottom: 20px;
-        }
-
-        /* Section backgrounds */
-        .section-content {
-            background-color: var(--section-bg);
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        /* News box */
-        .news-box {
-            background-color: var(--section-bg);
-            padding: 15px 20px;
-            border-left: 4px solid var(--accent-color);
-            border-radius: 5px;
-            margin-bottom: 30px;
-            font-size: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            transition: border-color 0.3s ease, color 0.3s ease;
         }
 
         /* Smooth scrolling */
@@ -569,12 +434,7 @@
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <div class="nav-left">
-                <a href="#home" class="nav-logo">Prateek P. Kulkarni</a>
-                <div class="theme-toggle" id="theme-toggle">
-                    <div class="theme-toggle-slider"></div>
-                </div>
-            </div>
+            <a href="#home" class="nav-logo">Prateek P. Kulkarni</a>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
                 <span></span>
@@ -614,20 +474,20 @@
             <hr>
 
             <!-- News Box -->
-            <!--<div class="news-box">
+            <!--<div style="background-color: #e6f3ff; padding: 15px 20px; border-left: 4px solid #3399ff; border-radius: 5px; margin-bottom: 30px; font-size: 15px;">
                 📣 I'll be joining <a href="https://www.meesho.com" target="_blank">Meesho</a> as a Business Analyst from August 2025!
             </div>-->
 
             <section id="about">
                 <div class="ctitle">about</div>
-                <div class="section-content">
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
                     I am a final year undergraduate pursuing BTech in Electronics and Communication Engineering, with specialization in VLSI and Quantum Technology at <a href="https://pes.edu/">PES University</a>. Research interests span quantum computing architectures, advanced memory systems, and electronic design automation for next-generation computing platforms.
                 </div>
             </section>
 
             <section id="research">
                 <div class="ctitle">research</div>
-                <div class="section-content">
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
                     I work on quantum computing systems and memory architectures. Currently, I am working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a> in the Future Computing Systems (FIST) Lab at <a href="https://www.csa.iisc.ac.in">CSA, IISc</a> on distributed quantum computing architectures and error correction for near-term devices. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>. <br><br>
                     My undergraduate thesis with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> explores variational quantum algorithms. <br><br>
                     I am also very keen on developing advanced memory systems in general, like using emerging technologies like 3D XPoint and memristors, and intelligent in-DRAM prefetching techniques.
@@ -667,7 +527,7 @@
 
             <section id="teaching">
                 <div class="ctitle">teaching</div>
-                <div class="section-content">
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
                     <div style="margin-bottom: 10px;">
                         <strong>Spring 2025:</strong> Teaching Assistant, Quantum Transport and Logic Gates
                     </div>
@@ -679,36 +539,20 @@
 
             <section id="service">
                 <div class="ctitle">service</div>
-                <div class="section-content">
+                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
                     <strong>Reviewer:</strong> <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a>, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
                 </div>
             </section>
 
             <div style="margin-bottom: 50px;"></div>
             
-            <footer>
-                Website design inspired by <a href="https://karpathy.ai/">Andrej Karpathy</a>
+            <footer style="text-align: center; padding: 40px 0; border-top: 1px solid #e0e0e0; margin-top: 40px; color: #666; font-size: 14px;">
+                Website design inspired by <a href="https://karpathy.ai/" style="color: #0066cc;">Andrej Karpathy</a>
             </footer>
         </div>
     </div>
 
     <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Check for saved theme preference or default to light mode
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-
-        themeToggle.addEventListener('click', function() {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-
         // Navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.getElementById('navbar');
