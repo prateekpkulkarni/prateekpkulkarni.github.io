@@ -6,8 +6,9 @@
     <title>Prateek P. Kulkarni</title>
     <meta name="description" content="Quantum Computing, Memory Systems, Electronic Design Automation">
     <meta name="keywords" content="quantum computing, memory systems, EDA, VLSI">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap');
         
         * {
             margin: 0;
@@ -16,74 +17,138 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: #fefefe;
-            color: #2a2a2a;
+            font-family: 'Crimson Text', serif;
+            background: #f8f5f2;
+            color: #3c3c3c;
             line-height: 1.6;
-            font-weight: 300;
+            font-weight: 400;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c9bc' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
-        /* Global link styling - blue and unvisited appearance */
+        /* Global link styling */
         a {
-            color: #0066cc !important;
+            color: #8b5a2b !important;
             text-decoration: none;
-        }
-        
-        a:visited {
-            color: #0066cc !important;
+            transition: all 0.3s ease;
+            border-bottom: 1px dotted transparent;
         }
         
         a:hover {
-            color: #004499 !important;
-            text-decoration: underline;
+            color: #654321 !important;
+            border-bottom: 1px dotted #8b5a2b;
+            text-decoration: none;
         }
         
         .container {
-            max-width: 700px;
+            max-width: 780px;
             margin: 0 auto;
             padding: 0 2rem;
+            background: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+            border-left: 1px solid #e8e0d4;
+            border-right: 1px solid #e8e0d4;
+            position: relative;
+        }
+        
+        .container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 30px;
+            right: 30px;
+            height: 5px;
+            background: #8b5a2b;
         }
         
         header {
-            padding: 6rem 0 4rem;
-            border-bottom: 1px solid #e8e8e8;
+            padding: 5rem 0 3.5rem;
+            border-bottom: 1px solid #e8e0d4;
+            text-align: center;
+            position: relative;
         }
         
         .name {
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            margin-bottom: 0.5rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #3c2c1d;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .role {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 300;
-            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            color: #8b5a2b;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            font-style: italic;
         }
         
         .affiliation {
-            font-size: 0.9rem;
-            color: #888;
+            font-size: 0.95rem;
+            color: #7a6a5a;
             font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .ornament {
+            display: block;
+            margin: 1.5rem auto;
+            width: 80px;
+            height: 4px;
+            background: #d4c9bc;
+            position: relative;
+        }
+        
+        .ornament:before, .ornament:after {
+            content: "❖";
+            position: absolute;
+            top: -8px;
+            color: #a8927a;
+            font-size: 16px;
+        }
+        
+        .ornament:before {
+            left: 0;
+        }
+        
+        .ornament:after {
+            right: 0;
         }
         
         .news {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-left: 3px solid #4a5568;
-            border-radius: 0 4px 4px 0;
+            background: #f9f7f4;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border: 1px solid #e8e0d4;
+            border-left: 4px solid #8b5a2b;
+            position: relative;
+        }
+        
+        .news:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background: #f9f7f4;
+            transform: rotate(45deg);
+            border-top: 1px solid #e8e0d4;
+            border-left: 1px solid #e8e0d4;
         }
         
         .news h3 {
             font-size: 0.9rem;
             font-weight: 500;
-            color: #4a5568;
-            margin-bottom: 1rem;
+            color: #8b5a2b;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #d4c9bc;
         }
         
         .news ul {
@@ -91,9 +156,18 @@
         }
         
         .news li {
-            margin-bottom: 0.8rem;
-            font-size: 0.9rem;
-            color: #4a4a4a;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #5a4a3c;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .news li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b5a2b;
         }
         
         .news li:last-child {
@@ -101,13 +175,14 @@
         }
         
         .news strong {
-            color: #2a2a2a;
-            font-weight: 400;
+            color: #3c2c1d;
+            font-weight: 600;
         }
         
         .section {
             padding: 3rem 0;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #e8e0d4;
+            position: relative;
         }
         
         .section:last-child {
@@ -115,28 +190,34 @@
         }
         
         .section h2 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 500;
-            color: #1a1a1a;
-            margin-bottom: 1.5rem;
+            color: #3c2c1d;
+            margin-bottom: 1.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #d4c9bc;
         }
         
         .content {
-            color: #4a4a4a;
-            font-size: 0.95rem;
+            color: #5a4a3c;
+            font-size: 1.05rem;
             line-height: 1.7;
         }
         
         .content p {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
         }
         
         .publication {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #f8f8f8;
+            margin-bottom: 2.2rem;
+            padding-bottom: 1.8rem;
+            border-bottom: 1px solid #f0ebe3;
+            position: relative;
         }
         
         .publication:last-child {
@@ -145,73 +226,95 @@
         }
         
         .pub-title {
-            font-weight: 400;
-            color: #1a1a1a;
-            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #3c2c1d;
+            margin-bottom: 0.5rem;
             line-height: 1.4;
         }
         
         .pub-authors {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.2rem;
+            color: #7a6a5a;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
             font-style: italic;
         }
         
         .pub-venue {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            color: #8b7a6a;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
         }
         
         .pub-links {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
         
         .pub-links a {
-            margin-right: 1rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
+            margin-right: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .pub-links a:hover {
-            border-bottom-color: #004499 !important;
-            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        .pub-links a i {
+            margin-right: 5px;
         }
         
         .links {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .links a {
-            font-size: 0.9rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .links a:hover {
-            border-bottom-color: #004499 !important;
-            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        .links a i {
+            margin-right: 8px;
         }
         
         .contact-info {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         
         .contact-info div {
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
-            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #7a6a5a;
+        }
+        
+        .contact-info strong {
+            color: #3c2c1d;
+            font-weight: 600;
+            min-width: 80px;
+            display: inline-block;
         }
         
         .footer {
-            padding: 4rem 0 2rem;
+            padding: 4rem 0 3rem;
             text-align: center;
-            color: #999;
-            font-size: 0.85rem;
+            color: #a89a8a;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .footer:before {
+            content: "※";
+            display: block;
+            margin-bottom: 1rem;
+            color: #d4c9bc;
+            font-size: 1.5rem;
         }
         
         @media (max-width: 768px) {
@@ -220,7 +323,7 @@
             }
             
             header {
-                padding: 4rem 0 3rem;
+                padding: 3.5rem 0 2.5rem;
             }
             
             .name {
@@ -228,17 +331,17 @@
             }
             
             .section {
-                padding: 2rem 0;
+                padding: 2.2rem 0;
             }
             
             .links {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.2rem;
             }
             
             .news {
-                margin: 1.5rem 0;
-                padding: 1rem;
+                margin: 2rem 0;
+                padding: 1.5rem;
             }
         }
     </style>
@@ -247,6 +350,7 @@
     <div class="container">
         <header>
             <h1 class="name">Prateek P. Kulkarni</h1>
+            <div class="ornament"></div>
             <p class="role">Final Year Undergraduate, Electronics and Communication Engineering</p>
             <p class="affiliation">PES University • VLSI and Quantum Technology • Bangalore, India</p>
         </header>
@@ -280,9 +384,9 @@
                     <div class="pub-authors">Prateek P. Kulkarni</div>
                     <div class="pub-venue">6th India ESD Workshop, 2025</div>
                     <div class="pub-links">
-                        <a href="https://iisc-inew.org/poster-presentations.php">Abstract</a>
-                        <a href="DIRECT.pdf">Paper</a>
-                        <a href="ppk_inew.pdf">Slides</a>
+                        <a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i>Abstract</a>
+                        <a href="DIRECT.pdf"><i class="far fa-file-pdf"></i>Paper</a>
+                        <a href="ppk_inew.pdf"><i class="fas fa-presentation"></i>Slides</a>
                     </div>
                 </div>
                 
@@ -291,7 +395,7 @@
                     <div class="pub-authors">Ramaseshan R, <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
                     <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
                     <div class="pub-links">
-                        <a href="https://doi.org/10.48550/arXiv.2507.09517">Paper</a>
+                        <a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="far fa-file-pdf"></i>Paper</a>
                     </div>
                 </div>
                 
@@ -306,7 +410,7 @@
                     <div class="pub-authors">Prateek P. Kulkarni</div>
                     <div class="pub-venue">International Conference on Emerging Technologies for Intelligent Systems, 2025</div>
                     <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/document/10961614">Paper</a>
+                        <a href="https://ieeexplore.ieee.org/document/10961614"><i class="far fa-file-pdf"></i>Paper</a>
                     </div>
                 </div>
                 
@@ -315,7 +419,7 @@
                     <div class="pub-authors">Prateek P. Kulkarni</div>
                     <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
                     <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/document/10894988">Paper</a>
+                        <a href="https://ieeexplore.ieee.org/document/10894988"><i class="far fa-file-pdf"></i>Paper</a>
                     </div>
                 </div>
             </div>
@@ -344,10 +448,10 @@
                 </div>
                 
                 <div class="links">
-                    <a href="PrateekPKCV.pdf">CV</a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
-                    <a href="https://github.com/prateekpkulkarni">GitHub</a>
-                    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+                    <a href="PrateekPKCV.pdf"><i class="far fa-file-alt"></i>CV</a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                    <a href="https://github.com/prateekpkulkarni"><i class="fab fa-github"></i>GitHub</a>
+                    <a href="https://www.linkedin.com/in/pkulkarni2425"><i class="fab fa-linkedin"></i>LinkedIn</a>
                 </div>
             </div>
         </div>
