@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P. Kulkarni</title>
+    <title>Prateek P Kulkarni</title>
     <meta name="description" content="Quantum Computing, Memory Systems, Electronic Design Automation">
     <meta name="keywords" content="quantum computing, memory systems, EDA, VLSI">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
         
         * {
             margin: 0;
@@ -17,138 +17,84 @@
         }
         
         body {
-            font-family: 'Crimson Text', serif;
-            background: #f8f5f2;
-            color: #3c3c3c;
+            font-family: 'Lato', sans-serif;
+            background: #f9f9f9;
+            color: #333;
             line-height: 1.6;
             font-weight: 400;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c9bc' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
-        /* Global link styling */
         a {
-            color: #8b5a2b !important;
+            color: #0065b3 !important;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px dotted transparent;
+            transition: all 0.2s ease;
         }
         
         a:hover {
-            color: #654321 !important;
-            border-bottom: 1px dotted #8b5a2b;
-            text-decoration: none;
+            color: #004d89 !important;
+            text-decoration: underline;
         }
         
         .container {
             max-width: 780px;
-            margin: 0 auto;
+            margin: 2rem auto;
             padding: 0 2rem;
             background: #fff;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
-            border-left: 1px solid #e8e0d4;
-            border-right: 1px solid #e8e0d4;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             position: relative;
         }
         
-        .container:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 30px;
-            right: 30px;
-            height: 5px;
-            background: #8b5a2b;
-        }
-        
         header {
-            padding: 5rem 0 3.5rem;
-            border-bottom: 1px solid #e8e0d4;
+            padding: 3.5rem 0 2.5rem;
+            border-bottom: 1px solid #eaeaea;
             text-align: center;
             position: relative;
         }
         
         .name {
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: #3c2c1d;
-            margin-bottom: 0.8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #0065b3;
+            margin-bottom: 0.5rem;
             letter-spacing: 0.5px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .role {
-            font-size: 1.1rem;
-            color: #8b5a2b;
+            font-size: 1.05rem;
+            color: #666;
             font-weight: 400;
             margin-bottom: 0.5rem;
-            font-style: italic;
         }
         
         .affiliation {
             font-size: 0.95rem;
-            color: #7a6a5a;
+            color: #777;
             font-weight: 300;
-            letter-spacing: 0.5px;
         }
         
-        .ornament {
+        .divider {
             display: block;
             margin: 1.5rem auto;
-            width: 80px;
-            height: 4px;
-            background: #d4c9bc;
-            position: relative;
-        }
-        
-        .ornament:before, .ornament:after {
-            content: "❖";
-            position: absolute;
-            top: -8px;
-            color: #a8927a;
-            font-size: 16px;
-        }
-        
-        .ornament:before {
-            left: 0;
-        }
-        
-        .ornament:after {
-            right: 0;
+            width: 60px;
+            height: 2px;
+            background: #0065b3;
         }
         
         .news {
-            background: #f9f7f4;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            border: 1px solid #e8e0d4;
-            border-left: 4px solid #8b5a2b;
-            position: relative;
-        }
-        
-        .news:before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            width: 20px;
-            height: 20px;
-            background: #f9f7f4;
-            transform: rotate(45deg);
-            border-top: 1px solid #e8e0d4;
-            border-left: 1px solid #e8e0d4;
+            background: #f5f9ff;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-left: 4px solid #0065b3;
         }
         
         .news h3 {
             font-size: 0.9rem;
-            font-weight: 500;
-            color: #8b5a2b;
+            font-weight: 700;
+            color: #0065b3;
             margin-bottom: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-family: 'Montserrat', sans-serif;
-            display: inline-block;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #d4c9bc;
+            letter-spacing: 1.2px;
         }
         
         .news ul {
@@ -158,16 +104,16 @@
         .news li {
             margin-bottom: 1rem;
             font-size: 0.95rem;
-            color: #5a4a3c;
-            padding-left: 1.5rem;
+            color: #444;
+            padding-left: 1.2rem;
             position: relative;
         }
         
         .news li:before {
-            content: "•";
+            content: "—";
             position: absolute;
             left: 0;
-            color: #8b5a2b;
+            color: #0065b3;
         }
         
         .news li:last-child {
@@ -175,14 +121,13 @@
         }
         
         .news strong {
-            color: #3c2c1d;
-            font-weight: 600;
+            color: #222;
+            font-weight: 700;
         }
         
         .section {
-            padding: 3rem 0;
-            border-bottom: 1px solid #e8e0d4;
-            position: relative;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #eaeaea;
         }
         
         .section:last-child {
@@ -190,34 +135,27 @@
         }
         
         .section h2 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #3c2c1d;
-            margin-bottom: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-family: 'Montserrat', sans-serif;
-            display: inline-block;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #d4c9bc;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0065b3;
+            margin-bottom: 1.5rem;
         }
         
         .content {
-            color: #5a4a3c;
-            font-size: 1.05rem;
+            color: #444;
+            font-size: 1rem;
             line-height: 1.7;
         }
         
         .content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
+            margin-bottom: 1.2rem;
         }
         
         .publication {
-            margin-bottom: 2.2rem;
-            padding-bottom: 1.8rem;
-            border-bottom: 1px solid #f0ebe3;
-            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
         }
         
         .publication:last-child {
@@ -227,22 +165,22 @@
         
         .pub-title {
             font-weight: 600;
-            color: #3c2c1d;
-            margin-bottom: 0.5rem;
+            color: #222;
+            margin-bottom: 0.4rem;
             line-height: 1.4;
         }
         
         .pub-authors {
-            color: #7a6a5a;
+            color: #555;
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
-            font-style: italic;
         }
         
         .pub-venue {
-            color: #8b7a6a;
+            color: #666;
             font-size: 0.95rem;
             margin-bottom: 0.8rem;
+            font-style: italic;
         }
         
         .pub-links {
@@ -251,12 +189,6 @@
         
         .pub-links a {
             margin-right: 1.2rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .pub-links a:hover {
-            transform: translateY(-2px);
         }
         
         .pub-links a i {
@@ -266,18 +198,12 @@
         .links {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 1.5rem;
         }
         
         .links a {
             font-size: 0.95rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .links a:hover {
-            transform: translateY(-2px);
         }
         
         .links a i {
@@ -285,62 +211,49 @@
         }
         
         .contact-info {
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
         }
         
         .contact-info div {
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
-            color: #7a6a5a;
+            color: #555;
         }
         
         .contact-info strong {
-            color: #3c2c1d;
+            color: #222;
             font-weight: 600;
-            min-width: 80px;
+            min-width: 50px;
             display: inline-block;
         }
         
         .footer {
-            padding: 4rem 0 3rem;
+            padding: 3rem 0 2.5rem;
             text-align: center;
-            color: #a89a8a;
+            color: #777;
             font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .footer:before {
-            content: "※";
-            display: block;
-            margin-bottom: 1rem;
-            color: #d4c9bc;
-            font-size: 1.5rem;
         }
         
         @media (max-width: 768px) {
             .container {
                 padding: 0 1.5rem;
+                margin: 1rem auto;
             }
             
             header {
-                padding: 3.5rem 0 2.5rem;
+                padding: 2.5rem 0 1.8rem;
             }
             
             .name {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .section {
-                padding: 2.2rem 0;
-            }
-            
-            .links {
-                flex-direction: column;
-                gap: 1.2rem;
+                padding: 2rem 0;
             }
             
             .news {
-                margin: 2rem 0;
+                margin: 1.8rem 0;
                 padding: 1.5rem;
             }
         }
@@ -349,8 +262,8 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="name">Prateek P. Kulkarni</h1>
-            <!--<div class="ornament"></div>-->
+            <h1 class="name">Prateek P Kulkarni</h1>
+            <div class="divider"></div>
             <p class="role">Final Year Undergraduate, Electronics and Communication Engineering</p>
             <p class="affiliation">PES University • VLSI and Quantum Technology • Bangalore, India</p>
         </header>
@@ -358,7 +271,7 @@
         <div class="news">
             <h3>News</h3>
             <ul>
-                <li><strong>[Sept 2025]</strong> I have joined as the lead algorithms researcher @<a href="https://www.bloq.in">Bloq Quantum</a>!</li>
+                <!--<li><strong>[Sept 2025]</strong> I have joined as the lead algorithms researcher @<a href="https://www.bloq.in">Bloq Quantum</a>!</li>-->
                 <li><strong>[Aug 2025]</strong> My work on coupling maps has been selected in the SRC @58th MICRO!</li>
             </ul>
         </div>
@@ -381,7 +294,7 @@
             <div class="content">
                 <div class="publication">
                     <div class="pub-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
-                    <div class="pub-authors">Prateek P. Kulkarni</div>
+                    <div class="pub-authors">Prateek P Kulkarni</div>
                     <div class="pub-venue">6th India ESD Workshop, 2025</div>
                     <div class="pub-links">
                         <a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i>Abstract</a>
@@ -392,7 +305,7 @@
                 
                 <div class="publication">
                     <div class="pub-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
-                    <div class="pub-authors">Ramaseshan R, <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
+                    <div class="pub-authors">Ramaseshan R, <b>Prateek P Kulkarni</b>, Sharanya Madhusudhan and Kaustav Bhowmick</div>
                     <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
                     <div class="pub-links">
                         <a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="far fa-file-pdf"></i>Paper</a>
@@ -401,13 +314,13 @@
                 
                 <div class="publication">
                     <div class="pub-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
-                    <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <b>Prateek P. Kulkarni</b> and Kaustav Bhowmick</div>
+                    <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <b>Prateek P Kulkarni</b> and Kaustav Bhowmick</div>
                     <div class="pub-venue">The Journal Of Supercomputing, 2025</div>
                 </div>
                 
                 <div class="publication">
                     <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
-                    <div class="pub-authors">Prateek P. Kulkarni</div>
+                    <div class="pub-authors">Prateek P Kulkarni</div>
                     <div class="pub-venue">International Conference on Emerging Technologies for Intelligent Systems, 2025</div>
                     <div class="pub-links">
                         <a href="https://ieeexplore.ieee.org/document/10961614"><i class="far fa-file-pdf"></i>Paper</a>
@@ -416,7 +329,7 @@
                 
                 <div class="publication">
                     <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
-                    <div class="pub-authors">Prateek P. Kulkarni</div>
+                    <div class="pub-authors">Prateek P Kulkarni</div>
                     <div class="pub-venue">5th International Conference on Communication, Computing and Industry 6.0, 2024</div>
                     <div class="pub-links">
                         <a href="https://ieeexplore.ieee.org/document/10894988"><i class="far fa-file-pdf"></i>Paper</a>
@@ -443,7 +356,7 @@
             <h2>Contact</h2>
             <div class="content">
                 <div class="contact-info">
-                    <div><strong>Email:</strong> pkulkarni2425 [at] gmail [dot] com (or) pkulkarni [at] bloq [dot] in</div>
+                    <div><strong>Email:</strong> pkulkarni2425 [at] gmail [dot] com <!--(or) pkulkarni [at] bloq [dot] in--></div>
                     <div><strong>Lab:</strong> <a href="https://www.csa.iisc.ac.in/~skmandal">Future Computing Systems (FIST) Lab, CSA, IISc</a></div>
                 </div>
                 
