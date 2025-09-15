@@ -39,6 +39,57 @@
             margin: 20px 0;
             border-left: 4px solid #0066cc;
         }
+        
+        /* Two-column layout styles */
+        .two-column-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .left-column {
+            flex: 1;
+        }
+        
+        .right-column {
+            flex: 1;
+        }
+        
+        .two-column-container h2 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        /* Publication type styling */
+        .pub-journal {
+            border-left: 4px solid #2E7D32;
+            padding-left: 12px;
+            background: #E8F5E8;
+        }
+        
+        .pub-conference {
+            border-left: 4px solid #1976D2;
+            padding-left: 12px;
+            background: #E3F2FD;
+        }
+        
+        .pub-poster {
+            border-left: 4px solid #F57C00;
+            padding-left: 12px;
+            background: #FFF3E0;
+        }
+        
+        .pub-srf {
+            border-left: 4px solid #7B1FA2;
+            padding-left: 12px;
+            background: #F3E5F5;
+        }
     </style>
 </head>
 <body>
@@ -62,8 +113,6 @@ PES University, Bangalore</p>
 <h2>About Me</h2>
 <p>I am a final year undergraduate pursuing BTech in Electronics and Communication Engineering, with specialization in VLSI and Quantum Technology at <a href="https://pes.edu/">PES University</a>. My research interests span quantum computing architectures and electronic design automation for next-generation computing platforms.</p>
 
-
-
 <h2>Research Experience</h2>
 
 <div class="project">
@@ -79,71 +128,77 @@ Supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Cente
 Exploring photonic processor architectures for variational quantum algorithms.
 </div>
 
-<h2>Publications</h2>
+<div class="two-column-container">
+    <div class="left-column">
+        <h2>Publications</h2>
 
-<div class="project">
-<b>MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</b><br>
-Prateek P. Kulkarni<br>
-<i>11th IEEE International Symposium on Smart Electronic Systems (IEEE – iSES), (SRF) 2025</i>
+        <div class="project">
+        <b>MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</b><br>
+        Prateek P. Kulkarni<br>
+        <i>11th IEEE International Symposium on Smart Electronic Systems (IEEE – iSES), 2025 (Student Research Forum)</i>
+        </div>
+
+        <div class="project">
+        <b>DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</b><br>
+        Prateek P. Kulkarni<br>
+        <i>6th India ESD Workshop, 2025 (Peer-reviewed Poster)</i><br>
+        [<a href="https://iisc-inew.org/poster-presentations.php">Abstract</a>] [<a href="#">Paper PDF</a>] [<a href="#">Slides</a>]
+        </div>
+
+        <div class="project">
+        <b>A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</b><br>
+        Ramaseshan R, <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan and Kaustav Bhowmick<br>
+        <i>arXiv:2507.09517 [quant-ph], 2025</i><br>
+        [<a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a>]
+        </div>
+
+        <div class="project">
+        <b>A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</b><br>
+        Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <b>Prateek P. Kulkarni</b> and Kaustav Bhowmick<br>
+        <i>The Journal Of Supercomputing, 2025</i>
+        </div>
+
+        <div class="project">
+        <b>RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</b><br>
+        Prateek P. Kulkarni<br>
+        <i>International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</i><br>
+        [<a href="https://ieeexplore.ieee.org/document/10961614">IEEE Xplore</a>]
+        </div>
+
+        <div class="project">
+        <b>A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</b><br>
+        Prateek P. Kulkarni<br>
+        <i>5th International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</i><br>
+        [<a href="https://ieeexplore.ieee.org/document/10894988">IEEE Xplore</a>]
+        </div>
+    </div>
+
+    <div class="right-column">
+        <h2>Research Interests</h2>
+        <div class="course">• Computer architecture</div>
+        <div class="course">&nbsp;&nbsp;-- Quantum computing architectures</div>
+        <div class="course">&nbsp;&nbsp;-- Memory design</div>
+        <div class="course">• Electronic design automation</div>
+        <div class="course">• Energy-efficient AI hardware</div>
+
+        <h2>Teaching</h2>
+        <p><b>Teaching Assistant</b><br>
+        Quantum Transport and Logic Gates (Spring 2025)<br>
+        PES University</p>
+
+        <h2>Service</h2>
+        <p><b>Reviewer:</b><br>
+        <a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a><br>
+        <a href="https://attend.ieee.org/dmc-2025/">IEEE DMC 2025</a><br>
+        <a href="https://tqe.ieee.org/">IEEE TQE</a></p>
+
+        <h2>Relevant Links</h2>
+        <p><a href="PrateekPKCV.pdf">CV/Resume</a><br>
+        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a><br>
+        <a href="https://github.com/prateekpkulkarni">GitHub Profile</a><br>
+        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a></p>
+    </div>
 </div>
-
-<div class="project">
-<b>DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</b><br>
-Prateek P. Kulkarni<br>
-<i>6th India ESD Workshop, (peer-reviewed poster) 2025</i><br>
-[<a href="https://iisc-inew.org/poster-presentations.php">Abstract</a>] [<a href="#">Paper PDF</a>] [<a href="#">Slides</a>]
-</div>
-
-<div class="project">
-<b>A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</b><br>
-Ramaseshan R, <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan and Kaustav Bhowmick<br>
-<i>arXiv:2507.09517 [quant-ph], 2025</i><br>
-[<a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a>]
-</div>
-
-<div class="project">
-<b>A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</b><br>
-Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <b>Prateek P. Kulkarni</b> and Kaustav Bhowmick<br>
-<i>The Journal Of Supercomputing, 2025</i>
-</div>
-
-<div class="project">
-<b>RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</b><br>
-Prateek P. Kulkarni<br>
-<i>International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</i><br>
-[<a href="https://ieeexplore.ieee.org/document/10961614">IEEE Xplore</a>]
-</div>
-
-<div class="project">
-<b>A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</b><br>
-Prateek P. Kulkarni<br>
-<i>5th International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</i><br>
-[<a href="https://ieeexplore.ieee.org/document/10894988">IEEE Xplore</a>]
-</div>
-
-<h2>Teaching</h2>
-<p><b>Teaching Assistant</b><br>
-Quantum Transport and Logic Gates (Spring 2025)<br>
-PES University</p>
-
-<h2>Service</h2>
-<p><b>Reviewer:</b><br>
-<a href="https://ieee-conecct.org/">IEEE CONECCT 2025</a><br>
-<a href="https://attend.ieee.org/dmc-2025/">IEEE DMC 2025</a><br>
-<a href="https://tqe.ieee.org/">IEEE TQE</a></p>
-
-<h2>Research Interests</h2>
-<div class="course">• Computer architecture</div>
-<div class="course">&nbsp;&nbsp;-- Quantum computing architectures</div>
-<div class="course">&nbsp;&nbsp;-- Memory design</div>
-<div class="course">• Electronic design automation</div>
-<div class="course">• Energy-efficient AI hardware</div>
-
-<h2>Relevant Links</h2>
-<p><a href="PrateekPKCV.pdf">CV/Resume</a><br>
-<a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a><br>
-<a href="https://github.com/prateekpkulkarni">GitHub Profile</a><br>
-<a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a></p>
 
 <hr>
 <p><i>Last updated: September 2025</i></p>
