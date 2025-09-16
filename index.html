@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P. Kulkarni</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #1a202c;
-      --text-muted: #4a5568;
-      --accent: #2b6cb0;
+      --text: #000000;
+      --text-muted: #666666;
+      --border: #e5e5e5;
       --bg: #ffffff;
-      --border: #e2e8f0;
-      --bg-subtle: #f7fafc;
     }
 
     * { 
@@ -23,37 +21,48 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      line-height: 1.65;
+      line-height: 1.6;
       color: var(--text);
       background: var(--bg);
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 400;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container { 
-      max-width: 720px; 
+      max-width: 700px; 
       margin: 0 auto; 
-      padding: 3rem 2rem; 
+      padding: 4rem 2rem; 
+    }
+
+    .ascii-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      line-height: 1.2;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      white-space: pre;
+      text-align: center;
     }
 
     header {
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 2.5rem;
+      text-align: center;
     }
 
     h1 {
       font-size: 2.2rem;
       font-weight: 300;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
     }
 
     .subtitle {
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      font-weight: 400;
+      margin-bottom: 0.25rem;
     }
 
     .affiliation {
@@ -64,20 +73,39 @@
 
     .contact {
       font-size: 0.95rem;
-      color: var(--accent);
+      color: var(--text);
       text-decoration: none;
+      border-bottom: 1px solid var(--border);
     }
 
     .contact:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--text);
     }
 
     .news {
-      background: var(--bg-subtle);
-      padding: 1.2rem;
       margin-bottom: 3rem;
-      border-left: 3px solid var(--accent);
-      font-size: 0.95rem;
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .news::before {
+      content: "┌─ LATEST ─────────────────────────────────────────────────────────┐";
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .news::after {
+      content: "└──────────────────────────────────────────────────────────────────┘";
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
     }
 
     section {
@@ -85,59 +113,79 @@
     }
 
     h2 {
-      font-size: 1.1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
       font-weight: 500;
       margin-bottom: 2rem;
-      color: var(--text);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      position: relative;
+    }
+
+    h2::after {
+      content: "────────────────────────────────────────────────────────────";
+      display: block;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
     }
 
     .about {
       font-size: 1rem;
       line-height: 1.7;
       color: var(--text);
+      margin-bottom: 2rem;
     }
 
     .about a {
-      color: var(--accent);
+      color: var(--text);
       text-decoration: none;
+      border-bottom: 1px solid var(--border);
     }
 
     .about a:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--text);
     }
 
-    .experience-item {
+    .research-interests {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    .experience-item, .publication {
       margin-bottom: 2rem;
       padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .experience-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .experience-item:last-child, .publication:last-child {
+      border-bottom: none;
     }
 
-    .exp-title {
+    .exp-title, .pub-title {
       font-weight: 500;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
       font-size: 1rem;
+      color: var(--text);
     }
 
-    .exp-meta {
+    .exp-meta, .pub-authors, .pub-venue {
       color: var(--text-muted);
       font-size: 0.9rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.75rem;
     }
 
-    .exp-meta a {
-      color: var(--accent);
+    .exp-meta a, .pub-links a {
+      color: var(--text);
       text-decoration: none;
+      border-bottom: 1px solid var(--border);
     }
 
-    .exp-meta a:hover {
-      text-decoration: underline;
+    .exp-meta a:hover, .pub-links a:hover {
+      border-bottom-color: var(--text);
     }
 
     .exp-description {
@@ -146,122 +194,135 @@
       line-height: 1.6;
     }
 
-    .publication {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .publication:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .pub-title {
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-      font-size: 0.98rem;
-    }
-
-    .pub-authors {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
     .pub-venue {
       font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 0.8rem;
-      font-size: 0.9rem;
+    }
+
+    .pub-links {
+      margin-top: 0.75rem;
     }
 
     .pub-links a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.85rem;
       margin-right: 1rem;
-    }
-
-    .pub-links a:hover {
-      text-decoration: underline;
-    }
-
-    .research-interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .interest {
-      color: var(--text-muted);
       font-size: 0.85rem;
-      padding: 0.3rem 0.8rem;
-      background: var(--bg-subtle);
-      border-radius: 3px;
+    }
+
+    .service-section {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      border: 1px solid var(--border);
+      padding: 1rem;
+    }
+
+    .service-section::before {
+      content: "┌─ REVIEWER ───────────────────────────────────────────────────────┐";
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-section::after {
+      content: "└──────────────────────────────────────────────────────────────────┘";
+      display: block;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
     }
 
     .service-list {
       list-style: none;
+      margin: 0.5rem 0;
     }
 
     .service-list li {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .service-list .role {
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
     }
 
     .service-list a {
-      color: var(--accent);
+      color: var(--text);
       text-decoration: none;
+      border-bottom: 1px solid var(--border);
     }
 
     .service-list a:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--text);
     }
 
     .links {
-      display: flex;
-      gap: 2rem;
       margin-top: 3rem;
-      justify-content: center;
-      border-top: 1px solid var(--border);
       padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    .links::before {
+      content: "┌─ CONNECT ────────────────────────────────────────────────────────┐";
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .links-content {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
     }
 
     .links a {
-      color: var(--accent);
+      color: var(--text);
       text-decoration: none;
-      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
     }
 
     .links a:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--text);
     }
 
-    @media (max-width: 640px) {
+    .links::after {
+      content: "└──────────────────────────────────────────────────────────────────┘";
+      display: block;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
       .container { 
-        padding: 2rem 1.5rem; 
+        padding: 2rem 1rem; 
       }
+      
+      .ascii-header {
+        font-size: 0.6rem;
+      }
+      
       h1 { 
         font-size: 1.8rem; 
       }
-      .links { 
-        flex-direction: column; 
-        align-items: center;
-        gap: 1rem;
+      
+      .links-content { 
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .news::before, .news::after,
+      .service-section::before, .service-section::after,
+      .links::before, .links::after,
+      h2::after {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!--<div class="ascii-header">
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║                     QUANTUM • SYSTEMS • VLSI                    ║
+    ╚══════════════════════════════════════════════════════════════════╝
+    </div>-->
+
     <header>
       <h1>Prateek P. Kulkarni</h1>
       <div class="subtitle">Electronics & Communication Engineering</div>
@@ -270,7 +331,7 @@
     </header>
 
     <div class="news">
-      <strong>Latest:</strong> My work on coupling maps has been selected for the Student Research Competition at the 58th MICRO (Aug 2025)
+      My work on coupling maps has been selected for the Student Research Competition at the 58th MICRO (Aug 2025)
     </div>
 
     <section>
@@ -284,12 +345,11 @@
         I am also interested in computer architecture and electronic design automation in general, for next-gen computing platforms.
       </div>
       <div class="research-interests">
-        <span class="interest">Quantum Computing Systems</span>
-        <span class="interest">Computer Architecture</span>
-        <span class="interest">Error Correction</span>
-        <span class="interest">Memory Design</span>
-        <span class="interest">Electronic Design Automation</span>
-        <span class="interest">Energy-Efficient AI Hardware</span>
+        ┌─ RESEARCH INTERESTS ─────────────────────────────────────────┐
+        │ • Quantum Computing Systems    • Computer Architecture       │
+        │ • Error Correction            • Memory Design               │
+        │ • Electronic Design Automation • Energy-Efficient AI        │
+        └──────────────────────────────────────────────────────────────┘
       </div>
     </section>
 
@@ -371,22 +431,27 @@
 
     <section>
       <h2>Professional Service</h2>
-      <ul class="service-list">
-        <li><strong>Reviewer</strong></li>
-        <li class="role">
-          <a href="https://conecct.ieee.org/" target="_blank">IEEE CONECCT 2025</a>, 
-          <a href="https://ieeedmc.org/" target="_blank">IEEE DMC 2025</a>, 
-          <a href="https://ieeeindicon.org/" target="_blank">IEEE INDICON 2025</a>, 
-          <a href="https://ieee-tqe.org/" target="_blank">IEEE Transactions on Quantum Engineering</a>
-        </li>
-      </ul>
+      <div class="service-section">
+        <ul class="service-list">
+          <li>
+            <a href="https://conecct.ieee.org/" target="_blank">IEEE CONECCT 2025</a>, 
+            <a href="https://ieeedmc.org/" target="_blank">IEEE DMC 2025</a>,
+          </li>
+          <li>
+            <a href="https://ieeeindicon.org/" target="_blank">IEEE INDICON 2025</a>, 
+            <a href="https://ieee-tqe.org/" target="_blank">IEEE Transactions on Quantum Engineering</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="links">
-      <a href="PrateekPKCV.pdf">CV</a>
-      <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
-      <a href="https://github.com/prateekpkulkarni">GitHub</a>
-      <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+      <div class="links-content">
+        <a href="PrateekPKCV.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Scholar</a>
+        <a href="https://github.com/prateekpkulkarni">GitHub</a>
+        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+      </div>
     </div>
   </div>
 </body>
