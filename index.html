@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P. Kulkarni</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #000000;
-      --text-muted: #666666;
-      --border: #e5e5e5;
-      --bg: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #3d3d3d;
+      --text-muted: #666;
+      --border-strong: #1a1a1a;
+      --border-subtle: #d5d5d5;
+      --bg-main: #fefefe;
+      --bg-accent: #f5f5f5;
+      --accent-color: #1a1a1a;
+      --jp-red: #c3272b;
+      --concrete-light: #f0f0f0;
+      --concrete-medium: #e0e0e0;
+      --concrete-dark: #d0d0d0;
     }
 
     * { 
@@ -20,319 +28,407 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background: var(--bg-main);
       font-size: 16px;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
-    }
-
-    .container { 
-      max-width: 700px; 
-      margin: 0 auto; 
-      padding: 4rem 2rem; 
-    }
-
-    .ascii-header {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      line-height: 1.2;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      white-space: pre;
-      text-align: center;
-    }
-
-    header {
-      margin-bottom: 4rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 300;
-      margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
     }
 
-    .subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
+    .container { 
+      max-width: 780px; 
+      margin: 0 auto; 
+      padding: 4rem 2rem 3rem; 
+    }
+
+    /* Brutalist header with Japanese minimalism */
+    header {
+      margin-bottom: 4rem;
+      text-align: left;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border-strong);
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--jp-red);
+    }
+
+    .name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 400;
     }
 
     .affiliation {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
     }
 
     .contact {
       font-size: 0.95rem;
-      color: var(--text);
+      color: var(--text-secondary);
       text-decoration: none;
-      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+      display: inline-block;
+    }
+
+    .contact::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
     }
 
     .contact:hover {
-      border-bottom-color: var(--text);
+      color: var(--jp-red);
     }
 
+    .contact:hover::after {
+      width: 100%;
+    }
+
+    /* News section with brutalist block */
     .news {
-      margin-bottom: 3rem;
-      padding: 1rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
+      margin-bottom: 3.5rem;
+      padding: 1.75rem 2rem;
+      background: var(--concrete-light);
+      border: 2px solid var(--border-strong);
       position: relative;
+      box-shadow: 6px 6px 0 var(--concrete-medium);
     }
 
-    .news::before {
-      content: "┌─ LATEST ─────────────────────────────────────────────────────────┐";
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .news::after {
-      content: "└──────────────────────────────────────────────────────────────────┘";
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--text-muted);
-      margin-top: 0.5rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
+    .news-label {
       font-weight: 500;
-      margin-bottom: 2rem;
+      color: var(--jp-red);
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--text);
-      position: relative;
-    }
-
-    h2::after {
-      content: "────────────────────────────────────────────────────────────";
-      display: block;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    .about {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 2rem;
-    }
-
-    .about a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .about a:hover {
-      border-bottom-color: var(--text);
-    }
-
-    .research-interests {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      white-space: pre-line;
-    }
-
-    .experience-item, .publication {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .experience-item:last-child, .publication:last-child {
-      border-bottom: none;
-    }
-
-    .exp-title, .pub-title {
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      color: var(--text);
-    }
-
-    .exp-meta, .pub-authors, .pub-venue {
-      color: var(--text-muted);
-      font-size: 0.9rem;
       margin-bottom: 0.75rem;
     }
 
-    .exp-meta a, .pub-links a {
-      color: var(--text);
+    section {
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    /* Section headers with Japanese-inspired minimal lines */
+    h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      color: var(--text-primary);
+      position: relative;
+      padding-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--border-strong);
+    }
+
+    .about {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .about a {
+      color: var(--text-primary);
       text-decoration: none;
-      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
     }
 
-    .exp-meta a:hover, .pub-links a:hover {
-      border-bottom-color: var(--text);
+    .about a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
     }
 
-    .exp-description {
-      color: var(--text);
+    .about a:hover {
+      color: var(--jp-red);
+    }
+
+    .about a:hover::after {
+      width: 100%;
+    }
+
+    /* Brutalist content blocks */
+    .item {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 0 2rem;
+      border-bottom: 1px solid var(--concrete-medium);
+      position: relative;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .item-title {
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    .item-meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .item-meta a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
+
+    .item-meta a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
+    }
+
+    .item-meta a:hover {
+      color: var(--jp-red);
+    }
+
+    .item-meta a:hover::after {
+      width: 100%;
+    }
+
+    .item-description {
+      color: var(--text-secondary);
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    .pub-authors {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
     }
 
     .pub-venue {
       font-style: italic;
-    }
-
-    .pub-links {
-      margin-top: 0.75rem;
-    }
-
-    .pub-links a {
-      margin-right: 1rem;
-      font-size: 0.85rem;
-    }
-
-    .service-section {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      border: 1px solid var(--border);
-      padding: 1rem;
-    }
-
-    .service-section::before {
-      content: "┌─ REVIEWER ───────────────────────────────────────────────────────┐";
-      display: block;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .service-section::after {
-      content: "└──────────────────────────────────────────────────────────────────┘";
-      display: block;
-      color: var(--text-muted);
-      margin-top: 0.5rem;
-    }
-
-    .service-list {
-      list-style: none;
-      margin: 0.5rem 0;
-    }
-
-    .service-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    .service-list a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .service-list a:hover {
-      border-bottom-color: var(--text);
-    }
-
-    .links {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-    }
-
-    .links::before {
-      content: "┌─ CONNECT ────────────────────────────────────────────────────────┐";
-      display: block;
-      color: var(--text-muted);
+      font-size: 0.9rem;
       margin-bottom: 1rem;
     }
 
-    .links-content {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 1rem 0;
-    }
-
-    .links a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .links a:hover {
-      border-bottom-color: var(--text);
-    }
-
-    .links::after {
-      content: "└──────────────────────────────────────────────────────────────────┘";
-      display: block;
-      color: var(--text-muted);
+    .pub-links {
       margin-top: 1rem;
     }
 
+    .pub-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-right: 1.5rem;
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
+      padding: 0.25rem 0;
+    }
+
+    .pub-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
+    }
+
+    .pub-links a:hover {
+      color: var(--jp-red);
+    }
+
+    .pub-links a:hover::after {
+      width: 100%;
+    }
+
+    .service-content {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .service-content a {
+      color: var(--text-primary);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
+
+    .service-content a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
+    }
+
+    .service-content a:hover {
+      color: var(--jp-red);
+    }
+
+    .service-content a:hover::after {
+      width: 100%;
+    }
+
+    /* Brutalist footer links */
+    .links {
+      margin-top: 5rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--border-strong);
+      text-align: left;
+    }
+
+    .links-grid {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+
+    .links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--jp-red);
+      transition: width 0.3s ease;
+    }
+
+    .links a:hover {
+      color: var(--jp-red);
+    }
+
+    .links a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .container { 
-        padding: 2rem 1rem; 
+        padding: 3rem 1.5rem; 
       }
       
-      .ascii-header {
-        font-size: 0.6rem;
+      .name { 
+        font-size: 2.2rem; 
       }
       
-      h1 { 
-        font-size: 1.8rem; 
+      .links-grid { 
+        flex-wrap: wrap;
+        gap: 1.5rem;
       }
       
-      .links-content { 
+      .news {
+        padding: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name {
+        font-size: 1.9rem;
+      }
+      
+      .links-grid {
         flex-direction: column;
-        gap: 0.5rem;
-      }
-      
-      .news::before, .news::after,
-      .service-section::before, .service-section::after,
-      .links::before, .links::after,
-      h2::after {
-        display: none;
+        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!--<div class="ascii-header">
-    ╔══════════════════════════════════════════════════════════════════╗
-    ║                     QUANTUM • SYSTEMS • VLSI                    ║
-    ╚══════════════════════════════════════════════════════════════════╝
-    </div>-->
-
     <header>
-      <h1>Prateek P. Kulkarni</h1>
-      <div class="subtitle">Electronics & Communication Engineering</div>
-      <div class="affiliation">VLSI and Quantum Technology • PES University, Bangalore</div>
+      <h1 class="name">Prateek P. Kulkarni</h1>
+      <div class="title">Electronics & Communication Engineering</div>
+      <div class="affiliation">VLSI and Quantum Technology<br>PES University, Bangalore</div>
       <a href="mailto:pkulkarni2425@gmail.com" class="contact">pkulkarni2425@gmail.com</a>
     </header>
 
     <div class="news">
-      <!--<b>[Sept'25]</b> I will be joining @<a href="https://www.bloq.in">Bloq Quantum</a> as the lead algorithms researcher! <br>-->
-      <b>[Aug'25]</b> My work on coupling maps has been selected for the SRC @58th MICRO!
+      <div class="news-label">Recent Update</div>
+      <strong>August 2025</strong> — My work on coupling maps has been selected for the SRC @58th MICRO!
     </div>
 
     <section>
@@ -345,48 +441,41 @@
         <br><br>
         I am also interested in computer architecture and electronic design automation in general, for next-gen computing platforms.
       </div>
-      <!--<div class="research-interests">
-        ┌─ RESEARCH INTERESTS ─────────────────────────────────────────┐
-        │ • Quantum Computing Systems    • Computer Architecture       │
-        │ • Error Correction            • Memory Design               │
-        │ • Electronic Design Automation • Energy-Efficient AI        │
-        └──────────────────────────────────────────────────────────────┘
-      </div>-->
     </section>
 
     <section>
       <h2>Experience</h2>
 
-      <div class="experience-item">
-        <div class="exp-title">Research Assistant</div>
-        <div class="exp-meta">2024 – Present • <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a><br>Future Computing Systems Lab, CSA, IISc</div>
-        <div class="exp-description">Working on distributed quantum computing architectures and error correction protocols for near-term devices. Supported by the Walmart Center for Tech Excellence.</div>
+      <div class="item">
+        <div class="item-title">Research Assistant</div>
+        <div class="item-meta">2024 – Present • <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a><br>Future Computing Systems Lab, CSA, IISc</div>
+        <div class="item-description">Working on distributed quantum computing architectures and error correction protocols for near-term devices. Supported by the Walmart Center for Tech Excellence.</div>
       </div>
 
-      <div class="experience-item">
-        <div class="exp-title">Undergraduate Thesis</div>
-        <div class="exp-meta">2024 – Present • <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, PES University</div>
-        <div class="exp-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges.</div>
+      <div class="item">
+        <div class="item-title">Undergraduate Thesis</div>
+        <div class="item-meta">2024 – Present • <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>, PES University</div>
+        <div class="item-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges.</div>
       </div>
 
-      <div class="experience-item">
-        <div class="exp-title">Teaching Assistant</div>
-        <div class="exp-meta">Spring 2025 • Quantum Transport and Logic Gates, PES University</div>
-        <div class="exp-description">Assisted in teaching and mentoring students in advanced quantum electronics, held lab sessions and office hours, for a class of ~80.</div>
+      <div class="item">
+        <div class="item-title">Teaching Assistant</div>
+        <div class="item-meta">Spring 2025 • Quantum Transport and Logic Gates, PES University</div>
+        <div class="item-description">Assisted in teaching and mentoring students in advanced quantum electronics, held lab sessions and office hours, for a class of ~80.</div>
       </div>
     </section>
 
     <section>
       <h2>Publications</h2>
 
-      <div class="publication">
-        <div class="pub-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
+      <div class="item">
+        <div class="item-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
         <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
         <div class="pub-venue">IEEE International Symposium on Smart Electronic Systems (iSES), 2025 (Student Research Forum)</div>
       </div>
 
-      <div class="publication">
-        <div class="pub-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
+      <div class="item">
+        <div class="item-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
         <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
         <div class="pub-venue">6th India ESD Workshop, 2025 (Peer-reviewed Poster)</div>
         <div class="pub-links">
@@ -396,8 +485,8 @@
         </div>
       </div>
 
-      <div class="publication">
-        <div class="pub-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
+      <div class="item">
+        <div class="item-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
         <div class="pub-authors">Ramaseshan R, <strong>Prateek P. Kulkarni</strong>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
         <div class="pub-venue">arXiv:2507.09517 [quant-ph], 2025</div>
         <div class="pub-links">
@@ -405,14 +494,14 @@
         </div>
       </div>
 
-      <div class="publication">
-        <div class="pub-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
+      <div class="item">
+        <div class="item-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
         <div class="pub-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <strong>Prateek P. Kulkarni</strong>, Kaustav Bhowmick</div>
         <div class="pub-venue">The Journal Of Supercomputing, 2025</div>
       </div>
 
-      <div class="publication">
-        <div class="pub-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+      <div class="item">
+        <div class="item-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
         <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
         <div class="pub-venue">International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
         <div class="pub-links">
@@ -420,8 +509,8 @@
         </div>
       </div>
 
-      <div class="publication">
-        <div class="pub-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+      <div class="item">
+        <div class="item-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
         <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
         <div class="pub-venue">International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
         <div class="pub-links">
@@ -432,24 +521,18 @@
 
     <section>
       <h2>Professional Service</h2>
-      <div class="service-section">
-        <ul class="service-list">
-          <li>
-            <a href="https://conecct.ieee.org/" target="_blank">IEEE CONECCT 2025</a>, 
-            <a href="https://ieeedmc.org/" target="_blank">IEEE DMC 2025</a>,
-          </li>
-          <li>
-            <a href="https://ieeeindicon.org/" target="_blank">IEEE INDICON 2025</a>, 
-            <a href="https://ieee-tqe.org/" target="_blank">IEEE Transactions on Quantum Engineering</a>
-          </li>
-        </ul>
+      <div class="service-content">
+        Reviewer for <a href="https://conecct.ieee.org/" target="_blank">IEEE CONECCT 2025</a>, 
+        <a href="https://ieeedmc.org/" target="_blank">IEEE DMC 2025</a>, 
+        <a href="https://ieeeindicon.org/" target="_blank">IEEE INDICON 2025</a>, and 
+        <a href="https://ieee-tqe.org/" target="_blank">IEEE Transactions on Quantum Engineering</a>.
       </div>
     </section>
 
     <div class="links">
-      <div class="links-content">
-        <a href="prateekpkulkarni_cv.pdf">CV</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Scholar</a>
+      <div class="links-grid">
+        <a href="prateekpkulkarni_cv.pdf">Curriculum Vitae</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a>
         <a href="https://github.com/prateekpkulkarni">GitHub</a>
         <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
       </div>
