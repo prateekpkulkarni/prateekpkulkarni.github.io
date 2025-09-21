@@ -1,429 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Prateek P. Kulkarni</title>
-<style type="text/css">
-/* Default css file for jemdoc. */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek P. Kulkarni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-table#tlayout {
-	border: none;
-	border-collapse: separate;
-	background: white;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-body {
-	background: white;
-	font-family: Georgia, serif;
-	padding-bottom: 8px;
-	margin: 0;
-}
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #000;
+        }
 
-#layout-menu {
-	background: #f6f6f6;
-	border: 1px solid #dddddd;
-	padding-top: 0.5em;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 1.0em;
-	width: auto;
-	white-space: nowrap;
-	text-align: left;
-	vertical-align: top;
-}
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            color: #000;
+        }
 
-#layout-menu td {
-	background: #f4f4f4;
-	vertical-align: top;
-}
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
 
-#layout-content {
-	padding-top: 0.0em;
-	padding-left: 1.0em;
-	padding-right: 1.0em;
-	border: none;
-	background: white;
-	text-align: left;
-	vertical-align: top;
-}
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
 
-#layout-menu a {
-	line-height: 1.5em;
-	margin-left: 0.5em;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-tt {
-	background: #ffffdd;
-}
+        .intro {
+            margin-bottom: 40px;
+        }
 
-pre, tt {
-	font-size: 90%;
-	font-family: monaco, monospace;
-}
+        .contact {
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
 
-a, a > tt {
-	color: #224b8d;
-	text-decoration: none;
-}
+        .contact a {
+            margin-right: 20px;
+        }
 
-a:hover {
-	border-bottom: 1px gray dotted;
-}
+        .news {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 3px solid #0066cc;
+        }
 
-#layout-menu a.current:link, #layout-menu a.current:visited {
-	color: #022b6d;
-	border-bottom: 1px gray solid;
-}
-#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
-	color: #527bbd;
-	text-decoration: none;
-}
-#layout-menu a:hover {
-	text-decoration: none;
-}
+        .work-item {
+            margin-bottom: 30px;
+        }
 
-div.menu-category {
-	border-bottom: 1px solid gray;
-	margin-top: 0.8em;
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
-	font-weight: bold;
-}
+        .work-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
 
-div.menu-item {
-	padding-left: 16px;
-	text-indent: -16px;
-}
+        .work-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
 
-div.infoblock {
-	margin-right: 0%;
-	margin-left: 0%;
-	border: 2px solid #334;
-	background: #ffffee;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 8px;
-	padding-right: 8px;
-	box-shadow: 3px 3px 3px #999;
-	-webkit-box-shadow: 3px 3px 3px #999;
-}
+        .work-description {
+            line-height: 1.5;
+        }
 
-div.infoblock p {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
+        .paper {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
 
-div.codeblock, div.infoblock {
-	margin-right: 0%;
-	margin-left: 0%;
-	padding-top: 1.2em;
-	padding-bottom: 1.3em;
-	padding-left: 1.4em;
-	padding-right: 1.4em;
-	border: 1px solid gray;
-	background: #f6f6f6;
-}
+        .paper:last-child {
+            border-bottom: none;
+        }
 
-div.codeblock {
-	font-family: monaco;
-	font-size: 90%;
-}
+        .paper-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
 
-div.codeblock pre {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
+        .paper-authors {
+            color: #666;
+            margin-bottom: 5px;
+        }
 
-span.pycommand {
-	color: #000070;
-}
+        .paper-venue {
+            color: #888;
+            font-size: 14px;
+        }
 
-span.pystring {
-	color: #009000;
-}
+        .service {
+            line-height: 1.6;
+        }
 
-table.imgtable, table.imgtable td {
-	border: none;
-	text-align: left;
-}
-
-h1, h2, h3 {
-	color: #527bbd;
-}
-
-h1 {
-	font-size: 165%;
-}
-
-h2 {
-	padding-top: 0.8em;
-	font-size: 125%;
-}
-
-h3 {
-	padding-top: 0.5em;
-	font-size: 110%;
-}
-
-p {
-	margin-top: 0.0em;
-}
-
-div#toptitle {
-	padding-bottom: 0.2em;
-	margin-bottom: 1.5em;
-	border-bottom: 3px double gray;
-}
-
-/* Improved pdf icon */
-div#subtitle {
-	margin-top: 0.0em;
-	margin-bottom: 0.0em;
-	padding-top: 0em;
-	padding-bottom: 0.1em;
-}
-
-em {
-	font-style: italic;
-}
-
-strong {
-	font-weight: bold;
-}
-
-ul {
-	margin-top: 0.5em;
-}
-
-ul li {
-	margin-top: 0.3em;
-}
-
-ol {
-	margin-top: 0.5em;
-}
-
-ol li {
-	margin-top: 0.3em;
-}
-
-#layout-content .MathJax_Display {
-	text-align: center;
-	margin: 1em 0em;
-}
-
-td.dl-left {
-	padding-left: 0px;
-	padding-right: 20px;
-	text-align: left;
-}
-
-.red {
-	color: red;
-}
-
-.gray {
-	color: gray;
-}
-
-.fwn {
-	color: #666666;
-	font-weight: normal;
-}
-
-.fwb {
-	font-weight: bold;
-}
-
-#layout-menu .fwn {
-	color: #999999;
-}
-
-#layout-menu .fwb {
-	color: #000000;
-}
-
-table.imgtable {
-	margin-bottom: 1em;
-}
-
-table.paper {
-	margin-bottom: 1.5em;
-}
-
-table.paper tr {
-	padding: 0.2em;
-}
-
-table.paper td {
-	padding: 0.2em 0;
-}
-
-.venue {
-	color: #900;
-	font-style: italic;
-}
-
-.paper-title {
-	font-weight: bold;
-}
-
-.authors {
-	color: #333;
-}
-
-.news-item {
-	margin-bottom: 0.8em;
-}
-
-.news-date {
-	font-weight: bold;
-	color: #527bbd;
-}
-</style>
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            .contact a {
+                display: block;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Prateek P. Kulkarni</div>
-<div class="menu-item"><a href="#home">Home</a></div>
-<div class="menu-item"><a href="#news">News</a></div>
-<div class="menu-item"><a href="#publications">Publications</a></div>
-<div class="menu-item"><a href="#experience">Experience</a></div>
-<div class="menu-item"><a href="#service">Service</a></div>
-<div class="menu-item"><a href="#links">Links</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Prateek P. Kulkarni</h1>
-</div>
+    <h1>Prateek P. Kulkarni</h1>
+    
+    <div class="intro">
+        <p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers, with current work focusing on distributed quantum systems and error correction at the Future Computing Systems Lab (FIST) Lab, IISc. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
+    </div>
 
-<table class="imgtable"><tr><td>
-<img src="1698818859534.jpg" alt="Prateek P. Kulkarni" width="200px" />&nbsp;</td>
-<td align="left">
-<p><!--<strong>Lead Quantum Architect</strong><br />
-<a href="https://www.bloq.in/">Bloq Quantum</a><br />
-Email: <tt>pkulkarni[at]bloq[dot]in</tt><br /><br />-->
+    <div class="contact">
+        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+        <a href="prateekpkulkarni_cv.pdf">CV</a>
+    </div>
 
+    <div class="news">
+        <strong>August 2025:</strong> My work on coupling maps has been selected for SRC at 58th MICRO!
+    </div>
 
-<strong>Final Year Undergraduate</strong><br />
-Electronics & Communication Engineering<br />
-<a href="https://www.pes.edu">PES University</a>, Bangalore<br /><br />
+    <h2>Current Work</h2>
+    
+    <div class="work-item">
+        <div class="work-title">Research Intern</div>
+        <div class="work-meta">Future Computing Systems Lab, Computer Science and Automation, IISc • 2024-Present</div>
+        <div class="work-description">Working on distributed quantum computing architectures and error correction protocols for near-term devices under Prof. Sumit K. Mandal.</div>
+    </div>
 
-<strong>Research Intern</strong><br />
-Future Computing Systems Lab<br />
-Computer Science and Automation<br />
-Indian Institute of Science, Bangalore<br /><br />
+    <div class="work-item">
+        <div class="work-title">Undergraduate Thesis</div>
+        <div class="work-meta">PES University • 2024-Present</div>
+        <div class="work-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</div>
+    </div>
 
-Email: <tt>pkulkarni2425[at]gmail[dot]com</tt>
-</p>
-</td></tr></table>
+    <div class="work-item">
+        <div class="work-title">Teaching Assistant</div>
+        <div class="work-meta">Quantum Transport and Logic Gates, PES University • Spring 2025</div>
+        <div class="work-description">Assisted in teaching and mentoring students in advanced quantum electronics, held lab sessions for ~80 students.</div>
+    </div>
 
-<a name="home"></a>
-<h2>About</h2>
-<p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. <!--I recently joined Bloq Quantum as the Lead Quantum Architect.--> My research interests center on the capabilities and limits of quantum computers, with current work focusing on distributed quantum systems and error correction at the Future Computing Systems Lab (FIST) Lab, IISc. I am also interested in computer architecture and electronic design automation for next-generation computing platforms, in general.</p>
+    <h2>Selected Publications</h2>
 
-<a name="news"></a>
-<h2>News</h2>
-<!--<div class="news-item">
-<span class="news-date">September 2025:</span> Joined Bloq Quantum as the Lead Quantum Architect!
-</div>-->
-<div class="news-item">
-<span class="news-date">August 2025:</span> My work on (quantum processor) coupling maps has been selected for SRC at 58th MICRO!
-</div>
+    <div class="paper">
+        <div class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
+        <div class="paper-authors">Prateek P. Kulkarni</div>
+        <div class="paper-venue">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</div>
+    </div>
 
-<a name="publications"></a>
-<h2>Selected Publications</h2>
-<!--<p><a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar Profile</a></p>-->
+    <div class="paper">
+        <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
+        <div class="paper-authors">Prateek P. Kulkarni</div>
+        <div class="paper-venue">6th India ESD Workshop, Poster, 2025 • <a href="https://iisc-inew.org/poster-presentations.php">abstract</a></div>
+    </div>
 
-<table class="paper">
-<tr><td>
-<span class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</span><br />
-<span class="authors">Prateek P. Kulkarni</span><br />
-<span class="venue">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</span>
-</td></tr>
-</table>
+    <div class="paper">
+        <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
+        <div class="paper-authors">Ramaseshan R, <strong>Prateek P. Kulkarni</strong>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
+        <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025 • <a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a></div>
+    </div>
 
-<table class="paper">
-<tr><td>
-<span class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</span><br />
-<span class="authors">Prateek P. Kulkarni</span><br />
-<span class="venue">6th India ESD Workshop, Poster, 2025</span> [<a href="https://iisc-inew.org/poster-presentations.php">abstract</a>]
-</td></tr>
-</table>
+    <div class="paper">
+        <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
+        <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <strong>Prateek P. Kulkarni</strong>, Kaustav Bhowmick</div>
+        <div class="paper-venue">The Journal Of Supercomputing, Springer, 2025</div>
+    </div>
 
-<table class="paper">
-<tr><td>
-<span class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</span><br />
-<span class="authors">Ramaseshan R, <strong>Prateek P. Kulkarni</strong>, Sharanya Madhusudhan, Kaustav Bhowmick</span><br />
-<span class="venue">arXiv:2507.09517 [quant-ph], 2025</span> [<a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a>]
-</td></tr>
-</table>
+    <div class="paper">
+        <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+        <div class="paper-authors">Prateek P. Kulkarni</div>
+        <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025 • <a href="https://ieeexplore.ieee.org/document/10961614">paper</a></div>
+    </div>
 
-<table class="paper">
-<tr><td>
-<span class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</span><br />
-<span class="authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <strong>Prateek P. Kulkarni</strong>, Kaustav Bhowmick</span><br />
-<span class="venue">The Journal Of Supercomputing, Springer, 2025</span>
-</td></tr>
-</table>
+    <div class="paper">
+        <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+        <div class="paper-authors">Prateek P. Kulkarni</div>
+        <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024 • <a href="https://ieeexplore.ieee.org/document/10894988">paper</a></div>
+    </div>
 
-<table class="paper">
-<tr><td>
-<span class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</span><br />
-<span class="authors">Prateek P. Kulkarni</span><br />
-<span class="venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</span> [<a href="https://ieeexplore.ieee.org/document/10961614">paper</a>]
-</td></tr>
-</table>
-
-<table class="paper">
-<tr><td>
-<span class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</span><br />
-<span class="authors">Prateek P. Kulkarni</span><br />
-<span class="venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</span> [<a href="https://ieeexplore.ieee.org/document/10894988">paper</a>]
-</td></tr>
-</table>
-
-<a name="experience"></a>
-<h2>Experience</h2>
-
-<h3>Research Intern (2024-Present)</h3>
-<p>Future Computing Systems Lab, Computer Science and Automation, IISc<br />
-Advisor: <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a><br />
-Working on distributed quantum computing architectures and error correction protocols for near-term devices</p>
-
-<h3>Undergraduate Thesis (2024-Present)</h3>
-<p>PES University<br />
-Advisor: <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a><br />
-Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges</p>
-
-<h3>Teaching Assistant (Spring 2025)</h3>
-<p>Quantum Transport and Logic Gates, PES University<br />
-Assisted in teaching and mentoring students in advanced quantum electronics, held lab sessions for ~80 students</p>
-
-<a name="service"></a>
-<h2>Professional Service</h2>
-<p><strong>Reviewer for:</strong> <a href="https://conecct.ieee.org/">IEEE CONECCT 2025</a>, <a href="https://ieeedmc.org/">IEEE DMC 2025</a>, <a href="https://ieeeindicon.org/">IEEE INDICON 2025</a>, <a href="https://ieee-tqe.org/">IEEE Transactions on Quantum Engineering</a></p>
-
-<a name="links"></a>
-<h2>Links</h2>
-<p>
-(<a href="prateekpkulkarni_cv.pdf">CV (pdf)</a> |
-<!--<a href="https://scholar.google.com/citations?hl=en&user=3gdIQrMAAAAJ">Google Scholar</a> |-->
-<!--<a href="https://github.com/prateekpkulkarni">GitHub</a> |-->
-<a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>)
-</p>
-
-<div id="footer">
-<div id="footer-text">
-Page generated by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-Last updated: September 2025.
-</div>
-</div>
-</td>
-</tr>
-</table>
+    <h2>Service</h2>
+    <div class="service">
+        <p><strong>Reviewer for:</strong> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE Transactions on Quantum Engineering</p>
+    </div>
 </body>
 </html>
