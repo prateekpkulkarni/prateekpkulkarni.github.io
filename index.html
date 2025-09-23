@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
     <style>
+        /* Base styles */
         * {
             margin: 0;
             padding: 0;
@@ -12,87 +13,122 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            line-height: 1.7;
+            color: #222;
             background: #fff;
-            font-size: 16px;
-            max-width: 800px;
+            font-size: 18px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 30px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* Typography */
         h1 {
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 32px;
+            font-weight: 400;
             margin-bottom: 40px;
             color: #000;
+            letter-spacing: -0.5px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
         }
 
         h2 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 40px 0 20px 0;
+            font-size: 22px;
+            font-weight: 500;
+            margin: 60px 0 25px 0;
             color: #000;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         p {
-            margin-bottom: 20px;
-            line-height: 1.6;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            text-align: justify;
         }
 
         a {
             color: #0066cc;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         a:hover {
+            color: #004499;
             text-decoration: underline;
         }
 
+        /* Layout sections */
         .intro {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
+            font-size: 19px;
         }
 
         .contact {
-            margin-bottom: 40px;
-            font-size: 16px;
+            margin-bottom: 50px;
+            font-size: 17px;
         }
 
         .contact a {
-            margin-right: 20px;
+            margin-right: 25px;
+            border-bottom: 1px dotted #0066cc;
+        }
+
+        .contact a:hover {
+            border-bottom: 1px solid #004499;
         }
 
         .news {
             background: #f8f9fa;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-left: 3px solid #0066cc;
+            padding: 22px;
+            margin-bottom: 40px;
+            border-left: 4px solid #0066cc;
+            font-style: italic;
+            font-size: 17px;
         }
 
         .work-item {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            padding-left: 15px;
+            border-left: 2px solid transparent;
+            transition: border-left-color 0.2s ease;
+        }
+
+        .work-item:hover {
+            border-left-color: #e0e0e0;
         }
 
         .work-title {
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 5px;
+            font-size: 19px;
         }
 
         .work-meta {
             color: #666;
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 10px;
+            font-style: italic;
         }
 
         .work-description {
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .paper {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-left: 15px;
+            transition: padding-left 0.2s ease;
+        }
+
+        .paper:hover {
+            padding-left: 20px;
         }
 
         .paper:last-child {
@@ -100,34 +136,65 @@
         }
 
         .paper-title {
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-weight: 500;
+            margin-bottom: 8px;
             line-height: 1.4;
+            font-size: 19px;
         }
 
         .paper-authors {
             color: #666;
             margin-bottom: 5px;
+            font-size: 16px;
         }
 
         .paper-venue {
             color: #888;
-            font-size: 14px;
+            font-size: 15px;
+            font-style: italic;
         }
 
         .service {
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        @media (max-width: 600px) {
+        .service p {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 700px) {
             body {
-                padding: 20px 15px;
+                padding: 40px 20px;
+                font-size: 17px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
             }
             
             .contact a {
                 display: block;
-                margin-bottom: 10px;
+                margin-bottom: 12px;
                 margin-right: 0;
+            }
+            
+            .intro, .paper-title, .work-title {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 30px 15px;
+            }
+            
+            .news {
+                padding: 18px;
             }
         }
     </style>
@@ -162,8 +229,6 @@
         <div class="work-meta">PES University • 2024-Present</div>
         <div class="work-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</div>
     </div>
-
-
 
     <h2>Selected Publications</h2>
 
