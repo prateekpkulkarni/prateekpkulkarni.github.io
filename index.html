@@ -29,20 +29,40 @@
         h1 {
             font-size: 32px;
             font-weight: 400;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #000;
             letter-spacing: -0.5px;
-            border-bottom: 1px solid #e0e0e0;
             padding-bottom: 15px;
+            position: relative;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #0066cc;
         }
 
         h2 {
             font-size: 22px;
             font-weight: 500;
-            margin: 60px 0 25px 0;
+            margin: 50px 0 25px 0;
             color: #000;
             padding-bottom: 8px;
-            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #e0e0e0;
         }
 
         p {
@@ -64,22 +84,29 @@
 
         /* Layout sections */
         .intro {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             font-size: 19px;
         }
 
         .contact {
             margin-bottom: 50px;
             font-size: 17px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .contact a {
-            margin-right: 25px;
-            border-bottom: 1px dotted #0066cc;
+            padding: 8px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            transition: all 0.2s ease;
         }
 
         .contact a:hover {
-            border-bottom: 1px solid #004499;
+            border-color: #0066cc;
+            background-color: #f8f9fa;
+            text-decoration: none;
         }
 
         .news {
@@ -87,19 +114,43 @@
             padding: 22px;
             margin-bottom: 40px;
             border-left: 4px solid #0066cc;
-            font-style: italic;
             font-size: 17px;
+            position: relative;
+        }
+
+        .news:before {
+            content: '📢';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 14px;
         }
 
         .work-item {
             margin-bottom: 35px;
-            padding-left: 15px;
+            padding-left: 20px;
             border-left: 2px solid transparent;
-            transition: border-left-color 0.2s ease;
+            transition: all 0.2s ease;
+            position: relative;
         }
 
-        .work-item:hover {
-            border-left-color: #e0e0e0;
+        .work-item:before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 0;
+            height: 0;
+            width: 2px;
+            background: #0066cc;
+            transition: height 0.3s ease;
+        }
+
+        .work-item:hover:before {
+            height: 100%;
         }
 
         .work-title {
@@ -123,12 +174,12 @@
             margin-bottom: 30px;
             padding-bottom: 25px;
             border-bottom: 1px solid #f0f0f0;
-            padding-left: 15px;
             transition: padding-left 0.2s ease;
+            position: relative;
         }
 
         .paper:hover {
-            padding-left: 20px;
+            padding-left: 10px;
         }
 
         .paper:last-child {
@@ -152,6 +203,11 @@
             color: #888;
             font-size: 15px;
             font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .paper-links {
+            font-size: 15px;
         }
 
         .service {
@@ -160,6 +216,12 @@
 
         .service p {
             margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 2px;
         }
 
         /* Responsive design */
@@ -177,14 +239,21 @@
                 font-size: 20px;
             }
             
+            .contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
             .contact a {
-                display: block;
-                margin-bottom: 12px;
-                margin-right: 0;
+                text-align: center;
             }
             
             .intro, .paper-title, .work-title {
                 font-size: 18px;
+            }
+            
+            .news:before {
+                display: none;
             }
         }
 
@@ -195,6 +264,10 @@
             
             .news {
                 padding: 18px;
+            }
+            
+            .work-item {
+                padding-left: 15px;
             }
         }
     </style>
@@ -241,31 +314,35 @@
     <div class="paper">
         <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">6th India ESD Workshop, Poster, 2025 • <a href="https://iisc-inew.org/poster-presentations.php">abstract</a></div>
+        <div class="paper-venue">6th India ESD Workshop, Poster, 2025</div>
+        <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php">abstract</a></div>
     </div>
 
     <div class="paper">
         <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
-        <div class="paper-authors">Ramaseshan R, <strong>Prateek P. Kulkarni</strong>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
-        <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025 • <a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a></div>
+        <div class="paper-authors">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
+        <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025</div>
+        <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a></div>
     </div>
 
     <div class="paper">
         <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
-        <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <strong>Prateek P. Kulkarni</strong>, Kaustav Bhowmick</div>
+        <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <span class="highlight">Prateek P. Kulkarni</span>, Kaustav Bhowmick</div>
         <div class="paper-venue">The Journal Of Supercomputing, Springer, 2025</div>
     </div>
 
     <div class="paper">
         <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025 • <a href="https://ieeexplore.ieee.org/document/10961614">paper</a></div>
+        <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
+        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614">paper</a></div>
     </div>
 
     <div class="paper">
         <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024 • <a href="https://ieeexplore.ieee.org/document/10894988">paper</a></div>
+        <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
+        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988">paper</a></div>
     </div>
 
     <h2>Service</h2>
