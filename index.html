@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek P. Kulkarni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base styles with Japanese minimalism */
+        /* Base styles with Japanese wave aesthetic */
+        :root {
+            --wave-blue: #1e3a5f;
+            --wave-light: #4a6fa5;
+            --wave-foam: #e8f4f8;
+            --text-dark: #2a2a2a;
+            --text-light: #666;
+            --bg: #fefefe;
+            --accent: #8B0000;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -13,38 +24,84 @@
         }
 
         body {
-            font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #fefefe;
+            font-family: 'Noto Serif JP', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg);
             font-size: 16px;
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 25px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             letter-spacing: 0.02em;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Typography with subtle hierarchy */
-        h1 {
-            font-size: 36px;
-            font-weight: 300;
-            margin-bottom: 30px;
-            color: #111;
-            letter-spacing: -0.5px;
-            padding-bottom: 15px;
+        /* Wave background elements */
+        .wave-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.03;
+            background: 
+                radial-gradient(circle at 20% 80%, var(--wave-blue) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--wave-light) 0%, transparent 50%);
+        }
+
+        .wave-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--wave-blue), transparent);
+            margin: 2rem 0;
             position: relative;
-            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .wave-divider:after {
+            content: '〰️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg);
+            padding: 0 10px;
+            font-size: 12px;
+            color: var(--wave-blue);
+        }
+
+        /* Refined typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            padding-bottom: 1rem;
+            position: relative;
+            border-bottom: 1px solid var(--wave-light);
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--wave-blue);
         }
 
         h2 {
-            font-size: 22px;
-            font-weight: 400;
-            margin: 60px 0 25px 0;
-            color: #222;
-            padding-bottom: 8px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 3rem 0 1.5rem 0;
+            color: var(--text-dark);
+            padding-bottom: 0.5rem;
             position: relative;
+            display: inline-block;
         }
 
         h2:after {
@@ -52,126 +109,164 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 30px;
-            height: 2px;
-            background: #b71c1c;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--wave-blue), transparent);
         }
 
         p {
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
             line-height: 1.8;
-            text-align: justify;
         }
 
         a {
-            color: #b71c1c;
+            color: var(--wave-blue);
             text-decoration: none;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        a:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--wave-blue);
+            transition: width 0.3s ease;
         }
 
         a:hover {
-            color: #7f0000;
-            border-bottom: 1px solid #b71c1c;
+            color: var(--accent);
         }
 
-        /* Layout sections with Japanese aesthetic */
+        a:hover:after {
+            width: 100%;
+        }
+
+        /* Layout sections with wave aesthetic */
         .intro {
-            margin-bottom: 40px;
-            font-size: 18px;
-            padding-left: 20px;
-            border-left: 3px solid #f0f0f0;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--wave-foam);
+            position: relative;
+        }
+
+        .intro:before {
+            content: '🌊';
+            position: absolute;
+            left: -1.8rem;
+            top: 0;
+            font-size: 1.2rem;
         }
 
         .contact {
-            margin-bottom: 50px;
-            font-size: 16px;
+            margin-bottom: 3rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 1rem;
         }
 
         .contact a {
-            padding: 8px 16px;
-            border: 1px solid #e0e0e0;
+            padding: 0.7rem 1.2rem;
+            border: 1px solid var(--wave-light);
             border-radius: 2px;
-            transition: all 0.2s ease;
-            background: #fafafa;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
         }
 
         .contact a:hover {
-            border-color: #b71c1c;
-            background-color: #fff;
-            text-decoration: none;
-            border-bottom: 1px solid #b71c1c;
+            border-color: var(--wave-blue);
+            background-color: var(--wave-foam);
+            transform: translateY(-2px);
+        }
+
+        .contact a:after {
+            display: none;
         }
 
         .news {
-            background: #f8f8f8;
-            padding: 20px;
-            margin-bottom: 40px;
-            border-left: 4px solid #b71c1c;
-            font-size: 16px;
+            background: var(--wave-foam);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid var(--wave-blue);
+            font-size: 1rem;
             position: relative;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-radius: 0 2px 2px 0;
         }
 
         .news:before {
-            content: '新着';
+            content: '波';
             position: absolute;
-            left: -45px;
+            left: -2.5rem;
             top: 50%;
             transform: translateY(-50%);
-            background: #b71c1c;
+            background: var(--wave-blue);
             color: white;
-            padding: 5px 8px;
-            font-size: 12px;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            letter-spacing: 0.1em;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
         .work-item {
-            margin-bottom: 35px;
-            padding-left: 20px;
-            border-left: 2px solid #f0f0f0;
-            transition: all 0.2s ease;
+            margin-bottom: 2.2rem;
+            padding: 1rem 0 1rem 1.5rem;
+            border-left: 2px solid var(--wave-foam);
+            transition: all 0.3s ease;
             position: relative;
         }
 
         .work-item:hover {
-            border-left-color: #b71c1c;
-            padding-left: 25px;
+            border-left-color: var(--wave-light);
+            padding-left: 2rem;
         }
 
         .work-title {
             font-weight: 500;
-            margin-bottom: 5px;
-            font-size: 18px;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .work-title i {
+            color: var(--wave-blue);
+            font-size: 0.9rem;
         }
 
         .work-meta {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 10px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
             font-style: normal;
         }
 
         .work-description {
             line-height: 1.7;
-            color: #444;
+            color: var(--text-dark);
         }
 
         .paper {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #f0f0f0;
-            transition: padding-left 0.2s ease;
+            margin-bottom: 1.8rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--wave-foam);
+            transition: all 0.3s ease;
             position: relative;
         }
 
         .paper:hover {
-            padding-left: 10px;
+            padding-left: 0.5rem;
         }
 
         .paper:last-child {
@@ -180,26 +275,26 @@
 
         .paper-title {
             font-weight: 500;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             line-height: 1.4;
-            font-size: 17px;
+            font-size: 1.05rem;
         }
 
         .paper-authors {
-            color: #666;
-            margin-bottom: 5px;
-            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
         }
 
         .paper-venue {
-            color: #888;
-            font-size: 14px;
+            color: var(--text-light);
+            font-size: 0.85rem;
             font-style: italic;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
 
         .paper-links {
-            font-size: 14px;
+            font-size: 0.85rem;
         }
 
         .service {
@@ -207,96 +302,130 @@
         }
 
         .service p {
-            margin-bottom: 20px;
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 2px solid transparent;
+            transition: border-left-color 0.3s ease;
+        }
+
+        .service p:hover {
+            border-left-color: var(--wave-foam);
         }
 
         .highlight {
-            background-color: transparent;
             font-weight: 500;
-            color: #b71c1c;
+            color: var(--wave-blue);
+            position: relative;
         }
 
-        /* Japanese-inspired decorative elements */
-        .decoration {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(183,28,28,0.03) 0%, rgba(183,28,28,0) 70%);
-            pointer-events: none;
+        .highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(30, 58, 95, 0.1);
             z-index: -1;
         }
 
+        /* Wave motif decorative elements */
+        .wave-motif {
+            position: absolute;
+            right: -50px;
+            top: 100px;
+            width: 150px;
+            height: 80px;
+            opacity: 0.1;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 30% 70%, var(--wave-blue) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, var(--wave-light) 0%, transparent 50%);
+            border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+            transform: rotate(10deg);
+        }
+
+        .wave-motif-2 {
+            position: absolute;
+            left: -50px;
+            bottom: 100px;
+            width: 120px;
+            height: 60px;
+            opacity: 0.1;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 30% 70%, var(--wave-light) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, var(--wave-blue) 0%, transparent 50%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            transform: rotate(-5deg);
+        }
+
         /* Responsive design */
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             body {
                 padding: 30px 15px;
                 font-size: 15px;
             }
             
             h1 {
-                font-size: 28px;
+                font-size: 2rem;
             }
             
             h2 {
-                font-size: 20px;
+                font-size: 1.3rem;
             }
             
             .contact {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.8rem;
             }
             
             .contact a {
                 text-align: center;
+                justify-content: center;
             }
             
             .intro, .paper-title, .work-title {
-                font-size: 16px;
+                font-size: 1rem;
             }
             
             .news:before {
-                writing-mode: horizontal-tb;
-                position: relative;
-                left: 0;
-                top: 0;
-                transform: none;
-                margin-bottom: 10px;
-                display: inline-block;
+                display: none;
             }
             
-            .news {
-                padding-left: 20px;
+            .wave-motif, .wave-motif-2 {
+                display: none;
             }
             
-            .decoration {
+            .intro:before {
                 display: none;
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 480px) {
             body {
                 padding: 20px 10px;
             }
             
             .news {
-                padding: 15px;
+                padding: 1.2rem;
             }
             
             .work-item {
-                padding-left: 15px;
+                padding-left: 1rem;
             }
             
             .intro {
-                padding-left: 15px;
+                padding-left: 1rem;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="decoration"></div>
+    <div class="wave-bg"></div>
+    <div class="wave-motif"></div>
+    <div class="wave-motif-2"></div>
     
     <h1>Prateek P. Kulkarni</h1>
     
@@ -305,28 +434,32 @@
     </div>
 
     <div class="contact">
-        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-        <a href="prateekpkulkarni_cv.pdf">CV</a>
+        <a href="mailto:pkulkarni2425@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/pkulkarni2425"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="prateekpkulkarni_cv.pdf"><i class="fas fa-file-alt"></i> CV</a>
     </div>
 
     <div class="news">
         <strong>August 2025:</strong> My work on coupling maps has been selected for SRC at 58th MICRO!
     </div>
 
+    <div class="wave-divider"></div>
+
     <h2>Current Work</h2>
     
     <div class="work-item">
-        <div class="work-title">Research Intern</div>
+        <div class="work-title"><i class="fas fa-flask"></i> Research Intern</div>
         <div class="work-meta">Future Computing Systems Lab, Computer Science and Automation, IISc • 2024-Present</div>
         <div class="work-description">Working on distributed quantum computing architectures and quantum error correction advised by Prof. Sumit K. Mandal.</div>
     </div>
 
     <div class="work-item">
-        <div class="work-title">Undergraduate Thesis</div>
+        <div class="work-title"><i class="fas fa-graduation-cap"></i> Undergraduate Thesis</div>
         <div class="work-meta">PES University • 2024-Present</div>
         <div class="work-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</div>
     </div>
+
+    <div class="wave-divider"></div>
 
     <h2>Selected Publications</h2>
 
@@ -340,14 +473,14 @@
         <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
         <div class="paper-venue">6th India ESD Workshop, Poster, 2025</div>
-        <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php">abstract</a></div>
+        <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i> abstract</a></div>
     </div>
 
     <div class="paper">
         <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
         <div class="paper-authors">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
         <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025</div>
-        <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a></div>
+        <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
     </div>
 
     <div class="paper">
@@ -360,15 +493,17 @@
         <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
         <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
-        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614">paper</a></div>
+        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614"><i class="fas fa-external-link-alt"></i> paper</a></div>
     </div>
 
     <div class="paper">
         <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
         <div class="paper-authors">Prateek P. Kulkarni</div>
         <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
-        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988">paper</a></div>
+        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988"><i class="fas fa-external-link-alt"></i> paper</a></div>
     </div>
+
+    <div class="wave-divider"></div>
 
     <h2>Service</h2>
     <div class="service">
