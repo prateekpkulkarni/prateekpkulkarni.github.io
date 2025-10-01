@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P. Kulkarni</title>
+    <title>Prateek P. Kulkarni | Research Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base styles with Japanese wave aesthetic */
@@ -360,6 +360,93 @@
             transform: rotate(-5deg);
         }
 
+        /* New additions for improved UX */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--wave-foam);
+        }
+        
+        .nav-links a {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--wave-foam);
+        }
+        
+        .year-group {
+            margin-bottom: 2.5rem;
+        }
+        
+        .year-heading {
+            font-size: 1.2rem;
+            color: var(--wave-blue);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--wave-blue);
+        }
+        
+        .publication-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-btn {
+            padding: 0.4rem 0.8rem;
+            background: var(--bg);
+            border: 1px solid var(--wave-light);
+            border-radius: 2px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--wave-blue);
+            color: white;
+            border-color: var(--wave-blue);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--wave-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-top.visible {
+            opacity: 0.8;
+        }
+        
+        .back-to-top:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top:after {
+            display: none;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             body {
@@ -400,6 +487,15 @@
             .intro:before {
                 display: none;
             }
+            
+            .nav-links {
+                justify-content: center;
+            }
+            
+            .back-to-top {
+                bottom: 10px;
+                right: 10px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -418,6 +514,11 @@
             .intro {
                 padding-left: 1rem;
             }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -429,7 +530,14 @@
     
     <h1>Prateek P. Kulkarni</h1>
     
-    <div class="intro">
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Current Work</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Service</a>
+    </div>
+    
+    <div class="intro" id="about">
         <p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
     </div>
 
@@ -437,6 +545,7 @@
         <a href="mailto:pkulkarni2425@gmail.com"><i class="fas fa-envelope"></i> Email</a>
         <a href="https://www.linkedin.com/in/pkulkarni2425"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="prateekpkulkarni_cv.pdf"><i class="fas fa-file-alt"></i> CV</a>
+        <!--<a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i> Google Scholar</a>-->
     </div>
 
     <div class="news">
@@ -445,7 +554,7 @@
 
     <div class="wave-divider"></div>
 
-    <h2>Current Work</h2>
+    <h2 id="work">Current Work</h2>
     
     <div class="work-item">
         <div class="work-title"><i class="fas fa-flask"></i> Research Intern</div>
@@ -461,63 +570,154 @@
 
     <div class="wave-divider"></div>
 
-    <h2>Selected Publications</h2>
-
-    <div class="paper">
-        <div class="paper-title">LLM-Driven Test Pattern Generation and Fault Coverage Analysis</div>
-        <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">9th IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS), 2025</div>
-        <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
+    <h2 id="publications">Selected Publications</h2>
+    
+    <div class="publication-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
+        <button class="filter-btn" data-filter="quantum">Quantum</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
     </div>
 
-    <div class="paper">
-        <div class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
-        <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</div>
-        <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
+    <div class="year-group" data-year="2025" data-category="architecture">
+        <div class="year-heading">2025</div>
+        
+        <div class="paper">
+            <div class="paper-title">LLM-Driven Test Pattern Generation and Fault Coverage Analysis</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">9th IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS), 2025</div>
+            <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</div>
+            <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">6th India ESD Workshop, Poster, 2025</div>
+            <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i> abstract</a></div>
+        </div>
     </div>
 
-    <div class="paper">
-        <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
-        <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">6th India ESD Workshop, Poster, 2025</div>
-        <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i> abstract</a></div>
+    <div class="year-group" data-year="2025" data-category="quantum">
+        <div class="paper">
+            <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
+            <div class="paper-authors">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
+            <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025</div>
+            <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
+            <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <span class="highlight">Prateek P. Kulkarni</span>, Kaustav Bhowmick</div>
+            <div class="paper-venue">The Journal Of Supercomputing, Springer, 2025</div>
+            <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s11227-025-07679-9"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
     </div>
 
-    <div class="paper">
-        <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
-        <div class="paper-authors">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
-        <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025</div>
-        <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
+    <div class="year-group" data-year="2025" data-category="architecture">
+        <div class="paper">
+            <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
+            <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
     </div>
 
-    <div class="paper">
-        <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
-        <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <span class="highlight">Prateek P. Kulkarni</span>, Kaustav Bhowmick</div>
-        <div class="paper-venue">The Journal Of Supercomputing, Springer, 2025</div>
-        <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s11227-025-07679-9"><i class="fas fa-external-link-alt"></i> paper</a></div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
-        <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
-        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614"><i class="fas fa-external-link-alt"></i> paper</a></div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
-        <div class="paper-authors">Prateek P. Kulkarni</div>
-        <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
-        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988"><i class="fas fa-external-link-alt"></i> paper</a></div>
+    <div class="year-group" data-year="2024" data-category="architecture">
+        <div class="year-heading">2024</div>
+        
+        <div class="paper">
+            <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
+            <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
     </div>
 
     <div class="wave-divider"></div>
 
-    <h2>Service</h2>
+    <h2 id="service">Service</h2>
     <div class="service">
         <p><strong>TA:</strong> Quantum Transport & Logic Gates, PES University (Spring 2025, Class Size: ~90)</p>
         <p><strong>Reviewer for:</strong> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE TQE</p>
     </div>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Publication filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const yearGroups = document.querySelectorAll('.year-group');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter publications
+                    yearGroups.forEach(group => {
+                        if (filter === 'all') {
+                            group.style.display = 'block';
+                        } else if (group.getAttribute('data-year') === filter || 
+                                  group.getAttribute('data-category') === filter) {
+                            group.style.display = 'block';
+                        } else {
+                            group.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
