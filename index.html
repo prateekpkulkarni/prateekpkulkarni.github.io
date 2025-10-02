@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prateek@portfolio:~$</title>
+    <title>Prateek P. Kulkarni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Linux Terminal Theme */
+        /* Base styles with Japanese wave aesthetic */
         :root {
-            --bg: #1e1e1e;
-            --terminal-bg: #2d2d2d;
-            --text: #00ff00;
-            --text-secondary: #cccccc;
-            --text-dim: #888888;
-            --prompt: #00aaff;
-            --accent: #ff5500;
-            --cursor: #00ff00;
-            --header: #ffff00;
+            --wave-blue: #1e3a5f;
+            --wave-light: #4a6fa5;
+            --wave-foam: #e8f4f8;
+            --text-dark: #2a2a2a;
+            --text-light: #666;
+            --bg: #fefefe;
+            --accent: #8B0000;
         }
         
         * {
@@ -26,514 +24,697 @@
         }
 
         body {
-            font-family: 'Courier New', 'Fira Code', monospace;
-            line-height: 1.4;
-            color: var(--text);
+            font-family: 'Noto Serif JP', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text-dark);
             background: var(--bg);
             font-size: 16px;
-            max-width: 900px;
+            max-width: 820px;
             margin: 0 auto;
-            padding: 20px;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: none;
-            letter-spacing: 0;
+            padding: 50px 25px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: 0.02em;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Terminal window styling */
-        .terminal {
-            background: var(--terminal-bg);
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            margin-bottom: 20px;
+        /* Wave background elements */
+        .wave-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.03;
+            background: 
+                radial-gradient(circle at 20% 80%, var(--wave-blue) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--wave-light) 0%, transparent 50%);
         }
 
-        .terminal-header {
-            background: #3c3c3c;
-            padding: 8px 15px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #555;
+        .wave-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--wave-blue), transparent);
+            margin: 2rem 0;
+            position: relative;
         }
 
-        .terminal-buttons {
-            display: flex;
-            gap: 8px;
+        .wave-divider:after {
+            content: '〰️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg);
+            padding: 0 10px;
+            font-size: 12px;
+            color: var(--wave-blue);
         }
 
-        .terminal-button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        /* Refined typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            padding-bottom: 1rem;
+            position: relative;
+            border-bottom: 1px solid var(--wave-light);
         }
 
-        .close { background: #ff5f57; }
-        .minimize { background: #ffbd2e; }
-        .maximize { background: #28ca42; }
-
-        .terminal-title {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-left: 15px;
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--wave-blue);
         }
 
-        .terminal-body {
-            padding: 20px;
-            min-height: 80vh;
-        }
-
-        /* Command line styling */
-        .command-line {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .prompt {
-            color: var(--prompt);
-            margin-right: 8px;
-            white-space: nowrap;
-        }
-
-        .cursor {
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 3rem 0 1.5rem 0;
+            color: var(--text-dark);
+            padding-bottom: 0.5rem;
+            position: relative;
             display: inline-block;
-            width: 8px;
-            height: 16px;
-            background-color: var(--cursor);
-            animation: blink 1s infinite;
-            margin-left: 2px;
         }
 
-        .cursor.hidden {
-            display: none;
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--wave-blue), transparent);
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
-        /* Content styling */
-        .command-result {
-            margin: 10px 0 20px 0;
-            color: var(--text-secondary);
-        }
-
-        .file {
-            color: var(--text);
-            margin-left: 20px;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-        }
-
-        .file i {
-            margin-right: 8px;
-            color: var(--prompt);
-            width: 16px;
-        }
-
-        .file a {
-            color: var(--text);
+        a {
+            color: var(--wave-blue);
             text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .file a:hover {
-            text-decoration: underline;
+        a:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--wave-blue);
+            transition: width 0.3s ease;
+        }
+
+        a:hover {
             color: var(--accent);
         }
 
-        .news-alert {
-            background: rgba(255, 85, 0, 0.1);
-            border-left: 3px solid var(--accent);
-            padding: 10px 15px;
-            margin: 15px 0;
-            color: var(--text-secondary);
+        a:hover:after {
+            width: 100%;
         }
 
-        .paper-item {
-            margin: 10px 0;
-            padding-left: 20px;
-            border-left: 1px solid #444;
+        /* Layout sections with wave aesthetic */
+        .intro {
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--wave-foam);
+            position: relative;
+        }
+
+        .intro:before {
+            content: '🌊';
+            position: absolute;
+            left: -1.8rem;
+            top: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact a {
+            padding: 0.7rem 1.2rem;
+            border: 1px solid var(--wave-light);
+            border-radius: 2px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact a:hover {
+            border-color: var(--wave-blue);
+            background-color: var(--wave-foam);
+            transform: translateY(-2px);
+        }
+
+        .contact a:after {
+            display: none;
+        }
+
+        .news {
+            background: var(--wave-foam);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid var(--wave-blue);
+            font-size: 1rem;
+            position: relative;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .news:before {
+            content: '波';
+            position: absolute;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--wave-blue);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .work-item {
+            margin-bottom: 2.2rem;
+            padding: 1rem 0 1rem 1.5rem;
+            border-left: 2px solid var(--wave-foam);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .work-item:hover {
+            border-left-color: var(--wave-light);
+            padding-left: 2rem;
+        }
+
+        .work-title {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .work-title i {
+            color: var(--wave-blue);
+            font-size: 0.9rem;
+        }
+
+        .work-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            font-style: normal;
+        }
+
+        .work-description {
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+
+        .paper {
+            margin-bottom: 1.8rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--wave-foam);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .paper:hover {
+            padding-left: 0.5rem;
+        }
+
+        .paper:last-child {
+            border-bottom: none;
         }
 
         .paper-title {
-            color: var(--text);
-            margin-bottom: 5px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            font-size: 1.05rem;
         }
 
-        .paper-meta {
-            color: var(--text-dim);
+        .paper-authors {
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
             font-size: 0.9rem;
-            margin-bottom: 5px;
+        }
+
+        .paper-venue {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
         }
 
         .paper-links {
             font-size: 0.85rem;
         }
 
-        .paper-links a {
-            color: var(--prompt);
-            text-decoration: none;
-            margin-right: 10px;
+        .service {
+            line-height: 1.7;
         }
 
-        .paper-links a:hover {
-            text-decoration: underline;
+        .service p {
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 2px solid transparent;
+            transition: border-left-color 0.3s ease;
         }
 
-        .work-item {
-            margin: 15px 0;
-            padding-left: 20px;
-            border-left: 1px solid #444;
-        }
-
-        .work-title {
-            color: var(--text);
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-        }
-
-        .work-title i {
-            margin-right: 8px;
-            color: var(--prompt);
-        }
-
-        .work-meta {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .work-description {
-            color: var(--text-secondary);
-        }
-
-        .service-item {
-            margin: 10px 0;
-            padding-left: 20px;
+        .service p:hover {
+            border-left-color: var(--wave-foam);
         }
 
         .highlight {
-            color: var(--header);
-            font-weight: bold;
+            font-weight: 500;
+            color: var(--wave-blue);
+            position: relative;
         }
 
-        /* Filter controls */
-        .filter-controls {
+        .highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(30, 58, 95, 0.1);
+            z-index: -1;
+        }
+
+        /* Wave motif decorative elements */
+        .wave-motif {
+            position: absolute;
+            right: -50px;
+            top: 100px;
+            width: 150px;
+            height: 80px;
+            opacity: 0.1;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 30% 70%, var(--wave-blue) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, var(--wave-light) 0%, transparent 50%);
+            border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+            transform: rotate(10deg);
+        }
+
+        .wave-motif-2 {
+            position: absolute;
+            left: -50px;
+            bottom: 100px;
+            width: 120px;
+            height: 60px;
+            opacity: 0.1;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 30% 70%, var(--wave-light) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, var(--wave-blue) 0%, transparent 50%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            transform: rotate(-5deg);
+        }
+
+        /* New additions for improved UX */
+        .nav-links {
             display: flex;
-            gap: 15px;
-            margin: 15px 0;
             flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--wave-foam);
         }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid var(--prompt);
-            color: var(--text);
-            padding: 5px 10px;
-            cursor: pointer;
-            font-family: 'Courier New', monospace;
+        
+        .nav-links a {
             font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
-
-        .filter-btn:hover {
-            background: rgba(0, 170, 255, 0.1);
+        
+        .nav-links a:hover {
+            background-color: var(--wave-foam);
         }
-
-        .filter-btn.active {
-            background: var(--prompt);
-            color: var(--bg);
+        
+        .year-group {
+            margin-bottom: 2.5rem;
         }
-
-        .year-filter {
+        
+        .year-heading {
+            font-size: 1.2rem;
+            color: var(--wave-blue);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--wave-blue);
+        }
+        
+        .publication-filters {
             display: flex;
-            gap: 10px;
-            margin: 10px 0;
             flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .year-btn {
-            background: transparent;
-            border: 1px solid var(--text-dim);
-            color: var(--text-dim);
-            padding: 3px 8px;
+        
+        .filter-btn {
+            padding: 0.4rem 0.8rem;
+            background: var(--bg);
+            border: 1px solid var(--wave-light);
+            border-radius: 2px;
+            font-size: 0.85rem;
             cursor: pointer;
-            font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
+            transition: all 0.3s ease;
         }
-
-        .year-btn:hover, .year-btn.active {
-            border-color: var(--prompt);
-            color: var(--prompt);
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--wave-blue);
+            color: white;
+            border-color: var(--wave-blue);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--wave-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-top.visible {
+            opacity: 0.8;
+        }
+        
+        .back-to-top:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top:after {
+            display: none;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
-                font-size: 14px;
+                padding: 30px 15px;
+                font-size: 15px;
             }
             
-            .terminal-body {
-                padding: 15px;
+            h1 {
+                font-size: 2rem;
             }
             
-            .prompt {
-                font-size: 0.9rem;
+            h2 {
+                font-size: 1.3rem;
             }
             
-            .filter-controls {
-                gap: 10px;
+            .contact {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .contact a {
+                text-align: center;
+                justify-content: center;
+            }
+            
+            .intro, .paper-title, .work-title {
+                font-size: 1rem;
+            }
+            
+            .news:before {
+                display: none;
+            }
+            
+            .wave-motif, .wave-motif-2 {
+                display: none;
+            }
+            
+            .intro:before {
+                display: none;
+            }
+            
+            .nav-links {
+                justify-content: center;
+            }
+            
+            .back-to-top {
+                bottom: 10px;
+                right: 10px;
             }
         }
 
         @media (max-width: 480px) {
             body {
-                font-size: 13px;
-                padding: 5px;
+                padding: 20px 10px;
             }
             
-            .terminal-body {
-                padding: 10px;
+            .news {
+                padding: 1.2rem;
             }
             
-            .file, .paper-item, .work-item, .service-item {
-                margin-left: 10px;
+            .work-item {
+                padding-left: 1rem;
             }
             
-            .filter-controls {
+            .intro {
+                padding-left: 1rem;
+            }
+            
+            .nav-links {
                 flex-direction: column;
-                gap: 8px;
+                align-items: center;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <div class="terminal-button close"></div>
-                <div class="terminal-button minimize"></div>
-                <div class="terminal-button maximize"></div>
-            </div>
-            <div class="terminal-title">prateek@portfolio: ~</div>
+    <div class="wave-bg"></div>
+    <div class="wave-motif"></div>
+    <div class="wave-motif-2"></div>
+    
+    <h1>Prateek P. Kulkarni</h1>
+    
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Current Work</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Service</a>
+    </div>
+    
+    <div class="intro" id="about">
+        <p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
+    </div>
+
+    <div class="contact">
+        <a href="mailto:pkulkarni2425@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/pkulkarni2425"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="prateekpkulkarni_cv.pdf"><i class="fas fa-file-alt"></i> CV</a>
+        <!--<a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i> Google Scholar</a>-->
+    </div>
+
+    <div class="news">
+        <strong>August 2025:</strong> My work on coupling maps has been selected for SRC at 58th MICRO!
+    </div>
+
+    <div class="wave-divider"></div>
+
+    <h2 id="work">Current Work</h2>
+    
+    <div class="work-item">
+        <div class="work-title"><i class="fas fa-flask"></i> Research Intern</div>
+        <div class="work-meta">Future Computing Systems Lab, Computer Science and Automation, IISc • 2024-Present</div>
+        <div class="work-description">Working on distributed quantum computing architectures and quantum error correction advised by Prof. Sumit K. Mandal.</div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-title"><i class="fas fa-graduation-cap"></i> Undergraduate Thesis</div>
+        <div class="work-meta">PES University • 2024-Present</div>
+        <div class="work-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</div>
+    </div>
+
+    <div class="wave-divider"></div>
+
+    <h2 id="publications">Selected Publications</h2>
+    
+    <div class="publication-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
+        <button class="filter-btn" data-filter="quantum">Quantum</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+    </div>
+
+    <div class="year-group" data-year="2025" data-category="architecture">
+        <div class="year-heading">2025</div>
+        
+        <div class="paper">
+            <div class="paper-title">LLM-Driven Test Pattern Generation and Fault Coverage Analysis</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">9th IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS), 2025</div>
+            <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
         </div>
-        <div class="terminal-body">
-            <!-- Intro Section -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">whoami</span>
-                <span class="cursor" id="main-cursor"></span>
-            </div>
-            <div class="command-result">
-                Prateek P. Kulkarni - Final-year undergraduate in Electronics & Communication Engineering at PES University
-            </div>
 
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">cat about.txt</span>
-            </div>
-            <div class="command-result">
-                <p>Specializing in VLSI and Quantum Technology. Research interests center on the capabilities and limits of quantum computers. Also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
-            </div>
+        <div class="paper">
+            <div class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</div>
+            <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
 
-            <!-- Contact Section -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">ls -la contact/</span>
-            </div>
-            <div class="command-result">
-                <div class="file"><i class="fas fa-envelope"></i> <a href="mailto:pkulkarni2425@gmail.com">email.txt</a></div>
-                <div class="file"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pkulkarni2425">linkedin.html</a></div>
-                <div class="file"><i class="fas fa-file-alt"></i> <a href="prateekpkulkarni_cv.pdf">cv.pdf</a></div>
-            </div>
-
-            <!-- News Section -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">tail -f news.log</span>
-            </div>
-            <div class="command-result">
-                <div class="news-alert">
-                    <strong>August 2025:</strong> My work on coupling maps has been selected for SRC at 58th MICRO!
-                </div>
-            </div>
-
-            <!-- Current Work Section -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">cd current-work/ && ls -l</span>
-            </div>
-            <div class="command-result">
-                <div class="work-item">
-                    <div class="work-title"><i class="fas fa-flask"></i> Research Intern</div>
-                    <div class="work-meta">Future Computing Systems Lab, Computer Science and Automation, IISc • 2024-Present</div>
-                    <div class="work-description">Working on distributed quantum computing architectures and quantum error correction advised by Prof. Sumit K. Mandal.</div>
-                </div>
-
-                <div class="work-item">
-                    <div class="work-title"><i class="fas fa-graduation-cap"></i> Undergraduate Thesis</div>
-                    <div class="work-meta">PES University • 2024-Present</div>
-                    <div class="work-description">Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</div>
-                </div>
-            </div>
-
-            <!-- Publications Section with Filtering -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">find publications/ -name "*.pdf" -o -name "*.html" | filter_pubs</span>
-            </div>
-            <div class="command-result">
-                <div class="filter-controls">
-                    <button class="filter-btn active" data-filter="all">All Publications</button>
-                    <button class="filter-btn" data-filter="quantum">Quantum</button>
-                    <button class="filter-btn" data-filter="architecture">Architecture</button>
-                </div>
-                
-                <div class="year-filter">
-                    <button class="year-btn active" data-year="all">All Years</button>
-                    <button class="year-btn" data-year="2025">2025</button>
-                    <button class="year-btn" data-year="2024">2024</button>
-                </div>
-
-                <div id="publications-list">
-                    <!-- Publications will be dynamically filtered here -->
-                    <div class="paper-item" data-category="architecture" data-year="2025">
-                        <div class="paper-title">LLM-Driven Test Pattern Generation and Fault Coverage Analysis</div>
-                        <div class="paper-meta">9th IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS), 2025</div>
-                        <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="architecture" data-year="2025">
-                        <div class="paper-title">MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</div>
-                        <div class="paper-meta">11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</div>
-                        <div class="paper-links"><a href="#"><i class="fas fa-external-link-alt"></i> paper</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="architecture" data-year="2025">
-                        <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
-                        <div class="paper-meta">6th India ESD Workshop, Poster, 2025</div>
-                        <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i> abstract</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="quantum" data-year="2025">
-                        <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
-                        <div class="paper-meta">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick • arXiv:2507.09517 [quant-ph], 2025</div>
-                        <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="quantum" data-year="2025">
-                        <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
-                        <div class="paper-meta">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <span class="highlight">Prateek P. Kulkarni</span>, Kaustav Bhowmick • The Journal Of Supercomputing, Springer, 2025</div>
-                        <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s11227-025-07679-9"><i class="fas fa-external-link-alt"></i> paper</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="architecture" data-year="2025">
-                        <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
-                        <div class="paper-meta">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
-                        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614"><i class="fas fa-external-link-alt"></i> paper</a></div>
-                    </div>
-
-                    <div class="paper-item" data-category="architecture" data-year="2024">
-                        <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
-                        <div class="paper-meta">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
-                        <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988"><i class="fas fa-external-link-alt"></i> paper</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Section -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">cat service.txt</span>
-            </div>
-            <div class="command-result">
-                <div class="service-item">
-                    <strong>TA:</strong> Quantum Transport & Logic Gates, PES University (Spring 2025, Class Size: ~90)
-                </div>
-                <div class="service-item">
-                    <strong>Reviewer for:</strong> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE TQE
-                </div>
-            </div>
-
-            <!-- Exit command -->
-            <div class="command-line">
-                <span class="prompt">prateek@portfolio:~$</span>
-                <span class="command">_</span>
-            </div>
+        <div class="paper">
+            <div class="paper-title">DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">6th India ESD Workshop, Poster, 2025</div>
+            <div class="paper-links"><a href="https://iisc-inew.org/poster-presentations.php"><i class="fas fa-external-link-alt"></i> abstract</a></div>
         </div>
     </div>
 
+    <div class="year-group" data-year="2025" data-category="quantum">
+        <div class="paper">
+            <div class="paper-title">A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</div>
+            <div class="paper-authors">Ramaseshan R, <span class="highlight">Prateek P. Kulkarni</span>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
+            <div class="paper-venue">arXiv:2507.09517 [quant-ph], 2025</div>
+            <div class="paper-links"><a href="https://doi.org/10.48550/arXiv.2507.09517"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</div>
+            <div class="paper-authors">Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <span class="highlight">Prateek P. Kulkarni</span>, Kaustav Bhowmick</div>
+            <div class="paper-venue">The Journal Of Supercomputing, Springer, 2025</div>
+            <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s11227-025-07679-9"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
+    </div>
+
+    <div class="year-group" data-year="2025" data-category="architecture">
+        <div class="paper">
+            <div class="paper-title">RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025</div>
+            <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10961614"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
+    </div>
+
+    <div class="year-group" data-year="2024" data-category="architecture">
+        <div class="year-heading">2024</div>
+        
+        <div class="paper">
+            <div class="paper-title">A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</div>
+            <div class="paper-authors">Prateek P. Kulkarni</div>
+            <div class="paper-venue">5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024</div>
+            <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/10894988"><i class="fas fa-external-link-alt"></i> paper</a></div>
+        </div>
+    </div>
+
+    <div class="wave-divider"></div>
+
+    <h2 id="service">Service</h2>
+    <div class="service">
+        <p><strong>TA:</strong> Quantum Transport & Logic Gates, PES University (Spring 2025, Class Size: ~90)</p>
+        <p><strong>Reviewer for:</strong> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE TQE</p>
+    </div>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script>
-        // Simple typewriter effect for commands
+        // Publication filtering
         document.addEventListener('DOMContentLoaded', function() {
-            const commands = document.querySelectorAll('.command');
-            const cursor = document.getElementById('main-cursor');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const yearGroups = document.querySelectorAll('.year-group');
             
-            // Hide cursor after 3 seconds
-            setTimeout(() => {
-                if (cursor) {
-                    cursor.classList.add('hidden');
-                }
-            }, 3000);
-            
-            commands.forEach(command => {
-                const text = command.textContent;
-                if (text.trim()) {
-                    command.textContent = '';
-                    let i = 0;
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
                     
-                    function typeWriter() {
-                        if (i < text.length) {
-                            command.textContent += text.charAt(i);
-                            i++;
-                            setTimeout(typeWriter, 50);
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter publications
+                    yearGroups.forEach(group => {
+                        if (filter === 'all') {
+                            group.style.display = 'block';
+                        } else if (group.getAttribute('data-year') === filter || 
+                                  group.getAttribute('data-category') === filter) {
+                            group.style.display = 'block';
+                        } else {
+                            group.style.display = 'none';
                         }
-                    }
-                    
-                    setTimeout(typeWriter, 500);
+                    });
+                });
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
                 }
             });
-
-            // Publication filtering functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const yearButtons = document.querySelectorAll('.year-btn');
-            const papers = document.querySelectorAll('.paper-item');
-
-            function filterPublications() {
-                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
-                const activeYear = document.querySelector('.year-btn.active').dataset.year;
-
-                papers.forEach(paper => {
-                    const paperCategory = paper.dataset.category;
-                    const paperYear = paper.dataset.year;
-
-                    const categoryMatch = activeFilter === 'all' || paperCategory === activeFilter;
-                    const yearMatch = activeYear === 'all' || paperYear === activeYear;
-
-                    if (categoryMatch && yearMatch) {
-                        paper.style.display = 'block';
-                    } else {
-                        paper.style.display = 'none';
-                    }
-                });
-            }
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    filterPublications();
+            
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             });
-
-            yearButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    yearButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    filterPublications();
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         });
