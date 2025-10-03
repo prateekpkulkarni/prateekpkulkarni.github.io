@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P. Kulkarni</title>
+    <title>Prateek P. Kulkarni | Quantum Computing & VLSI Research</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base styles with Japanese wave aesthetic */
+        /* Sophisticated color palette with Japanese wave aesthetic */
         :root {
             --wave-blue: #1e3a5f;
             --wave-light: #4a6fa5;
@@ -15,6 +15,10 @@
             --text-light: #666;
             --bg: #fefefe;
             --accent: #8B0000;
+            --gold: #b8860b;
+            --light-gold: #f5e8c8;
+            --shadow: rgba(30, 58, 95, 0.1);
+            --gradient: linear-gradient(135deg, var(--wave-blue) 0%, var(--wave-light) 100%);
         }
         
         * {
@@ -29,9 +33,9 @@
             color: var(--text-dark);
             background: var(--bg);
             font-size: 16px;
-            max-width: 820px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 50px 25px;
+            padding: 50px 30px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             letter-spacing: 0.02em;
@@ -39,7 +43,7 @@
             overflow-x: hidden;
         }
 
-        /* Wave background elements */
+        /* Enhanced wave background elements */
         .wave-bg {
             position: fixed;
             top: 0;
@@ -47,16 +51,17 @@
             width: 100%;
             height: 100%;
             z-index: -2;
-            opacity: 0.03;
+            opacity: 0.05;
             background: 
-                radial-gradient(circle at 20% 80%, var(--wave-blue) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--wave-light) 0%, transparent 50%);
+                radial-gradient(circle at 15% 85%, var(--wave-blue) 0%, transparent 40%),
+                radial-gradient(circle at 85% 15%, var(--wave-light) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, var(--wave-foam) 0%, transparent 60%);
         }
 
         .wave-divider {
-            height: 2px;
+            height: 1px;
             background: linear-gradient(90deg, transparent, var(--wave-blue), transparent);
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             position: relative;
         }
 
@@ -67,19 +72,19 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: var(--bg);
-            padding: 0 10px;
+            padding: 0 15px;
             font-size: 12px;
             color: var(--wave-blue);
         }
 
-        /* Refined typography */
+        /* Refined typography with improved hierarchy */
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 400;
             margin-bottom: 2rem;
             color: var(--text-dark);
             letter-spacing: -0.02em;
-            padding-bottom: 1rem;
+            padding-bottom: 1.2rem;
             position: relative;
             border-bottom: 1px solid var(--wave-light);
         }
@@ -89,17 +94,17 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            width: 80px;
-            height: 2px;
-            background: var(--wave-blue);
+            width: 100px;
+            height: 3px;
+            background: var(--gradient);
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            margin: 3rem 0 1.5rem 0;
+            margin: 3.5rem 0 1.8rem 0;
             color: var(--text-dark);
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.7rem;
             position: relative;
             display: inline-block;
         }
@@ -110,8 +115,8 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, var(--wave-blue), transparent);
+            height: 2px;
+            background: var(--gradient);
         }
 
         p {
@@ -145,21 +150,35 @@
             width: 100%;
         }
 
-        /* Layout sections with wave aesthetic */
+        /* Enhanced layout sections */
         .intro {
             margin-bottom: 2.5rem;
             font-size: 1.1rem;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--wave-foam);
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--wave-blue);
+            background: linear-gradient(to right, var(--wave-foam) 0%, transparent 100%);
             position: relative;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 10px var(--shadow);
         }
 
         .intro:before {
-            content: '🌊';
+            content: '波';
             position: absolute;
-            left: -1.8rem;
-            top: 0;
-            font-size: 1.2rem;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gradient);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px var(--shadow);
         }
 
         .contact {
@@ -170,20 +189,22 @@
         }
 
         .contact a {
-            padding: 0.7rem 1.2rem;
+            padding: 0.8rem 1.5rem;
             border: 1px solid var(--wave-light);
-            border-radius: 2px;
+            border-radius: 4px;
             background: var(--bg);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 5px var(--shadow);
         }
 
         .contact a:hover {
             border-color: var(--wave-blue);
             background-color: var(--wave-foam);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
         }
 
         .contact a:after {
@@ -191,64 +212,72 @@
         }
 
         .news {
-            background: var(--wave-foam);
-            padding: 1.5rem;
+            background: linear-gradient(to right, var(--wave-foam) 0%, var(--light-gold) 100%);
+            padding: 1.8rem;
             margin-bottom: 2.5rem;
-            border-left: 4px solid var(--wave-blue);
+            border-left: 5px solid var(--gold);
             font-size: 1rem;
             position: relative;
-            border-radius: 0 2px 2px 0;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 3px 10px var(--shadow);
         }
 
         .news:before {
-            content: '波';
+            content: '新';
             position: absolute;
-            left: -2.5rem;
+            left: -3rem;
             top: 50%;
             transform: translateY(-50%);
-            background: var(--wave-blue);
+            background: var(--gold);
             color: white;
-            width: 2rem;
-            height: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: bold;
+            box-shadow: 0 2px 5px var(--shadow);
         }
 
         .work-item {
-            margin-bottom: 2.2rem;
-            padding: 1rem 0 1rem 1.5rem;
-            border-left: 2px solid var(--wave-foam);
+            margin-bottom: 2.5rem;
+            padding: 1.5rem 1.5rem 1.5rem 2rem;
+            border-left: 3px solid var(--wave-foam);
             transition: all 0.3s ease;
             position: relative;
+            background: var(--bg);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .work-item:hover {
-            border-left-color: var(--wave-light);
-            padding-left: 2rem;
+            border-left-color: var(--wave-blue);
+            padding-left: 2.5rem;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px var(--shadow);
         }
 
         .work-title {
             font-weight: 500;
-            margin-bottom: 0.3rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
+            color: var(--wave-blue);
         }
 
         .work-title i {
             color: var(--wave-blue);
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .work-meta {
             color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 0.7rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
             font-style: normal;
         }
 
@@ -258,15 +287,19 @@
         }
 
         .paper {
-            margin-bottom: 1.8rem;
-            padding: 1.2rem 0;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
             border-bottom: 1px solid var(--wave-foam);
             transition: all 0.3s ease;
             position: relative;
+            background: var(--bg);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .paper:hover {
-            padding-left: 0.5rem;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
         }
 
         .paper:last-child {
@@ -275,26 +308,27 @@
 
         .paper-title {
             font-weight: 500;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
             line-height: 1.4;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            color: var(--wave-blue);
         }
 
         .paper-authors {
             color: var(--text-light);
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .paper-venue {
             color: var(--text-light);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
         }
 
         .paper-links {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .service {
@@ -302,14 +336,18 @@
         }
 
         .service p {
-            margin-bottom: 1.2rem;
-            padding-left: 1rem;
-            border-left: 2px solid transparent;
-            transition: border-left-color 0.3s ease;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            background: var(--bg);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .service p:hover {
-            border-left-color: var(--wave-foam);
+            border-left-color: var(--wave-blue);
+            transform: translateX(5px);
         }
 
         .highlight {
@@ -329,101 +367,117 @@
             z-index: -1;
         }
 
-        /* Wave motif decorative elements */
+        /* Enhanced wave motif decorative elements */
         .wave-motif {
             position: absolute;
             right: -50px;
             top: 100px;
-            width: 150px;
-            height: 80px;
-            opacity: 0.1;
+            width: 200px;
+            height: 100px;
+            opacity: 0.08;
             z-index: -1;
             background: 
                 radial-gradient(ellipse at 30% 70%, var(--wave-blue) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 30%, var(--wave-light) 0%, transparent 50%);
             border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
             transform: rotate(10deg);
+            filter: blur(1px);
         }
 
         .wave-motif-2 {
             position: absolute;
             left: -50px;
             bottom: 100px;
-            width: 120px;
-            height: 60px;
-            opacity: 0.1;
+            width: 150px;
+            height: 80px;
+            opacity: 0.08;
             z-index: -1;
             background: 
                 radial-gradient(ellipse at 30% 70%, var(--wave-light) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 30%, var(--wave-blue) 0%, transparent 50%);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             transform: rotate(-5deg);
+            filter: blur(1px);
         }
 
-        /* New additions for improved UX */
+        /* Enhanced navigation */
         .nav-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--wave-foam);
         }
         
         .nav-links a {
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 2px;
+            font-size: 0.95rem;
+            padding: 0.7rem 1.2rem;
+            border-radius: 4px;
             transition: all 0.3s ease;
+            background: var(--bg);
+            box-shadow: 0 2px 5px var(--shadow);
         }
         
         .nav-links a:hover {
-            background-color: var(--wave-foam);
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        .nav-links a:hover:after {
+            display: none;
         }
         
         .year-group {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .year-heading {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--wave-blue);
-            margin-bottom: 1rem;
-            padding-left: 0.5rem;
-            border-left: 3px solid var(--wave-blue);
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-left: 4px solid var(--wave-blue);
+            background: linear-gradient(to right, var(--wave-foam) 0%, transparent 100%);
+            border-radius: 0 4px 4px 0;
         }
         
         .publication-filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            gap: 0.7rem;
+            margin-bottom: 2rem;
         }
         
         .filter-btn {
-            padding: 0.4rem 0.8rem;
+            padding: 0.5rem 1rem;
             background: var(--bg);
             border: 1px solid var(--wave-light);
-            border-radius: 2px;
-            font-size: 0.85rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 5px var(--shadow);
         }
         
         .filter-btn:hover, .filter-btn.active {
-            background: var(--wave-blue);
+            background: var(--gradient);
             color: white;
             border-color: var(--wave-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px var(--shadow);
         }
         
         .back-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--wave-blue);
+            bottom: 25px;
+            right: 25px;
+            background: var(--gradient);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -432,34 +486,46 @@
             opacity: 0;
             transition: all 0.3s ease;
             z-index: 100;
+            box-shadow: 0 3px 10px var(--shadow);
         }
         
         .back-to-top.visible {
-            opacity: 0.8;
+            opacity: 0.9;
         }
         
         .back-to-top:hover {
             opacity: 1;
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
         }
         
         .back-to-top:after {
             display: none;
         }
 
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--wave-foam);
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                padding: 30px 15px;
+                padding: 30px 20px;
                 font-size: 15px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             h2 {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
             
             .contact {
@@ -493,31 +559,35 @@
             }
             
             .back-to-top {
-                bottom: 10px;
-                right: 10px;
+                bottom: 15px;
+                right: 15px;
             }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 20px 10px;
+                padding: 20px 15px;
             }
             
             .news {
-                padding: 1.2rem;
+                padding: 1.5rem;
             }
             
             .work-item {
-                padding-left: 1rem;
+                padding-left: 1.5rem;
             }
             
             .intro {
-                padding-left: 1rem;
+                padding-left: 1.5rem;
             }
             
             .nav-links {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .publication-filters {
+                justify-content: center;
             }
         }
     </style>
@@ -649,6 +719,10 @@
         <p><strong>Reviewer for:</strong> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE TQE</p>
     </div>
     
+    <footer>
+        <p>&copy; 2025 Prateek P. Kulkarni | Last updated: August 2025</p>
+    </footer>
+    
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
@@ -711,7 +785,7 @@
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - 20,
+                            top: targetElement.offsetTop - 30,
                             behavior: 'smooth'
                         });
                     }
