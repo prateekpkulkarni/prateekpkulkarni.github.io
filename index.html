@@ -1,59 +1,168 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-body {
-    background: #FFFFFF;
-    color: #000000;
-    font-family: Verdana, Arial Black, Geneva, Sans Serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-dfn {
-    font-style: oblique; 
-    color: #009900;
-}
-
-p.eq {
-    margin-left: 2em; 
-    margin-right: 2em;
-}
-
-table.stabilizer td {
-    text-align: center;
-}
-
-table.stabilizer {
-    margin-left: 3em;
-}
-
-p.display {
-    margin-left: 2em; 
-    margin-right: 2em;
-}
-</style>
-
-<meta name="Author" content="Prateek P. Kulkarni">
-<meta name="description" content="Prateek P. Kulkarni's home page">
-<meta name="keywords" content="Prateek P. Kulkarni,home page,quantum computing,computer architecture,VLSI,quantum technology">
-   
-<title>Prateek P. Kulkarni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Prateek P. Kulkarni">
+    <meta name="description" content="Prateek P. Kulkarni's home page">
+    <meta name="keywords" content="Prateek P. Kulkarni,home page,quantum computing,computer architecture,VLSI,quantum technology">
+    <title>Prateek P. Kulkarni</title>
+    <style>
+        /* Import Fira Code font */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.css');
+        
+        /* Define SF Mono as a fallback */
+        @font-face {
+            font-family: 'SF Mono';
+            src: local('SF Mono'), local('SFMono-Regular');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background: #FFFFFF;
+            color: #000000;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Fira Code', 'SF Mono', monospace;
+            font-weight: 500;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        h2 {
+            border-bottom: 2px solid #009900;
+            padding-bottom: 0.3em;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #333333;
+            font-size: 1.4em;
+            margin-top: 1.8em;
+        }
+        
+        p {
+            margin-bottom: 1.2em;
+        }
+        
+        ul {
+            padding-left: 1.5em;
+        }
+        
+        li {
+            margin-bottom: 0.8em;
+        }
+        
+        a {
+            color: #009900;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #006600;
+            text-decoration: underline;
+        }
+        
+        dfn {
+            font-style: oblique; 
+            color: #009900;
+        }
+        
+        p.eq {
+            margin-left: 2em; 
+            margin-right: 2em;
+        }
+        
+        table.stabilizer td {
+            text-align: center;
+        }
+        
+        table.stabilizer {
+            margin-left: 3em;
+        }
+        
+        p.display {
+            margin-left: 2em; 
+            margin-right: 2em;
+        }
+        
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Fira Code', 'SF Mono', monospace;
+        }
+        
+        .update-notice {
+            background-color: #e8f5e8;
+            border-left: 4px solid #009900;
+            padding: 1em;
+            margin: 1.5em 0;
+            font-family: 'Fira Code', 'SF Mono', monospace;
+        }
+        
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 1.5em;
+            border-radius: 5px;
+            margin: 1.5em 0;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #dddddd;
+            margin: 2em 0;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #666666;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <h2>Prateek P. Kulkarni</h2>
 
-<p>Final-year Undergrad
-<br>PES University
-<br>Bangalore, India
-<br>pkulkarni2425@gmail.com
-</p>
+<div class="contact-info">
+    <p>Final-year Undergrad
+    <br>PES University
+    <br>Bangalore, India
+    <br>pkulkarni2425@gmail.com
+    </p>
+</div>
 
 <p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
 
-<!--<p><b>October 2025</b>: Selected for the Pre-Doctoral Fellowship at CSA, IISc under <a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS Programme</a>!</p>-->   
-<p><b>August 2025</b>: My work on coupling maps has been selected for SRC at 58th MICRO!</p>
+<div class="update-notice">
+    <p><b>August 2025</b>: My work on coupling maps has been selected for SRC at 58th MICRO!</p>
+</div>
 
 <h3>Current Work</h3>
 
@@ -117,6 +226,6 @@ p.display {
 
 <hr>
 
-<p>Last Updated: September 2025</p>
+<p class="last-updated">Last Updated: September 2025</p>
 </body>
 </html>
