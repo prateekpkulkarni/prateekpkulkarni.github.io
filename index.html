@@ -5,384 +5,366 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Prateek P. Kulkarni">
     <meta name="description" content="Prateek P. Kulkarni's home page">
-    <meta name="keywords" content="Prateek P. Kulkarni,home page,quantum computing,computer architecture,VLSI,quantum technology">
+    <meta name="keywords" content="Prateek P. Kulkarni,quantum computing,computer architecture,IISc,quantum technology">
     <title>Prateek P. Kulkarni</title>
     <style>
-        /* Import Fira Code font */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.css');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
         
-        /* Define SF Mono as a fallback */
-        @font-face {
-            font-family: 'SF Mono';
-            src: local('SF Mono'), local('SFMono-Regular');
-            font-weight: normal;
-            font-style: normal;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
-            background: #FFFFFF;
-            color: #000000;
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px;
-            line-height: 1.6;
+            background: #ffffff;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
+            line-height: 1.65;
             font-weight: 400;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Fira Code', 'SF Mono', monospace;
-            font-weight: 500;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 40px 120px;
         }
         
-        h2 {
-            border-bottom: 2px solid #009900;
-            padding-bottom: 0.3em;
-            font-size: 1.8em;
-        }
-        
-        h3 {
-            color: #333333;
-            font-size: 1.4em;
-            margin-top: 1.8em;
-        }
-        
-        p {
-            margin-bottom: 1.2em;
-        }
-        
-        ul {
-            padding-left: 1.5em;
-        }
-        
-        li {
-            margin-bottom: 0.8em;
-        }
-        
-        a {
-            color: #009900;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        a:hover {
-            color: #006600;
-            text-decoration: underline;
-        }
-        
-        dfn {
-            font-style: oblique; 
-            color: #009900;
-        }
-        
-        p.eq {
-            margin-left: 2em; 
-            margin-right: 2em;
-        }
-        
-        table.stabilizer td {
-            text-align: center;
-        }
-        
-        table.stabilizer {
-            margin-left: 3em;
-        }
-        
-        p.display {
-            margin-left: 2em; 
-            margin-right: 2em;
-        }
-        
-        .highlight {
-            background-color: #f5f5f5;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            font-family: 'Fira Code', 'SF Mono', monospace;
-        }
-        
-        .update-notice {
-            background-color: #e8f5e8;
-            border-left: 4px solid #009900;
-            padding: 1em;
-            margin: 1.5em 0;
-            font-family: 'Fira Code', 'SF Mono', monospace;
-        }
-        
-        .contact-info {
-            background-color: #f9f9f9;
-            padding: 1.5em;
-            border-radius: 5px;
-            margin: 1.5em 0;
+        header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
+            align-items: flex-start;
+            gap: 36px;
+            margin-bottom: 48px;
         }
         
-        .contact-column {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #dddddd;
-            margin: 2em 0;
-        }
-        
-        .last-updated {
-            text-align: center;
-            color: #666666;
-            font-size: 0.9em;
-        }
-        
-        /* Dark mode styles */
-        body.dark-mode {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
-        
-        body.dark-mode h3 {
-            color: #cccccc;
-        }
-        
-        body.dark-mode .highlight {
-            background-color: #2d2d2d;
-        }
-        
-        body.dark-mode .contact-info {
-            background-color: #2d2d2d;
-        }
-        
-        body.dark-mode .update-notice {
-            background-color: #1e2e1e;
-            border-left-color: #33cc33;
-        }
-        
-        body.dark-mode a {
-            color: #33cc33;
-        }
-        
-        body.dark-mode a:hover {
-            color: #66ff66;
-        }
-        
-        /* Theme toggle button */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
+        .profile-photo {
+            flex-shrink: 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 2px;
+            overflow: hidden;
             background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            z-index: 100;
+            color: #ccc;
+            font-size: 12px;
         }
         
-        body.dark-mode .theme-toggle {
-            background: #2d2d2d;
-            border-color: #444;
-            color: #e0e0e0;
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .header-content {
+            flex: 1;
+            padding-top: 4px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #737373;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 14px;
+            font-size: 14px;
+        }
+        
+        .links a {
+            color: #737373;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .links a:hover {
+            color: #000;
+        }
+        
+        .bio {
+            margin-bottom: 48px;
+            font-size: 15px;
+            color: #404040;
+            line-height: 1.65;
+        }
+        
+        .news {
+            background: #fafafa;
+            padding: 16px 20px;
+            margin-bottom: 48px;
+            border-radius: 2px;
+            font-size: 14px;
+        }
+        
+        .news-item {
+            color: #525252;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .news-item strong {
+            color: #262626;
+            font-weight: 500;
+        }
+        
+        section {
+            margin-bottom: 48px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #000;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        
+        .item {
+            margin-bottom: 24px;
+        }
+        
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .item-title {
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 3px;
+            font-size: 15px;
+        }
+        
+        .item-meta {
+            font-size: 14px;
+            color: #737373;
+            margin-bottom: 6px;
+        }
+        
+        .item-desc {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: #d4d4d4;
+            text-underline-offset: 2px;
+            transition: text-decoration-color 0.2s;
+        }
+        
+        a:hover {
+            text-decoration-color: #737373;
+        }
+        
+        footer {
+            margin-top: 64px;
+            text-align: center;
+            font-size: 13px;
+            color: #a3a3a3;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            padding: 4px;
         }
         
         .theme-toggle:hover {
-            transform: scale(1.1);
+            opacity: 0.6;
         }
         
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #009900;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            font-size: 1.2em;
-            z-index: 100;
+        body.dark-mode {
+            background: #000000;
+            color: #e5e5e5;
         }
         
-        body.dark-mode .back-to-top {
-            background: #33cc33;
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode .item-title {
+            color: #ffffff;
         }
         
-        .back-to-top.visible {
-            opacity: 1;
+        body.dark-mode .bio {
+            color: #a3a3a3;
         }
         
-        .back-to-top:hover {
-            transform: scale(1.1);
+        body.dark-mode .title,
+        body.dark-mode .links a,
+        body.dark-mode .item-meta {
+            color: #737373;
         }
         
-        /* Responsive adjustments */
+        body.dark-mode .links a:hover {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .news {
+            background: #0a0a0a;
+        }
+        
+        body.dark-mode .news-item {
+            color: #a3a3a3;
+        }
+        
+        body.dark-mode .news-item strong {
+            color: #e5e5e5;
+        }
+        
+        body.dark-mode .item-desc {
+            color: #a3a3a3;
+        }
+        
+        body.dark-mode .profile-photo {
+            background: #0a0a0a;
+        }
+        
+        body.dark-mode a {
+            text-decoration-color: #262626;
+        }
+        
+        body.dark-mode a:hover {
+            text-decoration-color: #525252;
+        }
+        
+        body.dark-mode footer {
+            color: #525252;
+        }
+        
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
+            .container {
+                padding: 60px 28px 100px;
             }
             
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            h3 {
-                font-size: 1.2em;
-            }
-            
-            .contact-info {
+            header {
                 flex-direction: column;
-                gap: 1em;
+                gap: 20px;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 22px;
             }
             
             .theme-toggle {
-                top: 10px;
-                right: 10px;
-            }
-            
-            .back-to-top {
-                bottom: 20px;
-                right: 20px;
+                top: 24px;
+                right: 24px;
             }
         }
     </style>
 </head>
 <body>
 
-<button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌓</button>
+<button class="theme-toggle" onclick="toggleTheme()">○</button>
 
-<h2>Prateek P. Kulkarni</h2>
+<div class="container">
+    <header>
+        <div class="profile-photo">
+            <img src="prat25.jpg" alt="Prateek P. Kulkarni" onerror="this.parentElement.innerHTML='Photo'">
+        </div>
+        <div class="header-content">
+            <h1>Prateek P. Kulkarni</h1>
+            <div class="title">
+                Predoc, CSA, IISc<br>
+                Final-Year Undergrad, PES University
+            </div>
+            <div class="links">
+                <a href="mailto:pkulkarni2425@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+            </div>
+        </div>
+    </header>
 
-<div class="contact-info">
-
-    <div class="contact-column">
-        <p>Pre-Doctoral Fellow
-        <br><a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS Programme</a>, CSA
-        <br>Indian Institute of Science (IISc)
-        <br>Bangalore, India
-        </p>
+    <div class="bio">
+        I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.
     </div>
-    <div class="contact-column">
-        <p>Final-year Undergrad
-        <br>PES University
-        <br>Bangalore, India
-        <br>pkulkarni2425@gmail.com
-        </p>
+
+    <div class="news">
+        <div class="news-item"><strong>Oct 2025</strong> — Selected for the Pre-Doctoral (SPARKS) Program at CSA, IISc</div>
+        <div class="news-item"><strong>Oct 2025</strong> — Received the Bronze Medal (3rd Place) at MICRO 2025 SRC</div>
+        <div class="news-item"><strong>Aug 2025</strong> — Work on coupling maps selected for ACM SRC at 58th MICRO</div>
     </div>
+
+    <section>
+        <h2>Research</h2>
+        <div class="item">
+            <div class="item-title">Predoctoral Fellow, IISc</div>
+            <div class="item-meta">Computer Science and Automation · 2025–Present</div>
+            <div class="item-desc">
+                Working on quantum processor coupling maps, error correction schemes and quantum compilation in the Future Computing Systems (FIST) Lab advised by Prof. Sumit K. Mandal. Earlier, I was a research intern at FIST Lab where I worked on distributed quantum computing architectures and quantum processor coupling map design.
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">Undergraduate Thesis, PES University</div>
+            <div class="item-meta">2024–2025 (expected)</div>
+            <div class="item-desc">
+                Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Publications</h2>
+        <div class="item">
+            <div class="item-title">Near-Ramanujan Graphs are All You Need to Achieve the Maximum Quantum Fidelity</div>
+            <div class="item-meta">Prateek P. Kulkarni and Sumit K. Mandal</div>
+            <div class="item-desc">ACM SRC @ 58th IEEE/ACM International Symposium on Microarchitecture (MICRO), 2025</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Service</h2>
+        <div class="item">
+            <div class="item-title">Teaching Assistant</div>
+            <div class="item-desc">Quantum Transport & Logic Gates, PES University · Spring 2025</div>
+        </div>
+    </section>
+
+    <footer>
+        Last updated October 2025
+    </footer>
 </div>
-
-<p>I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.</p>
-
-<div class="update-notice">
-    <p><b>October 2025</b>: Selected for the Pre-Doctoral (SPARKS) Program at CSA, IISc!</p>
-    <p><b>October 2025</b>: Recieved the Bronze Medal (3rd Place) at MICRO 2025 SRC!</p>
-    <p><b>August 2025</b>: My work on coupling maps has been selected for ACM SRC at 58th MICRO!</p>
-</div>
-
-<h3>Current Work</h3>
-
-<ul>
-<li><b>Pre-Doctoral Fellow</b> at Computer Science and Automation, IISc (2025-Present)
-<br>Working on quantum processor coupling maps, error correction schemes and quantum compilation in the Future Computing Systems (FIST) Lab advised by Prof. Sumit K. Mandal. Earlier, I was a research intern at FIST Lab where I worked on distributed quantum computing architectures and quantum processor coupling map design.</li><br>
-
-<li><b>Undergraduate Thesis</b> at PES University (2024-Present)
-<br>Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.</li>
-</ul>
-
-<h3>Publications</h3>
-
-<ul>
-
-<li><b>Near-Ramanujan Graphs are All You Need to Achieve the Maxmium Quantum Fidelity.</b>
-<br>Prateek P. Kulkarni and Sumit K. Mandal
-<br>ACM SRC @ 58th IEEE/ACM International Symposium on Microarchitecture (MICRO), 2025.</li>
-<!--<li><b>LLM-Driven Test Pattern Generation and Fault Coverage Analysis</b>
-<br>9th IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS), 2025</li><br>
-
-<li><b>MEMEDGE: Adaptive In-Memory Architecture for Energy-Efficient TinyML Inference at the Edge</b>
-<br>11th IEEE International Symposium on Smart Electronic Systems (iSES), SRF, 2025</li><br>
-
-<li><b>A Theoretical Treatment of Optical Metasurfaces as an Efficient Basis for Quantum Correlations</b>
-<br>Ramaseshan R, <i>Prateek P. Kulkarni</i>, Sharanya Madhusudhan, Kaustav Bhowmick
-<br>arXiv:2507.09517 [quant-ph], 2025
-<br><a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a></li><br>
-
-<li><b>A Generalized Hamiltonian Approach for Designing Simple Single Photon-based Optical Quantum Devices</b>
-<br>Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind, <i>Prateek P. Kulkarni</i>, Kaustav Bhowmick
-<br>The Journal Of Supercomputing, Springer, 2025
-<br><a href="https://link.springer.com/article/10.1007/s11227-025-07679-9">paper</a></li><br>
-
-<!--<li><b>DIRECT: Enabling Scalable Processing-In-Memory via DPU-to-DPU Communication</b>
-<br>6th India ESD Workshop, Poster, 2025
-<br><a href="https://iisc-inew.org/poster-presentations.php">abstract</a></li><br>
-
-<li><b>RAPID: Row-Access Pattern-Aware In-DRAM Prefetching</b>
-<br>IEEE International Conference on Emerging Technologies for Intelligent Systems (ETIS), 2025
-<br><a href="https://ieeexplore.ieee.org/document/10961614">paper</a></li><br>
-
-<li><b>A Low-Latency Memory Architecture using 3D XPoint and Memristor Technologies</b>
-<br>5th IEEE International Conference on Communication, Computing and Industry 6.0 (C2I6), 2024
-<br><a href="https://ieeexplore.ieee.org/document/10894988">paper</a></li>-->
-</ul>
-</ul>
-
-<h3>Service</h3>
-
-<ul>
-<li><b>TA'd for:</b> Quantum Transport & Logic Gates, PES University (Spring '25, Class Size: ~90)</li>
-<!--<li><b>TPC for:</b> IEEE CICN 2025</li>
-<li><b>Reviewer for:</b> IEEE CONECCT 2025, IEEE DMC 2025, IEEE INDICON 2025, IEEE TQE</li>-->
-</ul>
-
-<h3>Contact</h3>
-
-<ul>
-<li>Email: pkulkarni2425@gmail.com</li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/pkulkarni2425">pkulkarni2425</a></li>
-<!--<li>CV: <a href="prateekpkulkarni_cv.pdf">prateekpkulkarni_cv.pdf</a></li>-->
-</ul>
-
-<button class="back-to-top" onclick="scrollToTop()">↑</button>
-
-<hr style="border: none; height: 1px; background: linear-gradient(90deg, transparent, #009900, transparent); margin: 2em 0;">
-
-<p class="last-updated">Last Updated: October 2025</p>
 
 <script>
-// Theme toggle functionality
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 }
 
-// Check saved preference or system preference
 if (localStorage.getItem('theme') === 'dark' || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
     document.body.classList.add('dark-mode');
-}
-
-// Back to top button functionality
-const backToTop = document.querySelector('.back-to-top');
-
-window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('visible', window.scrollY > 300);
-});
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 </body>
