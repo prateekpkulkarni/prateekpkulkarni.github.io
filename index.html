@@ -3,375 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Prateek P. Kulkarni | Predoctoral Fellow at IISc">
-    <meta name="description" content="Prateek P. Kulkarni's home page">
-    <meta name="keywords" content="Prateek P. Kulkarni,quantum computing,computer architecture,IISc,quantum technology">
+    <meta name="Author" content="Prateek P. Kulkarni">
+    <meta name="description" content="Predoctoral Fellow at IISc working on Quantum Architecture">
     <title>Prateek P. Kulkarni</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;500;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --text-light: #999999;
+            --accent: #000000;
+            --link-hover: #e0e0e0;
+            --badge-bg: #f4f4f5;
+            --badge-text: #18181b;
+            --border: #eaeaea;
         }
-        
+
+        [data-theme="dark"] {
+            --bg: #0a0a0a;
+            --text-main: #ededed;
+            --text-muted: #a1a1aa;
+            --text-light: #52525b;
+            --accent: #ffffff;
+            --link-hover: #27272a;
+            --badge-bg: #27272a;
+            --badge-text: #ededed;
+            --border: #27272a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            background: #ffffff;
-            color: #1a1a1a;
-            font-family: 'Andika', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 18px;
-            line-height: 1.65;
-            font-weight: 400;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
         }
-        
+
         .container {
-            max-width: 720px;
+            max-width: 640px;
             margin: 0 auto;
-            padding: 80px 40px 120px;
+            padding: 80px 24px 120px;
         }
-        
+
+        /* --- Header --- */
         header {
             display: flex;
+            gap: 32px;
+            margin-bottom: 56px;
             align-items: flex-start;
-            gap: 36px;
-            margin-bottom: 48px;
         }
-        
+
         .profile-photo {
             flex-shrink: 0;
-            width: 160px;
-            height: 160px;
-            border-radius: 2px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular looks a bit more modern/social */
             overflow: hidden;
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 12px;
+            background: var(--badge-bg);
+            border: 1px solid var(--border);
         }
-        
+
         .profile-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: grayscale(100%); /* Adds to the minimal aesthetic */
+            transition: filter 0.3s ease;
         }
-        
-        .header-content {
-            flex: 1;
-            padding-top: 4px;
+
+        .profile-photo:hover img {
+            filter: grayscale(0%);
         }
-        
+
         h1 {
-            font-size: 28px;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .role {
+            display: inline-flex;
+            align-items: center;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: 500;
-            letter-spacing: -0.01em;
             margin-bottom: 12px;
-            color: #000;
         }
-        
-        .title {
-            font-size: 16px;
-            color: #737373;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        
-        .links {
+
+        .social-links {
             display: flex;
-            gap: 14px;
-            font-size: 16px;
-        }
-        
-        .links a {
-            color: #737373;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .links a:hover {
-            color: #000;
-        }
-        
-        .bio {
-            margin-bottom: 48px;
-            font-size: 15px;
-            color: #404040;
-            line-height: 1.65;
-        }
-        
-        .news {
-            background: #fafafa;
-            padding: 16px 20px;
-            margin-bottom: 48px;
-            border-radius: 2px;
+            gap: 16px;
             font-size: 14px;
         }
-        
-        .news-item {
-            color: #525252;
-            margin-bottom: 6px;
-            line-height: 1.5;
-        }
-        
-        .news-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .news-item strong {
-            color: #262626;
-            font-weight: 500;
-        }
-        
-        section {
-            margin-bottom: 48px;
-        }
-        
-        h2 {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: #000;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-        }
-        
-        .item {
-            margin-bottom: 24px;
-        }
-        
-        .item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .item-title {
-            font-weight: 400;
-            color: #000;
-            margin-bottom: 3px;
-            font-size: 16px;
-        }
-        
-        .item-meta {
-            font-size: 14px;
-            color: #737373;
-            margin-bottom: 6px;
-        }
-        
-        .item-desc {
-            font-size: 15px;
-            color: #525252;
-            line-height: 1.6;
-        }
+
+        /* --- Typography & Links --- */
+        p { margin-bottom: 16px; color: var(--text-muted); }
         
         a {
-            color: inherit;
-            text-decoration: underline;
-            text-decoration-color: #d4d4d4;
-            text-underline-offset: 2px;
-            transition: text-decoration-color 0.2s;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
-        
+
         a:hover {
-            text-decoration-color: #737373;
+            background: var(--link-hover);
+            border-bottom-color: transparent;
         }
-        
-        footer {
-            margin-top: 64px;
-            text-align: center;
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin: 48px 0 24px 0;
+            letter-spacing: 0.05em;
+        }
+
+        /* --- News List (The "Log" look) --- */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .news-item {
+            display: grid;
+            grid-template-columns: 85px 1fr;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .news-date {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-light);
             font-size: 13px;
-            color: #a3a3a3;
+            padding-top: 2px;
         }
-        
+
+        /* --- Research Items --- */
+        .research-item {
+            margin-bottom: 32px;
+        }
+
+        .research-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .research-title {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .research-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* --- Theme Toggle --- */
         .theme-toggle {
             position: fixed;
-            top: 32px;
-            right: 32px;
+            top: 24px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
             background: transparent;
-            border: none;
+            border: 1px solid var(--border);
+            border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
-            opacity: 0.3;
-            transition: opacity 0.2s;
-            padding: 4px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
-        
+
         .theme-toggle:hover {
-            opacity: 0.6;
-        }
-        
-        body.dark-mode {
-            background: #000000;
-            color: #e5e5e5;
-        }
-        
-        body.dark-mode h1,
-        body.dark-mode h2,
-        body.dark-mode .item-title {
-            color: #ffffff;
-        }
-        
-        body.dark-mode .bio {
-            color: #a3a3a3;
-        }
-        
-        body.dark-mode .title,
-        body.dark-mode .links a,
-        body.dark-mode .item-meta {
-            color: #737373;
-        }
-        
-        body.dark-mode .links a:hover {
-            color: #ffffff;
-        }
-        
-        body.dark-mode .news {
-            background: #0a0a0a;
-        }
-        
-        body.dark-mode .news-item {
-            color: #a3a3a3;
-        }
-        
-        body.dark-mode .news-item strong {
-            color: #e5e5e5;
-        }
-        
-        body.dark-mode .item-desc {
-            color: #a3a3a3;
-        }
-        
-        body.dark-mode .profile-photo {
-            background: #0a0a0a;
-        }
-        
-        body.dark-mode a {
-            text-decoration-color: #262626;
-        }
-        
-        body.dark-mode a:hover {
-            text-decoration-color: #525252;
-        }
-        
-        body.dark-mode footer {
-            color: #525252;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 60px 28px 100px;
-            }
-            
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-            
-            h1 {
-                font-size: 22px;
-            }
-            
-            .theme-toggle {
-                top: 24px;
-                right: 24px;
-            }
-
+            color: var(--text-main);
+            border-color: var(--text-muted);
         }
 
-            
+        footer {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 24px; }
+            .profile-photo { width: 80px; height: 80px; }
+            .news-item { grid-template-columns: 1fr; gap: 4px; }
+        }
     </style>
 </head>
 <body>
 
-<button class="theme-toggle" onclick="toggleTheme()">○</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
 
-<div class="container">
-    <header>
-        <div class="profile-photo">
-            <img src="prat25.png" alt="Prateek P. Kulkarni" onerror="this.parentElement.innerHTML='Photo'">
-        </div>
-        <div class="header-content">
-            <h1>Prateek P. Kulkarni</h1>
-            <div class="title">
-                Predoc @CSA, IISc<br>
-                Final-year Undergrad, PES University
+    <div class="container">
+        
+        <header>
+            <div class="profile-photo">
+                <img src="prat25.png" alt="Prateek P. Kulkarni">
             </div>
-            <div class="links">
-                <!--<a href="ppk_research.pdf"</a>-->
-                <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+            <div>
+                <h1>Prateek P. Kulkarni</h1>
+                <div class="role">Predoctoral Fellow @ CSA, IISc</div>
+                <div class="social-links">
+                    <a href="mailto:pkulkarni2425@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+                    </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="bio">
-        I am a final-year undergraduate student in Electronics & Communication Engineering at PES University, specializing in VLSI and Quantum Technology. My research interests center on the capabilities and limits of quantum computers. I am also interested in computer architecture and electronic design automation for next-generation computing platforms.
+        <section>
+            <p>
+                I research the capabilities and limits of quantum computers. Currently, I am a Predoctoral Fellow at the <a href="https://www.csa.iisc.ac.in/">Department of Computer Science and Automation</a>, IISc.
+            </p>
+            <p>
+                My work focuses on the intersection of theoretical computer science, computer architecture and quantum computing, specifically designing <strong>coupling maps</strong> and <strong>error correction schemes</strong> for quantum processors, with theoretical guarantees.
+            </p>
+        </section>
+
+        <div class="section-title">Updates</div>
+        <div class="news-list">
+            <div class="news-item">
+                <span class="news-date">Nov 2025</span>
+                <span>Paper on quantum communication complexity accepted in <strong>WAGS @ FSTTCS 2025</strong>.</span>
+            </div>
+            <div class="news-item">
+                <span class="news-date">Oct 2025</span>
+                <span>Awarded <a href="https://src.acm.org/winners/2026">Bronze Medal (3rd Place)</a> at the MICRO 2025 Student Research Competition.</span>
+            </div>
+            <div class="news-item">
+                <span class="news-date">Oct 2025</span>
+                <span>Joined IISc as a <a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS Predoctoral Fellow</a>.</span>
+            </div>
+            <div class="news-item">
+                <span class="news-date">Aug 2025</span>
+                <span>Work on coupling maps selected for <strong>ACM SRC @ MICRO 58</strong>.</span>
+            </div>
+        </div>
+
+        <div class="section-title">Research Experience</div>
+        
+        <div class="research-item">
+            <div class="research-header">
+                <span class="research-title">Predoctoral Fellow</span>
+                <span class="research-meta">2025—Present</span>
+            </div>
+            <p>
+                <strong>Future Computing Systems (FIST) Lab, IISc</strong><br>
+                Advised by <a href="#">Prof. Sumit K. Mandal</a>. Working on compiling quantum circuits to hardware-efficient coupling maps and analyzing error correction overheads.
+            </p>
+        </div>
+
+        <div class="research-item">
+            <div class="research-header">
+                <span class="research-title">Undergraduate Thesis</span>
+                <span class="research-meta">2024—2025</span>
+            </div>
+            <p>
+                <strong>PES University</strong><br>
+                Advised by Prof. Kaustav Bhowmick. Explored photonic processor architectures for variational quantum algorithms (VQA).
+            </p>
+        </div>
+
+        <div class="section-title">Selected Publications</div>
+        
+        <div class="research-item">
+            <div class="research-header">
+                <span class="research-title">Near-Ramanujan Graphs are All You Need to Achieve the Maximum Quantum Fidelity</span>
+            </div>
+            <p style="font-size: 14px; margin-top: 4px;">
+                <strong>Prateek P. Kulkarni</strong> and Sumit K. Mandal<br>
+                <span style="color: var(--text-light);">ACM SRC @ 58th IEEE/ACM International Symposium on Microarchitecture (MICRO), 2025.</span>
+            </p>
+        </div>
+
+        <footer>
+            <span>Bengaluru, India</span>
+            <span>Last updated: Dec 2025</span>
+        </footer>
+
     </div>
 
-    <div class="news">
-        <!--<div class="news-item"><strong>Nov 2025</strong> — Work on Scalable PIM via DPU-to-DPU communication accepted in <a href="https://www.comsnets.org/SysAI.html">SysAI at 18th COMSNETS</a>!</div>-->
-        <div class="news-item"><strong>Nov 2025</strong> — Work on quantum communication complexity for circuit synthesis accepted in <a href="https://sites.google.com/view/wagsfsttcs2025/home">WAGS at 45th FSTTCS</a>!</div>
-        <div class="news-item"><strong>Oct 2025</strong> — <a href="https://www.csa.iisc.ac.in/sparks-programme/">Selected for the Pre-Doctoral (SPARKS) Program</a> at CSA, IISc</div>
-        <div class="news-item"><strong>Oct 2025</strong> — <a href="https://src.acm.org/winners/2026">Received the Bronze Medal</a> (3rd Place) at MICRO 2025 SRC</div>
-        <div class="news-item"><strong>Aug 2025</strong> — Work on coupling maps selected for ACM SRC at <a href="https://microarch.org/micro58/">58th MICRO</a></div>
-    </div>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
 
-    <section>
-        <h2>Research</h2>
-        <div class="item">
-            <div class="item-title">Predoctoral Fellow, IISc</div>
-            <div class="item-meta">Computer Science and Automation, IISc · 2025–Present</div>
-            <div class="item-desc">
-                Working on quantum processor coupling maps, error correction schemes and quantum compilation in the Future Computing Systems (FIST) Lab advised by Prof. Sumit K. Mandal. Earlier, I was a research intern at FIST Lab where I worked on distributed quantum computing architectures and quantum processor coupling map design.
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-title">Undergraduate Thesis, PES University</div>
-            <div class="item-meta">2024–2025</div>
-            <div class="item-desc">
-                Exploring photonic processor architectures for variational quantum algorithms and their implementation challenges with Prof. Kaustav Bhowmick.
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Publications</h2>
-        <div class="item">
-            <div class="item-title">Near-Ramanujan Graphs are All You Need to Achieve the Maximum Quantum Fidelity</div>
-            <div class="item-meta">Prateek P. Kulkarni and Sumit K. Mandal</div>
-            <div class="item-desc">ACM SRC @ 58th IEEE/ACM International Symposium on Microarchitecture (MICRO), 2025. [🥉 3rd Place]</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Service</h2>
-        <div class="item">
-            <div class="item-title">Teaching Assistant</div>
-            <div class="item-desc">Quantum Transport & Logic Gates, PES University · Spring 2025</div>
-        </div>
-    </section>
-
-    <footer>
-        Last updated October 2025
-    </footer>
-</div>
-
-<script>
-function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-}
-
-if (localStorage.getItem('theme') === 'dark' || 
-    (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
-    document.body.classList.add('dark-mode');
-}
-</script>
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>
