@@ -1,260 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek P. Kulkarni - Indian Institute of Science</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text: #1a1a1a;
-            --text-muted: #666666;
-            --accent: #2c5aa0;
-            --border: #d0d0d0;
-            
-            --serif: 'Crimson Pro', serif;
-            --mono: 'IBM Plex Mono', monospace;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--serif);
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            padding: 3rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            margin-bottom: 3rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            gap: 2rem;
-        }
-
-        .header-content {
-            flex: 1;
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 4px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        h1 {
-            font-weight: 600;
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-
-        .affiliation {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .contact {
-            margin-top: 1rem;
-            font-family: var(--mono);
-            font-size: 0.85rem;
-        }
-
-        .contact a {
-            color: var(--accent);
-            text-decoration: none;
-            margin-right: 1rem;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        h2 {
-            font-weight: 600;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.3rem;
-        }
-
-        .paper {
-            margin-bottom: 1.5rem;
-        }
-
-        .paper-title {
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-
-        .paper-authors {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .paper-venue {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-bottom: 0.3rem;
-        }
-
-        .paper-links {
-            font-family: var(--mono);
-            font-size: 0.85rem;
-        }
-
-        .paper-links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin-right: 0.8rem;
-        }
-
-        .paper-links a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 2rem 1rem;
-            }
-            
-            h1 {
-                font-size: 1.75rem;
-            }
-
-            header {
-                flex-direction: column;
-            }
-
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    a {
+      color: #1772d0;
+      text-decoration:none;
+    }
+    a:focus, a:hover {
+      color: #f09228;
+      text-decoration:none;
+    }
+    body,td,th,tr,p,a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+  </style>
+  <title>Prateek P. Kulkarni</title>
 </head>
 <body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+    <td>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td width="67%" valign="middle">
+          <p align="center">
+            <name>Prateek P. Kulkarni</name>
+          </p>
 
-<header>
-    <div class="header-content">
-        <h1>Prateek P. Kulkarni</h1>
-        <div class="subtitle">Predoctoral Fellow</div>
-        <div class="affiliation">
-            <a href="https://www.csa.iisc.ac.in">Department of Computer Science and Automation</a><br>
-            Indian Institute of Science, Bengaluru
-        </div>
-        <div class="contact">
-            <a href="mailto:pkulkarni2425@gmail.com">email</a>
-            <a href="www.linkedin.com/in/pkulkarni2425">linkedin</a>
-        </div>
-    </div>
-    <img src="prat25.png" alt="Prateek P. Kulkarni" class="profile-photo">
-</header>
+          <p align="justify">
+            I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) in the Department of Computer Science and Automation at the Indian Institute of Science, advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. My research interests lie in quantum computing architecture, spectral graph theory, and their applications to quantum error correction and hardware design.
+          </p>
+          
+          <p align="justify">
+            My work focuses on the theoretical foundations of quantum processor design, particularly in optimizing coupling maps (graph structures that represent qubit connectivity). I study how spectral properties of these graphs affect quantum circuit fidelity and error correction thresholds. Currently, I am investigating the use of near-Ramanujan graphs for optimal quantum coupling map design and developing analytical models for quantum processor fidelity that are validated on actual quantum hardware.
+          </p>
+          
+          <p align="justify">
+            My undergraduate thesis explored programmable photonic processors for variational quantum algorithms, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>. I am pursuing my B.Tech in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technologies at PES University (2022–2026).
+          </p>
 
-<section>
-    <p>
-        I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) in the Department of Computer Science and Automation at the Indian Institute of Science, advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. My research interests lie in quantum computing architecture, spectral graph theory, and their applications to quantum error correction and hardware design.
-    </p>
-    <p>
-        My work focuses on the theoretical foundations of quantum processor design, particularly in optimizing coupling maps (graph structures that represent qubit connectivity). I study how spectral properties of these graphs affect quantum circuit fidelity and error correction thresholds.
-    </p>
-    <p>
-        Currently, I am investigating the use of near-Ramanujan graphs for optimal quantum coupling map design and developing analytical models for quantum processor fidelity that are validated on actual quantum hardware.
-    </p>
-    <p>
-        My undergraduate thesis explored programmable photonic processors for variational quantum algorithms, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.
-    </p>
-</section>
+          <p align="center">
+            <a href="mailto:pkulkarni2425@gmail.com">Email</a> &nbsp;/&nbsp;
+            <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+          </p>   
+        </td>
+        <td height="33%">
+          <img src="prat25.png" width="160px" height="auto">
+        </td>
+      </tr>
+      </tbody></table>
 
-<section>
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Quantum architecture and coupling map design</li>
-        <li>Spectral graph theory applications to quantum computing</li>
-        <li>Quantum error correction and fault tolerance</li>
-        <li>Randomized algorithms for quantum systems</li>
-        <li>Hardware-software co-design for quantum processors</li>
-    </ul>
-</section>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+        <tbody>
+        <tr>
+          <td width="100%" valign="middle">
+            <heading>Research Interests</heading>
+          </td>
+        </tr>
+        </tbody>
+      </table>
 
-<section>
-    <h2>Publications</h2>
-    
-    <div class="paper">
-        <a href="https://src.acm.org/winners/2026">Near-Ramanujan Graphs are All You Need to Achieve the Maximum Quantum Fidelity</a>
-        </div>
-        <div class="paper-authors">
-            Prateek P. Kulkarni and Sumit K. Mandal
-        </div>
-        <div class="paper-venue">
-            MICRO 58, 2025 • Student Research Competition (Bronze Medal)
-        </div>
-    </div>
-</section>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+          <td valign="top">
+            <p align="left" style="margin: 2px 0;">
+              <papertitle>&nbsp;&nbsp;• Quantum architecture and coupling map design</papertitle>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p align="left" style="margin: 2px 0;">
+              <papertitle>&nbsp;&nbsp;• Spectral graph theory applications to quantum computing</papertitle>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p align="left" style="margin: 2px 0;">
+              <papertitle>&nbsp;&nbsp;• Quantum error correction and fault tolerance</papertitle>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p align="left" style="margin: 2px 0;">
+              <papertitle>&nbsp;&nbsp;• Randomized algorithms for quantum systems</papertitle>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p align="left" style="margin: 2px 0;">
+              <papertitle>&nbsp;&nbsp;• Hardware-software co-design for quantum processors</papertitle>
+            </p>
+          </td>
+        </tr>
+        </tbody>
+        Our research on designing efficient coupling maps (that guarantee maximum fidelity) was recognized with the <a href="https://src.acm.org/winners/2026" target="_blank">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025!
+      </table>
 
-<section>
-    <h2>Education</h2>
-    
-    <div class="paper">
-        <div class="paper-title">B.Tech in Electronics and Communication Engineering</div>
-        <div class="paper-authors">Specialization in VLSI and Quantum Technologies</div>
-        <div class="paper-venue">PES University, 2022–2026</div>
-    </div>
-</section>
+      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+        <tbody>
+        <tr>
+          <td width="100%" valign="middle" id="publications">
+            <heading>Publications</heading>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+          <td valign="top">
+            <p align="left">
+              <a href="https://src.acm.org/winners/2026" target="_blank">
+                <papertitle>Near-Ramanujan Graphs are All You Need to Achieve the Maximum Quantum Fidelity.</papertitle>
+              </a>
+              <br>
+              Prateek P. Kulkarni, Sumit K. Mandal<br>
+              <em>MICRO 58 Student Research Competition</em>, 2025<br>
+              <b>🥉 Bronze Medal</b>
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table> -->
 
-<footer>
-    Last updated: November 2025
-</footer>
-
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <br>
+        <p align="right"><font size="2">
+          <a href="http://www.cs.berkeley.edu/~barron/">website template stolen from here</a>
+          </font>
+        </p>
+        <p align="right"><font size="2">
+          Last updated: November 2025
+        </font></p>
+        </td>
+      </tr>
+      </tbody></table>
+    </td>
+    </tr>
+  </tbody></table>
 </body>
 </html>
