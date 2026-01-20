@@ -1,292 +1,153 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prateek P. Kulkarni</title>
+  <meta name="description" content="Prateek P. Kulkarni's personal website"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 5% auto;
+      background: #f2f2f2;
+      color: #444444;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      text-shadow: 0 1px 0 #ffffff;
+      max-width: 50%;
+    }
+
+    code {
+      background: white;
+    }
+
     a {
-      color: #1772d0;
-      text-decoration:none;
+      border-bottom: 1px solid #444444;
+      color: #444444;
+      text-decoration: none;
     }
-    a:focus, a:hover {
-      color: #f09228;
-      text-decoration:none;
+
+    a:hover {
+      border-bottom: 0;
     }
-    body,td,th,tr,p,a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-    }
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-    }
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+
+    h1 {
+      color: #4b2e83;
       font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    .news-item {
-      background-color: #fffbf0;
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 3px solid #f09228;
+
+    h2 {
+      color: #4b2e83;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .bold {
+      border-bottom: 0;
+      color: #444444;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .bold:hover {
+      border-bottom: 1px solid #444444;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    header img {
+      float: right;
+      margin: 10px 0 10px 40px;
+      filter: drop-shadow(8px 0 12px rgba(0, 0, 0, 0.15));
+    }
+
+    aside p {
+      margin: 5px 0;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+    }
+
+    .column::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        max-width: 90%;
+        margin: 5% auto;
+      }
+
+      header img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
-  <title>Prateek P. Kulkarni</title>
 </head>
 <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tbody><tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tbody><tr>
-        <td width="67%" valign="middle">
-          <p align="center">
-            <name>Prateek P. Kulkarni</name>
-          </p>
+  <header>
+    <img id="photo" src="prat25.png" align="right" height="204" width="180">
+    <h1>Prateek P. Kulkarni</h1>
+    <aside>
+      <p><a class="bold" href="https://www.csa.iisc.ac.in/sparks-programme/">Predoctoral Fellow</a><br>
+      <a class="bold" href="https://www.csa.iisc.ac.in/">Indian Institute of Science</a></p>
+      <p><a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a> | <a href="ppk_research.pdf">CV</a> | <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a></p>
+    </aside>
+  </header>
 
-          <!-- <p align="justify">
-            I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) in the Department of Computer Science and Automation at the Indian Institute of Science, advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. My research interests lie in quantum computing architecture, spectral graph theory, and their applications to quantum error correction and hardware design.
-          </p>
-          
-          <p align="justify">
-            At IISc, my work focuses on the theoretical foundations of quantum processor design, especially the optimization of coupling maps. This work is supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence</a>. I am currently investigating the use of near-Ramanujan graphs for optimal qubit connectivity and developing analytical fidelity models validated on real quantum hardware.
-          </p>
-          
-          <p align="justify">
-            My undergraduate thesis explored programmable photonic processors for variational quantum algorithms, advised by <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>. I am pursuing my B.Tech in Electronics and Communication Engineering with a specialization in VLSI and Quantum Technologies at PES University (class of '26).
-          </p> -->
-          <p align="justify">
-          I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) in the Department of Computer Science and Automation at the Indian Institute of Science, where I work with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. My research interests include quantum computer architecture and resource-aware hardware design.
-          </p>
-          <p align="justify">
-          My current work focuses on the theoretical foundations of quantum processor design, with an emphasis on coupling-map optimization. In particular, I study the use of near-Ramanujan graph constructions for qubit connectivity and develop analytical fidelity models, which are validated on real quantum hardware.
-          </p>
-          
-          <p align="justify">
-          Previously, my undergraduate thesis investigated programmable photonic processors for variational quantum algorithms, under the supervision of <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>. I am pursuing a B.Tech in Electronics and Communication Engineering, with a specialization in VLSI and Quantum Technologies, at PES University (Class of 2026).
-          </p>
+  <h2>Biography</h2>
+  <p align="justify">I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) at the Indian Institute of Science, working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am pursuing a B.Tech in ECE (Quantum Tech) at PES University (Class of 2026).</p>
 
+  <p align="justify">At IISc, I study how spectral graph theory, particularly expander constructions, can optimize qubit connectivity and reduce circuit compilation overhead. Our work on efficient coupling map design using Near-Ramanujan Graphs with theoretical guarantees to maximize fidelity was recognized with the <a href="https://src.acm.org/winners/2026" target="_blank">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025. I am broadly interested in quantum complexity theory and algorithmic aspects of near-term quantum computation.</p>
 
+  <p align="justify">For my undergraduate thesis, I worked on making the training and learning of variational quantum (machine learning) algorithms more feasible on photonic quantum computers, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
 
-          <p align="center">
-            <a href="ppk_research.pdf">CV</a> &nbsp;/&nbsp;
-            <a href="mailto:pkulkarni2425@gmail.com">Email</a> &nbsp;/&nbsp;
-            <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-          </p>   
-        </td>
-        <td height="33%">
-          <img src="prat25.png" width="160px" height="auto">
-        </td>
-      </tr>
-      </tbody></table>
+  <br><hr>
 
-<!-- RESEARCH INTERESTS SECTION -->
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10" style="padding-left: 2px;">
-  <tbody>
-    <tr>
-      <td width="100%" valign="middle">
-        <heading>Research Interests</heading>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <h2>Contact Information</h2>
+  <div class="column">
+    <p style="font-size:12px;">Prateek P. Kulkarni<br>
+    Department of Computer Science and Automation<br>
+    Indian Institute of Science<br>
+    Bengaluru, Karnataka 560012<br>
+    India</p>
+  </div>
+  <div class="column">
+    <p style="font-size:12px;">Office: <a href="https://maps.app.goo.gl/p2cB37v8BNFBAxzu8">CSA 223</a><br>
+    Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/pkulkarni2425">pkulkarni2425</a></p>
+    <p style="font-size:12px;">&copy; Prateek P. Kulkarni. All rights reserved.</p>
+  </div>
+  <div style="clear:both;"></div>
 
-<p style="margin: 5px 0; padding-left: 12px;">
-  My specific research interests are:
-</p>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="padding-left: 12px;">
-  <tbody>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 2px 0;">
-          <papertitle>• Quantum architecture and coupling map design</papertitle>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 2px 0;">
-          <papertitle>• Quantum error correction and fault tolerance</papertitle>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 2px 0;">
-          <papertitle>• Randomized algorithms for quantum systems</papertitle>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 2px 0;">
-          <papertitle>• Hardware–software co-design for quantum processors</papertitle>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 2px 0;">
-          <papertitle>• Resource estimation and quantifying quantum “advantage”</papertitle>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top">
-        <p style="margin: 8px 0;">
-          <papertitle>
-            Our work on efficient coupling map design using expander graphs was recognized with the
-            <a href="https://src.acm.org/winners/2026" target="_blank"><strong>Bronze Medal</strong></a>
-            in the ACM Student Research Competition at <b>MICRO 2025</b>, in the undergraduate category.
-          </papertitle>
-        </p>
-      </td>
-    </tr>
-
-  </tbody>
-</table>
-
-      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tbody> 
-
-     <tr>
-      <td width="100%" valign="middle" id="publications">
-        <heading>Publications</heading>
-      </td>
-    </tr>
-
-     <tr>
-      <td valign="top">
-        <p align="left">
-          <a href="https://arxiv.org/abs/2507.09517" target="_blank">
-            <papertitle>
-              A theoretical treatment of optical metasurfaces as an efficient basis for quantum correlations
-            </papertitle>
-          </a>
-          <br>
-          Ramaseshan R., <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan, Kaustav Bhowmick
-          <br>
-          <em>arXiv:2507.09517, 2025</em>, <a href="https://quantumzeitgeist.com/metasurfaces-generate-maximally-entangled-bell-states-via-hamiltonian-driven-spin-entanglement/" target="_blank"><strong>Featured by Quantum Zeitgeist!</strong>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-  <td valign="top">
-    <p align="left">
-      <a href="https://doi.org/10.1007/s11227-025-07679-9" target="_blank">
-        <papertitle>
-          A generalized Hamiltonian approach for designing simple single-photon-based optical quantum devices
-        </papertitle>
-      </a>
-      <br>
-      R. Ramaseshan, V. S. Abhishek Kumar, Adith Rajeev, V. Prathik, Aditya Aravind, <b>Prateek P. Kulkarni</b>, Kaustav Bhowmick
-      <br>
-      <em>Journal of Supercomputing, Vol. 81, Article 1395, 2025</em>
-    </p>
-  </td>
-</tr>
-
-
-  </tbody>
-</table> -->
-
-
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tbody><tr>
-        <td>
-        <br>
-        <p align="right"><font size="2">
-          <a href="http://www.cs.berkeley.edu/~barron/">website template stolen from here</a>
-          </font>
-        </p>
-        <p align="right"><font size="2">
-          Last updated: November 2025
-        </font></p>
-        </td>
-      </tr>
-      </tbody></table>
-    </td>
-    </tr>
-  </tbody></table>
-
-  <script type="text/javascript">
-(function () {
-
-  const CANON_IDS = [
-    505, 664, 1304, 1716, 895,
-    1122, 2048, 1401, 2200,
-    1236, 1344, 1688, 1724, 2111
-  ];
-
-  const KEYWORDS = [
-    "quantum", "physics", "theorem", "proof",
-    "algorithm", "complexity", "asymptotic",
-    "math", "mathematics", "computer",
-    "logic", "graph", "matrix", "learning"
-  ];
-
-  const CACHE_KEY = "xkcd_theory_pool_v1";
-
-  function scoreComic(d) {
-    const text = (d.title + " " + d.alt + " " + d.transcript).toLowerCase();
-    return KEYWORDS.reduce((s, k) => s + (text.includes(k) ? 1 : 0), 0);
-  }
-
-  async function buildPool() {
-    const cached = localStorage.getItem(CACHE_KEY);
-    if (cached) return JSON.parse(cached);
-
-    const latest = await fetch("https://xkcd.com/info.0.json").then(r => r.json());
-    const pool = new Set(CANON_IDS);
-
-    for (let i = latest.num; i > latest.num - 200; i--) {
-      try {
-        const d = await fetch(`https://xkcd.com/${i}/info.0.json`).then(r => r.json());
-        if (scoreComic(d) >= 2) pool.add(i);
-      } catch (_) {}
-    }
-
-    const result = Array.from(pool);
-    localStorage.setItem(CACHE_KEY, JSON.stringify(result));
-    return result;
-  }
-
-  buildPool().then(pool => {
-    const day = Math.floor(Date.now() / 86400000);
-    const id = pool[day % pool.length];
-
-    fetch(`https://xkcd.com/${id}/info.0.json`)
-      .then(r => r.json())
-      .then(d => {
-        document.getElementById("xkcd-img").src = d.img;
-        document.getElementById("xkcd-img").alt = d.alt;
-        document.getElementById("xkcd-link").href = `https://xkcd.com/${id}`;
-        document.getElementById("xkcd-title").innerText =
-          d.safe_title + " — " + d.alt;
-      });
-  });
-
-})();
-</script>
+  <br>
+  <p style="font-size:12px; color: #888888;">Template from <a href="https://homes.cs.washington.edu/~nirkhe/">Chinmay Nirkhe</a></p>
 
 </body>
 </html>
