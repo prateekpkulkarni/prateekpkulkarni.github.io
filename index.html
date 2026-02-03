@@ -1,706 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek P. Kulkarni</title>
-  <meta name="description" content="Prateek P. Kulkarni — Predoctoral Fellow at IISc, working on quantum complexity theory."/>
-  
-  <!-- Fonts: Source Serif for scholarly headings, IBM Plex Sans for clean body -->
+  <meta name="description" content="Prateek P. Kulkarni's personal website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      /* Light theme */
-      --bg-primary: #faf9f7;
-      --bg-secondary: #f0efec;
-      --text-primary: #1a1a1a;
-      --text-secondary: #555;
-      --text-muted: #888;
-      --accent: #4b2e83;
-      --accent-light: #6b4e9e;
-      --border: #ddd;
-      --card-bg: #fff;
-      --graph-color: rgba(75, 46, 131, 0.08);
-      --graph-node: rgba(75, 46, 131, 0.15);
-    }
-    
-    [data-theme="dark"] {
-      --bg-primary: #0d0d0f;
-      --bg-secondary: #141418;
-      --text-primary: #e8e6e3;
-      --text-secondary: #a0a0a0;
-      --text-muted: #666;
-      --accent: #a78bfa;
-      --accent-light: #c4b5fd;
-      --border: #2a2a2e;
-      --card-bg: #18181c;
-      --graph-color: rgba(167, 139, 250, 0.06);
-      --graph-node: rgba(167, 139, 250, 0.12);
-    }
-    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
+
     body {
-      font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+      margin: 5% auto;
+      background: #f2f2f2;
+      color: #444444;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.75;
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      transition: background 0.3s ease, color 0.3s ease;
-      min-height: 100vh;
+      line-height: 1.8;
+      text-shadow: 0 1px 0 #ffffff;
+      max-width: 50%;
     }
-    
-    /* Animated graph background */
-    .graph-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
+
+    code {
+      background: white;
     }
-    
-    .graph-bg svg {
-      width: 100%;
-      height: 100%;
+
+    a {
+      border-bottom: 1px solid #444444;
+      color: #444444;
+      text-decoration: none;
     }
-    
-    .graph-edge {
-      stroke: var(--graph-color);
-      stroke-width: 1;
-      animation: pulse-edge 8s ease-in-out infinite;
+
+    a:hover {
+      border-bottom: 0;
     }
-    
-    .graph-node {
-      fill: var(--graph-node);
-      animation: pulse-node 6s ease-in-out infinite;
-    }
-    
-    @keyframes pulse-edge {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
-    }
-    
-    @keyframes pulse-node {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.2); opacity: 1; }
-    }
-    
-    /* Main container */
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 80px 24px 60px;
-    }
-    
-    /* Theme toggle */
-    .theme-toggle {
-      position: fixed;
-      top: 24px;
-      right: 24px;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      background: var(--card-bg);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      z-index: 100;
-    }
-    
-    .theme-toggle:hover {
-      transform: scale(1.05);
-      border-color: var(--accent);
-    }
-    
-    .theme-toggle svg {
-      width: 20px;
-      height: 20px;
-      color: var(--text-secondary);
-      transition: color 0.2s ease;
-    }
-    
-    .sun-icon { display: none; }
-    .moon-icon { display: block; }
-    [data-theme="dark"] .sun-icon { display: block; }
-    [data-theme="dark"] .moon-icon { display: none; }
-    
-    /* Header */
-    header {
-      margin-bottom: 60px;
-      position: relative;
-    }
-    
-    .header-content {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
-    
-    .header-text {
-      flex: 1;
-    }
-    
-    .photo-container {
-      flex-shrink: 0;
-    }
-    
-    .photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 8px;
-      object-fit: cover;
-      border: 2px solid var(--border);
-      transition: border-color 0.2s ease, transform 0.3s ease;
-    }
-    
-    .photo:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-    
+
     h1 {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-    
-    .tagline {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-    }
-    
-    .tagline a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-    }
-    
-    .tagline a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: var(--accent);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-    }
-    
-    .tagline a:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-    
-    .links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-family: 'IBM Plex Mono', monospace;
-      position: relative;
-      padding-bottom: 2px;
-      transition: color 0.2s ease;
-    }
-    
-    .links a::before {
-      content: '→ ';
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-    
-    .links a:hover {
-      color: var(--accent);
-    }
-    
-    .links a:hover::before {
-      opacity: 1;
-    }
-    
-    /* Section styling */
-    section {
-      margin-bottom: 50px;
-      animation: fadeInUp 0.6s ease forwards;
-      opacity: 0;
-    }
-    
-    section:nth-child(2) { animation-delay: 0.1s; }
-    section:nth-child(3) { animation-delay: 0.2s; }
-    section:nth-child(4) { animation-delay: 0.3s; }
-    section:nth-child(5) { animation-delay: 0.4s; }
-    section:nth-child(6) { animation-delay: 0.5s; }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    h2 {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    
-    h2::before {
-      content: '';
-      width: 24px;
-      height: 2px;
-      background: var(--accent);
-      display: inline-block;
-    }
-    
-    p {
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-      text-align: justify;
-      hyphens: auto;
-    }
-    
-    p a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease;
-    }
-    
-    p a:hover {
-      border-bottom-color: var(--accent);
-    }
-    
-    /* Publication cards */
-    .pub-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    
-    .pub-item {
-      padding: 20px 24px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .pub-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--accent);
-      transform: scaleY(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .pub-item:hover {
-      border-color: var(--accent);
-      transform: translateX(4px);
-    }
-    
-    .pub-item:hover::before {
-      transform: scaleY(1);
-    }
-    
-    .pub-title {
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-    
-    .pub-authors {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
-    }
-    
-    .pub-venue {
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--text-muted);
+      color: #4b2e83;
+      font-size: 32px;
+      font-weight: bold;
       margin-bottom: 10px;
     }
-    
-    .pub-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    
-    .pub-links a {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid var(--accent);
-      border-radius: 4px;
-      transition: all 0.2s ease;
-    }
-    
-    .pub-links a:hover {
-      background: var(--accent);
-      color: var(--bg-primary);
-    }
-    
-    /* Talks & Service */
-    .item-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    
-    .item-list li {
-      color: var(--text-secondary);
-      padding-left: 20px;
-      position: relative;
-    }
-    
-    .item-list li::before {
-      content: '◆';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 0.6rem;
-      top: 0.5em;
-    }
-    
-    .item-list strong {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-    
-    .item-list .venue {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    
-    /* Divider */
-    hr {
-      border: none;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
-      margin: 40px 0;
-    }
-    
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border);
-    }
-    
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    
-    .footer-grid a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    
-    .footer-grid a:hover {
-      color: var(--accent);
-    }
-    
-    .copyright {
-      text-align: center;
+
+    h2 {
+      color: #4b2e83;
+      font-size: 20px;
+      font-weight: bold;
       margin-top: 40px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      margin-bottom: 15px;
     }
-    
-    /* Responsive */
-    @media (max-width: 640px) {
-      .container {
-        padding: 60px 20px 40px;
+
+    .bold {
+      border-bottom: 0;
+      color: #444444;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .bold:hover {
+      border-bottom: 1px solid #444444;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    header img {
+      float: right;
+      margin: 10px 0 10px 40px;
+    }
+
+    aside p {
+      margin: 5px 0;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+    }
+
+    .column::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        max-width: 90%;
+        margin: 5% auto;
       }
-      
-      .header-content {
-        flex-direction: column-reverse;
-        gap: 24px;
-        align-items: center;
-        text-align: center;
+
+      header img {
+        float: none;
+        display: block;
+        margin: 20px auto;
       }
-      
+
       h1 {
-        font-size: 2rem;
-      }
-      
-      .links {
-        justify-content: center;
-      }
-      
-      h2::before {
-        display: none;
-      }
-      
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        text-align: center;
-      }
-      
-      .theme-toggle {
-        top: 16px;
-        right: 16px;
+        font-size: 28px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Animated graph background (subtle Ramanujan-esque graph pattern) -->
-  <div class="graph-bg">
-    <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
-      <!-- Graph edges -->
-      <g class="edges">
-        <line class="graph-edge" x1="100" y1="150" x2="250" y2="100" style="animation-delay: 0s"/>
-        <line class="graph-edge" x1="250" y1="100" x2="400" y2="180" style="animation-delay: 1s"/>
-        <line class="graph-edge" x1="100" y1="150" x2="180" y2="300" style="animation-delay: 2s"/>
-        <line class="graph-edge" x1="250" y1="100" x2="180" y2="300" style="animation-delay: 0.5s"/>
-        <line class="graph-edge" x1="400" y1="180" x2="500" y2="80" style="animation-delay: 1.5s"/>
-        <line class="graph-edge" x1="180" y1="300" x2="350" y2="350" style="animation-delay: 2.5s"/>
-        
-        <line class="graph-edge" x1="700" y1="200" x2="850" y2="150" style="animation-delay: 0.3s"/>
-        <line class="graph-edge" x1="850" y1="150" x2="920" y2="280" style="animation-delay: 1.3s"/>
-        <line class="graph-edge" x1="700" y1="200" x2="780" y2="350" style="animation-delay: 2.3s"/>
-        <line class="graph-edge" x1="850" y1="150" x2="780" y2="350" style="animation-delay: 0.8s"/>
-        
-        <line class="graph-edge" x1="150" y1="600" x2="280" y2="550" style="animation-delay: 0.7s"/>
-        <line class="graph-edge" x1="280" y1="550" x2="420" y2="620" style="animation-delay: 1.7s"/>
-        <line class="graph-edge" x1="150" y1="600" x2="220" y2="750" style="animation-delay: 2.7s"/>
-        <line class="graph-edge" x1="280" y1="550" x2="220" y2="750" style="animation-delay: 1.2s"/>
-        
-        <line class="graph-edge" x1="600" y1="700" x2="750" y2="650" style="animation-delay: 0.4s"/>
-        <line class="graph-edge" x1="750" y1="650" x2="880" y2="720" style="animation-delay: 1.4s"/>
-        <line class="graph-edge" x1="600" y1="700" x2="680" y2="850" style="animation-delay: 2.4s"/>
-        <line class="graph-edge" x1="750" y1="650" x2="680" y2="850" style="animation-delay: 0.9s"/>
-        <line class="graph-edge" x1="880" y1="720" x2="950" y2="600" style="animation-delay: 1.9s"/>
-      </g>
-      
-      <!-- Graph nodes -->
-      <g class="nodes">
-        <circle class="graph-node" cx="100" cy="150" r="4" style="animation-delay: 0s"/>
-        <circle class="graph-node" cx="250" cy="100" r="5" style="animation-delay: 0.5s"/>
-        <circle class="graph-node" cx="400" cy="180" r="4" style="animation-delay: 1s"/>
-        <circle class="graph-node" cx="180" cy="300" r="5" style="animation-delay: 1.5s"/>
-        <circle class="graph-node" cx="500" cy="80" r="3" style="animation-delay: 2s"/>
-        <circle class="graph-node" cx="350" cy="350" r="4" style="animation-delay: 2.5s"/>
-        
-        <circle class="graph-node" cx="700" cy="200" r="5" style="animation-delay: 0.3s"/>
-        <circle class="graph-node" cx="850" cy="150" r="4" style="animation-delay: 0.8s"/>
-        <circle class="graph-node" cx="920" cy="280" r="3" style="animation-delay: 1.3s"/>
-        <circle class="graph-node" cx="780" cy="350" r="5" style="animation-delay: 1.8s"/>
-        
-        <circle class="graph-node" cx="150" cy="600" r="4" style="animation-delay: 0.7s"/>
-        <circle class="graph-node" cx="280" cy="550" r="5" style="animation-delay: 1.2s"/>
-        <circle class="graph-node" cx="420" cy="620" r="4" style="animation-delay: 1.7s"/>
-        <circle class="graph-node" cx="220" cy="750" r="5" style="animation-delay: 2.2s"/>
-        
-        <circle class="graph-node" cx="600" cy="700" r="5" style="animation-delay: 0.4s"/>
-        <circle class="graph-node" cx="750" cy="650" r="4" style="animation-delay: 0.9s"/>
-        <circle class="graph-node" cx="880" cy="720" r="5" style="animation-delay: 1.4s"/>
-        <circle class="graph-node" cx="680" cy="850" r="4" style="animation-delay: 1.9s"/>
-        <circle class="graph-node" cx="950" cy="600" r="3" style="animation-delay: 2.4s"/>
-      </g>
-    </svg>
+  <header>
+    <img id="photo" src="prat25.png" align="right" height="180" width="180">
+    <h1>Prateek P. Kulkarni</h1>
+    <aside>
+      <p><a class="bold" href="https://www.csa.iisc.ac.in/sparks-programme/">Predoctoral Fellow</a><br>
+      <a class="bold" href="https://www.csa.iisc.ac.in/">Indian Institute of Science</a></p>
+      <p><a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a> | <a href="ppk_research.pdf">CV</a> | <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a></p>
+    </aside>
+  </header>
+
+  <h2>Biography</h2>
+  <p align="justify">I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) at the Indian Institute of Science, working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am pursuing a B.Tech in ECE (Quantum Tech) at PES University (Class of 2026).</p>
+
+  <p align="justify">At IISc, I study how spectral graph theory, particularly expander constructions, can optimize qubit connectivity and reduce circuit compilation overhead. Our work on efficient coupling map design using Near-Ramanujan Graphs with theoretical guarantees to maximize fidelity was recognized with the <a href="https://src.acm.org/winners/2026" target="_blank">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025. I am broadly interested in quantum complexity theory and algorithmic aspects of near-term quantum computation.</p>
+
+  <p align="justify">For my undergraduate thesis, I worked on making the training and learning of variational quantum (machine learning) algorithms more feasible on photonic quantum computers, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
+
+  <h2 id="publications">Select Publications</h2>
+  <ul>
+    <li>
+      <b>A theoretical treatment of optical metasurfaces as an efficient basis for quantum correlations</b><br>
+      Ramaseshan R., <b>Prateek P. Kulkarni</b>, Sharanya Madhusudhan, Kaustav Bhowmick.<br>
+      [<a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv:2507.09517</a>] [<a href="https://quantumzeitgeist.com/metasurfaces-generate-maximally-entangled-bell-states-via-hamiltonian-driven-spin-entanglement/">Featured by Quantum Zeitgeist</a>]
+    </li>
+    <li>
+      <b>A generalized Hamiltonian approach for designing simple single photon-based optical quantum devices</b><br>
+      R. Ramaseshan, V. S. Abhishek Kumar, Adith Rajeev, V. Prathik, Aditya Aravind, <b>Prateek P. Kulkarni</b>, Kaustav Bhowmick.<br>
+      <i>Journal of Supercomputing, Vol. 81, Article 1395, 2025.</i><br>
+      [<a href="https://doi.org/10.1007/s11227-025-07679-9">Springer Nature</a>]
+    </li>
+  </ul>
+
+  <h2 id="selected-talks">Selected Talks</h2>
+  <ul>
+    <li>
+      <b>Systems Day 2025</b><br>
+      Computer Science and Automation, IISc. January 2025.<br>
+      <a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html">Selected</a> (among ~20) nationwide to present a poster on multi-core quantum computing with superconducting qubits.
+    </li>
+    <li>
+      <b>2nd Workshop on Automata and Games for Synthesis</b><br>
+      45th FSTTCS. December 2025.<br>
+      <a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1?authuser=0">Selected</a> (among ~5) to present a short talk: <i>Quantum Communication Exponentially Speeds-up Circuit Synthesis</i>.
+    </li>
+  </ul>
+
+  <h2 id="academic-service">Academic Service</h2>
+  <ul>
+    <li>Teaching Assistant for <i>Quantum Transport and Logic Gates</i>, PES University, Spring 2025<br>(Credits: 4, Class size: ~90).</li>
+    <li>Reviewer for <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>.</li>
+  </ul>
+
+  <br><hr>
+
+  <h2 id="education">Education</h2>
+  <ul>
+    <li>
+      <a class="bold" href="https://pes.edu">PES University</a><br>
+      B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track). 2022 - 2026.
+    </li>
+  </ul>
+
+  <br><hr>
+
+  <h2>Contact Information</h2>
+  <div class="column">
+    <p style="font-size:12px;">Prateek P. Kulkarni<br>
+    Department of Computer Science and Automation<br>
+    Indian Institute of Science<br>
+    Bengaluru, Karnataka 560012<br>
+    India</p>
   </div>
-
-  <!-- Theme toggle -->
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-    </svg>
-    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-    </svg>
-  </button>
-
-  <div class="container">
-    <header>
-      <div class="header-content">
-        <div class="header-text">
-          <h1>Prateek P. Kulkarni</h1>
-          <p class="tagline">
-            Predoctoral Fellow  @<a href="https://www.csa.iisc.ac.in/">IISc</a>, working on quantum complexity theory
-          </p>
-          <div class="links">
-            <a href="mailto:pkulkarni2425@gmail.com">email</a>
-            <a href="ppk_research.pdf">cv</a>
-            <a href="https://www.linkedin.com/in/pkulkarni2425">linkedin</a>
-          </div>
-        </div>
-        <div class="photo-container">
-          <img class="photo" src="prat25.png" alt="Prateek P. Kulkarni">
-        </div>
-      </div>
-    </header>
-
-    <section>
-      <h2>About</h2>
-      <p>
-        I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) at the Indian Institute of Science, working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am pursuing a B.Tech in ECE (Quantum Tech) at PES University (Class of 2026).
-      </p>
-      <p>
-        At IISc, I study how spectral graph theory, particularly expander constructions, can optimize qubit connectivity and reduce circuit compilation overhead. Our work on efficient coupling map design using Near-Ramanujan Graphs with theoretical guarantees to maximize fidelity was recognized with the <a href="https://src.acm.org/winners/2026">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025.
-      </p>
-      <p>
-        I am broadly interested in quantum complexity theory and algorithmic aspects of near-term quantum computation. For my undergraduate thesis, I worked on making the training and learning of variational quantum algorithms more feasible on photonic quantum computers, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.
-      </p>
-    </section>
-
-    <section>
-      <h2>Publications</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <div class="pub-title">A theoretical treatment of optical metasurfaces as an efficient basis for quantum correlations</div>
-          <div class="pub-authors">Ramaseshan R., <strong>Prateek P. Kulkarni</strong>, Sharanya Madhusudhan, Kaustav Bhowmick</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.48550/arXiv.2507.09517">arXiv</a>
-            <a href="https://quantumzeitgeist.com/metasurfaces-generate-maximally-entangled-bell-states-via-hamiltonian-driven-spin-entanglement/">press</a>
-          </div>
-        </li>
-        <li class="pub-item">
-          <div class="pub-title">A generalized Hamiltonian approach for designing simple single photon-based optical quantum devices</div>
-          <div class="pub-authors">R. Ramaseshan, V. S. Abhishek Kumar, Adith Rajeev, V. Prathik, Aditya Aravind, <strong>Prateek P. Kulkarni</strong>, Kaustav Bhowmick</div>
-          <div class="pub-venue">Journal of Supercomputing, Vol. 81, Article 1395, 2025</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.1007/s11227-025-07679-9">Springer</a>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Talks</h2>
-      <ul class="item-list">
-        <li>
-          <strong>Systems Day 2025</strong> <span class="venue">— CSA, IISc · January 2025</span><br>
-          <a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html">Selected</a> (among ~20) nationwide to present a poster on multi-core quantum computing with superconducting qubits.
-        </li>
-        <li>
-          <strong>2nd Workshop on Automata and Games for Synthesis</strong> <span class="venue">— 45th FSTTCS · December 2025</span><br>
-          <a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1">Selected</a> (among ~5) to present: <em>Quantum Communication Exponentially Speeds-up Circuit Synthesis</em>.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Service</h2>
-      <ul class="item-list">
-        <li>
-          Teaching Assistant for <em>Quantum Transport and Logic Gates</em>, PES University, Spring 2025<br>
-          <span class="venue">4 credits · ~90 students</span>
-        </li>
-        <li>
-          Reviewer for <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
-        </li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Education</h2>
-      <ul class="item-list">
-        <li>
-          <strong><a href="https://pes.edu">PES University</a></strong><br>
-          B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track)<br>
-          <span class="venue">2022 – 2026</span>
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      <div class="footer-grid">
-        <div>
-          <strong>Prateek P. Kulkarni</strong><br>
-          Dept. of Computer Science and Automation<br>
-          Indian Institute of Science<br>
-          Bengaluru, Karnataka 560012
-        </div>
-        <div>
-          Office: <a href="https://maps.app.goo.gl/p2cB37v8BNFBAxzu8">CSA 223</a><br>
-          Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a><br>
-          LinkedIn: <a href="https://www.linkedin.com/in/pkulkarni2425">pkulkarni2425</a>
-        </div>
-      </div>
-      <p class="copyright">© 2025 Prateek P. Kulkarni</p>
-    </footer>
+  <div class="column">
+    <p style="font-size:12px;">Office: <a href="https://maps.app.goo.gl/p2cB37v8BNFBAxzu8">CSA 223</a><br>
+    Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/pkulkarni2425">pkulkarni2425</a></p>
+    <p style="font-size:12px;">&copy; Prateek P. Kulkarni. All rights reserved.</p>
   </div>
+  <div style="clear:both;"></div>
 
-  <script>
-    // Initialize theme
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
-      if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-      } else if (prefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    }
-    
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    }
-    
-    initTheme();
-  </script>
+  <br>
+  <p style="font-size:12px; color: #888888;">Template from <a href="https://homes.cs.washington.edu/~nirkhe/">Chinmay Nirkhe</a></p>
+
 </body>
 </html>
