@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,57 +11,91 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* --- THEME VARIABLES --- */
-    /* Default (Light) Theme */
+    /* --- NANOBANANA THEME VARIABLES --- */
     :root {
-      --color-bg-main: #FFFCF5;    /* Creamy background */
-      --color-bg-card: #ffffff;    /* Pure white cards */
-      --color-text: #222222;       /* Harsh black text */
-      --color-primary: #4F46E5;    /* Electric Indigo */
-      --color-accent: #FDE047;     /* Banana Yellow */
-      --color-border: #222222;     /* Black borders */
-      
-      --shadow-hard: 4px 4px 0px var(--color-border);
-      --border-thick: 3px solid var(--color-border);
+      --color-bg: #FFFCF5; /* Creamy off-white */
+      --color-text: #222222; /* Harsh black for contrast */
+      --color-primary: #4F46E5; /* Electric Indigo */
+      --color-accent: #FDE047; /* Banana Yellow! */
+      --border-thick: 3px solid #222222;
+      --shadow-hard: 4px 4px 0px #222222;
       --radius-std: 12px;
+      --navbar-height: 70px;
     }
 
-    /* Dark Theme Override */
-    [data-theme="dark"] {
-      --color-bg-main: #0a0a12;    /* Deep midnight background */
-      --color-bg-card: #161622;    /* Slightly lighter dark card */
-      --color-text: #ededed;       /* Soft white text */
-      --color-primary: #9e99ff;    /* Brighter neon indigo for dark mode */
-      /* --color-accent stays banana yellow for pop! */
-      --color-border: #9e99ff;     /* Neon borders instead of black */
-    }
-
-    /* --- BASE STYLES --- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      /* Smooth transition for color changes */
-      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     body {
       margin: 0;
-      background: var(--color-bg-main);
+      background: var(--color-bg);
       color: var(--color-text);
       font-family: 'Inter', sans-serif;
       font-size: 17px;
       line-height: 1.7;
-      padding: 40px 20px;
+      /* Added extra padding top to account for fixed navbar */
+      padding: calc(var(--navbar-height) + 40px) 20px 40px 20px;
     }
 
+    /* --- NAVBAR --- */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-bottom: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        z-index: 1000;
+        padding: 0 20px;
+        height: var(--navbar-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    .nav-list a {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        color: var(--color-text);
+        text-decoration: none;
+        border-bottom: none; /* Override default link underline */
+        padding: 5px 10px;
+        /* The highlighter hover effect */
+        background-image: linear-gradient(var(--color-accent), var(--color-accent));
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 0%; /* Hidden by default */
+        transition: background-size 0.3s ease-in-out, transform 0.2s ease;
+    }
+
+    .nav-list a:hover {
+        background-size: 100% 100%; /* Full highlight on hover */
+        transform: translateY(-2px);
+    }
+
+    /* This ensures that when clicking nav links, the section isn't hidden behind the fixed navbar */
+    section h2, .contact-section {
+        scroll-margin-top: 100px;
+    }
+
+
+    /* --- MAIN LAYOUT --- */
     main {
       max-width: 800px;
       margin: 0 auto;
-      position: relative; /* For positioning toggle */
     }
 
-    /* --- TYPOGRAPHY --- */
+    /* Typography */
     h1, h2, h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
@@ -81,18 +115,19 @@
       margin-top: 50px;
       margin-bottom: 25px;
       display: inline-block;
-      /* Fun underline effect */
+      /* Fun underline effect for headers */
       background-image: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent) 100%);
       background-repeat: no-repeat;
       background-size: 100% 30%;
       background-position: 0 88%;
     }
 
-    p { margin-bottom: 20px; }
+    p {
+      margin-bottom: 20px;
+    }
 
-    /* --- LINKS --- */
-    /* The Highlighter Effect */
-    a {
+    /* Fun Link Styling - The Highlighter Effect (for body links) */
+    main a {
       color: var(--color-text);
       text-decoration: none;
       font-weight: 600;
@@ -100,61 +135,66 @@
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 0% 40%;
-      transition: background-size 0.2s ease-in-out;
+      transition: background-size 0.3s ease-in-out, color 0.3s ease;
       padding-bottom: 2px;
-      border-bottom: 2px solid var(--color-border);
+      border-bottom: 2px solid var(--color-text);
     }
 
-    a:hover {
+    main a:hover {
       background-size: 100% 40%;
       border-color: transparent;
-      color: #222222; /* Ensure text is readable on yellow highlight even in dark mode */
     }
     
-    /* Hero links - distinct button style */
+    /* Specific link styles for hero buttons */
     .hero-links a {
         border-bottom: none;
-        background-size: 100% 100%;
-        padding: 6px 12px;
-        border-radius: 6px;
-        border: 2px solid var(--color-border);
-        box-shadow: 2px 2px 0 var(--color-border);
+        background-size: 100% 100%; /* Full highlighter on hero links */
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 2px solid var(--color-text);
+        box-shadow: 2px 2px 0 var(--color-text);
+        transition: all 0.2s ease;
         background-image: none;
-        background-color: var(--color-bg-card);
+        background-color: #fff;
     }
 
     .hero-links a:hover {
         background-color: var(--color-accent);
         transform: translate(-2px, -2px);
-        box-shadow: 4px 4px 0 var(--color-border);
-        color: #222222; /* Always black text on hover for contrast */
+        box-shadow: 4px 4px 0 var(--color-text);
     }
 
 
-    /* --- HEADER SECTION --- */
+    /* --- HEADER SECTION (The Card) --- */
     header {
       display: flex;
       align-items: center;
       gap: 40px;
       margin-bottom: 60px;
-      margin-top: 40px; /* Space for toggle */
       padding: 30px;
-      background: var(--color-bg-card);
+      background: #fff;
       border: var(--border-thick);
       border-radius: var(--radius-std);
       box-shadow: var(--shadow-hard);
     }
 
-    .header-content { flex: 1; }
+    .header-content {
+      flex: 1;
+    }
+
+    .profile-img-container {
+        position: relative;
+    }
 
     header img {
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 50%; /* Circle */
       border: var(--border-thick);
+      /* Fun offset shadow for the image */
       box-shadow: 6px 6px 0 var(--color-primary);
-      background-color: var(--color-accent);
+      background-color: var(--color-accent); /* Fallback if transparent IMG */
     }
 
     .role-title {
@@ -173,47 +213,19 @@
         font-size: 14px;
     }
 
-    /* --- TOGGLE SWITCH --- */
-    .theme-toggle-btn {
-        position: absolute;
-        top: -30px;
-        right: 0;
-        background: var(--color-bg-card);
-        border: var(--border-thick);
-        box-shadow: var(--shadow-hard);
-        color: var(--color-text);
-        padding: 8px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-    }
-    
-    .theme-toggle-btn:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 6px 6px 0 var(--color-border);
-        background-color: var(--color-accent);
-        color: #222222;
-    }
-
-    /* Hide/Show icons based on theme */
-    [data-theme="light"] .icon-moon { display: block; }
-    [data-theme="light"] .icon-sun { display: none; }
-    [data-theme="dark"] .icon-moon { display: none; }
-    [data-theme="dark"] .icon-sun { display: block; }
-
     /* --- LISTS & CARDS --- */
-    ul { list-style: none; }
+    ul {
+      list-style: none;
+    }
 
+    /* Making publication items look like distinct blocks */
     ul li {
       margin-bottom: 25px;
       padding: 20px;
-      background: var(--color-bg-card);
-      border: 2px solid var(--color-border);
+      background: #fff;
+      border: 2px solid var(--color-text);
       border-radius: var(--radius-std);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     ul li:hover {
@@ -237,42 +249,74 @@
         display: block;
     }
 
-    /* --- FOOTER --- */
+    /* --- FOOTER/CONTACT --- */
     .contact-section {
       margin-top: 60px;
       padding-top: 30px;
-      border-top: 2px solid var(--color-border);
+      border-top: var(--border-thick);
       display: flex;
       justify-content: space-between;
       font-size: 14px;
     }
-    .contact-column { width: 48%; }
+
+    .contact-column {
+        width: 48%;
+    }
     
+    hr {
+        display: none; /* Hiding standard HRs */
+    }
+
     /* --- RESPONSIVE --- */
     @media (max-width: 768px) {
-      body { padding: 20px 15px; }
-      main { margin-top: 40px; }
+      /* Adjust navbar for mobile */
+      .main-nav {
+          height: auto;
+          padding: 15px;
+      }
+      .nav-list {
+          gap: 15px;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      body {
+         padding-top: 120px; /* More padding for taller mobile nav */
+      }
+
       header {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
-        padding: 25px 15px;
+        padding: 20px;
       }
-      header img { width: 140px; height: 140px; }
+
+      header img {
+        width: 140px;
+        height: 140px;
+      }
+      
       h1 { font-size: 32px; }
-      .contact-section { flex-direction: column; gap: 20px; }
+
+      .contact-section {
+        flex-direction: column;
+        gap: 20px;
+      }
       .contact-column { width: 100%; }
-      .theme-toggle-btn { top: -50px; right: 10px;}
     }
   </style>
 </head>
 <body>
-  <main>
-    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </button>
+  <nav class="main-nav">
+      <ul class="nav-list">
+          <li><a href="#biography">About</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#selected-talks">Talks</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+  </nav>
 
+  <main>
     <header>
       <div class="header-content">
         <h1>Prateek P. Kulkarni</h1>
@@ -285,13 +329,13 @@
           <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
         </div>
       </div>
-      <div>
+      <div class="profile-img-container">
           <img id="photo" src="prat25.png" alt="Prateek P. Kulkarni">
       </div>
     </header>
 
     <section>
-      <h2>Biography</h2>
+      <h2 id="biography">Biography</h2>
       <p>I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) at the Indian Institute of Science, working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am pursuing a B.Tech in ECE (Quantum Tech) at PES University (Class of 2026).</p>
       <p>At IISc, I study how spectral graph theory, particularly expander constructions, can optimize qubit connectivity and reduce circuit compilation overhead. Our work on efficient coupling map design using Near-Ramanujan Graphs with theoretical guarantees to maximize fidelity was recognized with the <a href="https://src.acm.org/winners/2026" target="_blank">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025. I am broadly interested in quantum complexity theory and algorithmic aspects of near-term quantum computation.</p>
       <p>For my undergraduate thesis, I worked on making the training and learning of variational quantum (machine learning) algorithms more feasible on photonic quantum computers, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
@@ -338,7 +382,7 @@
       <ul>
         <li>
           <span class="pub-title"><a href="https://pes.edu" style="background:none; border:none;">PES University</a></span>
-          B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track). <br> 
+          B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track). <br>
           2022 - 2026.
         </li>
       </ul>
@@ -352,7 +396,7 @@
       </ul>
     </section>
 
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
       <div class="contact-column">
         <p style="font-weight: 600; margin-bottom: 5px;">Prateek P. Kulkarni</p>
         <p>Department of Computer Science and Automation<br>
@@ -367,32 +411,5 @@
       </div>
     </div>
   </main>
-
-  <script>
-    // JavaScript for Dark Mode Toggle with Local Storage Memory
-
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-
-    // 1. Check for saved user preference on load
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', currentTheme);
-
-    // 2. Event Listener for the button click
-    toggleBtn.addEventListener('click', () => {
-        let theme = htmlElement.getAttribute('data-theme');
-        
-        // Switch theme
-        if (theme === 'light') {
-            theme = 'dark';
-        } else {
-            theme = 'light';
-        }
-        
-        // Apply new theme and save to local storage
-        htmlElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    });
-  </script>
 </body>
 </html>
