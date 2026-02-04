@@ -20,7 +20,7 @@
       --border-thick: 3px solid #222222;
       --shadow-hard: 4px 4px 0px #222222;
       --radius-std: 12px;
-      --navbar-height: 70px;
+      --radius-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
     * {
@@ -36,60 +36,10 @@
       font-family: 'Inter', sans-serif;
       font-size: 17px;
       line-height: 1.7;
-      /* Added extra padding top to account for fixed navbar */
-      padding: calc(var(--navbar-height) + 40px) 20px 40px 20px;
+      padding: 40px 20px;
     }
 
-    /* --- NAVBAR --- */
-    .main-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        border-bottom: var(--border-thick);
-        box-shadow: var(--shadow-hard);
-        z-index: 1000;
-        padding: 0 20px;
-        height: var(--navbar-height);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-list {
-        display: flex;
-        list-style: none;
-        gap: 30px;
-    }
-
-    .nav-list a {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        color: var(--color-text);
-        text-decoration: none;
-        border-bottom: none; /* Override default link underline */
-        padding: 5px 10px;
-        /* The highlighter hover effect */
-        background-image: linear-gradient(var(--color-accent), var(--color-accent));
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 0%; /* Hidden by default */
-        transition: background-size 0.3s ease-in-out, transform 0.2s ease;
-    }
-
-    .nav-list a:hover {
-        background-size: 100% 100%; /* Full highlight on hover */
-        transform: translateY(-2px);
-    }
-
-    /* This ensures that when clicking nav links, the section isn't hidden behind the fixed navbar */
-    section h2, .contact-section {
-        scroll-margin-top: 100px;
-    }
-
-
-    /* --- MAIN LAYOUT --- */
+    /* Minimal Container */
     main {
       max-width: 800px;
       margin: 0 auto;
@@ -126,8 +76,8 @@
       margin-bottom: 20px;
     }
 
-    /* Fun Link Styling - The Highlighter Effect (for body links) */
-    main a {
+    /* Fun Link Styling - The Highlighter Effect */
+    a {
       color: var(--color-text);
       text-decoration: none;
       font-weight: 600;
@@ -140,12 +90,12 @@
       border-bottom: 2px solid var(--color-text);
     }
 
-    main a:hover {
+    a:hover {
       background-size: 100% 40%;
       border-color: transparent;
     }
     
-    /* Specific link styles for hero buttons */
+    /* Specific link styles */
     .hero-links a {
         border-bottom: none;
         background-size: 100% 100%; /* Full highlighter on hero links */
@@ -165,7 +115,7 @@
     }
 
 
-    /* --- HEADER SECTION (The Card) --- */
+    /* --- HEADER SECTION --- */
     header {
       display: flex;
       align-items: center;
@@ -269,20 +219,6 @@
 
     /* --- RESPONSIVE --- */
     @media (max-width: 768px) {
-      /* Adjust navbar for mobile */
-      .main-nav {
-          height: auto;
-          padding: 15px;
-      }
-      .nav-list {
-          gap: 15px;
-          flex-wrap: wrap;
-          justify-content: center;
-      }
-      body {
-         padding-top: 120px; /* More padding for taller mobile nav */
-      }
-
       header {
         flex-direction: column-reverse;
         text-align: center;
@@ -306,22 +242,12 @@
   </style>
 </head>
 <body>
-  <nav class="main-nav">
-      <ul class="nav-list">
-          <li><a href="#biography">About</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#selected-talks">Talks</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-  </nav>
-
   <main>
     <header>
       <div class="header-content">
         <h1>Prateek P. Kulkarni</h1>
         <div class="role-title">
-            Predoctoral Fellow (SPARKS) @ <a href="https://www.csa.iisc.ac.in/" style="background: none; border: none; color: inherit;">IISc</a>
+            Predoctoral Fellow @ <a href="https://www.csa.iisc.ac.in/" style="background: none; border: none; color: inherit;">IISc</a>
         </div>
         <div class="hero-links">
           <a href="mailto:pkulkarni2425@gmail.com">Email</a>
@@ -335,7 +261,7 @@
     </header>
 
     <section>
-      <h2 id="biography">Biography</h2>
+      <h2>Biography</h2>
       <p>I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) at the Indian Institute of Science, working with <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am pursuing a B.Tech in ECE (Quantum Tech) at PES University (Class of 2026).</p>
       <p>At IISc, I study how spectral graph theory, particularly expander constructions, can optimize qubit connectivity and reduce circuit compilation overhead. Our work on efficient coupling map design using Near-Ramanujan Graphs with theoretical guarantees to maximize fidelity was recognized with the <a href="https://src.acm.org/winners/2026" target="_blank">Bronze Medal</a> in the ACM Student Research Competition at MICRO 2025. I am broadly interested in quantum complexity theory and algorithmic aspects of near-term quantum computation.</p>
       <p>For my undergraduate thesis, I worked on making the training and learning of variational quantum (machine learning) algorithms more feasible on photonic quantum computers, with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a>.</p>
@@ -396,7 +322,7 @@
       </ul>
     </section>
 
-    <div class="contact-section" id="contact">
+    <div class="contact-section">
       <div class="contact-column">
         <p style="font-weight: 600; margin-bottom: 5px;">Prateek P. Kulkarni</p>
         <p>Department of Computer Science and Automation<br>
