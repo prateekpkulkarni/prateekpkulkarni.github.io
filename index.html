@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prateek P. Kulkarni | Quantum Tech</title>
+  <title>Prateek P. Kulkarni's Homepage</title>
   <meta name="description" content="Prateek P. Kulkarni's personal website - Predoctoral Fellow at IISc"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,27 +11,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* --- NANOBANANA THEME VARIABLES --- */
+    /* --- THEME VARIABLES --- */
+    /* Default (Light) Theme */
     :root {
-      --color-bg: #FFFCF5; /* Creamy off-white */
-      --color-text: #222222; /* Harsh black for contrast */
-      --color-primary: #4F46E5; /* Electric Indigo */
-      --color-accent: #FDE047; /* Banana Yellow! */
-      --border-thick: 3px solid #222222;
-      --shadow-hard: 4px 4px 0px #222222;
+      --color-bg-main: #FFFCF5;    /* Creamy background */
+      --color-bg-card: #ffffff;    /* Pure white cards */
+      --color-text: #222222;       /* Harsh black text */
+      --color-primary: #4F46E5;    /* Electric Indigo */
+      --color-accent: #FDE047;     /* Banana Yellow */
+      --color-border: #222222;     /* Black borders */
+      
+      --shadow-hard: 4px 4px 0px var(--color-border);
+      --border-thick: 3px solid var(--color-border);
       --radius-std: 12px;
-      --radius-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
+    /* Dark Theme Override */
+    [data-theme="dark"] {
+      --color-bg-main: #0a0a12;    /* Deep midnight background */
+      --color-bg-card: #161622;    /* Slightly lighter dark card */
+      --color-text: #ededed;       /* Soft white text */
+      --color-primary: #9e99ff;    /* Brighter neon indigo for dark mode */
+      /* --color-accent stays banana yellow for pop! */
+      --color-border: #9e99ff;     /* Neon borders instead of black */
+    }
+
+    /* --- BASE STYLES --- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      /* Smooth transition for color changes */
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     body {
       margin: 0;
-      background: var(--color-bg);
+      background: var(--color-bg-main);
       color: var(--color-text);
       font-family: 'Inter', sans-serif;
       font-size: 17px;
@@ -39,13 +55,13 @@
       padding: 40px 20px;
     }
 
-    /* Minimal Container */
     main {
       max-width: 800px;
       margin: 0 auto;
+      position: relative; /* For positioning toggle */
     }
 
-    /* Typography */
+    /* --- TYPOGRAPHY --- */
     h1, h2, h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
@@ -65,18 +81,17 @@
       margin-top: 50px;
       margin-bottom: 25px;
       display: inline-block;
-      /* Fun underline effect for headers */
+      /* Fun underline effect */
       background-image: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent) 100%);
       background-repeat: no-repeat;
       background-size: 100% 30%;
       background-position: 0 88%;
     }
 
-    p {
-      margin-bottom: 20px;
-    }
+    p { margin-bottom: 20px; }
 
-    /* Fun Link Styling - The Highlighter Effect */
+    /* --- LINKS --- */
+    /* The Highlighter Effect */
     a {
       color: var(--color-text);
       text-decoration: none;
@@ -85,33 +100,34 @@
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 0% 40%;
-      transition: background-size 0.3s ease-in-out, color 0.3s ease;
+      transition: background-size 0.2s ease-in-out;
       padding-bottom: 2px;
-      border-bottom: 2px solid var(--color-text);
+      border-bottom: 2px solid var(--color-border);
     }
 
     a:hover {
       background-size: 100% 40%;
       border-color: transparent;
+      color: #222222; /* Ensure text is readable on yellow highlight even in dark mode */
     }
     
-    /* Specific link styles */
+    /* Hero links - distinct button style */
     .hero-links a {
         border-bottom: none;
-        background-size: 100% 100%; /* Full highlighter on hero links */
-        padding: 4px 8px;
-        border-radius: 4px;
-        border: 2px solid var(--color-text);
-        box-shadow: 2px 2px 0 var(--color-text);
-        transition: all 0.2s ease;
+        background-size: 100% 100%;
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: 2px solid var(--color-border);
+        box-shadow: 2px 2px 0 var(--color-border);
         background-image: none;
-        background-color: #fff;
+        background-color: var(--color-bg-card);
     }
 
     .hero-links a:hover {
         background-color: var(--color-accent);
         transform: translate(-2px, -2px);
-        box-shadow: 4px 4px 0 var(--color-text);
+        box-shadow: 4px 4px 0 var(--color-border);
+        color: #222222; /* Always black text on hover for contrast */
     }
 
 
@@ -121,30 +137,24 @@
       align-items: center;
       gap: 40px;
       margin-bottom: 60px;
+      margin-top: 40px; /* Space for toggle */
       padding: 30px;
-      background: #fff;
+      background: var(--color-bg-card);
       border: var(--border-thick);
       border-radius: var(--radius-std);
       box-shadow: var(--shadow-hard);
     }
 
-    .header-content {
-      flex: 1;
-    }
-
-    .profile-img-container {
-        position: relative;
-    }
+    .header-content { flex: 1; }
 
     header img {
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 50%; /* Circle */
+      border-radius: 50%;
       border: var(--border-thick);
-      /* Fun offset shadow for the image */
       box-shadow: 6px 6px 0 var(--color-primary);
-      background-color: var(--color-accent); /* Fallback if transparent IMG */
+      background-color: var(--color-accent);
     }
 
     .role-title {
@@ -163,19 +173,47 @@
         font-size: 14px;
     }
 
-    /* --- LISTS & CARDS --- */
-    ul {
-      list-style: none;
+    /* --- TOGGLE SWITCH --- */
+    .theme-toggle-btn {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        background: var(--color-bg-card);
+        border: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        color: var(--color-text);
+        padding: 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .theme-toggle-btn:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 var(--color-border);
+        background-color: var(--color-accent);
+        color: #222222;
     }
 
-    /* Making publication items look like distinct blocks */
+    /* Hide/Show icons based on theme */
+    [data-theme="light"] .icon-moon { display: block; }
+    [data-theme="light"] .icon-sun { display: none; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="dark"] .icon-sun { display: block; }
+
+    /* --- LISTS & CARDS --- */
+    ul { list-style: none; }
+
     ul li {
       margin-bottom: 25px;
       padding: 20px;
-      background: #fff;
-      border: 2px solid var(--color-text);
+      background: var(--color-bg-card);
+      border: 2px solid var(--color-border);
       border-radius: var(--radius-std);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     ul li:hover {
@@ -199,50 +237,42 @@
         display: block;
     }
 
-    /* --- FOOTER/CONTACT --- */
+    /* --- FOOTER --- */
     .contact-section {
       margin-top: 60px;
       padding-top: 30px;
-      border-top: var(--border-thick);
+      border-top: 2px solid var(--color-border);
       display: flex;
       justify-content: space-between;
       font-size: 14px;
     }
-
-    .contact-column {
-        width: 48%;
-    }
+    .contact-column { width: 48%; }
     
-    hr {
-        display: none; /* Hiding standard HRs */
-    }
-
     /* --- RESPONSIVE --- */
     @media (max-width: 768px) {
+      body { padding: 20px 15px; }
+      main { margin-top: 40px; }
       header {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
-        padding: 20px;
+        padding: 25px 15px;
       }
-
-      header img {
-        width: 140px;
-        height: 140px;
-      }
-      
+      header img { width: 140px; height: 140px; }
       h1 { font-size: 32px; }
-
-      .contact-section {
-        flex-direction: column;
-        gap: 20px;
-      }
+      .contact-section { flex-direction: column; gap: 20px; }
       .contact-column { width: 100%; }
+      .theme-toggle-btn { top: -50px; right: 10px;}
     }
   </style>
 </head>
 <body>
   <main>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
     <header>
       <div class="header-content">
         <h1>Prateek P. Kulkarni</h1>
@@ -255,7 +285,7 @@
           <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
         </div>
       </div>
-      <div class="profile-img-container">
+      <div>
           <img id="photo" src="prat25.png" alt="Prateek P. Kulkarni">
       </div>
     </header>
@@ -308,7 +338,8 @@
       <ul>
         <li>
           <span class="pub-title"><a href="https://pes.edu" style="background:none; border:none;">PES University</a></span>
-          B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track). 2022 - 2026.
+          B.Tech. Electronics and Communication Engineering (VLSI, Quantum Tech Track). <br> 
+          2022 - 2026.
         </li>
       </ul>
     </section>
@@ -336,5 +367,32 @@
       </div>
     </div>
   </main>
+
+  <script>
+    // JavaScript for Dark Mode Toggle with Local Storage Memory
+
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // 1. Check for saved user preference on load
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+
+    // 2. Event Listener for the button click
+    toggleBtn.addEventListener('click', () => {
+        let theme = htmlElement.getAttribute('data-theme');
+        
+        // Switch theme
+        if (theme === 'light') {
+            theme = 'dark';
+        } else {
+            theme = 'light';
+        }
+        
+        // Apply new theme and save to local storage
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+  </script>
 </body>
 </html>
