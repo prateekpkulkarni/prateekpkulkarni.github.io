@@ -1,364 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prateek P. Kulkarni</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prateek P. Kulkarni's Homepage</title>
   <meta name="description" content="Prateek P. Kulkarni — Predoctoral Fellow, IISc"/>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --text: #1a1a1a;
-      --text-light: #555;
-      --link: #1a1a1a;
-      --rule: #ccc;
-      --bg: #fafaf8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      font-size: 18px;
-    }
-
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Source Serif 4', 'Georgia', serif;
-      line-height: 1.75;
-      padding: 60px 20px 100px;
-    }
-
-    main {
       max-width: 680px;
-      margin: 0 auto;
+      margin: 80px auto;
+      padding: 0 24px;
+      font-family: Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #fff;
     }
 
-    /* ── Header ── */
-    .site-header {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: start;
-      padding-bottom: 36px;
-      border-bottom: 1px solid var(--rule);
-      margin-bottom: 44px;
-    }
+    h1 { font-size: 1.5rem; font-weight: normal; margin: 0 0 4px 0; }
+    h2 { font-size: 1rem; font-weight: bold; margin: 2.5rem 0 0.75rem; }
 
-    .name {
-      font-family: 'EB Garamond', 'Georgia', serif;
-      font-size: 2.2rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
-
-    .affiliation {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      font-size: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--link);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      border-bottom: 1px solid var(--text);
-      padding-bottom: 1px;
-      transition: opacity 0.15s;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.5;
-    }
-
-    /* Photo */
-    .photo-wrap img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 2px;
-      display: block;
-      filter: grayscale(15%);
-    }
-
-    /* ── Sections ── */
-    section {
-      margin-bottom: 48px;
-    }
-
-    h2 {
-      font-family: 'EB Garamond', 'Georgia', serif;
-      font-size: 1.05rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      margin-bottom: 18px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    p {
-      margin-bottom: 16px;
-      font-size: 1rem;
-    }
-
+    p { margin: 0 0 0.85rem; }
     p:last-child { margin-bottom: 0; }
 
-    /* ── Inline links ── */
-    a {
-      color: var(--link);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: #999;
-      transition: text-decoration-color 0.15s;
+    a { color: #222; }
+    a:hover { color: #555; }
+
+    .title { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+    ul { margin: 0 0 0.85rem; padding-left: 1.4rem; }
+    li { margin-bottom: 0.4rem; }
+
+    .paper { margin-bottom: 1.1rem; }
+    .paper .venue { color: #555; font-size: 0.9rem; }
+
+    nav { font-size: 0.9rem; margin-top: 1.2rem; margin-bottom: 3rem; }
+    nav a { margin-right: 1.2rem; color: #555; text-decoration: none; }
+    nav a:hover { color: #222; }
+
+    hr { border: none; border-top: 1px solid #ddd; margin: 2.5rem 0; }
+
+    .talk { margin-bottom: 1rem; }
+    .talk .meta { color: #555; font-size: 0.9rem; }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .header img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 2px;
+      flex-shrink: 0;
     }
 
-    a:hover {
-      text-decoration-color: var(--text);
-    }
-
-    /* ── Publications ── */
-    .pub-list {
-      list-style: none;
-    }
-
-    .pub-list li {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .pub-list li:first-child {
-      padding-top: 0;
-    }
-
-    .pub-title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.08rem;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 4px;
-      color: var(--text);
-      line-height: 1.45;
-    }
-
-    .pub-authors {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-bottom: 4px;
-    }
-
-    .pub-meta {
-      font-size: 0.87rem;
-      color: var(--text-light);
-      font-style: italic;
-    }
-
-    .pub-meta a {
-      font-style: normal;
-      color: var(--text-light);
-      text-decoration-color: #bbb;
-    }
-
-    /* ── Talks ── */
-    .talk-list {
-      list-style: none;
-    }
-
-    .talk-list li {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--rule);
-      font-size: 0.97rem;
-    }
-
-    .talk-list li:first-child { padding-top: 0; }
-
-    .talk-title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .talk-meta {
-      color: var(--text-light);
-      font-size: 0.88rem;
-    }
-
-    /* ── Service ── */
-    .service-list {
-      list-style: none;
-    }
-
-    .service-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--rule);
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .service-list li:first-child { padding-top: 0; }
-
-    /* ── Footer ── */
-    footer {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      font-size: 0.85rem;
-      color: var(--text-light);
-      line-height: 1.9;
-    }
-
-    footer a {
-      color: var(--text-light);
-    }
-
-    .copyright {
-      grid-column: 1 / -1;
-      margin-top: 16px;
-      font-size: 0.8rem;
-      opacity: 0.55;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 560px) {
-      .site-header {
-        grid-template-columns: 1fr;
-      }
-      .photo-wrap {
-        order: -1;
-      }
-      .photo-wrap img {
-        width: 90px;
-        height: 90px;
-      }
-      footer {
-        grid-template-columns: 1fr;
-      }
-    }
+    footer { margin-top: 4rem; font-size: 0.85rem; color: #999; }
   </style>
 </head>
 <body>
-<main>
 
-  <header class="site-header">
-    <div>
-      <div class="name">Prateek P. Kulkarni</div>
-      <div class="affiliation">Predoctoral Fellow &middot; IISc Bangalore</div>
-      <nav class="nav-links">
-        <a href="mailto:pkulkarni2425@gmail.com">Email</a>
-        <a href="Prateek_Kulkarni_CV_March26.pdf">CV</a>
-        <a href="https://arxiv.org/search/?searchtype=author&query=Kulkarni+P">arXiv</a>
-        <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
-      </nav>
-    </div>
-    <div class="photo-wrap">
-      <img src="prat25.png" alt="Prateek P. Kulkarni">
-    </div>
-  </header>
+<div class="header">
+  <div>
+    <h1>Prateek P. Kulkarni</h1>
+    <p class="title">Predoctoral Fellow &middot; IISc Bangalore</p>
+  </div>
+  <img src="prat25.png" alt="Prateek P. Kulkarni">
+</div>
 
-  <section>
-    <h2>About</h2>
-    <p>I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>) in the Department of Computer Science and Automation at the Indian Institute of Science, advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>. I am concurrently pursuing a B.Tech. in ECE (Quantum Technology track) at PES University (Class of 2026).</p>
-    <p>My research centers on <em>quantum complexity theory</em> and the algorithmic aspects of near-term quantum computation. At IISc, I study how spectral graph theory—particularly expander constructions—can be used to optimize qubit connectivity and reduce circuit compilation overhead. Our work on coupling map design via Near-Ramanujan Graphs received the <a href="https://src.acm.org/winners/2026">ACM SRC Bronze Medal</a> at MICRO 2025.</p>
-    <p>For my undergraduate thesis, I worked with <a href="https://staff.pes.edu/nm1246/">Prof. Kaustav Bhowmick</a> on variational quantum algorithms for photonic quantum computers.</p>
-  </section>
+<nav>
+  <a href="mailto:pkulkarni2425@gmail.com">Email</a>
+  <a href="Prateek_Kulkarni_CV_March26.pdf">CV</a>
+  <a href="https://arxiv.org/search/?searchtype=author&query=Kulkarni+P">arXiv</a>
+  <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+</nav>
 
-  <section>
-    <h2>Selected Publications</h2>
-    <ul class="pub-list">
+<p>
+  I am a Predoctoral Fellow (<a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS</a>)
+  in the Department of Computer Science and Automation at the Indian Institute of Science,
+  advised by <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>.
+  I am concurrently pursuing a B.Tech. in ECE (Quantum Technology track) at PES University (Class of 2026).
+</p>
+<p>
+  My research centers on <em>quantum complexity theory</em> and the algorithmic aspects of
+  near-term quantum computation. At IISc, I study how spectral graph theory&mdash;particularly
+  expander constructions&mdash;can be used to optimize qubit connectivity and reduce circuit
+  compilation overhead. Our work on coupling map design via Near-Ramanujan Graphs received
+  the <a href="https://src.acm.org/winners/2026">ACM SRC Bronze Medal</a> at MICRO 2025.
+</p>
 
-      <li>
-        <span class="pub-title">Entanglement-Dependent Error Bounds for Hamiltonian Simulation</span>
-        <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
-        <div class="pub-meta">
-          TQC 2026 &ensp;&middot;&ensp;
-          [<a href="https://arxiv.org/abs/2602.00555v1">arXiv:2602.00555</a>]
-        </div>
-      </li>
+<hr>
 
-      <li>
-        <span class="pub-title">Quantum Algorithms for Approximate Graph Isomorphism Testing</span>
-        <div class="pub-authors"><strong>Prateek P. Kulkarni</strong></div>
-        <div class="pub-meta">
-          QCTiP 2026 &ensp;&middot;&ensp;
-          [<a href="https://arxiv.org/abs/2603.02656">arXiv:2603.02656</a>]
-        </div>
-      </li>
+<h2>Publications</h2>
 
-    </ul>
-  </section>
+<div class="paper">
+  <a href="https://arxiv.org/abs/2602.00555v1">Entanglement-Dependent Error Bounds for Hamiltonian Simulation</a><br>
+  <span class="venue">Prateek P. Kulkarni &middot; TQC 2026 &middot; arXiv:2602.00555</span>
+</div>
 
-  <section>
-    <h2>Selected Talks</h2>
-    <ul class="talk-list">
-      <li>
-        <span class="talk-title">Quantum Communication Exponentially Speeds-up Circuit Synthesis</span>
-        <span class="talk-meta">
-          2nd Workshop on Automata and Games for Synthesis (<a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1">WAG@FSTTCS</a>), December 2025. Short contributed talk.
-        </span>
-      </li>
-      <li>
-        <span class="talk-title">Multi-Core Quantum Computing with Superconducting Qubits</span>
-        <span class="talk-meta">
-          <a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html">Systems Day 2025</a>, CSA, IISc. January 2025. Poster (selected among ~20 nationwide).
-        </span>
-      </li>
-    </ul>
-  </section>
+<div class="paper">
+  <a href="https://arxiv.org/abs/2603.02656">Quantum Algorithms for Approximate Graph Isomorphism Testing</a><br>
+  <span class="venue">Prateek P. Kulkarni &middot; QCTiP 2026 &middot; arXiv:2603.02656</span>
+</div>
 
-  <section>
-    <h2>Service &amp; Teaching</h2>
-    <ul class="service-list">
-      <li>Reviewer, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
-      <li>Teaching Assistant, <em>Quantum Transport and Logic Gates</em>, PES University, Spring 2025 &mdash; 4-credit course, ~90 students</li>
-    </ul>
-  </section>
+<hr>
 
-  <section>
-    <h2>Education</h2>
-    <ul class="service-list">
-      <li>B.Tech. Electronics and Communication Engineering (VLSI &amp; Quantum Technology), <a href="https://pes.edu">PES University</a>, 2022&ndash;2026</li>
-    </ul>
-  </section>
+<h2>Talks</h2>
 
-  <footer>
-    <div>
-      Prateek P. Kulkarni<br>
-      Dept. of Computer Science and Automation<br>
-      Indian Institute of Science<br>
-      Bengaluru, KA 560012, India
-    </div>
-    <div>
-      Office: <a href="https://maps.app.goo.gl/p2cB37v8BNFBAxzu8">CSA A358</a><br>
-      Email: <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a>
-    </div>
-    <div class="copyright">© Prateek P. Kulkarni. All rights reserved.</div>
-  </footer>
+<div class="talk">
+  Quantum Communication Exponentially Speeds-up Circuit Synthesis<br>
+  <span class="meta">2nd Workshop on Automata and Games for Synthesis (<a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1">WAG@FSTTCS</a>), December 2025. Short contributed talk.</span>
+</div>
 
-</main>
+<div class="talk">
+  Multi-Core Quantum Computing with Superconducting Qubits<br>
+  <span class="meta"><a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html">Systems Day 2025</a>, CSA, IISc, January 2025. Poster (selected among ~20 nationwide).</span>
+</div>
+
+<hr>
+
+<h2>Service &amp; Teaching</h2>
+<ul>
+  <li>Reviewer, <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a></li>
+  <li>Teaching Assistant, <em>Quantum Transport and Logic Gates</em>, PES University, Spring 2025 &mdash; 4-credit course, ~90 students</li>
+</ul>
+
+<hr>
+
+<h2>Education</h2>
+<ul>
+  <li>B.Tech. Electronics and Communication Engineering (VLSI &amp; Quantum Technology), <a href="https://pes.edu">PES University</a>, 2022&ndash;2026</li>
+</ul>
+
+<hr>
+
+<h2>Contact</h2>
+<p>
+  pkulkarni2425@gmail.com<br>
+  CSA A358, Dept. of Computer Science and Automation<br>
+  Indian Institute of Science, Bengaluru 560012
+</p>
+
+<footer>&copy; Prateek P. Kulkarni</footer>
+
 </body>
 </html>
