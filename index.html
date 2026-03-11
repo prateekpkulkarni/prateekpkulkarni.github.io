@@ -1,145 +1,540 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prateek P. Kulkarni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --berkeley-blue: #003262;
+    --gold: #C4820A;
+    --gold-light: #FDB515;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #d6d1c4;
+    --bg: #faf9f7;
+    --link: #003262;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Sans 3', Georgia, serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 36px 100px;
+  }
+
+  /* ─── Navbar ─── */
+  nav {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: none;
+    transition: color 0.15s ease;
+  }
+
+  nav a:hover {
+    color: var(--berkeley-blue);
+    border-bottom: none;
+  }
+
+  /* ─── Header ─── */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 52px;
+    padding-bottom: 36px;
+    border-bottom: 2px solid var(--berkeley-blue);
+  }
+
+  .header-text { flex: 1; }
+
+  .header-text h1 {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--berkeley-blue);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .header-text p {
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  .header-text p:last-child { margin-bottom: 0; }
+
+  .profile-photo {
+    width: 200px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+
+  /* ─── Award badge ─── */
+  .award {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fffbf0;
+    border: 1px solid var(--gold);
+    border-left: 3px solid var(--gold);
+    color: #6b4a00;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .award::before {
+    content: "🥉";
+    font-size: 1em;
+  }
+
+  /* ─── Sections ─── */
+  section {
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--berkeley-blue);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ─── Links ─── */
+  a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .ext-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .ext-links a {
+    display: inline-block;
+    background: var(--berkeley-blue);
+    color: #fff;
+    font-size: 0.82rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border: none;
+    transition: background 0.15s ease;
+  }
+
+  .ext-links a:hover {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+  }
+
+  /* ─── Papers ─── */
+  .papers-list {
+    list-style: none;
+    counter-reset: papers;
+  }
+
+  .papers-list li {
+    counter-increment: papers;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .papers-list li::before {
+    content: counter(papers) ".";
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--muted);
+    min-width: 22px;
+    padding-top: 1px;
+    flex-shrink: 0;
+  }
+
+  .paper-body { flex: 1; }
+
+  .paper-title {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--berkeley-blue);
+    font-style: italic;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .paper-authors {
+    font-size: 0.95rem;
+    color: var(--text);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .paper-venue {
+    font-size: 0.9rem;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .paper-links a {
+    font-size: 0.82rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6a1aad;
+    border-bottom: none;
+  }
+
+  .paper-links a:hover {
+    color: var(--gold);
+    border-bottom: none;
+  }
+
+  /* ─── Talks ─── */
+  .talk {
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border-left: 2px solid var(--border);
+  }
+
+  .talk-title {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.08rem;
+    font-style: italic;
+    color: var(--berkeley-blue);
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  .talk-venue {
+    font-size: 0.92rem;
+    color: var(--muted);
+    display: block;
+  }
+
+  .talk-type {
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  /* ─── Contact ─── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 20px;
+    font-size: 0.97rem;
+  }
+
+  .contact-grid .label {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-top: 2px;
+    white-space: nowrap;
+  }
+
+  /* ─── Service / Education ─── */
+  .service-item, .edu-item {
+    margin-bottom: 10px;
+    font-size: 0.97rem;
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* ─── Interests tags ─── */
+  .interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    background: #eef2f8;
+    color: var(--berkeley-blue);
+    font-size: 0.85rem;
+    padding: 3px 11px;
+    border: 1px solid #c9d5e8;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 28px 18px 60px;
+      font-size: 16px;
+    }
+
+    nav {
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .site-header {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+    }
+
+    .profile-photo {
+      width: 130px;
+    }
+
+    .header-text h1 {
+      font-size: 1.9rem;
+      margin-bottom: 14px;
+    }
+
+    .ext-links {
+      margin-top: 16px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .contact-grid .label {
+      margin-bottom: -6px;
+    }
+
+    .papers-list li {
+      gap: 10px;
+    }
+
+    .interest-tags {
+      gap: 6px;
+    }
+  }
+</style>
 </head>
 
-<body bgcolor="white" text="black" link="blue" vlink="red" alink="red">
+<body>
 
-<h1>Prateek P. Kulkarni</h1>
+<nav>
+  <a href="#papers">Papers</a>
+  <a href="#talks">Talks</a>
+  <a href="#service">Service</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<img align="right" src="prat25.png" width="320" style="margin-left:25px;">
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="site-header">
+  <div class="header-text">
+    <h1>Prateek P. Kulkarni</h1>
 
-<p style="font-family:Cambria">
-I am a Predoctoral Fellow in the 
-<a href="https://www.csa.iisc.ac.in/sparks-programme/" style="text-decoration:none">SPARKS Programme</a>
-at the Department of Computer Science and Automation,
-<a href="https://www.iisc.ac.in" style="text-decoration:none">Indian Institute of Science</a>, Bangalore,
-where I work with 
-<a href="https://www.csa.iisc.ac.in/~skmandal" style="text-decoration:none">Prof. Sumit K. Mandal</a>.
-</p>
+    <p>
+      Predoctoral Fellow, 
+      <a href="https://www.csa.iisc.ac.in/sparks-programme/">SPARKS Programme</a><br>
+      Department of Computer Science and Automation<br>
+      <a href="https://www.iisc.ac.in">Indian Institute of Science</a>, Bangalore<br>
+      Advisor: <a href="https://www.csa.iisc.ac.in/~skmandal">Prof. Sumit K. Mandal</a>
+    </p>
 
-<p style="font-family:Cambria">
-I am concurrently pursuing a B.Tech. in Electronics and Communication Engineering 
-(Quantum Technology track) at 
-<a href="https://pes.edu" style="text-decoration:none">PES University</a> (Class of 2026).
-</p>
+    <p>
+      Concurrently pursuing a B.Tech. in Electronics and Communication Engineering 
+      (Quantum Technology track) at 
+      <a href="https://pes.edu">PES University</a> (Class of 2026).
+    </p>
 
-<p style="font-family:Cambria">
-At IISc, I use tools from theoretical computer science
-to analyze and inform better quantum hardware design, particularly around qubit
-connectivity and circuit compilation.
-</p>
+    <p>
+      I use tools from theoretical computer science to analyze and inform
+      better quantum hardware design, particularly around qubit connectivity
+      and circuit compilation.
+      Our work on coupling map design received the 
+      <a href="https://src.acm.org/winners/2026">ACM SRC Bronze Medal</a>
+      at MICRO 2025 (Undergraduate category).
+    </p>
 
-<p style="font-family:Cambria">
-Our work on coupling map design received the 
-<a href="https://src.acm.org/winners/2026" style="text-decoration:none">
-ACM SRC Bronze Medal</a> at MICRO 2025 (Undergraduate category).
-</p>
+    <p>
+      If you think our interests overlap, I'd love to hear from you — feel free to reach out by email.
+    </p>
 
-<h2>Research interests</h2>
+    <div class="ext-links">
+      <a href="Prateek_Kulkarni_CV_March26.pdf">CV</a>
+      <a href="https://arxiv.org/a/pkulkarni_p_1.html">arXiv</a>
+      <a href="https://www.linkedin.com/in/pkulkarni2425">LinkedIn</a>
+    </div>
+  </div>
 
-<p style="font-family:Cambria">
-Quantum algorithms, Quantum learning theory, Quantum complexity theory, 
-Analysis of Boolean functions, Property testing.
-</p>
+  <img class="profile-photo" src="prat25.png" alt="Prateek P. Kulkarni">
+</header>
 
-<h2>Contact information</h2>
+<!-- ═══════════════════ RESEARCH INTERESTS ═══════════════════ -->
+<section>
+  <h2>Research Interests</h2>
+  <div class="interest-tags">
+    <span class="tag">Quantum Algorithms</span>
+    <span class="tag">Quantum Learning Theory</span>
+    <span class="tag">Quantum Complexity Theory</span>
+    <span class="tag">Analysis of Boolean Functions</span>
+    <span class="tag">Property Testing</span>
+  </div>
+  <p style="margin-top: 16px; font-size: 0.97rem; color: var(--muted); line-height: 1.8;">
+    I am broadly interested in what quantum computers can and cannot do efficiently — 
+    both in terms of query and computational complexity. 
+    On the algorithms side, I think about quantum speedups for combinatorial and algebraic problems, 
+    and how structural properties of inputs (such as entanglement or symmetry) govern the 
+    cost of simulation and compilation.
+    On the learning and testing side, I am drawn to questions about how efficiently a quantum 
+    learner can recover or test properties of unknown Boolean functions and quantum states, 
+    and what separates quantum from classical sample complexity.
+    I also have a growing interest in the interplay between coding theory and complexity — 
+    particularly how list-decoding and local testability 
+    ideas inform hardness and pseudorandomness in the quantum setting.
+  </p>
+</section>
 
-<p style="font-family:Cambria">
-Email: pkulkarni2425 (at) gmail (dot) com <br>
-Office: CSA A358 <br>
-Department of Computer Science and Automation <br>
-Indian Institute of Science <br>
-Bengaluru 560012, India
-</p>
+<!-- ═══════════════════ PAPERS ═══════════════════ -->
+<section id="papers">
+  <h2>Papers</h2>
+  <ol class="papers-list">
 
-<h2>External links</h2>
+    <li>
+      <div class="paper-body">
+        <span class="paper-title">Quantum Algorithms for Approximate Graph Isomorphism Testing</span>
+        <span class="paper-authors">Prateek P. Kulkarni</span>
+        <span class="paper-venue">Quantum Computing Theory in Practice (QCTiP 2026)</span>
+        <span class="paper-links">
+          <a href="https://arxiv.org/abs/2603.02656">[arXiv]</a>
+        </span>
+      </div>
+    </li>
 
-<p style="font-family:Cambria">
-<a href="Prateek_Kulkarni_CV_March26.pdf" style="text-decoration:none">[CV]</a>
-<a href="https://arxiv.org/a/pkulkarni_p_1.html" style="text-decoration:none">[arXiv]</a>
-<a href="https://www.linkedin.com/in/pkulkarni2425" style="text-decoration:none">[LinkedIn]</a>
-</p>
+    <li>
+      <div class="paper-body">
+        <span class="paper-title">Entanglement-Dependent Error Bounds for Hamiltonian Simulation</span>
+        <span class="paper-authors">Prateek P. Kulkarni</span>
+        <span class="paper-venue">Theory of Quantum Computation, Communication and Cryptography (TQC 2026)</span>
+        <span class="paper-links">
+          <a href="https://arxiv.org/abs/2602.00555v1">[arXiv]</a>
+        </span>
+      </div>
+    </li>
 
-<hr>
+  </ol>
+</section>
 
-<h1>Papers</h1>
+<!-- ═══════════════════ TALKS ═══════════════════ -->
+<section id="talks">
+  <h2>Talks</h2>
 
-<ol>
+  <div class="talk">
+    <span class="talk-title">Quantum Communication Exponentially Speeds-up Circuit Synthesis</span>
+    <span class="talk-venue">2nd Workshop on Automata and Games for Synthesis (WAGS@FSTTCS 2025)</span>
+    <span class="talk-type">Short contributed talk &nbsp;&middot;&nbsp; 
+      <a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1">Workshop page</a>
+    </span>
+  </div>
 
-<li>
-<p style="font-family:Cambria">
-<b>Quantum Algorithms for Approximate Graph Isomorphism Testing</b><br>
-Prateek P. Kulkarni <br>
-Quantum Computing Theory in Practice (QCTiP 2026) <br>
-<a href="https://arxiv.org/abs/2603.02656" style="color:#9A33FF;text-decoration:none">[arXiv]</a>
-</p>
-</li>
-  
-<li>
-<p style="font-family:Cambria">
-<b>Entanglement-Dependent Error Bounds for Hamiltonian Simulation</b><br>
-Prateek P. Kulkarni <br>
-Theory of Quantum Computation, Communication and Cryptography (TQC 2026) <br>
-<a href="https://arxiv.org/abs/2602.00555v1" style="color:#9A33FF;text-decoration:none">[arXiv]</a>
-</p>
-</li>
+  <div class="talk">
+    <span class="talk-title">Multi-Core Quantum Computing with Superconducting Qubits</span>
+    <span class="talk-venue">Systems Day 2025, CSA, IISc</span>
+    <span class="talk-type">Poster presentation &nbsp;&middot;&nbsp; 
+      <a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html">Poster listing</a>
+    </span>
+  </div>
+</section>
 
-</ol>
+<!-- ═══════════════════ SERVICE ═══════════════════ -->
+<section id="service">
+  <h2>Service</h2>
+  <div class="service-item">
+    <strong>Reviewer</strong> &mdash; 
+    <a href="https://tqe.ieee.org/">IEEE Transactions on Quantum Engineering</a>
+  </div>
+  <div class="service-item">
+    <strong>Teaching Assistant</strong> &mdash; Quantum Transport and Logic Gates, PES University (Spring 2025)
+  </div>
+</section>
 
-<hr>
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <span class="label">Email</span>
+    <span>pkulkarni2425 (at) gmail &lt;.&gt; com</span>
+    <span class="label">Office</span>
+    <span>CSA A358, Department of Computer Science and Automation, IISc, Bengaluru 560012</span>
+  </div>
+</section>
 
-<h1>Talks</h1>
+<!-- ═══════════════════ EDUCATION ═══════════════════ -->
+<section>
+  <h2>Education</h2>
+  <div class="edu-item">
+    B.Tech., Electronics and Communication Engineering (Quantum Technology track)<br>
+    <a href="https://pes.edu">PES University</a>, 2022–2026
+  </div>
+</section>
 
-<p style="font-family:Cambria">
-<b>Quantum Communication Exponentially Speeds-up Circuit Synthesis</b><br>
-2nd Workshop on Automata and Games for Synthesis (WAGS@FSTTCS 2025)<br>
-Short contributed talk.<br>
-<a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1" style="text-decoration:none">[Workshop page]</a>
-</p>
-
-<p style="font-family:Cambria">
-<b>Multi-Core Quantum Computing with Superconducting Qubits</b><br>
-Systems Day 2025, CSA, IISc<br>
-Poster presentation.<br>
-<a href="https://events.csa.iisc.ac.in/systemsday2025/poster.html" style="text-decoration:none">[Poster listing]</a>
-</p>
-
-<hr>
-
-<h2>Service</h2>
-
-<p style="font-family:Cambria">
-Reviewer: 
-<a href="https://tqe.ieee.org/" style="text-decoration:none">
-IEEE Transactions on Quantum Engineering
-</a>
-</p>
-
-<p style="font-family:Cambria">
-Teaching Assistant: Quantum Transport and Logic Gates, PES University (Spring 2025)
-</p>
-
-<hr>
-
-<h2>Education</h2>
-
-<p style="font-family:Cambria">
-B.Tech., Electronics and Communication Engineering (Quantum Technology track) <br>
-<a href="https://pes.edu" style="text-decoration:none">PES University</a>, 2022–2026
-</p>
-
-<hr>
-
-<p style="font-family:Cambria">
-Last updated: March 2026 <br>
-Website template inspired by 
-<a href="https://logitechenator.github.io/sarunach/" style="text-decoration:none">
-Srinivasan Arunachalam.
-</a>
-</p>
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  Last updated: March 2026
+</footer>
 
 </body>
 </html>
