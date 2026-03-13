@@ -328,11 +328,33 @@
 
   /* ─── Footer ─── */
   footer {
-    margin-top: 60px;
+    margin-top: 0;
     padding-top: 20px;
     border-top: 1px solid var(--border);
     font-size: 0.85rem;
     color: var(--muted);
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tcs4f-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    opacity: 0.75;
+    transition: opacity 0.15s ease, border-color 0.15s ease;
+  }
+
+  .tcs4f-badge:hover {
+    opacity: 1;
+    border-color: #aaa;
   }
 
   /* ─── Interests tags ─── */
@@ -548,7 +570,7 @@
   <h2>Contact</h2>
   <div class="contact-grid">
     <span class="label">Email</span>
-    <span>pkulkarni2425 (at) gmail (dot) com</span>
+    <span>pkulkarni2425 (at) gmail &lt;.&gt; com</span>
     <span class="label">Office</span>
     <span>CSA A358, Department of Computer Science and Automation, IISc, Bengaluru 560012</span>
   </div>
@@ -571,7 +593,12 @@
 
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer>
-  Last updated: March 2026
+  <div class="footer-inner">
+    <span>Last updated: March 2026</span>
+    <a href="https://tcs4f.org" class="tcs4f-badge" title="Theoretical Computer Scientists for Future">
+      <img width="72" src="https://tcs4f.org/themes/tcs4f/img/logo.svg" alt="Theoretical Computer Scientists for Future">
+    </a>
+  </div>
 </footer>
 
 </body>
