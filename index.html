@@ -1,435 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Prateek P. Kulkarni</title>
-  <meta name="description" content="Prateek P. Kulkarni's personal website">
-  <meta name="author" content="Prateek P. Kulkarni">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* ── Reset ── */
-    html,body,div,span,applet,object,iframe,
-    h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-    a,abbr,acronym,address,big,cite,code,
-    del,dfn,em,img,ins,kbd,q,s,samp,
-    small,strike,strong,sub,sup,tt,var,
-    b,u,i,center,dl,dt,dd,ol,ul,li,
-    fieldset,form,label,legend,table,caption,
-    tbody,tfoot,thead,tr,th,td,article,aside,
-    canvas,details,embed,figure,figcaption,footer,
-    header,hgroup,menu,nav,output,ruby,section,
-    summary,time,mark,audio,video {
-      margin: 0; padding: 0; border: 0;
-      font-size: 1em; font: inherit; vertical-align: baseline;
-    }
-    a { text-decoration: none; }
-    article,aside,details,figcaption,figure,
-    footer,header,hgroup,menu,nav,section { display: block; }
-    body { line-height: 1; }
-    table { border-collapse: collapse; border-spacing: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prateek P. Kulkarni — quantum computing systems researcher working on compilers, runtimes, architectures, and fault-tolerant quantum computing.">
+    <title>Prateek P. Kulkarni</title>
 
-    /* ── Base ── */
-    body {
-      color: #272727;
-      background: #fff;
-      font-family: "Inconsolata", monospace;
-      font-size: 100%;
-      font-weight: 400;
-    }
-    h1 { margin-bottom: 5px; }
-    p  { font-size: 1em; line-height: 150%; }
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #ffffff;
+            padding: 0;
+            margin: 0;
+            color: #111;
+            font-size: 16px;
+            line-height: 1.48;
+        }
 
-    /* ── Links ── */
-    a               { color: #1A0DAB; text-decoration: none; }
-    a:visited       { color: #1A0DAB; text-decoration: none; }
-    a:hover         { color: #1A0DAB; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #1A0DAB; }
-    a:active        { color: #1A0DAB; text-decoration: none; }
+        #layout {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            padding: 28px 24px 50px;
+            gap: 46px;
+        }
 
-    /* ── Lists ── */
-    ul { list-style: none; }
-    ul li { padding: 5px 5px 5px 10px; }
-    @media screen and (max-width: 600px) { ul li { padding: 10px 0; } }
+        #menu {
+            width: 170px;
+            flex-shrink: 0;
+            padding-top: 6px;
+            position: sticky;
+            top: 24px;
+            align-self: flex-start;
+        }
 
-    /* ── Layout ── */
-    .wrapper {
-      max-width: 600px;
-      margin: auto;
-      padding: 60px 30px;
-    }
-    @media screen and (max-width: 600px) { .wrapper { padding: 20px; } }
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    /* ── Header ── */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-bottom: 50px;
-    }
-    @media screen and (max-width: 600px) { .header { display: block; } }
-    .header h1 { font-size: 2em; margin-bottom: 0; }
-    .header ul { margin-top: 10px; }
-    .header ul li { display: inline; padding: 0 0 0 5px; }
+        #menu li {
+            margin: 8px 0;
+        }
 
-    /* ── Profile picture ── */
-    .profile-pic {
-      float: right;
-      height: 140px;
-      width: 140px;
-      border-radius: 50%;
-      border: 1px solid #000;
-      object-fit: cover;
-    }
+        #menu a {
+            color: #224b8d;
+            text-decoration: none;
+        }
 
-    /* ── Accordion arrows ── */
-    .arrows a               { color: black; text-decoration: none; }
-    .arrows a:visited       { color: #1A0DAB; text-decoration: none; }
-    .arrows a:hover         { color: #1A0DAB; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #1A0DAB; }
-    .arrows a:active        { color: #1A0DAB; text-decoration: none; }
+        #menu a:hover {
+            color: #527bbd;
+            text-decoration: underline;
+        }
 
-    /* ── Portfolio / About ── */
-    .portfolio { padding-bottom: 30px; }
-    .portfolio h1 { font-size: 1.3em; font-weight: bold; margin-bottom: 5px; }
+        #content {
+            flex-grow: 1;
+            max-width: 760px;
+            min-width: 0;
+        }
 
-    /* ── Section blocks ── */
-    .blog { padding-bottom: 30px; }
-    .blog h1 { font-size: 1.3em; font-weight: bold; margin-bottom: 5px; }
-    .blog h2 { font-size: 1.1em; font-weight: bold; }
-    .blog h3 { font-size: 0.9em; font-weight: bold; padding: 3px 0; }
-    .blog h4 { font-size: 0.9em; padding: 5px 0 5px 10px; }
-    .blog li { padding: 10px 0; }
-    .blog b  { font-weight: bold; }
-    .blog i  { font-style: italic; }
-    .blog table {
-      border-collapse: collapse;
-      font-family: "Inconsolata", monospace;
-      width: 100%;
-      margin-top: 10px;
-    }
-    .blog td { border: 1px solid #ddd; text-align: left; padding: 4px 8px; }
-    .blog th { border: 1px solid #ddd; text-align: left; padding: 4px 8px; font-weight: bold; }
-    .blog tr:nth-child(even) { background-color: #ddd; }
+        .title {
+            font-size: 1.95rem;
+            margin-bottom: 4px;
+            color: #527bbd;
+            font-weight: normal;
+        }
 
-    /* ── Labels ── */
-    .label-green { color: #009933; font-weight: bold; }
+        h2 {
+            font-size: 1.08rem;
+            font-weight: normal;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            color: #527bbd;
+        }
 
-    /* ── Contact ── */
-    .contact-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-    .contact-row input {
-      font-family: "Inconsolata", monospace;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      padding: 3px 6px;
-      background: #fafafa;
-      color: #272727;
-      width: 240px;
-    }
-    .contact-row button {
-      font-family: "Inconsolata", monospace;
-      font-size: 0.85em;
-      border: 1px solid #ccc;
-      background: #f4f4f4;
-      padding: 3px 8px;
-      cursor: pointer;
-    }
-    .contact-row button:hover { background: #e8e8e8; }
-    .copy-confirm { font-size: 0.85em; color: #009933; display: none; }
+        h3 {
+            font-size: 1rem;
+            margin: 0;
+            font-weight: bold;
+        }
 
-    /* ── Footer ── */
-    .footer {
-      clear: both;
-      color: #999;
-      font-size: 0.85em;
-      padding-top: 20px;
-      margin-top: 10px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      line-height: 150%;
-    }
-  </style>
+        p {
+            margin: 0.65em 0;
+        }
 
-  <script>
-    function expand_collapse(id) {
-      var e = document.getElementById(id);
-      var f = document.getElementById(id + "_arrows");
-      if (e.style.display === 'none') {
-        e.style.display = 'block';
-        f.innerHTML = '&#9650;';
-      } else {
-        e.style.display = 'none';
-        f.innerHTML = '&#9660;';
-      }
-    }
-    function copyEmail() {
-      navigator.clipboard.writeText('pkulkarni2425@gmail.com').then(function () {
-        var c = document.getElementById('copy-confirm');
-        c.style.display = 'inline';
-        setTimeout(function () { c.style.display = 'none'; }, 1500);
-      });
-    }
-  </script>
+        a {
+            color: #224b8d;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .profile {
+            display: flex;
+            gap: 22px;
+            margin: 22px 0 18px;
+            align-items: flex-start;
+        }
+
+        .profile img {
+            width: 145px;
+            max-width: 35vw;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .contact {
+            line-height: 1.55;
+        }
+
+        .quick-links {
+            margin-top: 8px;
+            font-size: 0.94rem;
+        }
+
+        .quick-links a {
+            margin-right: 10px;
+        }
+
+        .research-list,
+        .plain-list {
+            margin: 0.6em 0 0.8em;
+            padding-left: 1.35em;
+        }
+
+        .research-list li,
+        .plain-list li {
+            margin-bottom: 0.45em;
+        }
+
+        .pub-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pub-list li {
+            margin-bottom: 1.35em;
+        }
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        .pub-authors {
+            font-size: 95%;
+            margin: 0.18em 0;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            font-size: 95%;
+            color: #444;
+        }
+
+        .pub-links {
+            font-size: 90%;
+            color: #666;
+            margin-top: 0.15em;
+        }
+
+        .pub-links a {
+            color: #527bbd;
+            margin-right: 0.5em;
+        }
+
+        .entry {
+            margin-bottom: 1.35em;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .entry-title {
+            font-weight: bold;
+        }
+
+        .entry-date {
+            color: #555;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .entry-subtitle {
+            color: #444;
+            font-size: 0.95rem;
+            margin-top: 0.12em;
+        }
+
+        .entry ul {
+            margin: 0.45em 0 0;
+            padding-left: 1.35em;
+        }
+
+        .entry li {
+            margin-bottom: 0.38em;
+        }
+
+        .project-name {
+            font-weight: bold;
+        }
+
+        .muted {
+            color: #555;
+            font-size: 0.94rem;
+        }
+
+        .award-list,
+        .service-list {
+            padding-left: 1.35em;
+        }
+
+        .award-list li,
+        .service-list li {
+            margin-bottom: 0.45em;
+        }
+
+        .references {
+            display: grid;
+            gap: 0.65em;
+        }
+
+        .footer {
+            margin-top: 42px;
+            font-size: 90%;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            #layout {
+                flex-direction: column;
+                gap: 20px;
+                padding: 18px;
+            }
+
+            #menu {
+                width: 100%;
+                position: static;
+                text-align: center;
+            }
+
+            #menu ul {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px 16px;
+            }
+
+            #menu li {
+                display: inline;
+                margin: 0;
+            }
+
+            #content {
+                max-width: 100%;
+            }
+
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .entry-header {
+                display: block;
+            }
+
+            .entry-date {
+                display: block;
+                margin-top: 2px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="wrapper">
+    <div id="layout">
+        <nav id="menu" aria-label="Primary navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
 
-    <!-- ════════════ HEADER ════════════ -->
-    <div class="header">
-      <h1>Prateek P. Kulkarni</h1>
+        <main id="content">
+            <section id="home">
+                <div class="title">Prateek P. Kulkarni</div>
+                <div class="profile">
+                    <img src="prat25.jpg" alt="Prateek P. Kulkarni">
+                    <div class="contact">
+                        Walmart Predoctoral Fellow<br>
+                        Department of Computer Science and Automation<br>
+                        Indian Institute of Science, Bangalore<br><br>
+
+                        <a href="mailto:pkulkarni2425@gmail.com">email</a> ·
+                        <!-- <a href="https://scholar.google.com/">scholar</a> · -->
+                        <a href="https://github.com/prateekpkulkarni">github</a> ·
+                        <a href="https://www.linkedin.com/in/pkulkarni2425">linkedin</a> ·
+                        <a href="Prateek_P_Kulkarni_CV26.pdf">cv</a>
+                    </div>
+                </div>
+
+                <h2>About</h2>
+                <p>
+                    I am a Walmart Predoctoral Fellow at the Indian Institute of Science, advised by
+                    <a href="https://sumitmandal.github.io/">Prof. Sumit K. Mandal</a>.
+                    I work on <strong>quantum computer systems</strong>, especially compilers, runtimes,
+                    resource management, and hardware–software co-design for scalable and fault-tolerant quantum computing.
+                </p>
+                <p>
+                    I will be a visiting researcher at the Fields Institute in Fall 2026.
+                </p>
+            </section>
+
+            <section id="research">
+                <h2>Research</h2>
+                <p>
+                    My current interests include quantum compilation and runtime systems,
+                    fault-tolerant quantum computing, QEC-aware mapping, resource allocation,
+                    and architecture–compiler co-design.
+                </p>
+            </section>
+
+            <section id="publications">
+                <h2>Publications &amp; Preprints</h2>
+                <ul class="pub-list">
+                    <li>
+                        <div class="pub-title">
+                            <a href="https://doi.org/10.1145/3816440.3818544">
+                                How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework
+                            </a>
+                        </div>
+                        <div class="pub-authors">
+                            <strong>Prateek P. Kulkarni</strong>, Sumit K. Mandal
+                        </div>
+                        <div class="pub-venue">
+                            Proceedings of the 31st ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED 2026)
+                        </div>
+                        <div class="pub-links">
+                            Extended version invited to <strong>IEEE TVLSI</strong> ·
+                            <a href="https://arxiv.org/pdf/2607.24704v1">arXiv:2607.24704</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="pub-title">
+                            <a href="https://arxiv.org/pdf/2608.12936v1">AutoQuREO: An Automated Framework for Quantum Resource Estimation and Optimization</a>
+                        </div>
+                        <div class="pub-authors">
+                            Harshkumar Oza, Aritra Sarkar, Syed Naqi Abbas, Rahul Bhowmick,
+                            Aryan Prakash, <strong>Prateek P. Kulkarni</strong>, Krishna Kumar Sabapathy
+                        </div>
+                        <div class="pub-venue">
+                            Under submission · Preprint, 2026
+                        </div>
+                        <!-- <div class="pub-links">
+                            []
+                        </div> -->
+                    </li>
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">Indian Institute of Science — Walmart Predoctoral Fellow</div>
+                        <div class="entry-date">July 2026 – Present</div>
+                    </div>
+                    <div class="entry-subtitle">Advisor: Prof. Sumit K. Mandal</div>
+                    <p>Quantum runtimes, scheduling, and resource management for shared quantum systems.</p>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">University of Cambridge — Research Assistant</div>
+                        <div class="entry-date">Apr. 2026 – Present</div>
+                    </div>
+                    <div class="entry-subtitle">Advisor: Prof. Prakash Murali</div>
+                    <p>Compiler abstractions and hardware-aware embeddings for qLDPC codes.</p>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">Fujitsu Research India — Research Intern</div>
+                        <div class="entry-date">Apr. -- June 2026</div>
+                    </div>
+                    <p>Quantum resource estimation, compilation, and optimization.</p>
+                </div>
+            </section>
+
+            <section id="awards">
+                <h2>Selected Awards</h2>
+                <ul class="award-list">
+                    <li><strong>3rd Prize</strong>, ACM Student Research Competition at MICRO 2025.</li>
+                    <li><strong>SPARKS Predoctoral Research Fellowship</strong>, IISc, 2025.</li>
+                    <li><strong>INAE Mentee</strong>, Indian National Academy of Engineering, 2026.</li>
+                </ul>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">PES University — B.Tech., Electronics and Communication Engineering</div>
+                        <div class="entry-date">2022 – 2026</div>
+                    </div>
+                    <p class="muted">Major Project: Quantum Machine Learning on Photonic Processors.</p>
+                </div>
+            </section>
+
+            <div class="footer">
+                Last updated: August 2026
+            </div>
+        </main>
     </div>
-
-    <!-- ════════════ PROFILE PICTURE ════════════ -->
-    <img src="prat25.png" class="profile-pic" alt="Prateek P. Kulkarni">
-
-    <!-- ════════════ ABOUT ════════════ -->
-    <div class="portfolio">
-      <div id="about" style="display:block;">
-        <p>
-          Pre-Doctoral Fellow,
-          <a href="https://www.csa.iisc.ac.in/" target="_blank">CSA</a>,
-          <a href="https://www.iisc.ac.in" target="_blank">IISc</a>
-        </p>
-        <br>
-        <p>
-          I am a predoctoral fellow at
-          <a href="https://www.iisc.ac.in" target="_blank">IISc</a>
-          under the <a href="https://www.csa.iisc.ac.in/sparks-programme/" target="_blank">SPARKS Programme</a>,
-          advised by <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Prof. Sumit K. Mandal</a>.
-          
-        I am concurrently completing a B.Tech. in Electronics and Communication Engineering
-          (Quantum Technology track) at
-          <a href="https://pes.edu" target="_blank">PES University</a> (Class of 2026).
-        </p>
-        <br>
-<p> I am fortunate to spend this summer interning at Fujitsu Research India, working on interesting problems in optimizing quantum compilation, hosted by Aritra Sarkar and Harshkumar Oza. </p>
-<br>
-        <p>
-          My work sits at the intersection of theoretical computer science and quantum hardware. I am
-          interested in building reliable and efficient quantum computing systems &mdash; understanding how
-          constraints across abstraction layers limit real devices, and closing that gap to make quantum
-          advantage practically realizable. My recent focus has been on designing better coupling maps
-          and optimal resource allocation strategies for noisy quantum devices.
-        </p>
-        <br>
-        <p>
-          If you think our interests overlap, I&rsquo;d love to hear from you.
-        </p>
-        <br>
-        <!--<p>
-          Links: &nbsp;
-        <a href="PPK_CV26.pdf" target="_blank">CV</a> &nbsp;
-          <a href="https://arxiv.org/a/pkulkarni_p_1.html" target="_blank">arXiv</a> &nbsp;
-          <a href="https://www.linkedin.com/in/pkulkarni2425" target="_blank">LinkedIn</a> &nbsp;
-          <a href="https://github.com/prateekpkulkarni" target="_blank">GitHub</a>
-      </p> -->
-      </div>
-    </div>
-
-    <!-- ════════════ PAPERS ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="pubs_arrows" class="arrows" onclick="expand_collapse('pubs'); return false;">&#9650;</a>
-        Papers
-      </h1>
-      <div id="pubs" style="display:block;">
-        <p><!--All papers are <a href="https://arxiv.org/a/pkulkarni_p_1.html" target="_blank">available on the arXiv</a>. PPK&nbsp;=&nbsp;Prateek&nbsp;P.&nbsp;Kulkarni;--> *&nbsp;denotes&nbsp;equal&nbsp;contribution.</p>
-        <ol reversed style="padding-left:34px; margin-top:12px;">
-
-          <li>
-            <h2>How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework</h2>
-            Prateek P. Kulkarni and
-            <a href="https://www.csa.iisc.ac.in/~skmandal" target="_blank">Sumit K. Mandal</a><br>
-            <i>31st IEEE/ACM International Symposium on Low-Power Electronic Design (<b>ISLPED 2026</b>).</i><br>
-            <a href="#" target="_blank">[ACM DL]</a>
-          </li>
-
-          <li>
-            <h2>One Key Good, L Keys Better: List Decoding Meets Quantum Privacy Amplification</h2>
-            Prateek P. Kulkarni<br>
-            <i>Poster, 16th Conference on Quantum Cryptography (<b>QCrypt 2026</b>).</i><br>
-            <a href="https://arxiv.org/abs/2603.18097" target="_blank">[arXiv:2603.18097]</a>
-          </li>
-
-          <li>
-            <h2>QuSim-Join: Provably Optimal Quadratic Speedup in Set Similarity Joins via Quantum Amplitude Estimation</h2>
-            Prateek P. Kulkarni* and <a href="aakarshalam.github.io">Aakarsh Alam</a>*<br>
-            <i>3rd Workshop on Quantum Computing and Quantum-Inspired Technology for Data-Intensive Systems
-            and Applications (<b>Q-Data 2026</b>), co-located with SIGMOD&rsquo;26.</i><br>
-            <a href="https://doi.org/10.1145/3811628.3811832" target="_blank">[ACM DL]</a>
-          </li>
-
-          <li>
-            <h2>Entanglement-Dependent Error Bounds for Hamiltonian Simulation</h2>
-            Prateek P. Kulkarni<br>
-            <i>Poster, 21st Conference on the Theory of Quantum Computation, Communication and
-            Cryptography (<b>TQC 2026</b>).</i><br>
-            <a href="https://arxiv.org/abs/2602.00555v1" target="_blank">[arXiv:2602.00555]</a> &nbsp;
-            <a href="https://eccc.weizmann.ac.il/report/2026/042" target="_blank">[ECCC: TR26-042]</a>
-          </li>
-
-          <li>
-            <h2>A Generalized Hamiltonian Approach for Designing Single Photon-based Optical Quantum Devices</h2>
-            Ramaseshan R, Abhishek Kumar V S, Adith Rajeev, Prathik V, Aditya Aravind,
-            Prateek P. Kulkarni, Kaustav Bhowmick<br>
-            <i>Journal of Supercomputing, vol. 81, no. 1395, 2025.</i><br>
-            <a href="https://link.springer.com/article/10.1007/s11227-024-06843-5" target="_blank">[Springer]</a>
-          </li>
-
-        </ol>
-      </div>
-    </div>
-
-    <!-- ════════════ SOFTWARE ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="sw_arrows" class="arrows" onclick="expand_collapse('sw'); return false;">&#9650;</a>
-        Software
-      </h1>
-      <div id="sw" style="display:block;">
-        <ul>
-          <li>
-            <h2><a href="https://github.com/prateekpkulkarni/SubLCS" target="_blank">SubLCS</a></h2>
-            Enumeration framework for logical Clifford synthesis of subsystem QEC codes via
-            symplectic gauge-orbit decomposition. Presented as a poster at TQC 2026.
-          </li>
-          <li>
-            <h2><a href="https://github.com/prateekpkulkarni/surface2cirqit" target="_blank">surface2cirqit</a></h2>
-            Modular surface-code abstraction with a Cirq compilation pipeline; achieves
-            20&ndash;40% gate-overhead reduction for NISQ-era simulation.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ════════════ TALKS ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="talks_arrows" class="arrows" onclick="expand_collapse('talks'); return false;">&#9650;</a>
-        Talks &amp; Presentations
-      </h1>
-      <div id="talks" style="display:block;">
-        <ul>
-          <li>
-            <h2>Quantum Distribution-Free Testing via Fourier Sampling</h2>
-            <h3>Poster &middot; Workshop on ML for Algorithms @ STOC 2026</h3>
-          </li>
-          <li>
-            <h2>Classical Shadows are Optimal for Local Observables</h2>
-            <h3>Poster-talk &middot; 5th International Conference on Quantum Error Correction (QEC 2026)</h3>
-          </li>
-          <li>
-            <h2>Formalizing Operator-Level Proofs of Quantum Speedups in Lean</h2>
-            <h3>Long talk &middot; Lean Workshop @ FLoC 2026</h3>
-          </li>
-          <li>
-            <h2>Quantum Communication Exponentially Speeds-up Circuit Synthesis</h2>
-            <h3>Short contributed talk &middot; WAGS @ FSTTCS 2025</h3>
-            <!-- <a href="https://sites.google.com/view/wagsfsttcs2025/schedule_1" target="_blank">[Workshop page]</a> -->
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ════════════ RECOGNITIONS ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="awards_arrows" class="arrows" onclick="expand_collapse('awards'); return false;">&#9650;</a>
-        Recognitions &amp; Grants
-      </h1>
-      <div id="awards" style="display:block;">
-        <ul>
-          <li>
-            <b>ACM SIGMOD/PODS 2026 India Fellowship</b> &mdash; May 2026
-          </li>
-          <li>
-            <b>Indian National Academy of Engineering (INAE) Mentee</b> &mdash; Apr. 2026
-          </li>
-          <li>
-            <b>Pre-Doctoral Fellowship</b>, SPARKS Programme, CSA, IISc &mdash; Nov. 2025<br>
-            <h3>(1 of 5 positions nationally)</h3>
-          </li>
-          <li>
-            <b>ACM SRC, 3rd Place (UG)</b> &#x1F3C6;
-            &mdash; MICRO 2025, Oct. 2025<br>
-            <h3>For work on optimal coupling map design using spectral graph theory.</h3>
-          </li>
-          <li>
-            <b>Q-Pragathi Project Grant</b>, Quantum Research Park (QuRP), IISc &mdash; Sep. 2024
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ════════════ SERVICE ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="service_arrows" class="arrows" onclick="expand_collapse('service'); return false;">&#9650;</a>
-        Service
-      </h1>
-      <div id="service" style="display:block;">
-        <ul>
-          <li>
-            <b>Reviewer</b> &mdash;
-            IEEE Transactions on Quantum Engineering; AI4Math Workshop at ICML 2026
-          </li>
-          <li>
-            <b>Subreviewer</b> &mdash; IEEE/ACM ISLPED 2026; IEEE FOCS 2026
-          </li>
-          <li>
-            <b>Artifact Evaluator</b> &mdash; ACM SOSP 2026; IEEE/ACM HPCA 2026
-          </li>
-          <li>
-            <b>Teaching Assistant</b> &mdash; Quantum Transport and Logic Gates, PES University (Spring 2025)
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ════════════ EDUCATION ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="edu_arrows" class="arrows" onclick="expand_collapse('edu'); return false;">&#9660;</a>
-        Education
-      </h1>
-      <div id="edu" style="display:none;">
-        <ul>
-          <li>
-            <h2>B.Tech., Electronics and Communication Engineering</h2>
-            <h3>(Quantum Technology track) &middot; <a href="https://pes.edu" target="_blank">PES University</a>, 2022&ndash;2026</h3>
-            Thesis: Efficient Quantum Machine Learning on Programmable Photonic Processors &nbsp;&middot;&nbsp; Grade: S (10/10)
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ════════════ CONTACT ════════════ -->
-    <div class="blog">
-      <h1>
-        <a href="#" id="contact_arrows" class="arrows" onclick="expand_collapse('contact'); return false;">&#9660;</a>
-        Contact
-      </h1>
-      <div id="contact" style="display:none;">
-        <p>You can reach me at:</p>
-        <div class="contact-row">
-          <input id="email-input" value="pkulkarni2425@gmail.com" readonly>
-          <button onclick="copyEmail()">Copy</button>
-          <span id="copy-confirm" class="copy-confirm">Copied!</span>
-        </div>
-        <br>
-        <p>Office: CSA A358, Department of Computer Science and Automation, IISc, Bengaluru 560 012</p>
-      </div>
-    </div>
-
-    <!-- ════════════ FOOTER ════════════ -->
-    <div class="footer">
-      <p>Last updated: May 2026 &nbsp;&middot;&nbsp;
-        Website template from <a href="https://sabeegrewal.com" target="_blank">Sabee Grewal</a>
-      </p>
-    </div>
-
-  </div><!-- /.wrapper -->
 </body>
 </html>
