@@ -6,283 +6,283 @@
     <meta name="description" content="Prateek P. Kulkarni — quantum computing systems researcher working on compilers, runtimes, architectures, and fault-tolerant quantum computing.">
     <title>Prateek P. Kulkarni</title>
 
-    <style>
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #ffffff;
-            padding: 0;
-            margin: 0;
-            color: #111;
-            font-size: 16px;
-            line-height: 1.48;
-        }
+<style>
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: #ffffff;
+        padding: 0;
+        margin: 0;
+        color: #111;
+        font-size: 16px;
+        line-height: 1.48;
+    }
 
+    #layout {
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        padding: 28px 24px 50px;
+        gap: 35px;
+    }
+
+    #menu {
+        width: 150px;
+        flex-shrink: 0;
+        padding-top: 6px;
+        position: sticky;
+        top: 24px;
+        align-self: flex-start;
+    }
+
+    #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu li {
+        margin: 8px 0;
+    }
+
+    #menu a {
+        color: #224b8d;
+        text-decoration: none;
+    }
+
+    #menu a:hover {
+        color: #527bbd;
+        text-decoration: underline;
+    }
+
+    #content {
+        flex-grow: 1;
+        max-width: 850px;
+        min-width: 0;
+    }
+
+    .title {
+        font-size: 1.95rem;
+        margin-bottom: 4px;
+        color: #527bbd;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-size: 1.08rem;
+        font-weight: normal;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+        color: #527bbd;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0.65em 0;
+    }
+
+    a {
+        color: #224b8d;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .profile {
+        display: flex;
+        gap: 22px;
+        margin: 22px 0 18px;
+        align-items: flex-start;
+    }
+
+    .profile img {
+        width: 145px;
+        max-width: 35vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .contact {
+        line-height: 1.55;
+    }
+
+    .quick-links {
+        margin-top: 8px;
+        font-size: 0.94rem;
+    }
+
+    .quick-links a {
+        margin-right: 10px;
+    }
+
+    .research-list,
+    .plain-list {
+        margin: 0.6em 0 0.8em;
+        padding-left: 1.35em;
+    }
+
+    .research-list li,
+    .plain-list li {
+        margin-bottom: 0.45em;
+    }
+
+    .pub-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .pub-list li {
+        margin-bottom: 1.35em;
+    }
+
+    .pub-title {
+        font-weight: bold;
+    }
+
+    .pub-authors {
+        font-size: 95%;
+        margin: 0.18em 0;
+    }
+
+    .pub-venue {
+        font-style: italic;
+        font-size: 95%;
+        color: #444;
+    }
+
+    .pub-links {
+        font-size: 90%;
+        color: #666;
+        margin-top: 0.15em;
+    }
+
+    .pub-links a {
+        color: #527bbd;
+        margin-right: 0.5em;
+    }
+
+    .entry {
+        margin-bottom: 1.35em;
+    }
+
+    .entry-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: baseline;
+    }
+
+    .entry-title {
+        font-weight: bold;
+    }
+
+    .entry-date {
+        color: #555;
+        font-size: 0.92rem;
+        white-space: nowrap;
+    }
+
+    .entry-subtitle {
+        color: #444;
+        font-size: 0.95rem;
+        margin-top: 0.12em;
+    }
+
+    .entry ul {
+        margin: 0.45em 0 0;
+        padding-left: 1.35em;
+    }
+
+    .entry li {
+        margin-bottom: 0.38em;
+    }
+
+    .project-name {
+        font-weight: bold;
+    }
+
+    .muted {
+        color: #555;
+        font-size: 0.94rem;
+    }
+
+    .award-list,
+    .service-list {
+        padding-left: 1.35em;
+    }
+
+    .award-list li,
+    .service-list li {
+        margin-bottom: 0.45em;
+    }
+
+    .references {
+        display: grid;
+        gap: 0.65em;
+    }
+
+    .footer {
+        margin-top: 42px;
+        font-size: 90%;
+        color: #666;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    @media (max-width: 800px) {
         #layout {
-            max-width: 1050px;
-            margin: 0 auto;
-            display: flex;
-            padding: 28px 24px 50px;
-            gap: 46px;
+            flex-direction: column;
+            gap: 20px;
+            padding: 18px;
         }
 
         #menu {
-            width: 170px;
-            flex-shrink: 0;
-            padding-top: 6px;
-            position: sticky;
-            top: 24px;
-            align-self: flex-start;
+            width: 100%;
+            position: static;
+            text-align: center;
         }
 
         #menu ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 16px;
         }
 
         #menu li {
-            margin: 8px 0;
-        }
-
-        #menu a {
-            color: #224b8d;
-            text-decoration: none;
-        }
-
-        #menu a:hover {
-            color: #527bbd;
-            text-decoration: underline;
+            display: inline;
+            margin: 0;
         }
 
         #content {
-            flex-grow: 1;
-            max-width: 760px;
-            min-width: 0;
-        }
-
-        .title {
-            font-size: 1.95rem;
-            margin-bottom: 4px;
-            color: #527bbd;
-            font-weight: normal;
-        }
-
-        h2 {
-            font-size: 1.08rem;
-            font-weight: normal;
-            margin-top: 30px;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ccc;
-            color: #527bbd;
-        }
-
-        h3 {
-            font-size: 1rem;
-            margin: 0;
-            font-weight: bold;
-        }
-
-        p {
-            margin: 0.65em 0;
-        }
-
-        a {
-            color: #224b8d;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            max-width: 100%;
         }
 
         .profile {
-            display: flex;
-            gap: 22px;
-            margin: 22px 0 18px;
-            align-items: flex-start;
-        }
-
-        .profile img {
-            width: 145px;
-            max-width: 35vw;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .contact {
-            line-height: 1.55;
-        }
-
-        .quick-links {
-            margin-top: 8px;
-            font-size: 0.94rem;
-        }
-
-        .quick-links a {
-            margin-right: 10px;
-        }
-
-        .research-list,
-        .plain-list {
-            margin: 0.6em 0 0.8em;
-            padding-left: 1.35em;
-        }
-
-        .research-list li,
-        .plain-list li {
-            margin-bottom: 0.45em;
-        }
-
-        .pub-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .pub-list li {
-            margin-bottom: 1.35em;
-        }
-
-        .pub-title {
-            font-weight: bold;
-        }
-
-        .pub-authors {
-            font-size: 95%;
-            margin: 0.18em 0;
-        }
-
-        .pub-venue {
-            font-style: italic;
-            font-size: 95%;
-            color: #444;
-        }
-
-        .pub-links {
-            font-size: 90%;
-            color: #666;
-            margin-top: 0.15em;
-        }
-
-        .pub-links a {
-            color: #527bbd;
-            margin-right: 0.5em;
-        }
-
-        .entry {
-            margin-bottom: 1.35em;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .entry-header {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            align-items: baseline;
-        }
-
-        .entry-title {
-            font-weight: bold;
+            display: block;
         }
 
         .entry-date {
-            color: #555;
-            font-size: 0.92rem;
-            white-space: nowrap;
+            display: block;
+            margin-top: 2px;
         }
-
-        .entry-subtitle {
-            color: #444;
-            font-size: 0.95rem;
-            margin-top: 0.12em;
-        }
-
-        .entry ul {
-            margin: 0.45em 0 0;
-            padding-left: 1.35em;
-        }
-
-        .entry li {
-            margin-bottom: 0.38em;
-        }
-
-        .project-name {
-            font-weight: bold;
-        }
-
-        .muted {
-            color: #555;
-            font-size: 0.94rem;
-        }
-
-        .award-list,
-        .service-list {
-            padding-left: 1.35em;
-        }
-
-        .award-list li,
-        .service-list li {
-            margin-bottom: 0.45em;
-        }
-
-        .references {
-            display: grid;
-            gap: 0.65em;
-        }
-
-        .footer {
-            margin-top: 42px;
-            font-size: 90%;
-            color: #666;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        @media (max-width: 800px) {
-            #layout {
-                flex-direction: column;
-                gap: 20px;
-                padding: 18px;
-            }
-
-            #menu {
-                width: 100%;
-                position: static;
-                text-align: center;
-            }
-
-            #menu ul {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 8px 16px;
-            }
-
-            #menu li {
-                display: inline;
-                margin: 0;
-            }
-
-            #content {
-                max-width: 100%;
-            }
-
-            .profile {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .entry-header {
-                display: block;
-            }
-
-            .entry-date {
-                display: block;
-                margin-top: 2px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
@@ -391,7 +391,7 @@
                 <div class="entry">
                     <div class="entry-header">
                         <div class="entry-title">University of Cambridge — Research Assistant</div>
-                        <div class="entry-date">Apr. 2026 – Present</div>
+                        <div class="entry-date">April 2026 – Present</div>
                     </div>
                     <div class="entry-subtitle">Advisor: Prof. Prakash Murali</div>
                     <p>Compiler abstractions and hardware-aware embeddings for qLDPC codes.</p>
@@ -400,7 +400,7 @@
                 <div class="entry">
                     <div class="entry-header">
                         <div class="entry-title">Fujitsu Research India — Research Intern</div>
-                        <div class="entry-date">Apr. -- June 2026</div>
+                        <div class="entry-date">April - June 2026</div>
                     </div>
                     <p>Quantum resource estimation, compilation, and optimization.</p>
                 </div>
