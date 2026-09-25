@@ -13,7 +13,7 @@ profile:
     <p>Indian Institute of Science</p>
     <p><a href="mailto:prateekp@iisc.ac.in">prateekp@iisc.ac.in</a></p>
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
