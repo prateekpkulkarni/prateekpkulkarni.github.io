@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Completed a research internship at Fujitsu Research India on quantum compilation and resource estimation ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
+Spent the summer at Fujitsu Research India working on quantum compilation and resource estimation ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
