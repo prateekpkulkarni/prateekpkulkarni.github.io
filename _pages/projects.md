@@ -7,20 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-My work studies how compiler, runtime, and architectural choices interact with the structure of quantum programs and error-correcting codes.
+My research is guided by the idea that the structure needed to make good systems decisions often already exists in the computation, but is hidden across layers. In quantum computing, algorithmic structure, logical operations, error-correcting codes, scheduling constraints, routing, and hardware topology are usually considered separately. I am interested in identifying the mathematical and architectural structure that connects these layers and turning it into compiler abstractions and algorithms that improve reliability, resource efficiency, and scalability. My broader goal is to develop compiler and architecture techniques that make fault-tolerant quantum computers practical at scale.
 
-### Fault-tolerant compilation
-
-Compiler and runtime techniques for fault-tolerant quantum computers, with an emphasis on reducing synchronization, scheduling overheads, and physical resource cost.
-
-### QEC-aware systems
-
-Mapping and implementation methods that exploit structure in quantum error-correcting codes, including qLDPC code families, while accounting for connectivity and syndrome-extraction overheads.
-
-### Resource management
-
-Noise-aware allocation, scheduling, and resource estimation for quantum workloads. I am interested in methods that expose useful structure before execution and use it to guide compilation and runtime decisions.
-
-### Architecture–compiler co-design
-
-Hardware/software co-design for scalable quantum processors, including coupling-map design, locality, and compiler-visible architectural constraints.
+Within this direction, I am especially interested in fault-tolerant compilation and runtime systems, QEC-aware mapping and scheduling, resource-aware compilation, and compiler–architecture co-design. I am also interested in how algebraic freedom in quantum codes and logical operations can become a systems primitive: for example, by choosing among equivalent implementations to reduce connectivity, synchronization, decoding, or physical-resource costs. More generally, I want to understand what information about a fault-tolerant computation should remain visible to the software stack, and how exposing the right structure can lead to simpler and more efficient implementations.
