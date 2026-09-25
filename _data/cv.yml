@@ -4,7 +4,6 @@ cv:
   email: prateekp@iisc.ac.in
   location: Bengaluru, India
   image: ""
-  summary: Researcher working on quantum computer systems, compilation, runtimes, and fault-tolerant quantum computing.
 
   social_networks:
     - network: GitHub
@@ -13,17 +12,7 @@ cv:
       username: pkulkarni2425
 
   sections:
-    Education:
-      - institution: PES University
-        location: Bengaluru, India
-        area: Electronics and Communication Engineering
-        studyType: B.Tech., specialization in Quantum Technology
-        start_date: 2022-07
-        end_date: 2026-06
-        highlights:
-          - "Senior Project: Quantum Machine Learning on Photonic Processors"
-
-    Experience:
+    "Research Experience":
       - company: Indian Institute of Science
         position: Walmart Predoctoral Fellow
         location: Bengaluru, India
@@ -31,33 +20,128 @@ cv:
         end_date: present
         highlights:
           - "Advisor: Prof. Sumit K. Mandal"
-          - "Quantum compilation, runtime systems, and architecture."
+          - "Quantum compilers and runtimes, resource management, and architecture for scalable and fault-tolerant quantum computing."
 
       - company: University of Cambridge
         position: Research Assistant
         location: Remote
-        start_date: 2026-04
+        start_date: 2026-03
         end_date: present
         highlights:
           - "Advisor: Prof. Prakash Murali"
-          - "Hardware-efficient realizations of quantum error-correcting codes."
+          - "Hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes."
 
       - company: Fujitsu Research India
-        position: Research Intern
-        location: India
+        position: Research Intern, Quantum Lab
+        location: Bengaluru, India
         start_date: 2026-04
         end_date: 2026-07
         highlights:
           - "Mentors: Dr. Aritra Sarkar and Harshkumar Oza"
-          - "Quantum compilation and resource estimation."
+          - "Compiler infrastructure and symbolic models for pre-execution quantum resource estimation."
 
-    Awards:
-      - title: 3rd Prize, ACM Student Research Competition
-        date: 2025
-        awarder: MICRO 2025
-      - title: SPARKS Predoctoral Research Fellowship
-        date: 2025
-        awarder: Indian Institute of Science
-      - title: INAE Mentee
+      - company: The Fields Institute
+        position: Visiting Researcher
+        location: Toronto, Canada
+        start_date: 2026-10
+        end_date: 2026-12
+        highlights:
+          - "Thematic Program on Quantum Algorithms for Differential Equations."
+
+    Education:
+      - institution: PES University
+        location: Bengaluru, India
+        area: Electronics and Communication Engineering
+        studyType: "B.Tech., specialization in Quantum Technology"
+        start_date: 2022
+        end_date: 2026
+        highlights:
+          - "Coursework and research emphasis in quantum computing, algorithms, and systems."
+
+    Publications:
+      - title: "How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework"
+        authors:
+          - "Prateek P. Kulkarni"
+          - "Sumit K. Mandal"
+        publisher: "ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED)"
+        releaseDate: 2026
+        url: https://doi.org/10.1145/3816440.3818544
+        summary: "Oral presentation. Extended version invited to IEEE Transactions on Very Large Scale Integration Systems."
+
+      - title: "AutoQuREO: An Automated Framework for Quantum Resource Estimation and Optimization"
+        authors:
+          - "Harshkumar Oza"
+          - "Aritra Sarkar"
+          - "Syed Naqi Abbas"
+          - "Rahul Bhowmick"
+          - "Aryan Prakash"
+          - "Prateek P. Kulkarni"
+          - "Krishna Kumar Sabapathy"
+        publisher: "Preprint"
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2608.12936
+
+    "Selected Posters & Presentations":
+      - name: "Rethinking Resource Allocation on Noisy Quantum Computers"
+        date: 2026-09
+        issuer: "QuCS Lecture Series"
+        summary: "Invited talk."
+
+      - name: "How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework"
+        date: 2026-08
+        issuer: "ISLPED 2026"
+        summary: "Oral presentation."
+
+      - name: "Entanglement-Dependent Error Bounds for Hamiltonian Simulation"
         date: 2026
-        awarder: Indian National Academy of Engineering
+        issuer: "TQC 2026"
+        summary: "Poster."
+
+      - name: "One Key Good, L Keys Better: List Decoding Meets Quantum Privacy Amplification"
+        date: 2026
+        issuer: "QCrypt 2026"
+        summary: "Poster."
+
+      - name: "PassProbe"
+        date: 2026
+        issuer: "IISWC 2026"
+        summary: "Short paper / poster; also accepted at MQSF 2026 and IWQC 2026."
+
+    Honors:
+      - title: "3rd Prize, ACM Student Research Competition"
+        date: 2025
+        awarder: "MICRO 2025"
+
+      - title: "SPARKS Predoctoral Research Fellowship"
+        date: 2025
+        awarder: "Indian Institute of Science"
+
+      - title: "INAE Mentee"
+        date: 2026
+        awarder: "Indian National Academy of Engineering"
+
+      - title: "SIGMOD/PODS India Fellowship"
+        date: 2026
+        awarder: "ACM SIGMOD India"
+
+      - title: "Q-Pragathi Grant"
+        date: 2026
+        awarder: "Q-Pragathi"
+
+    "Academic Service":
+      - company: "POPL 2027"
+        position: "Artifact Evaluation Committee"
+        start_date: 2026
+        end_date: 2027
+
+      - company: "HPCA 2026 · SOSP 2026 · PACT"
+        position: "Artifact Evaluation"
+        start_date: 2026
+        end_date: 2026
+
+      - company: "Peer Review"
+        position: "Reviewer / Sub-reviewer"
+        start_date: 2025
+        end_date: 2026
+        highlights:
+          - "IEEE Transactions on Quantum Engineering and conference/workshop reviewing."
