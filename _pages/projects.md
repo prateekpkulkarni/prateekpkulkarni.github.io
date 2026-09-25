@@ -2,7 +2,6 @@
 layout: page
 title: research
 permalink: /research/
-description: Research directions in quantum computing systems.
 nav: true
 nav_order: 3
 ---
