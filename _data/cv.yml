@@ -4,7 +4,6 @@ cv:
   email: prateekp@iisc.ac.in
   location: Bengaluru, India
   image: ""
-  summary: Researcher working on quantum computer systems, compilation, runtimes, and fault-tolerant quantum computing.
 
   social_networks:
     - network: GitHub
@@ -18,10 +17,11 @@ cv:
         location: Bengaluru, India
         area: Electronics and Communication Engineering
         studyType: B.Tech., specialization in Quantum Technology
-        start_date: 2022-07
-        end_date: 2026-06
+        start_date: 2022
+        end_date: 2026
+        score: "GPA: 7.83/10 · Upper-division GPA: 8.24/10"
         highlights:
-          - "Senior Project: Quantum Machine Learning on Photonic Processors"
+          - "Senior project: Quantum Machine Learning on Photonic Processors"
 
     Experience:
       - company: Indian Institute of Science
@@ -31,33 +31,115 @@ cv:
         end_date: present
         highlights:
           - "Advisor: Prof. Sumit K. Mandal"
-          - "Quantum compilation, runtime systems, and architecture."
+          - "Quantum compilation, runtime systems, resource management, and architecture for scalable and fault-tolerant quantum computing."
 
       - company: University of Cambridge
         position: Research Assistant
         location: Remote
-        start_date: 2026-04
-        end_date: present
+        start_date: 2026-03
+        end_date: 2026-07
         highlights:
           - "Advisor: Prof. Prakash Murali"
-          - "Hardware-efficient realizations of quantum error-correcting codes."
+          - "Studied hardware-efficient realizations of qLDPC codes, including Bivariate Bicycle and Gross-family codes."
 
-      - company: Fujitsu Research India
+      - company: Fujitsu Research India, Quantum Lab
         position: Research Intern
         location: India
         start_date: 2026-04
-        end_date: 2026-07
+        end_date: 2026-06
         highlights:
           - "Mentors: Dr. Aritra Sarkar and Harshkumar Oza"
-          - "Quantum compilation and resource estimation."
+          - "Built compiler adapters and resource-estimation models for AutoQuREO."
+
+      - company: Indian Institute of Science
+        position: Research Intern
+        location: Bengaluru, India
+        start_date: 2024
+        end_date: 2025
+        highlights:
+          - "Worked with Prof. Sumit K. Mandal during Summer 2024 and Summer/Fall 2025."
+          - "Studied noise-aware resource allocation and coupling-map design for quantum processors."
+
+      - company: The Fields Institute
+        position: Visiting Researcher
+        location: Toronto, Canada
+        start_date: 2026-10
+        end_date: 2026-12
+        highlights:
+          - "Thematic Program on Quantum Algorithms for Differential Equations."
+
+    Publications:
+      - title: "How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework"
+        authors:
+          - "Prateek P. Kulkarni"
+          - "Sumit K. Mandal"
+        publisher: "ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED)"
+        releaseDate: 2026
+        url: https://doi.org/10.1145/3816440.3818544
+        summary: "Oral presentation; extended version invited to IEEE TVLSI. arXiv:2607.24704."
+
+      - title: "AutoQuREO: An Automated Framework for Quantum Resource Estimation and Optimization"
+        authors:
+          - "Harshkumar Oza"
+          - "Aritra Sarkar"
+          - "Syed Naqi Abbas"
+          - "Rahul Bhowmick"
+          - "Aryan Prakash"
+          - "Prateek P. Kulkarni"
+          - "Krishna Kumar Sabapathy"
+        publisher: "Preprint, 2026"
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2608.12936
 
     Awards:
-      - title: 3rd Prize, ACM Student Research Competition
+      - title: "3rd Prize, ACM Student Research Competition"
         date: 2025
-        awarder: MICRO 2025
-      - title: SPARKS Predoctoral Research Fellowship
+        awarder: "MICRO 2025"
+
+      - title: "SPARKS Predoctoral Research Fellowship"
         date: 2025
-        awarder: Indian Institute of Science
-      - title: INAE Mentee
+        awarder: "Indian Institute of Science"
+        summary: "Selected as one of five fellows nationally."
+
+      - title: "INAE Mentee"
         date: 2026
-        awarder: Indian National Academy of Engineering
+        awarder: "Indian National Academy of Engineering"
+        summary: "Selected as one of 60 mentees nationally."
+
+    "Talks & Posters":
+      - name: "Rethinking Resource Allocation on Noisy Quantum Computers"
+        date: 2026-09
+        issuer: "QuCS Lecture Series"
+        summary: "Invited talk."
+
+      - name: "Entanglement-Dependent Error Bounds for Hamiltonian Simulation"
+        date: 2026
+        issuer: "Theory of Quantum Computation, Communication and Cryptography (TQC)"
+        summary: "Poster."
+
+      - name: "Lean Workshop"
+        date: 2026
+        issuer: "FLoC 2026"
+        summary: "Presentation."
+
+    "Academic Service":
+      - company: "Artifact Evaluation Committees"
+        position: "Artifact Evaluator"
+        start_date: 2026
+        end_date: 2026
+        highlights:
+          - "PACT 2026 · SOSP 2026 · HPCA 2026"
+
+      - company: "Peer Review"
+        position: "Reviewer / Sub-reviewer"
+        start_date: 2025
+        end_date: 2026
+        highlights:
+          - "IEEE Transactions on Quantum Engineering · ISLPED 2026 · ICML AI4Math Workshop 2026"
+
+      - company: "PES University"
+        position: "Teaching Assistant"
+        start_date: 2025
+        end_date: 2025
+        highlights:
+          - "Quantum Transport and Logic Gates"
