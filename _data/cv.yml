@@ -28,7 +28,7 @@ cv:
         start_date: 2026-03
         end_date: present
         highlights:
-          - "Advisor: Prof. Prakash Murali"
+          - "Advisor: Prakash Murali"
           - "Hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes."
 
       - company: Fujitsu Research India
@@ -37,7 +37,7 @@ cv:
         start_date: 2026-04
         end_date: 2026-07
         highlights:
-          - "Mentors: Dr. Aritra Sarkar and Harshkumar Oza"
+          - "Mentors: Aritra Sarkar and Harshkumar Oza"
           - "Compiler infrastructure and symbolic models for pre-execution quantum resource estimation."
 
       - company: The Fields Institute
