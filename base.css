@@ -1,0 +1,50 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em !important;
+}
+
+hr {
+	border-width: 5px;
+	border-color: #e54649;
+}
+
+.bg-dark {
+	background-color: #000 !important;
+}
+
+.img-reduce {
+	width: 90% !important;
+}
+
+.bg-dark-transparent {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.indented {
+	padding-left: 2em
+}
+
+.img-person {
+	padding-top: 20px !important;
+}
+
+.heading-style {
+	border-width: 1ex !important;
+	border-color: #000 !important;
+}
+
+.profile-img {
+	width: 80%;
+}
+
+.scroll-link {
+	color: white !important;
+}
+
+.main-divider {
+	background: url("./img/object_photos/asanoha.png");
+	background-size: cover;
+	background-position: center;
+	max-width: 110%;
+	height: auto;
+}

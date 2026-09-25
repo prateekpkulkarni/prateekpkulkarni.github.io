@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Perturbation Explorer for QPSK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #d92d24; /* MIT Red */
+        }
+
+        header {
+            background-color: #282828;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .slider {
+            margin: 10px 0;
+        }
+
+        .reset-btn {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #d92d24; /* MIT Red */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reset-btn:hover {
+            background-color: #c62828; /* Darker Red */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Add additional styles for constellations and EVM plots */
+        .plot {
+            display: inline-block;
+            width: 48%;
+            height: 400px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Advanced Perturbation Explorer for QPSK</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Abstract</h2>
+            <p>
+                The <strong>QPSK Simulator</strong> is a Python-driven toolkit designed to simulate the real-time behavior of Quadrature Phase Shift Keying (QPSK) modulation under various signal impairments and noise conditions. This simulator enables users to explore the nuanced effects of parameters such as Signal-to-Noise Ratio (SNR), amplitude/phase imbalance, DC offset, time jitter, frequency offset, and symbol rate variation. Leveraging high-resolution constellation plots and Error Vector Magnitude (EVM) visualizations, the tool serves both academic and industry applications where rigorous analysis of modulation performance is paramount.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Dynamic Modulation Insights</strong>: Real-time constellation and Error Vector Magnitude (EVM) plots that respond instantly to parameter variations. This allows users to visually assess the impact of changes, fostering a deeper understanding of modulation performance and its implications for signal integrity in practical applications.</li>
+                <li><strong>Signal Impairment Control</strong>: Adjustable parameters including SNR, amplitude/phase imbalance, and jitter.</li>
+                <li><strong>Reset Capability</strong>: All parameters can be reverted to their default values with a single action.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Prerequisites</h2>
+            <h3>System Requirements</h3>
+            <p>
+                Ensure the following system requirements are satisfied before running the QPSK Simulator.
+            </p>
+            <ul>
+                <li><strong>Python Version</strong>: Python 3.x</li>
+                <li><strong>Dependencies</strong>:
+                    <ul>
+                        <li><code>numpy</code></li>
+                        <li><code>matplotlib</code></li>
+                    </ul>
+                </li>
+            </ul>
+            <p>To install dependencies, execute:</p>
+            <pre><code>pip install numpy matplotlib</code></pre>
+            <h3>Execution Instructions</h3>
+            <ol>
+                <li>Clone or download the script from the repository.</li>
+                <li>Install the required libraries (see above).</li>
+                <li>Execute the simulator with:</li>
+            </ol>
+            <pre><code>python qpsk_simulator.py</code></pre>
+        </section>
+
+        <section>
+            <h2>Interface Overview</h2>
+            <h3>1. Constellation Plot</h3>
+            <p><strong>Position</strong>: Left section of the UI. <strong>Functionality</strong>: Displays the instantaneous QPSK constellation. Ideal reference points are annotated for comparative analysis of signal impairments.</p>
+
+            <h3>2. EVM Plot</h3>
+            <p><strong>Position</strong>: Right section of the UI. <strong>Functionality</strong>: The Error Vector Magnitude (EVM) plot displays the progressive degradation of the signal over time due to noise and other impairments.</p>
+
+            <h3>3. Control Panel</h3>
+            <p>The <strong>Control Panel</strong> provides intuitive sliders to fine-tune signal impairments. Each slider modifies a key property of the QPSK signal, allowing for in-depth simulation.</p>
+        </section>
+
+        <section>
+            <h2>Parameter Descriptions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Range</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Signal-to-Noise Ratio (SNR)</td>
+                        <td>-50 dB to 30 dB</td>
+                        <td>Alters the noise component of the signal, effectively controlling noise influence. Higher SNR values indicate a clearer signal, which is crucial in environments with high levels of interference, such as urban settings.</td>
+                    </tr>
+                    <tr>
+                        <td>Amplitude Imbalance</td>
+                        <td>0% to 100%</td>
+                        <td>Simulates amplitude imbalance between I and Q components, causing non-uniform scaling.</td>
+                    </tr>
+                    <tr>
+                        <td>Phase Imbalance</td>
+                        <td>0° to 45°</td>
+                        <td>Introduces phase misalignment, distorting the symmetry of the QPSK constellation.</td>
+                    </tr>
+                    <tr>
+                        <td>DC Offset</td>
+                        <td>0% to 50%</td>
+                        <td>Applies a DC bias, shifting the constellation from its origin.</td>
+                    </tr>
+                    <tr>
+                        <td>Time Jitter</td>
+                        <td>0 ps to 100 ps</td>
+                        <td>Introduces random timing shifts, simulating clock recovery or instability.</td>
+                    </tr>
+                    <tr>
+                        <td>Frequency Offset</td>
+                        <td>-1000 Hz to +1000 Hz</td>
+                        <td>Simulates frequency shifts due to oscillator mismatches or Doppler effects.</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol Rate Variation</td>
+                        <td>-10% to +10%</td>
+                        <td>Modifies the symbol rate to mimic clock synchronization issues.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Functional Overview</h2>
+            <h3>generate_qpsk_signal()</h3>
+            <p>Generates the baseband QPSK signal. The function integrates user-specified impairments, providing a signal suitable for real-time analysis.</p>
+
+            <h3>add_noise(signal)</h3>
+            <p>Applies Gaussian noise to the signal based on the SNR setting, yielding a noisy modulated waveform for testing.</p>
+
+            <h3>calculate_evm(original, received)</h3>
+            <p>Computes the Error Vector Magnitude (EVM) as the difference between the original and received, impaired signal, offering a quantitative measure of signal degradation.</p>
+
+            <h3>plot_constellation()</h3>
+            <p>Renders the QPSK constellation plot, updating dynamically as signal impairments are altered.</p>
+
+            <h3>animate(i)</h3>
+            <p>Handles the real-time updating of the constellation and EVM plots during simulation execution.</p>
+        </section>
+
+        <section>
+            <h2>Usage Workflow</h2>
+            <ol>
+                <li>Adjust the sliders in the Control Panel to set desired parameter values.</li>
+                <li>Observe real-time updates in the Constellation and EVM plots.</li>
+                <li>Click the <strong>Reset</strong> button to revert to default values.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Example Experimentation</h2>
+            <p>Try varying the SNR between -10 dB and 30 dB to observe how the constellation changes. Additionally, introduce different levels of phase imbalance and DC offset to evaluate the robustness of your QPSK system.</p>
+        </section>
+
+        <section>
+            <h2>Future Enhancements</h2>
+            <p>Planned improvements include advanced error-correction modeling and an expanded user interface to accommodate multiple modulation schemes. Future iterations aim to incorporate user feedback and real-world testing scenarios.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 QPSK Simulator. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
