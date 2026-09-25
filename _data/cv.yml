@@ -1,0 +1,63 @@
+cv:
+  name: Prateek P. Kulkarni
+  label: Walmart Predoctoral Fellow
+  email: prateekp@iisc.ac.in
+  location: Bengaluru, India
+  image: ""
+  summary: Researcher working on quantum computer systems, compilation, runtimes, and fault-tolerant quantum computing.
+
+  social_networks:
+    - network: GitHub
+      username: prateekpkulkarni
+    - network: LinkedIn
+      username: pkulkarni2425
+
+  sections:
+    Education:
+      - institution: PES University
+        location: Bengaluru, India
+        area: Electronics and Communication Engineering
+        studyType: B.Tech., specialization in Quantum Technology
+        start_date: 2022-07
+        end_date: 2026-06
+        highlights:
+          - "Senior Project: Quantum Machine Learning on Photonic Processors"
+
+    Experience:
+      - company: Indian Institute of Science
+        position: Walmart Predoctoral Fellow
+        location: Bengaluru, India
+        start_date: 2026-07
+        end_date: present
+        highlights:
+          - "Advisor: Prof. Sumit K. Mandal"
+          - "Quantum compilation, runtime systems, and architecture."
+
+      - company: University of Cambridge
+        position: Research Assistant
+        location: Remote
+        start_date: 2026-04
+        end_date: present
+        highlights:
+          - "Advisor: Prof. Prakash Murali"
+          - "Hardware-efficient realizations of quantum error-correcting codes."
+
+      - company: Fujitsu Research India
+        position: Research Intern
+        location: India
+        start_date: 2026-04
+        end_date: 2026-07
+        highlights:
+          - "Mentors: Dr. Aritra Sarkar and Harshkumar Oza"
+          - "Quantum compilation and resource estimation."
+
+    Awards:
+      - title: 3rd Prize, ACM Student Research Competition
+        date: 2025
+        awarder: MICRO 2025
+      - title: SPARKS Predoctoral Research Fellowship
+        date: 2025
+        awarder: Indian Institute of Science
+      - title: INAE Mentee
+        date: 2026
+        awarder: Indian National Academy of Engineering
