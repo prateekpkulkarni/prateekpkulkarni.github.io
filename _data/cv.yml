@@ -12,18 +12,7 @@ cv:
       username: pkulkarni2425
 
   sections:
-    Education:
-      - institution: PES University
-        location: Bengaluru, India
-        area: Electronics and Communication Engineering
-        studyType: B.Tech., specialization in Quantum Technology
-        start_date: 2022
-        end_date: 2026
-        score: "GPA: 7.83/10 · Upper-division GPA: 8.24/10"
-        highlights:
-          - "Senior project: Quantum Machine Learning on Photonic Processors"
-
-    Experience:
+    "Research Experience":
       - company: Indian Institute of Science
         position: Walmart Predoctoral Fellow
         location: Bengaluru, India
@@ -31,34 +20,25 @@ cv:
         end_date: present
         highlights:
           - "Advisor: Prof. Sumit K. Mandal"
-          - "Quantum compilation, runtime systems, resource management, and architecture for scalable and fault-tolerant quantum computing."
+          - "Quantum compilers and runtimes, resource management, and architecture for scalable and fault-tolerant quantum computing."
 
       - company: University of Cambridge
         position: Research Assistant
         location: Remote
         start_date: 2026-03
-        end_date: 2026-07
+        end_date: present
         highlights:
           - "Advisor: Prof. Prakash Murali"
-          - "Studied hardware-efficient realizations of qLDPC codes, including Bivariate Bicycle and Gross-family codes."
+          - "Hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes."
 
-      - company: Fujitsu Research India, Quantum Lab
-        position: Research Intern
-        location: India
+      - company: Fujitsu Research India
+        position: Research Intern, Quantum Lab
+        location: Bengaluru, India
         start_date: 2026-04
-        end_date: 2026-06
+        end_date: 2026-07
         highlights:
           - "Mentors: Dr. Aritra Sarkar and Harshkumar Oza"
-          - "Built compiler adapters and resource-estimation models for AutoQuREO."
-
-      - company: Indian Institute of Science
-        position: Research Intern
-        location: Bengaluru, India
-        start_date: 2024
-        end_date: 2025
-        highlights:
-          - "Worked with Prof. Sumit K. Mandal during Summer 2024 and Summer/Fall 2025."
-          - "Studied noise-aware resource allocation and coupling-map design for quantum processors."
+          - "Compiler infrastructure and symbolic models for pre-execution quantum resource estimation."
 
       - company: The Fields Institute
         position: Visiting Researcher
@@ -68,6 +48,16 @@ cv:
         highlights:
           - "Thematic Program on Quantum Algorithms for Differential Equations."
 
+    Education:
+      - institution: PES University
+        location: Bengaluru, India
+        area: Electronics and Communication Engineering
+        studyType: "B.Tech., specialization in Quantum Technology"
+        start_date: 2022
+        end_date: 2026
+        highlights:
+          - "Coursework and research emphasis in quantum computing, algorithms, and systems."
+
     Publications:
       - title: "How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework"
         authors:
@@ -76,7 +66,7 @@ cv:
         publisher: "ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED)"
         releaseDate: 2026
         url: https://doi.org/10.1145/3816440.3818544
-        summary: "Oral presentation; extended version invited to IEEE TVLSI. arXiv:2607.24704."
+        summary: "Oral presentation. Extended version invited to IEEE Transactions on Very Large Scale Integration Systems."
 
       - title: "AutoQuREO: An Automated Framework for Quantum Resource Estimation and Optimization"
         authors:
@@ -87,11 +77,37 @@ cv:
           - "Aryan Prakash"
           - "Prateek P. Kulkarni"
           - "Krishna Kumar Sabapathy"
-        publisher: "Preprint, 2026"
+        publisher: "Preprint"
         releaseDate: 2026
         url: https://arxiv.org/abs/2608.12936
 
-    Awards:
+    "Selected Posters & Presentations":
+      - name: "Rethinking Resource Allocation on Noisy Quantum Computers"
+        date: 2026-09
+        issuer: "QuCS Lecture Series"
+        summary: "Invited talk."
+
+      - name: "How Many Shots Does It Take? A Noise-Aware Quantum Resource Allocation Framework"
+        date: 2026-08
+        issuer: "ISLPED 2026"
+        summary: "Oral presentation."
+
+      - name: "Entanglement-Dependent Error Bounds for Hamiltonian Simulation"
+        date: 2026
+        issuer: "TQC 2026"
+        summary: "Poster."
+
+      - name: "One Key Good, L Keys Better: List Decoding Meets Quantum Privacy Amplification"
+        date: 2026
+        issuer: "QCrypt 2026"
+        summary: "Poster."
+
+      - name: "PassProbe"
+        date: 2026
+        issuer: "IISWC 2026"
+        summary: "Short paper / poster; also accepted at MQSF 2026 and IWQC 2026."
+
+    Honors:
       - title: "3rd Prize, ACM Student Research Competition"
         date: 2025
         awarder: "MICRO 2025"
@@ -99,47 +115,33 @@ cv:
       - title: "SPARKS Predoctoral Research Fellowship"
         date: 2025
         awarder: "Indian Institute of Science"
-        summary: "Selected as one of five fellows nationally."
 
       - title: "INAE Mentee"
         date: 2026
         awarder: "Indian National Academy of Engineering"
-        summary: "Selected as one of 60 mentees nationally."
 
-    "Talks & Posters":
-      - name: "Rethinking Resource Allocation on Noisy Quantum Computers"
-        date: 2026-09
-        issuer: "QuCS Lecture Series"
-        summary: "Invited talk."
-
-      - name: "Entanglement-Dependent Error Bounds for Hamiltonian Simulation"
+      - title: "SIGMOD/PODS India Fellowship"
         date: 2026
-        issuer: "Theory of Quantum Computation, Communication and Cryptography (TQC)"
-        summary: "Poster."
+        awarder: "ACM SIGMOD India"
 
-      - name: "Lean Workshop"
+      - title: "Q-Pragathi Grant"
         date: 2026
-        issuer: "FLoC 2026"
-        summary: "Presentation."
+        awarder: "Q-Pragathi"
 
     "Academic Service":
-      - company: "Artifact Evaluation Committees"
-        position: "Artifact Evaluator"
+      - company: "POPL 2027"
+        position: "Artifact Evaluation Committee"
+        start_date: 2026
+        end_date: 2027
+
+      - company: "HPCA 2026 · SOSP 2026 · PACT"
+        position: "Artifact Evaluation"
         start_date: 2026
         end_date: 2026
-        highlights:
-          - "PACT 2026 · SOSP 2026 · HPCA 2026"
 
       - company: "Peer Review"
         position: "Reviewer / Sub-reviewer"
         start_date: 2025
         end_date: 2026
         highlights:
-          - "IEEE Transactions on Quantum Engineering · ISLPED 2026 · ICML AI4Math Workshop 2026"
-
-      - company: "PES University"
-        position: "Teaching Assistant"
-        start_date: 2025
-        end_date: 2025
-        highlights:
-          - "Quantum Transport and Logic Gates"
+          - "IEEE Transactions on Quantum Engineering and conference/workshop reviewing."
