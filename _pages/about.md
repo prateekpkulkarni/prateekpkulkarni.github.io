@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Walmart Predoctoral Fellow · Department of Computer Science and Automation, IISc
+subtitle: Quantum Computing Systems Researcher · Walmart Predoctoral Fellow, IISc
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: true
   more_info: >
-    <p>Walmart Center for Tech Excellence</p>
+    <p>Department of Computer Science and Automation</p>
     <p>Indian Institute of Science</p>
     <p><a href="mailto:prateekp@iisc.ac.in">prateekp@iisc.ac.in</a></p>
 
