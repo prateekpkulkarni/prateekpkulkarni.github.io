@@ -1,14 +1,7 @@
 ---
-permalink: /cv/
 title: CV
+permalink: https://prateekpkulkarni.github.io/pkulkarni_sept26.pdf
 nav: true
 nav_order: 4
 sitemap: false
 ---
-
-<meta http-equiv="refresh" content="0; url={{ '/pkulkarni_sept26.pdf' | relative_url }}">
-<script>
-  window.location.replace("{{ '/pkulkarni_sept26.pdf' | relative_url }}");
-</script>
-
-<a href="{{ '/pkulkarni_sept26.pdf' | relative_url }}">Open CV</a>.
