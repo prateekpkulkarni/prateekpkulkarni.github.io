@@ -6,9 +6,9 @@ nav_order: 4
 sitemap: false
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/assets/pdf/Prateek_P_Kulkarni_CV26.pdf' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/pkulkarni_sept26.pdf' | relative_url }}">
 <script>
-  window.location.replace("{{ '/assets/pdf/Prateek_P_Kulkarni_CV26.pdf' | relative_url }}");
+  window.location.replace("{{ '/pkulkarni_sept26.pdf' | relative_url }}");
 </script>
 
-<a href="{{ '/assets/pdf/Prateek_P_Kulkarni_CV26.pdf' | relative_url }}">Open CV</a>.
+<a href="{{ '/pkulkarni_sept26.pdf' | relative_url }}">Open CV</a>.
