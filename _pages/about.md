@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Quantum Computing Systems Researcher · Walmart Predoctoral Fellow, IISc
+subtitle: Predoc @ CSA, IISc | FTQC Systems
 
 profile:
   align: right
