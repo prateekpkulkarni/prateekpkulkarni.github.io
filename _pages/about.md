@@ -27,17 +27,8 @@ latest_posts:
   limit: 0
 ---
 
-I am a Walmart Predoctoral Fellow in the [Department of Computer Science and Automation](https://www.csa.iisc.ac.in/) at the Indian Institute of Science, advised by [Prof. Sumit K. Mandal](https://sumitmandal.github.io/). My research is in **quantum computer systems**, with an emphasis on compilers, runtimes, and architectures for scalable and fault-tolerant quantum computing.
+I am a Walmart Predoctoral Fellow in the [Department of Computer Science and Automation](https://www.csa.iisc.ac.in/) at the Indian Institute of Science, advised by [Prof. Sumit K. Mandal](https://sumitmandal.github.io/). I work on quantum computer systems, with a focus on compilers, runtimes, and architectures for scalable and fault-tolerant quantum computing.
 
-I am interested in how structure in quantum programs and error-correcting codes can be used to reduce systems overheads and make execution more reliable. My recent work spans resource allocation and scheduling, QEC-aware mapping, qLDPC implementations, and compiler–architecture co-design. I have also worked with [Prof. Prakash Murali](https://www.cl.cam.ac.uk/~pm644/) at the University of Cambridge and with Fujitsu Research India.
+My research is driven by a simple observation: many important compiler decisions become difficult because useful information is scattered across layers of the stack. I am interested in exposing structure in quantum programs and error-correcting codes and turning it into practical compiler and architecture techniques, particularly for fault-tolerant compilation, QEC-aware mapping, resource-aware runtimes, and compiler–architecture co-design.
 
-In Fall 2026, I will be a Visiting Researcher at the [Fields Institute](https://www.fields.utoronto.ca/) for the thematic program on quantum algorithms for differential equations.
-
-## Research
-
-My current interests include:
-
-- fault-tolerant quantum compilation and runtime systems,
-- QEC-aware mapping and resource management,
-- scalable qLDPC implementations, and
-- compiler–architecture co-design for quantum systems.
+I am currently working with [Prof. Prakash Murali](https://www.cl.cam.ac.uk/~pm644/) at the University of Cambridge on hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes. I also spent Summer 2026 at Fujitsu Research India, hosted by Dr. Aritra Sarkar, working on quantum compilation and resource estimation.
