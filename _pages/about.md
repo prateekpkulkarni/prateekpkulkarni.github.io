@@ -27,8 +27,8 @@ latest_posts:
   limit: 0
 ---
 
-I am a Walmart Predoctoral Fellow in the [Department of Computer Science and Automation](https://www.csa.iisc.ac.in/) at the Indian Institute of Science, advised by [Sumit K. Mandal](https://sumitmandal.github.io/). I work on quantum computer systems, especially compilers, runtimes, and architectures for scalable and fault-tolerant quantum computing.
+I am a Walmart Predoctoral Fellow in the [Department of Computer Science and Automation](https://www.csa.iisc.ac.in/) at the Indian Institute of Science, advised by [Sumit K. Mandal](https://sumitmandal.github.io/). I work on quantum computer systems, especially where compiler, runtime, and architectural choices interact.
 
-My research asks what information about a fault-tolerant computation should remain visible to the software stack. Rather than treating error correction, logical execution, scheduling, and hardware constraints as separate layers, I study how their structure can be exposed to the compiler and runtime to reduce resource cost and improve reliability. I am particularly interested in fault-tolerant compilation, QEC-aware mapping and scheduling, resource-aware runtimes, and compiler–architecture co-design.
+My research asks what information about a fault-tolerant computation should remain visible to the software stack. Rather than treating error correction, logical operations, scheduling, and hardware constraints as independent layers, I study how exposing their structure can guide compiler and runtime decisions. I am particularly interested in fault-tolerant compilation, QEC-aware mapping and scheduling, resource-aware runtimes, and compiler–architecture co-design.
 
 I am currently working with [Prakash Murali](https://www.cst.cam.ac.uk/people/pm830) at the University of Cambridge on hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes. I also spent Summer 2026 at Fujitsu Research India, hosted by [Aritra Sarkar](https://aritrasarkar.com/), working on quantum compilation and resource estimation.
