@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Spent the summer at Fujitsu Research India working on quantum compilation and resource estimation ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
+Summer at Fujitsu Research India automating and benchmarking end-to-end resource estimation and optimization! ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
