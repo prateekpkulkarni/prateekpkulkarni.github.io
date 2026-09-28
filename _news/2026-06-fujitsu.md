@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Summer at Fujitsu Research India automating and benchmarking end-to-end resource estimation and optimization! ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
+Spent the summer at Fujitsu Research India working on automated end-to-end quantum resource estimation and optimization ([AutoQuREO](https://arxiv.org/abs/2608.12936)).
