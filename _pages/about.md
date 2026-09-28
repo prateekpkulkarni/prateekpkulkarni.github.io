@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>Department of Computer Science and Automation</p>
     <p>Indian Institute of Science</p>
-    <p><a href="mailto:prateekp@iisc.ac.in">prateekp@iisc.ac.in</a> / <a href="mailto:pkulkarni2425@gmail.com">pkulkarni2425@gmail.com</a></p>
+    <p><a href="mailto:prateekp@iisc.ac.in">prateekp@iisc.ac.in</a></p>
 
 selected_papers: false
 social: true
