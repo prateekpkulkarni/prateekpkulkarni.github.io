@@ -2,10 +2,16 @@
 layout: page
 title: research
 permalink: /research/
-nav: false
-nav_order: 3
+nav: true
+nav_order: 1
 ---
 
-My work has explored several layers of the quantum software stack. I have worked on noise-aware shot allocation and runtime resource management, compiler-pass attribution, pre-execution resource estimation, coupling-map design, and hardware-efficient mappings of qLDPC codes. Although these projects address different parts of the stack, they share a common theme: useful structure often exists before execution, but conventional abstractions hide it from the compiler or runtime. I am interested in recovering that structure and using it to make systems decisions more informed, predictable, and hardware-aware.
+My research focuses on fault-tolerant quantum systems, especially where quantum error correction, compilation, and hardware architecture interact.
 
-Going forward, I am especially interested in fault-tolerant quantum systems. I want to study how error-correction structure, logical equivalences, decoding constraints, and hardware topology can become first-class compiler and architecture signals rather than fixed backend constraints. This includes fault-tolerant compilation and runtime systems, QEC-aware mapping and scheduling, hardware-efficient qLDPC implementations, and compiler–architecture co-design. A recurring question for me is how much freedom the software stack should preserve—for example through code structure, gauge freedom, or equivalent logical implementations—and when that freedom should be resolved using hardware and runtime information.
+### Narayanan Rengaswamy
+
+I currently work with [Narayanan Rengaswamy](https://nrenga.github.io/) on quantum error correction and subsystem-code compilation. We study how gauge freedom and equivalent logical realizations can be exposed algorithmically for scalable, hardware-aware synthesis.
+
+### Prakash Murali
+
+I currently work with [Prakash Murali](https://prakashmurali.bitbucket.io/) on hardware-efficient realizations of Bivariate Bicycle and Gross-family qLDPC codes. Our work uses algebraic equivalences to reshape code geometry and reduce connectivity overhead while preserving the underlying code structure.
