@@ -31,4 +31,4 @@ I am a Walmart Predoctoral Fellow in the [Department of Computer Science and Aut
 
 My research asks what information about a fault-tolerant computation should remain visible to the software stack. Rather than treating error correction, logical operations, scheduling, and hardware constraints as independent layers, I study how exposing their structure can guide compiler and runtime decisions. I am particularly interested in fault-tolerant compilation, QEC-aware mapping and scheduling, resource-aware runtimes, and compiler–architecture co-design.
 
-I spent Summer 2026 at Fujitsu Research India, working on quantum compilation and resource estimation.
+I spent Summer 2026 at Fujitsu Research India, hosted by [Aritra Sarkar](https://aritrasarkar.com/), working on quantum compilation and resource estimation.
